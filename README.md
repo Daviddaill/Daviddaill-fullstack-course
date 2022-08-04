@@ -6,7 +6,7 @@ The codecademy fullStack course indexed for faster access and easy review
  + Each courses has indexed chapter and subchapter for quick overview. a mainpage link brings you back to the landing page.
  
  ## How to use:
-+visit: https://daviddaill.github.io/Daviddaill-fullstack-course/
++ visit: https://daviddaill.github.io/Daviddaill-fullstack-course/
 
 or 
 
