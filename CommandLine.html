@@ -1,0 +1,185 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="./resources/css/courses.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Line</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <p id="main"><a href="index.html">Main page </a></p>
+        <h1>Command Line</h1>
+    </header>
+    <nav>
+        <ol>
+            <li> <a href="#1">Introduction </a></li>
+            <li> <a href="#2"> ls</a> </li>
+            <li> <a href="#3">pwd</a> </li>
+            <li> <a href="#4">cd I  </a></li>
+            <li> <a href="#5"> cd II </a> </li>
+            <li> <a href="#6"> mkdir </a> </li>
+            <li> <a href="#7">touch</a></li>
+            <li> <a href="#8"> Helper Commands </a> </li>
+            <li> <a href="#9"> review </a> </li>
+        </ol>
+    </nav>
+    <main>
+        <h2 id="1"><span class="c7">Introduction</span></h2>
+        <p class="c0"><span>The </span><span class="c3">command line</span><span class="c2">&nbsp;is a text interface
+                for
+                your computer. It&rsquo;s a program that takes in commands and passes them on to the computer&rsquo;s
+                operating system to run.</span></p>
+        <p class="c0"><span class="c2">From the command line, you can navigate through files and folders on your
+                computer,
+                just as you would with Finder on Mac OS or Windows Explorer on Windows. The difference is that the
+                command
+                line is fully text-based.</span></p>
+        <p class="c0"><span class="c2">The advantage of using the command line is its power. You can run programs, write
+                scripts to automate common tasks, and combine simple commands to handle difficult tasks. All of these
+                traits
+                come together to make it an important programming tool.</span></p>
+        <p class="c0"><span>This course is for unix-based systems such as Linux and Mac OS X. You can also download
+                programs
+                on Windows that will allow you to use the same commands. An appendix of all commands taught in this
+                course
+                is available</span><span><a class="c11"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/command-line-commands&amp;sa=D&amp;source=editors&amp;ust=1659423472124392&amp;usg=AOvVaw35Tm9gfjIoctblN8oCK8VS">&nbsp;</a></span><span
+                class="c17"><a class="c11"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/command-line-commands&amp;sa=D&amp;source=editors&amp;ust=1659423472124584&amp;usg=AOvVaw3hX3NR3MWJiE_1rZUhGvZX">here</a></span><span
+                class="c2">.</span></p>
+        <h2 id="2"><span class="c7">ls</span></h2>
+        <p class="c0"><span>The first command we&rsquo;re going to look at is ls. A </span><span
+                class="c4">command</span><span class="c2">&nbsp;is a directive to the computer to perform a specific
+                task.
+                When you type ls, the command line looks at the directory you are in, and then &ldquo;lists&rdquo; all
+                the
+                files and directories inside of it. Be sure to type the letter l as in &ldquo;List&rdquo; and not the
+                number
+                1.</span></p>
+        <p class="c0"><span>In the terminal, the first thing you see is $. This is called a </span><span
+                class="c4">shell
+                prompt</span><span class="c2">. It appears when the terminal is ready to accept a command.</span></p>
+        <p class="c0"><span class="c2">If we typed:</span></p>
+        <p class="c12"><span class="c2">$ ls</span></p>
+        <p class="c0"><span class="c2">the terminal would display our current directory&rsquo;s files and
+                directories:</span></p>
+        <p class="c12"><span class="c2">2014 &nbsp;2015 &nbsp;hardware.txt</span></p>
+        <p class="c0"><span>The directories </span><span class="c3">2014</span><span>, </span><span
+                class="c3">2015</span><span>, and the file </span><span class="c3">hardware.txt</span><span
+                class="c2">&nbsp;are the contents of the current directory.</span></p>
+        <p class="c9"><span class="c2"></span></p>
+        <h2 id="3"><span class="c7">pwd</span></h2>
+        <p class="c0"><span>The next command we&rsquo;re going to look at is pwd, which stands for &ldquo;print working
+                directory.&rdquo; It outputs the name of the directory you are currently in, called the </span><span
+                class="c4">working directory</span><span class="c2">.</span></p>
+        <p class="c0"><span>Here the working directory is </span><span class="c3">blog/</span><span>. In Codecademy
+                courses,
+                your working directory is usually inside the </span><span class="c3">/home/ccuser/workspace/</span><span
+                class="c2">&nbsp;directory.</span></p>
+        <p class="c0"><span class="c2">Together with ls, the pwd command is useful to show where you are in the
+                filesystem.</span></p>
+        <p class="c9"><span class="c2"></span></p>
+        <h2 id="4"><span class="c7">cd I</span></h2>
+        <p class="c0"><span class="c2">Our next command is cd, which stands for &ldquo;change directory.&rdquo; Just as
+                you
+                would click on a folder in Windows Explorer or Finder, cd switches you into the directory you specify.
+                In
+                other words, cd changes the working directory.</span></p>
+        <p class="c0"><span>Let&rsquo;s say the directory we change into is </span><span class="c3">2015</span><span
+                class="c2">:</span></p>
+        <p class="c12"><span class="c2">$ cd 2015</span></p>
+        <p class="c9"><span class="c2"></span></p>
+        <h2 class="c8" id="h.izf98fy8kw80"><span class="c7">cd II</span></h2>
+        <p class="c0"><span>Instead of using cd twice in order to move from </span><span
+                class="c3">2015</span><span>&nbsp;to </span><span class="c3">memory</span><span class="c2">, we can use
+                it
+                once and give it a longer argument:</span></p>
+        <p class="c12"><span class="c2">$ cd jan/memory</span></p>
+        <p class="c0"><span>To navigate directly to a directory, use cd with the directory&rsquo;s path as an argument.
+                Here, cd jan/memory navigates directly to the </span><span class="c3">memory</span><span
+                class="c2">&nbsp;directory.</span></p>
+        <p class="c9"><span class="c2"></span></p>
+        <h2 id="5"><span class="c7">mkdir</span></h2>
+        <p class="c0"><span class="c2">Now that we can traverse the existing filesystem, let&rsquo;s try editing it by
+                making directories (folders) through the command line. The command for that is mkdir:</span></p>
+        <p class="c12"><span class="c2">$ mkdir media</span></p>
+        <p class="c0"><span class="c2">The mkdir command stands for &ldquo;make directory&rdquo;. It takes in a
+                directory
+                name as an argument and then creates a new directory in the current working directory.</span></p>
+        <h2 id="6"><span class="c7">touch</span></h2>
+        <p class="c0"><span class="c2">Now we know how to create directories through the command line, but how do we
+                create
+                new files?</span></p>
+        <p class="c0"><span class="c2">We can do this using the command touch:</span></p>
+        <p class="c12"><span class="c2">$ touch keyboard.txt</span></p>
+        <p class="c0"><span class="c2">The touch command creates a new file inside the working directory. It takes in a
+                filename as an argument and then creates an empty file with that name in the current working
+                directory.</span></p>
+        <p class="c0"><span>Here we used touch to create a new file named </span><span
+                class="c3">keyboard.txt</span><span class="c2">.</span></p>
+        <h2 id="7"><span class="c7">Helper Commands</span></h2>
+        <p class="c0"><span class="c2">Now that we&rsquo;ve covered the basics of navigating your filesystem from the
+                command line, let&rsquo;s look at some helpful commands that will make using it easier!</span></p>
+        <p class="c0"><span class="c2">clear is used to clear your terminal, which is useful when it&rsquo;s full of
+                previous commands and outputs. It doesn&rsquo;t change or undo your previous commands, it just clears
+                them
+                from the view. You can scroll upwards to see them at any time.</span></p>
+        <p class="c0"><span class="c2">tab can be used to autocomplete your command. When you are typing the name of an
+                existing file or directory, you can use tab to finish the rest of the name.</span></p>
+        <p class="c0"><span class="c2">The up and down arrows (&uarr; and &darr;) can be used to cycle through your
+                previous
+                commands. &uarr; will take you up through your most recent commands, and &darr; will take you back
+                through
+                to the most recent one.</span></p>
+        <p class="c9"><span class="c2"></span></p>
+        <p class="c9"><span class="c2"></span></p>
+        <h2 id="8"><span class="c7">review</span></h2>
+        <p class="c9"><span class="c2"></span></p>
+        <p class="c9"><span class="c2"></span></p>
+        <ul class="c10 lst-kix_ul3kl0zeajp7-0 start">
+            <li class="c0 c1 li-bullet-0"><span>The </span><span class="c4">command line</span><span class="c2">&nbsp;is
+                    a
+                    text interface for the computer&rsquo;s operating system. To access the command line, we use the
+                    terminal.</span></li>
+            <li class="c0 c1 li-bullet-0"><span>A </span><span class="c4">filesystem</span><span>&nbsp;organizes a
+                    computer&rsquo;s files and directories into a tree structure. It starts with the </span><span
+                    class="c4">root directory</span><span class="c2">. Each parent directory can contain more child
+                    directories and files.</span></li>
+            <li class="c0 c1 li-bullet-0"><span class="c2">From the command line, you can navigate through files and
+                    folders
+                    on your computer:</span></li>
+        </ul>
+        <ul class="c10 lst-kix_ul3kl0zeajp7-1 start">
+            <li class="c0 c6 li-bullet-0"><span class="c2">pwd outputs the name of the current working directory.</span>
+            </li>
+            <li class="c0 c6 li-bullet-0"><span class="c2">ls lists all files and directories in the working
+                    directory.</span></li>
+            <li class="c0 c6 li-bullet-0"><span class="c2">cd switches you into the directory you specify.</span></li>
+            <li class="c0 c6 li-bullet-0"><span class="c2">mkdir creates a new directory in the working
+                    directory.</span>
+            </li>
+            <li class="c0 c6 li-bullet-0"><span class="c2">touch creates a new file inside the working directory.</span>
+            </li>
+        </ul>
+        <ul class="c10 lst-kix_ul3kl0zeajp7-0">
+            <li class="c0 c1 li-bullet-0"><span class="c2">You can use helper commands to make navigation easier:</span>
+            </li>
+        </ul>
+        <ul class="c10 lst-kix_ul3kl0zeajp7-1 start">
+            <li class="c0 c6 li-bullet-0"><span class="c2">clear clears the terminal</span></li>
+            <li class="c0 c6 li-bullet-0"><span class="c2">tab autocompletes the name of a file or directory</span></li>
+            <li class="c0 c6 li-bullet-0"><span class="c2">&uarr; and &darr; allow you to cycle through previous
+                    commands</span></li>
+        </ul>
+        <p class="c14" id="h.8ko0nlx79cwt"><span class="c13"><a class="c11"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/article/command-line-commands&amp;sa=D&amp;source=editors&amp;ust=1659423472130878&amp;usg=AOvVaw2lA_X96Zct_4JFr8SLqEr2">more</a></span>
+        </p>
+        <p class="c9"><span class="c2"></span></p>
+</body>
+
+</html>

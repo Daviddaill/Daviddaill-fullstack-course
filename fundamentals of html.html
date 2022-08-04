@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals Of HTML</title>
+    <link rel="stylesheet" href="resources/css/courses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <p id="main"><a href="index.html">Main page </a></p>
+        <h1>Fundamentals Of HTML</h1>
+    </header>
+    <nav>
+        <ol>
+            <li> <a href="#intro">Introduction to HTML </a></li>
+            <li> <a href="#html structure"> HTML Structure </a></li>
+            <ul>
+                <li> <a href="#attributes">Attributes</a> </li>  
+                  <li> <a href="#displaying text"> Displaying Text</li> </a>
+                  <ul>
+                      <li><a href="#styling">Styling Text</a></li>
+                      <li><a href="#breaks">Line Breaks</a></li>
+                      <li><a href="#ul">Unordered List</a></li>
+                      <li><a href="#ol">Ordered List</a></li>   
+                  </ul>
+                  <li> <a href="#image">Images </a></li>
+                  <li> <a href="#video"> Video </a></li>
+                  <li><a href="#video">Review </a></li>  
+              </ul>
+            <li> <a href="#preparing html">Preparing For HTML</a></li>
+              <ul>
+                <li> <a href="#html tag"> The &lt;html&gt; tag</a></li>
+                <li> <a href="#the head"> The Head</a></li>
+                <li> <a href="#page title"> Page Title</a></li>
+                <li> <a href="#linking"> Creating links</a></li>
+                    <ul>
+                        <li> <a href="#new window"> Opening Links in a New Window</a></li>
+                        <li> <a href="#relative page"> Linking to Relative Page</a></li>
+                        <li> <a href="#linking at will"> Linking At Will</a></li>
+                        <li> <a href="#linking to same page"> Linking to Same Page</a></li>
+                    </ul>
+                <li> <a href="#indentation"> Whitespace, Indentation & comments</a></li>
+                <li> <a href="#review tags"> review</a></li>
+              </ul>
+           
+            <li> <a href="#table">Table</a></li>
+              <ul>
+                  <li> <a href="#table rows">Table Rows</a> </li>
+                  <li> <a href="#table headings">Table Headings</a> </li>
+                  <li> <a href="#spanning columns">Spanning Columns</a> </li>
+                  <li> <a href="#spanning rows">Spanning Rows</a> </li>
+                  <li> <a href="#table body">Table Body</a> </li>
+                  <li> <a href="#table head">Table Head </a></li>
+                  <li> <a href="#table footer">Table Footer</a> </li>
+                  <li> <a href="#review table">Review Table</a> </li>
+              </ul>
+            <li> <a href="#semantic"> Introduction to Semantic HTML</a></li>
+              <ul>
+                  <li> <a href="#Why use Semantic HTML?">Why use Semantic HTML?</a>  </li>
+                  <li> <a href="#Header and Nav">Header and Nav</a> </li>
+                  <li> <a href="#Main and Footer">Main and Footer</a>  </li>
+                  <li> <a href="#Article and Section">Article and Section</a>  </li>
+                  <li> <a href="#The Aside Element">The Aside Element</a>  </li>
+                  <li> <a href="#Figure and Figcaption">Figure and Figcaption</a>  </li>
+                  <li> <a href="#Audio and Attributes">Audio and Attributes</a>  </li>
+                  <li> <a href="#Video and Embed">Video and Embed</a>  </li>
+                  <li> <a href="#review semantic">Review Semantic</a>  </li>
+
+
+              </ul>
+            
+        </ol>
+    </nav>
+
+    <main>
+        <div class="1" id="intro"> 
+            <h2>Introductio to HTML</h2>
+            <p>Right-click on any page on the internet, choose “Inspect,” and you’ll see HTML in a panel of your screen. 
+            </p>
+            <ul>
+                <li>A markup language is a computer language that defines the structure and presentation of raw text.</li>
+                <li>In HTML, the computer can interpret raw text that is wrapped in HTML elements.</li>
+                <li>HyperText is text displayed on a computer or device that provides access to other text through links, also known as hyperlinks. You probably clicked on a couple of hyperlinks on your way to this Codecademy course.</li>
+            </ul>
+        </div>
+
+        <div class="2" id="html structure">
+            
+              <h2>HTML Structure</h2>
+              <p>HTML is organized as a collection of family tree relationships. As you saw in the last exercise, we placed &lt;p&gt; tags within &lt;body&gt; tags. When an element is contained inside another element, it is considered the child of that element. The child element is said to be nested inside of the parent element.</p>
+              <div  id="attributes"></div>
+              <h3>Attributes</h3>
+              <p>If we want to expand an element’s tag, we can do so using an attribute. Attributes are content added to the opening tag of an element and can be used in several different ways, from providing information to changing styling. Attributes are made up of the following two parts:</p>
+              <ul>
+                <li>The name of the attribute</li>
+                <li>The value of the attribute</li>
+              </ul>
+              <p>One commonly used attribute is the id. We can use the id attribute to specify different content (such as &lt;div&gt;s) and is really helpful when you use an element more than once. ids have several different purposes in HTML, but for now, we’ll focus on how they can help us identify content on our page.
+              When we add an id to a &lt;div&gt;, we place it in the opening tag: </p>
+              <p class="exemple">  &lt;div id="intro"&gt;
+                <br>&lt;h1&gt;Introduction&lt;/h1&gt;
+                <br>  &lt;/div&gt;   
+              </p>
+            </div>
+            <div  id="displaying text">
+                <h3>Displaying Text</h3>
+                <p>If you want to display text in HTML, you can use a paragraph or span:</p>
+                <ul>
+                    <li>Paragraphs (&lt;p&gt;) contain a block of plain text.</li>
+                    <li>&lt;span&gt; contains short pieces of text or other HTML. They are used to separate small pieces of content that are on the same line as other content.</li>
+                </ul>
+                <p>Exemple:</p>
+                <p class: exemple>
+                    &lt;div&gt; <br>
+                    &lt;h1 &gt; Title here &lt;/h1&gt; <br>
+                     &lt; p&gt; &lt;span &gt; Isolated paragraph gere &lt;/span &gt; Rest of the paragrph here &lt;/p &gt; <br>
+                      &lt; /div&gt; <br>
+                </p>
+               <p>It’s best to use a <span> element when you want to target a specific piece of content that is inline, or on the same line as other text. If you want to divide your content into blocks, it’s better to use a &lt;div&gt;.</p>
+            </div>
+
+            <div id="styling"></div>
+              <h4>Styling Text</h4>
+              <p>You can also style text using HTML tags. The &lt;em&gt; tag emphasizes text, while the &lt;strong&gt; tag highlights important text.
+                <br> Later, when you begin to style websites, you will decide how you want browsers to display content within &lt;em&gt; and &lt;strong&gt; tags. Browsers, however, have built-in style sheets that will generally style these tags in the following ways:
+                </p>
+              <ul>
+                  <li>The &lt;em&gt; tag will generally render as italic emphasis.</li>
+                  <li>The &lt;strong&gt; will generally render as bold emphasis.</li>
+              </ul>  
+            </div> 
+            <div id="breaks">
+              <h4>Line Breaks </h4>
+              <p>The spacing between code in an HTML file doesn’t affect the positioning of elements in the browser. If you are interested in modifying the spacing in the browser, you can use HTML’s line break element: &lt;br&gt;. <br>
+                The line break element is unique because it is only composed of a starting tag. You can use it anywhere within your HTML code and a line break will be shown in the browser.
+                </p>
+            </div>
+            <div id="ul">    
+                <h4>Unordered Lists</h4>
+                <p>In addition to organizing text in paragraph form, you can also display content in an easy-to-read list.
+                    In HTML, you can use an unordered list tag (&lt;ul&gt;) to create a list of items in no particular order. An unordered list outlines individual list items with a bullet point.
+                    The &lt;ul&gt; element should not hold raw text and won’t automatically format raw text into an unordered list of items. Individual list items must be added to the unordered list using the &lt;li&gt; tag. The &lt;li&gt; or list item tag is used to describe an item in a list.
+                    </p>
+                <p class="exemple">
+                    &lt;ul&gt; <br>
+                        &lt;li&gt;Limes&lt;/li&gt; <br>
+                        &lt;li&gt;Tortillas&lt;/li&gt; <br>
+                        &lt;li&gt;Chicken&lt;/li&gt; <br>
+                      &lt;/ul&gt; <br>
+                </p>
+                <p>In the example above, the list was created using the &lt;ul&gt; tag and all individual list items were added using &lt;li&gt; tags.
+                    The output will look like this:
+                </p>
+                <ul>
+                    <li>Limes</li>
+                    <li>Tortillas</li>
+                    <li>Chicken</li>
+                </ul>
+            </div>
+            <div id="ol">
+                <h4>Ordered List</h4>
+                <p>Ordered lists (&lt;ol&gt;) are like unordered lists, except that each list item is numbered. They are useful when you need to list different steps in a process or rank items for first to last.
+                    You can create the ordered list with the &lt;ol&gt; tag and then add individual list items to the list using &lt;li&gt; tags.
+                    </p>
+            </div>
+            <div id="image">
+                <h3>Images</h3>  
+                <h4>Displaying Images</h4>
+               <p>The &lt;img&gt; tag allows you to add an image to a web page. Most elements require both opening and closing tags, but the &lt;img&gt; tag is a self-closing tag. Note that the end of the &lt;img&gt; tag has a forward slash /. Self-closing tags may include or omit the final slash — both will render properly.  </p> 
+               <p class="exemple">
+                   &gt;img src="image-location.jpg" /&lt;
+               </p>
+               <p>The &lt;img&gt; tag has a required attribute called src. The src attribute must be set to the image’s source, or the location of the image. In this case, the value of src must be the uniform resource locator (URL) of the image. A URL is the web address or local address where a file is stored.</p>
+            
+            
+               <h4>Image Alts</h4>
+               <p>Part of being an exceptional web developer is making your site accessible to users of all backgrounds. In order to make the Web more inclusive, we need to consider what happens when assistive technologies such as screen readers come across image tags.
+                The alt attribute, which means alternative text, brings meaning to the images on our sites. The alt attribute can be added to the image tag just like the src attribute. The value of alt should be a description of the image.
+                </p>
+                <p class="exemple">
+                    &lt;img src="#" alt="A field of yellow sunflowers" /&gt;
+                </p>
+                <p>The alt attribute also serves the following purposes:</p>
+                <ul>
+                    <li>If an image fails to load on a web page, a user can mouse over the area originally intended for the image and read a brief description of the image. This is made possible by the description you provide in the alt attribute.</li>
+                    <li>Visually impaired users often browse the web with the aid of screen reading software. When you include the alt attribute, the screen reading software can read the image’s description out loud to the visually impaired user.</li>
+                    <li>The alt attribute also plays a role in Search Engine Optimization (SEO), because search engines cannot “see” the images on websites as they crawl the internet. Having descriptive alt attributes can improve the ranking of your site</li>
+                </ul>
+                <p>If the image on the web page is not one that conveys any meaningful information to a user (visually impaired or otherwise), the alt attribute should be left empty.</p>
+            </div>
+
+            <div id="video">
+                <h3>Video</h3>
+                <p>In addition to images, HTML also supports displaying videos. Like the &lt;img&gt; tag, the &lt;video&gt; tag requires a src attribute with a link to the video source. Unlike the &lt;img&gt; tag however, the &lt;video&gt; element requires an opening and a closing tag.</p>
+                <p class="exemple">
+                    &lt;video src="myVideo.mp4" width="320" height="240" controls&gt; <br>
+                    Video not supported
+                  &lt;/video&gt;
+                  </p>
+                <p>In this example, the video source (src) is myVideo.mp4 The source can be a video file that is hosted alongside your webpage, or a URL that points to a video file hosted on another webpage. <br>
+                    After the src attribute, the width and height attributes are used to set the size of the video displayed in the browser. The controls attribute instructs the browser to include basic video controls: pause, play and skip. <br>
+                    The text, “Video not supported”, between the opening and closing video tags will only be displayed if the browser is unable to load the video.
+                    </p>
+            </div>
+
+            <div id="review">
+                <h3>Review</h3>
+                <ul>
+                    <li>HTML stands for HyperText Markup Language and is used to create the structure and content of a webpage.</li>
+                    <li>Most HTML elements contain opening and closing tags with raw text or other HTML tags between them.</li>
+                    <li>HTML elements can be nested inside other elements. The enclosed element is the child of the enclosing parent element.</li>
+                    <li>Any visible content should be placed within the opening and closing &lt;body&gt; tags.&lt;/li&gt;
+                    <li>Headings and sub-headings, &lt;h1&gt; to &lt;h6&gt; tags, are used to provide titles for sections of content.</li>
+                    <li>&lt;p&gt;, &lt;span&gt; and &lt;div&gt; tags specify text or blocks.</li>
+                    <li>The &lt;em&gt; and &lt;strong&gt; tags are used to emphasize text.</li>
+                    <li>Line breaks are created with the &lt;br&gt; tag.</li>
+                    <li>Ordered lists (&lt;ol&gt;) are numbered and unordered lists (&lt;ul&gt;) are bulleted.</li>
+                    <li>Images (&lt;img&gt;) and videos (&lt;video&gt;) can be added by linking to an existing source.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="3" id="preparing html">
+            <h2>Preparing for HTML</h2>
+            <p>how to set up an HTML file.</p>
+            <p>&lt;!DOCTYPE html&gt; </p>
+            <p>This declaration is an instruction, and it must be the first line of code in your HTML document. It tells the browser what type of document to expect, along with what version of HTML is being used in the document. For now, the browser will correctly assume that the html in <!DOCTYPE html> is referring to HTML5, as it is the current standard.
+                In the future, however, a new standard will override HTML5. To make sure your document is forever interpreted correctly, always include <!DOCTYPE html> at the very beginning of your HTML documents.
+                </p>
+            <div id="html tag">
+                <h3>The &lt;html&gt; tag</h3>
+                <p>The &lt;!DOCTYPE html&gt; declaration provides the browser with two pieces of information (the type of document and the HTML version to expect), but it doesn’t actually add any HTML structure or content.
+                    To create HTML structure and content, we must add opening and closing &lt;html&gt; tags after declaring &lt;!DOCTYPE html&gt;:
+                    </p>
+                <p class="exemple"> &lt;!DOCTYPE html&gt; <br>
+                    &lt;html&gt; <br>
+                    &lt;/html&gt; <br>
+                    </p>
+                <p>Anything between the opening &lt;html&gt; and closing &lt;/html&gt; tags will be interpreted as HTML code. Without these tags, it’s possible that browsers could incorrectly interpret your HTML code.</p>    
+            </div>
+
+            <div id="the head">
+                <h3>The Head</h3>
+                <p>So far you’ve done two things to set up the file properly:
+                </p>
+                <ul>
+                    <li>Declared to the browser that your code is HTML with <!DOCTYPE html></li>
+                    <li>Added the HTML element (<html>) that will contain the rest of your code.</li>
+                </ul>
+                <p>We have added these elements to the Brown Bears page you previously created. Now, let’s also give the browser some information about the page itself. We can do this by adding a &lt;head&gt; element.
+                    Remember the &lt;body&gt; tag? The &lt;head&gt; element is part of this HTML metaphor. It goes above our &lt;body&gt; element.
+                    The &lt;head&gt; element contains the metadata for a web page. Metadata is information about the page that isn’t displayed directly on the web page. Unlike the information inside of the &lt;body&gt; tag, the metadata in the head is information about the page itself. You’ll see an example of this in the next exercise.
+                    The opening and closing head tags typically appear as the first item after your first HTML tag: <br>
+                    &lt;head&gt; &lt;/head&gt;
+                   
+                    </p>
+
+            </div>
+
+            <div id="page title">
+                <h3>Page Title</h3>
+                <p>What kind of metadata about the web page can the &lt;head&gt; element contain?
+                    If you navigate to the Codecademy catalog and look at the top of your browser, you’ll notice the words All Courses & Tutorials | Codecademy, which is the title of the web page.
+                    A browser’s tab displays the title specified in the &lt;title&gt; tag. The &lt;title&gt; tag is always inside of the &lt;head&gt;.
+                    </p> 
+                <p class="exemple">
+                    &lt;!DOCTYPE html&gt; <br>
+                    &lt;html&gt; <br>
+                      &lt;head&gt; <br>
+                        &lt;title&gt;My Coding Journal&lt;/title&gt; <br>
+                      &lt;/head&gt; <br>
+                    &lt;/html&gt;
+                    </p>
+                <p>If we were to open a file containing the HTML code in the example above, the browser would display the words My Coding Journal in the title bar (or in the tab’s title).</p>
+            </div>
+
+            <div id="linking">
+                <h3> Creating links</h3>
+                <div id="new window">
+
+                    <h4>Opening Links in a New Window</h4>
+                    <p>the &lt;a&gt; element’s target attribute.
+                        The target attribute specifies how a link should open.
+                        It’s possible that one or more links on your web page link to an entirely different website. In that case, you may want users to read the linked website, but hope that they return to your web page. This is exactly when the target attribute is useful!
+                        For a link to open in a new window, the target attribute requires a value of _blank. The target attribute can be added directly to the opening tag of the anchor element, just like the href attribute.
+                        </p>
+                    <p id="exemple"> &lt;a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank"&gt;The Brown Bear&lt;/a&gt;</p>
+                    <p>In the example above, setting the target attribute to "_blank" instructs the browser to open the relevant Wikipedia page in a new window.
+                        In this exercise, we’ve used the terminology “open in a new window.” It’s likely that you are using a modern browser that opens up websites in new tabs, rather than new windows. 
+                        Before the advent of browsers with tabs, additional browser windows had to be opened to view more websites. The target="_blank" attribute, when used in modern browsers, will open new websites in a new tab.</p>
+                </div>
+
+                <div id="relative page">
+                    <h4>Linking to Relative Page</h4>
+                    <p>Many sites also link to internal web pages like Home, About, and Contact.
+                        When making multi-page static websites, web developers often store HTML files in the root directory, or a main folder where all the files for the project are stored. As the size of the projects you create grows, you may use additional folders within the main project folder to organize your code.</p>
+                    <p class="exemple">
+                        project-folder/ <br>
+                        |—— about.html <br>
+                        |—— contact.html <br>
+                        |—— index.html <br>
+                    </p>
+                    <p>The example above shows three different files — about.html, contact.html, and index.html in one folder. <br>
+                        HTML files are often stored in the same folder, as shown in the example above. If the browser is currently displaying index.html, it also knows that about.html and contact.html are in the same folder. 
+                        Because the files are stored in the same folder, we can link web pages together using a relative path.</p>
+                    <p class="exemple">&lt;a href="./contact.html"&gt;Contact&lt;/a&gt;</p>
+                    <p>In this example, the &lt;a&gt; tag is used with a relative path to link from the current HTML file to the contact.html file in the same folder. On the web page, Contact will appear as a link.
+                        A relative path is a filename that shows the path to a local file (a file on the same website, such as ./index.html) versus an absolute path (a full URL, like https://www.codecademy.com/learn/learn-html which is stored in a different folder). The ./ in ./index.html tells the browser to look for the file in the current folder.
+                    </p>
+      
+                </div>
+
+                <div id="linking at will">
+                    <h4>Linking At Will</h4>
+                    <p>HTML allows you to turn nearly any element into a link by wrapping that element with an anchor element. With this technique, it’s possible to turn images into links by simply wrapping the &lt;img&gt; element with an &lt;a&gt; element.</p>
+                    <p id="exemple">
+                        &lt;a href="https://en.wikipedia.org/wiki/Opuntia" target="_blank"&gt;&lt;img src="https://www.Prickly_Pear_Closeup.jpg" alt="A red prickly pear fruit"/&lt;&gt;/a&lt;
+                    </p>
+                    
+                </div>
+
+                <div id="linking to same page">
+                    <h4>Linking to Same Page</h4>
+                    <p>In order to link to a target on the same page, we must give the target an id, like this:</p>
+                    <p class="exemple">
+                        &lt;p id="top"&gt;This is the top of the page!&lt;/p&gt;
+                    &lt;h1 id="bottom"&gt;This is the bottom! &lt;/h1&gt;
+                    </p>
+                    <p>In this example, the &lt;p&gt; element is assigned an id of “top” and the &lt;h1&gt; element is assigned “bottom.” An id can be added to most elements on a webpage.
+                        An id should be descriptive to make it easier to remember the purpose of a link. The target link is a string containing the # character and the target element’s id.
+                    </p>
+                    <p class="exemple">
+                        &lt;ol&gt; <br>
+                            &lt;li&gt;&lt;a href="#top"&gt;Top&lt;/a&gt;&lt;/li&gt; <br>
+                            &lt;li&gt;&lt;a href="#bottom"&gt;Bottom&lt;/a&gt;&lt;/li&gt; <br>
+                          &lt;/ol&gt;      
+                    </p>
+
+                <div id=""></div>
+
+                </div>
+            </div>
+
+            <div id="indentation">
+                <h3>Whitespace  Indentation & comment</h3>
+                <p>Programmers use two tools to visualize the relationship between elements: whitespace and indentation.
+                    Whitespace (jump line)
+                    Indentation (double space bar) for each nesting
+                </p>
+                <p>Comments begin with &lt;!-- and end with --&gt;. </p>
+            </div>
+
+            <div id="review tags">
+                <h3>Review Tags</h3>
+                <p>A full list of available HTML tags can be found in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla documentation</a> .
+                </p>
+                <ul>
+                    <li>The &lt;!DOCTYPE html&gt; declaration should always be the first line of code in your HTML files. This lets the browser know what version of HTML to expect.</li>
+                    <li>The &lt;html&gt; element will contain all of your HTML code.</li>
+                    <li>Information about the web page, like the title, belongs within the &lt;head&gt; of the page.</li>
+                    <li>You can add a title to your web page by using the &lt;title&gt; element, inside of the head.</li>
+                    <li>A webpage’s title appears in a browser’s tab.</li>
+                    <li>Anchor tags (&lt;a&gt;) are used to link to internal pages, external pages or content on the same page.</li>
+                    <li>You can create sections on a webpage and jump to them using &lt;a&gt; tags and adding ids to the elements you wish to jump to.</li>
+                    <li>Whitespace between HTML elements helps make code easier to read while not changing how elements appear in the browser.</li>
+                    <li>Indentation also helps make code easier to read. It makes parent-child relationships visible.</li>
+                    <li>Comments are written in HTML using the following syntax: &lt;!-- comment --&gt;.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="table" >
+            <h2>TABLE</h2>
+            <div id="table rows">
+                <h3>Table Rows</h3>
+                <p>In many programs that use tables, the table is already predefined for you, meaning that it contains the rows, columns, and cells that will hold data. In HTML, all of these components must be created.
+                    The first step in entering data into the table is to add rows using the table row element: &lt;tr&gt;.</p>
+                <p class="exemple">
+                    &lt;table&gt; <br>
+                    &lt;tr&gt; <br>
+                    &lt;/tr&gt; <br>
+                    &lt;tr&gt; <br>
+                    &lt;/tr&gt; <br>
+                  &lt;/table&gt; <br>
+                  </p>
+            </div>  
+            
+            <div id="table data">
+                <p>Rows aren’t sufficient to add data to a table. Each cell element must also be defined. In HTML, you can add data using the table data element: &lt;td&gt;.</p>
+                <p class="exemple">
+                    &lt;tr&gt; <br>
+                        &lt;td&gt;73&lt;/td&gt; <br>
+                        &lt;td&gt;81&lt;/td&gt; <br>
+                      &lt;/tr&gt; <br>
+                    &lt;/table&gt; <br>
+                    
+                </p>
+            </div>
+
+            <div id="table headings">
+                <h3>Table Headings</h3>
+                <p>Table data doesn’t make much sense without titles to describe what the data represents.
+                    To add titles to rows and columns, you can use the table heading element: <th>.
+                    The table heading element is used just like a table data element, except with a relevant title. Just like table data, a table heading must be placed within a table row.
+                    </p>
+                <p class="exemple">
+                    &lt;table&gt; <br>
+                        &lt;tr&gt; <br>
+                          &lt;th&gt;&lt;/th&gt; <br>
+                          &lt;th scope="col"&gt;Saturday&lt;/th&gt; <br>
+                          &lt;th scope="col"&gt;Sunday&lt;/th&gt; <br>
+                        &lt;/tr&gt; <br>
+                        &lt;tr&gt; <br>
+                          &lt;th scope="row"&gt;Temperature&lt;/th&gt; <br>
+                          &lt;td&gt;73&lt;/td&gt; <br>
+                          &lt;td&gt;81&lt;/td&gt; <br>
+                        &lt;/tr&gt; <br>
+                      &lt;/table&gt; <br>                    
+                </p>
+                <table>
+                    <tr>
+                      <th></th>
+                      <th scope="col">Saturday</th>
+                      <th scope="col">Sunday</th>
+                    </tr>
+                    <tr>
+                      <th scope="row">Temperature</th>
+                      <td>73</td>
+                      <td>81</td>
+                    </tr>
+                  </table>
+                  
+            </div>
+
+            <div id="spanning columns"></div>
+                <h3>Spanning Columns</h3>
+                <p>What if the table contains data that spans multiple columns?
+                    For example, a personal calendar could have events that span across multiple hours, or even multiple days.
+                    Data can span columns using the colspan attribute. The attribute accepts an integer (greater than or equal to 1) to denote the number of columns it spans across.
+                    </p>
+                <p class="exemple">
+                    &lt;table&gt; <br>
+                        &lt;tr&gt; <br>
+                          &lt;th&gt;Monday&lt;/th&gt; <br>
+                          &lt;th&gt;Tuesday&lt;/th&gt; <br>
+                          &lt;th&gt;Wednesday&lt;/th&gt; <br>
+                        &lt;/tr&gt; <br>
+                        &lt;tr&gt; <br>
+                          &lt;td colspan="2"&gt;Out of Town&lt;/td&gt; <br>
+                          &lt;td&gt;Back in Town&lt;/td&gt; <br>
+                        &lt;/tr&gt; <br>
+                      &lt;/table&gt; <br>   
+                </p>  
+                <table>
+                    <tr>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Out of Town</td>
+                        <td>Back in Town</td>
+                    </tr>
+                </table> 
+                <p>In the example above, the data Out of Town spans the Monday and Tuesday table headings using the value 2 (two columns). The data Back in Town appear only under the Wednesday heading.</p>      
+        </div>
+
+        <div id="spanning rows">
+            <h3>Spanning Rows</h3>
+            <p>Data can also span multiple rows using the rowspan attribute.
+                The rowspan attribute is used for data that spans multiple rows (perhaps an event goes on for multiple hours on a certain day). It accepts an integer (greater than or equal to 1) to denote the number of rows it spans across.
+                </p>
+            <p class="exemple">
+                &lt;/table&gt; <br>
+                &nbsp; &nbsp; &lt;tr&gt; &lt;!-- Row 1 --&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp;   &lt;th&gt;&lt;/th&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp;   &lt;th&gt;Saturday&lt;/th&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp;   &lt;th&gt;Sunday&lt;/th&gt; <br>
+                &nbsp; &nbsp;     &lt;/tr&gt; <br>
+                &nbsp; &nbsp;     &lt;tr&gt; &lt;!-- Row 2 --&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp;    &lt;th&gt;Morning&lt;/th&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    &lt;td rowspan="2"&gt;Work&lt;/td&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    &lt;td rowspan="3"&gt;Relax&lt;/td&gt; <br>
+                &nbsp; &nbsp;    &lt;/tr&gt; <br>
+                &nbsp; &nbsp;     &lt;tr&gt; &lt;!-- Row 3 --&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp;    &lt;th&gt;Afternoon&lt;/th&gt; <br>
+                &nbsp; &nbsp;    &lt;/tr&gt; <br>
+                &nbsp; &nbsp;    &lt;tr&gt; &lt;!-- Row 4 --&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp;   &lt;th&gt;Evening&lt;/th&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    &lt;td&gt;Dinner&lt;/td&gt; <br>
+                &nbsp; &nbsp;    &lt;/tr&gt; <br>
+                    &lt;/table&gt; <br>    
+            </p>
+            <table class="table_exemple">
+
+                <tr> <!-- Row 1 -->
+                  <th></th>
+                  <th>Saturday</th>
+                  <th>Sunday</th>
+                </tr>
+                <tr> <!-- Row 2 -->
+                  <th>Morning</th>
+                  <td rowspan="2">Work</td>
+                  <td rowspan="3">Relax</td>
+                </tr>
+                <tr> <!-- Row 3 -->
+                  <th>Afternoon</th>
+                </tr>
+                <tr> <!-- Row 4 -->
+                  <th>Evening</th>
+                  <td>Dinner</td>
+                </tr>
+              </table>
+            </div>
+            
+            <div id="table body">
+                <h3>Table Body</h3>
+                <p>Over time, a table can grow to contain a lot of data and become very long. When this happens, the table can be sectioned off so that it is easier to manage.
+                    Long tables can be sectioned off using the table body element: &lt;tbody&gt;.
+                    The &lt;tbody&gt; element should contain all of the table’s data, excluding the table headings (more on this in a later exercise).</p>
+                <p class="exemple">
+                &lt;/table&gt; <br>
+                &nbsp; &nbsp; &lt;/body&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp;&lt;tr&gt; &lt;!-- Row 1 --&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&lt;th&gt;&lt;/th&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Saturday&lt;/th&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Sunday&lt;/th&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt; &lt;!-- Row 2 --&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Morning&lt;/th&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td rowspan="2"&gt;Work&lt;/td&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td rowspan="3"&gt;Relax&lt;/td&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt; &lt;!-- Row 3 --&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Afternoon&lt;/th&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt; &lt;!-- Row 4 --&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Evening&lt;/th&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Dinner&lt;/td&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt; <br>
+                &nbsp; &nbsp; &lt;/tbody&gt; <br>
+                &lt;/table&gt; <br>  </p>
+            </table class= table_exemple>
+                </body>
+                    <tr> <!-- Row 1 -->
+                        <th></th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                     </tr>
+                    <tr> <!-- Row 2 -->
+                        <th>Morning</th>
+                            <td rowspan="2">Work</td>
+                            <td rowspan="3">Relax</td>
+                    </tr>
+                    <tr> <!-- Row 3 -->
+                        <th>Afternoon</th>
+                    </tr>
+                    <tr> <!-- Row 4 -->
+                    <th>Evening</th>
+                        <td>Dinner</td>
+                    </tr>
+                </tbody>
+            </table> 
+
+            </div>
+
+            <div id="table head">
+                <h3>Table Head</h3>
+                <p>In the last exercise, the table’s headings were kept inside of the table’s body. When a table’s body is sectioned off, however, it also makes sense to section off the table’s column headings using the &lt;thead&gt; element.</p>
+                <p class="exemple">
+                    &lt;/table&gt; <br>   
+                    &nbsp; &nbsp;&lt;thead&gt; <br> 
+                    &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt; <br> 
+                    &nbsp; &nbsp; &nbsp; &nbsp;  &lt;th&gt;&lt;/th&gt; <br> 
+                    &nbsp; &nbsp; &nbsp; &nbsp;  &lt;th scope="col"&gt;Saturday&lt;/th&gt; <br> 
+                    &nbsp; &nbsp; &nbsp; &nbsp;   &lt;th scope="col"&gt;Sunday&lt;/th&gt; <br> 
+                    &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt; <br> 
+                    &nbsp; &nbsp;   &lt;thead&gt; <br> 
+                      &nbsp; &nbsp; &lt;/body&gt; <br>
+                      "...code for the body" <br>
+                      &nbsp; &nbsp; &lt;/tbody&gt; <br>
+                &lt;/table&gt; <br> 
+                    
+                </p>
+            </div>
+
+            <div id="table footer">
+                <h3>Table Footer</h3>
+                <p>The bottom part of a long table can also be sectioned off using the &lt;tfoot&gt; element.</p>
+
+            </div>
+
+            <div id="review table">
+                <h3>Review Table</h3>
+                <ul>
+                    <li>The &lt;table&gt; element creates a table.</li>
+                    <li>The &lt;tr&gt; element adds rows to a table.</li>
+                    <li>To add data to a row, you can use the &lt;td&gt; element.</li>
+                    <li>Table headings clarify the meaning of data. Headings are added with the &lt;th&gt; element.</li>
+                    <li>Table data can span columns using the colspan attribute.</li>
+                    <li>Table data can span rows using the rowspan attribute.</li>
+                    <li>Tables can be split into three main sections: a head, a body, and a footer.</li>
+                    <li>A table’s head is created with the &lt;thead&gt; element.</li>
+                    <li>A table’s body is created with the &lt;tbody&gt; element.</li>
+                    <li>A table’s footer is created with the &lt;tfoot&gt; element.</li>
+                   
+
+                </ul>
+
+            </div>
+        <div id="semantic">
+            <h2>Introduction to Semantic HTML</h2>
+            <p>When building web pages, we use a combination of non-semantic HTML and Semantic HTML. The word semantic means “relating to meaning,” so semantic elements provide information about the content between the opening and closing tags.
+                By using Semantic HTML, we select HTML elements based on their meaning, not on how they are presented. Elements such as &lt;div&gt; and &lt;span&gt; are not semantic elements since they provide no context as to what is inside of those tags.
+                For example, instead of using a &lt;div&gt; element to contain our header information, we could use a &lt;header&gt; element, which is used as a heading section. By using a &lt;header&gt; tag instead of a &lt;div&gt;, we provide context as to what information is inside of the opening and closing tag.
+                </p>
+            <div id="Why use Semantic HTML?">
+                <h3>Why use Semantic HTML?</h3>
+               <ul>
+                   <li> <strong>Accessibility: </strong> Semantic HTML makes webpages accessible for mobile devices and for people with disabilities as well. This is because screen readers and browsers are able to interpret the code better.</li>
+                   <li> <strong> SEO:</strong> It improves the website SEO, or Search Engine Optimization, which is the process of increasing the number of people that visit your webpage. With better SEO, search engines are better able to identify the content of your website and weight the most important content appropriately.</li>
+                   <li> <strong>Easy to Understand: </strong> Semantic HTML also makes the website’s source code easier to read for other web developers.</li>
+               </ul>
+               <p>To better understand this, you can think of comparing non-semantic HTML to going into a store with no signs on the aisles. Since the aisles aren’t labeled, you don’t know what products are in those aisles. However, stores that do have signs for each aisle make it a lot easier to find the items you need, just like Semantic HTML.</p>
+            </div>
+
+            <article id="Header and Nav">
+                <h3>Header and Nav</h3>
+                <p>Let’s take a look at some semantic elements that assist in the structure of a web page. A &lt;header&gt; is a container usually for either navigational links or introductory content containing &lt;h1&gt; to &lt;h6&gt; headings.
+                    The example below shows &lt;header&gt; in action:
+                    </p>
+                <p class="exemple">
+                    &lt;header&gt; <br>
+                    &nbsp; &nbsp;    &lt;h1&gt;
+                           Everything you need to know about pizza!
+                        &lt;/h1&gt; <br>
+                      &lt;/header&gt;
+                </p>
+                <p>    This can be compared to the code below which uses a &lt;div&gt; tag instead of a &lt;header&gt; tag:
+                </p>
+                <p class="exemple">    
+                    &lt;div id="header"&gt; <br>
+                      &nbsp; &nbsp;   &lt;h1&gt;
+                          Everything you need to know about pizza!
+                        &lt;/h1&gt; <br>
+                      &lt;/div&gt;
+                      
+                </p>
+                <p>
+                    By using a &lt;header&gt; tag, our code becomes easier to read. It is much easier to identify what is inside of the &lt;h1&gt;‘s parent tags, as opposed to a &lt;div&gt; tag which would provide no details as to what was inside of the tag.
+                        A &lt;nav&gt; is used to define a block of navigation links such as menus and tables of contents. It is important to note that &lt;nav&gt; can be used inside of the &lt;header&gt; element but can also be used on its own.
+                        Let’s take a look at the example below:        
+                </p>
+                <p class="exemple">
+                    &lt;header&gt; <br>
+                    &nbsp; &nbsp;  &lt;nav&gt; <br>
+                    &nbsp; &nbsp;  &nbsp; &nbsp;   &lt;ul&gt; <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;li&gt; &lt;a href="#home">Home &lt;/a&gt; &lt;/li&gt; <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;li&gt; &lt;a href="#about"&gt;About &lt;/a&gt; &lt;/li&gt;      <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp;   &lt;/ul&gt;  <br>
+                    &nbsp; &nbsp; &lt;/nav&gt;  <br>
+                    &lt;/header&gt; <br>
+                      
+                </p>
+
+            </article>
+
+            <article id="Main and Footer">
+                <h3>Main and Footer</h3>
+                <p>Two more structural elements are &lt;main&gt; and &lt;footer&gt;. These elements along with &lt;nav&gt; and &lt;header&gt; help describe where an element is located based on conventional web development standards.
+                    The element &lt;main&gt; is used to encapsulate the dominant content within a webpage. This tag is separate from the &lt;footer&gt; and the &lt;nav&gt; of a web page since these elements don’t contain the principal content. By using &lt;main&gt; as opposed to a &lt;div&gt; element, screen readers and web browsers are better able to identify that whatever is inside of the tag is the bulk of the content.
+                    So how does &lt;main&gt; look when incorporated into our code? That’s a great question.
+                    </p>
+                <p class="exemple">
+                    &lt;main"&gt; <br>
+                    &nbsp; &nbsp; &lt;header"&gt; <br>
+                    &nbsp; &nbsp;&nbsp; &nbsp;   &lt;h1&gt; Types of Sports &lt;/h1&gt; <br>
+                    &nbsp; &nbsp; &lt;/header"&gt; <br>
+                    &nbsp; &nbsp; &lt;article"&gt; <br>
+                    &nbsp; &nbsp;&nbsp; &nbsp;   &lt;h2&gt;Baseball &lt;/h2&gt; <br>
+                    &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;   &lt;p&gt;The first game of baseball was played in Cooperstown, New York in the summer of 1839.
+                    &lt;/p&gt; <br>
+                
+                    &nbsp; &nbsp; &lt;/article"&gt; <br>
+                    &lt;/main&gt;
+                </p>
+
+               <p>As we see above, &lt;main&gt; contains an &lt;article&gt; and &lt;header&gt; tag with child elements that hold the most important information related to the page.
+                The content at the bottom of the subject information is known as the footer, indicated by the &lt;footer&gt; element. The footer contains information such as:
+                </p>
+                <ul>
+                    <li>Contact information</li>
+                    <li>Copyright information</li>
+                    <li>Terms of use</li>
+                    <li>Site Map</li>
+                    <li>Reference to top of page links</li>
+
+                </ul>
+            </article>
+
+            <article id="Article and Section">
+                <h3>Article and Section</h3>
+                <p>Now that we covered the body of Semantic HTML, let’s focus on what can go in the body. The two elements we’re going to focus on now are &lt;section&gt; and &lt;article&gt;.
+                    &lt;section&gt; defines elements in a document, such as chapters, headings, or any other area of the document with the same theme. For example, content with the same theme such as articles about cricket can go under a single &lt;section&gt;. A website’s home page could be split into sections for the introduction, news items, and contact information.
+                    
+                <p class="exemple">
+                &nbsp; &nbsp; &lt;section&gt; <br>
+                &nbsp; &nbsp; &nbsp; &nbsp;   &lt;h2&gt;Fun Facts About Cricket &lt;/h2&gt; <br>
+                    &lt;article&gt; <br>
+                    &nbsp; &nbsp;&nbsp; &nbsp;    &lt;p&gt;A single match of cricket can last up to 5 days. &lt;/p&gt; <br>
+                    &nbsp; &nbsp;&nbsp; &nbsp; &lt;/article&gt; <br>
+                    &lt;/section&gt;
+                      
+                </p>
+            </article>
+
+
+            <article id="The Aside Element">
+                <h3>The Aside Element</h3>
+                <p>The <strong>&lt;aside&gt; </strong> element is used to mark additional information that can enhance another element but isn’t required in order to understand the main content. This element can be used alongside other elements such as&lt;article&gt; or &lt;section&gt;. Some common uses of the &lt;aside&gt; element are for:
+                    </p>
+                <ul>
+                    <li>Bibliographies</li>
+                    <li>Endnotes</li>
+                    <li>Comments</li>
+                    <li>Editorial sidebars</li>
+                    <li>Additional information</li>
+                </ul>
+            </article>
+            <article id="Figure and Figcaption">
+                <h3>Figure and Figcaption</h3>
+                <p> With  &lt;aside&gt;, we learned that we can put additional information next to a main piece of content, but what if we wanted to add an image or illustration? That is where &lt;figure7gt; and &lt;figcaption&gt; come in.
+                    &lt;figure&gt; is an element used to encapsulate media such as an image, illustration, diagram, code snippet, etc, which is referenced in the main flow of the document.
+                    
+                    </p>
+                <p class="exemple">
+                    &lt;figure&gt; <br>
+                    &nbsp; &nbsp;    &lt;img src="overwatch.jpg"&gt; <br>
+                      &lt;/figure&gt; <br>
+                      
+                </p>
+                <p>It’s possible to add a caption to the image by using &lt;figcaption&gt;.
+                    &lt;figcaption&gt; is an element used to describe the media in the &lt;figure&gt; tag. Usually, &lt;figcaption&gt; will go inside &lt;figure&gt;. This is different than using a &lt;p&gt; element to describe the content; if we decide to change the location of &lt;figure&gt;, the paragraph tag may get displaced from the figure while a &lt;figcaption&gt; will move with the figure. This is useful for grouping an image with a caption.
+                    </p>
+                <p class="exemple">
+                    &lt;figure&gt; <br>
+                    &nbsp; &nbsp; &lt;img src="overwatch.jpg"&gt; <br>
+                    &nbsp; &nbsp;    &lt;figcaption&gt;This picture shows characters from Overwatch.&lt;/figcaption&gt; <br>
+                      &lt;/figure&gt;
+                      
+                </p>
+            </article>
+            <article id="Audio and Attributes">
+                <h3>Audio and Attributes</h3>
+                <p> Now that we learned about text-based content, let us dig into &lt;audio&gt;! Surely everyone needs &lt;audio&gt;—how else would you listen to your Korean hip hop?
+                    The &lt;audio&gt; element is used to embed audio content into a document. Like &lt;video&gt;, &lt;audio&gt; uses src to link the audio source.
+                    
+                    </p>
+                <p class="exemple">
+                    &lt;audio&gt; <br>
+                        &lt;source src="iAmAnAudioFile.mp3" type="audio/mp3"&gt; <br>
+                      &lt;/audio&gt; <br>
+                       
+                </p>
+            </article>
+            <article id="Video and Embed">
+                <h3>Video and Embed</h3>
+                <p>As demonstrated in the previous exercise, media content can be a useful addition to a website. By using a &lt;video&gt; element, we can add videos to our website. The &lt;video&gt; element makes it clear that a developer is attempting to display a video to the user.
+                    Some attributes that can alter a video playback include:                    
+                    </p>
+                <ul>
+                    <li><strong>controls:</strong> When added in, a play/pause button will be added onto the video along with volume control and a fullscreen option.</li>
+                    <li> <strong>autoplay:</strong>The attribute which results in a video automatically playing as soon as the page is loaded.</li>
+                    <li> <strong>loop: </strong> This attribute results in the video continuously playing on repeat. </li>
+                    <li></li>
+
+                </ul>
+              
+            </article>
+
+            <article id="review semantic">
+                <h3>Review Semantic</h3>
+                <ul>
+                    <li>Semantic HTML introduces meaning to a page through specific elements that provide context as to what is in between the tags.</li>
+                    <li>Semantic HTML is a modern standard and makes a website accessible for people who use screen readers to translate the webpage and improves your website’s SEO. </li>
+                    <li> <strong>&lt;header&gt;</strong>, <strong> &lt;nav&gt; </strong>,<strong> &lt;main&gt;</strong> and <strong> &lt;footer&gt;</strong> create the basic structure of the webpage. </li>
+                    <li> <strong>&lt;section>&gt;</strong> defines elements in a document, such as chapters, headings, or any other area of the document with the same theme. </li>
+                    <li><strong> &lt;article&gt;</strong> holds content that makes sense on its own such as articles, blogs, comments, etc. </li>
+                    <li> <strong>&lt;aside&gt;</strong> contains information that is related to the main content, but not required in order to understand the dominant information.</li>
+                    <li> <strong>&lt;figure&gt;</strong> encapsulates all types of media. </li>
+                    <li><strong>&lt;figcaption&gt;</strong> is used to describe the media in &lt;figure&gt;.</li>
+                    <li> <strong>&lt;video&gt;</strong>,<strong>&lt;embed&gt;</strong>, and <strong>&lt;audio&lt;</strong> elements are used for media files.</li>
+                </ul>
+            </article>
+        </div>
+    </main>
+</body>
+</html>

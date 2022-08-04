@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+
+  }
+
+a {
+    
+    color: rgb(25, 147, 187);
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(45, 187, 247);  
+}
+
+header{
+    width:100%;
+    height: 100px;
+    position:absolute ;
+    z-index: 1;
+    background-color: rgb(25, 147, 187);
+}
+
+
+
+
+
+h1{
+    
+    
+    text-align: center;
+    font-size: 50px ;
+    color:white;
+    font-family: ''Merriweather'', serif;
+}
+
+
+
+nav{
+    position: absolute; 
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    top: 100px;
+      
+    height: 500px;
+    overflow-y: scroll; 
+    padding:5px;
+    margin: 5px ;
+
+
+   
+}
+
+
+
+

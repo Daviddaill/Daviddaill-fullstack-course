@@ -1,0 +1,1395 @@
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Improved styling with CSS</title>
+        <link rel="stylesheet" href="resources/css/courses.css">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap"
+                rel="stylesheet">
+</head>
+
+<body>
+        <header>
+                <p id="main"><a href="index.html">Main page </a></p>
+                <h1>Improves Styling With CSS</h1>
+        </header>
+        <nav>
+                <ol>
+                        <li> <a href="#1">Color </a></li>
+                        <ul>
+                                <li> <a href="#1a">Introduction to Color</a> </li>
+                                <li><a href="#1b">Foreground vs Background</a> </li>
+                                <li><a href="#1c">Hue, Saturation, and Lightness</a>
+                                </li>
+                                <li><a href="#1d">Opacity and Alpha</a> </li>
+                                <li><a href="#1e">Review</a> </li>
+                        </ul>
+
+                        <li> <a href="#2"> Typography </a> </li>
+                        <ul>
+                                <li> <a href="#2a">Font Family </a> </li>
+                                <li> <a href="#2b">Multi-Word Values </a> </li>
+                                <li> <a href="#2c"> Web Safe Fonts</a> </li>
+                                <li> <a href="#2d"> Fallback Fonts and Font Stacks </a>
+                                </li>
+                                <li> <a href="#2e"> Serif and Sans-Serif </a> </li>
+                                <li> <a href="#2f"> Font Weight </a> </li>
+                                <li> <a href="#2g"> Font Style </a> </li>
+                                <li> <a href="#2h"> Text Transformation </a> </li>
+                                <li> <a href="#2i"> Text Layout </a> </li>
+                                <li> <a href="#2j"> Text Alignment </a> </li>
+                                <li> <a href="#2k"> Web Fonts </a> </li>
+                                <ul>
+                                        <li> <a href="#2ka">Web Fonts Using
+                                                        <link>
+                                                </a> </li>
+                                        <li><a href="#2kb">Web Fonts Using
+                                                        @font-face</a> </li>
+                                </ul>
+                                <li> <a href="#2l"> Review </a> </li>
+                        </ul>
+
+                        <li> <a href="#3">Learn Links and Buttons</a> </li>
+                        <ul>
+                                <li> <a href="#3a">Tooltips and Titles </a> </li>
+                                <li> <a href="#3b">Hover States and Cursors </a> </li>
+                                <li> <a href="#3c"> Link States </a> </li>
+                                <li> <a href="#3d"> Skeuomorphism and Flat Design </a>
+                                </li>
+                                <li> <a href="#3e"> Buttons: Skeuomorphic styling </a>
+                                </li>
+                                <li> <a href="#3f"> Buttons: Flat Design </a> </li>
+                                <li> <a href="#3g"> Buttons: Hover States </a> </li>
+                                <li> <a href="#3h"> Review </a> </li>
+                        </ul>
+
+
+                        <li> <a href="#4">Secondary navigation</a></li>
+                        <ul>
+                                <li> <a href="#4a">What is primary vs secondary
+                                                navigation? </a> </li>
+                                <li> <a href="#4b">Why do we call them breadcrumbs? </a>
+                                </li>
+                                <li> <a href="#4c">Benefit of using breadcrumbs </a>
+                                </li>
+                                <li> <a href="#4d"> Simple Example of Breadcrumbs </a>
+                                </li>
+                                <li> <a href="#4e"> Where do Breadcrumbs Lead </a> </li>
+                                <li> <a href="#4f"> CSS set up of a basic breadcrumb
+                                        </a> </li>
+                                <li> <a href="#4g"> Review </a> </li>
+                        </ul>
+
+
+                </ol>
+        </nav>
+        <main>
+                
+                <ul class="c4 lst-kix_v9q81ew640pv-0 start">
+                        <li class="c27 c7 li-bullet-0"><span class="c5">Apply more
+                                        custom colors and fonts</span></li>
+                        <li class="c27 c7 li-bullet-0"><span class="c5">Style navigation
+                                        elements like links and buttons</span></li>
+                        <li class="c27 c7 li-bullet-0"><span class="c5">Create secondary
+                                        (breadcrumb) navigation</span></li>
+                </ul>
+                <h2 id="1" ><span class="c13">Color</span></h2>
+                <p class="c3 c8"><span class="c15"></span></p>
+                <h3 id="1a"><span class="c12">Introduction to
+                                Color</span></h3>
+                <p class="c3 c8"><span class="c31"></span></p>
+                <ul class="c4 lst-kix_mn8lnnsfkqlp-0 start">
+                        <li class="c7 c27 li-bullet-0"><span class="c20">Named
+                                        colors</span><span>&nbsp;&mdash; English words
+                                        that
+                                        describe colors, also called </span><span class="c20 c33">keyword
+                                        colors</span></li>
+                        <li class="c27 c7 li-bullet-0"><span class="c20">RGB</span><span class="c5">&nbsp;&mdash;
+                                        numeric values that
+                                        describe a mix of red, green, and blue</span>
+                        </li>
+                        <li class="c27 c7 li-bullet-0"><span class="c20">HSL</span><span class="c5">&nbsp;&mdash;
+                                        numeric values that
+                                        describe a mix of hue, saturation, and
+                                        lightness</span></li>
+                </ul>
+                <h3 id="1b"><span class="c12">Foreground vs
+                                Background</span></h3>
+                <p class="c3 c8"><span class="c31"></span></p>
+                <ul class="c4 lst-kix_strthem4osbn-0 start">
+                        <li class="c27 c7 li-bullet-0"><span class="c5">color - this
+                                        property styles an element&rsquo;s foreground
+                                        color.</span></li>
+                        <li class="c27 c7 li-bullet-0"><span class="c5">background-color
+                                        - this property styles an element&rsquo;s
+                                        background color.</span></li>
+                </ul>
+                <p class="c3 c8"><span class="c15"></span></p>
+                <h3 id="1c"><span class="c12">Hue, Saturation,
+                                and Lightness</span></h3>
+                <p class="c0"><span>The RGB color scheme is convenient because
+                                it&rsquo;s very close to how computers represent
+                                colors internally. There&rsquo;s another equally
+                                powerful system in CSS called the
+                                hue-saturation-lightness
+                                color scheme, abbreviated as </span><span class="c20">HSL</span><span
+                                class="c5">.</span></p>
+                <p class="c0"><span class="c5">The syntax for HSL is similar to the
+                                decimal form of RGB, though it differs in
+                                important ways. The first number represents the degree
+                                of the hue, and can be between 0 and 360. The second
+                                and third numbers are percentages representing
+                                saturation and lightness respectively. Here is an
+                                example:</span></p>
+                <p class="c3"><span class="c5">color: hsl(120, 60%, 70%);</span></p>
+                <p class="c0"><span class="c20">Hue</span><span class="c5">&nbsp;is the
+                                first number. It refers to an angle on a
+                                color wheel. Red is 0 degrees, Green is 120 degrees,
+                                Blue is 240 degrees, and then back to Red at 360. You
+                                can see an example of a color wheel below.</span></p>
+                <p class="c0 c8"><span class="c5"></span></p>
+                <p class="c0"><span class="c20">Saturation</span><span class="c5">&nbsp;refers to the intensity
+                                or purity of
+                                the
+                                color. The saturation increases towards 100% as the
+                                color becomes richer. The saturation decreases towards
+                                0% as the color becomes grayer.</span></p>
+                <p class="c0"><span class="c20">Lightness</span><span class="c5">&nbsp;refers to how light or
+                                dark the color
+                                is.
+                                Halfway, or 50%, is normal lightness. Imagine a sliding
+                                dimmer on a light switch that starts halfway.
+                                Sliding the dimmer up towards 100% makes the color
+                                lighter, closer to white. Sliding the dimmer down
+                                towards
+                                0% makes the color darker, closer to black.</span></p>
+                <p class="c0"><span class="c5">HSL is convenient for adjusting colors.
+                                In RGB, making the color a little darker may
+                                affect all three color components. In HSL, that&rsquo;s
+                                as easy as changing the lightness value. HSL is also
+                                useful for making a set of colors that work well
+                                together by selecting various colors that have the same
+                                lightness and saturation but different hues.</span></p>
+                <p class="c3 c8"><span class="c31"></span></p>
+                <h3 id="1d"><span class="c12">Opacity and
+                                Alpha</span></h3>
+                <p class="c0"><span>All of the colors we&rsquo;ve seen so far have been
+                                opaque, or non-transparent. When we overlap
+                                two opaque elements, nothing from the bottom element
+                                shows through the top element. In this exercise,
+                                we&rsquo;ll change the </span><span class="c20">opacity</span><span class="c5">,
+                                or the
+                                amount of
+                                transparency, of some colors so that some or all of the
+                                bottom elements are visible through a covering
+                                element.</span></p>
+                <p class="c0"><span class="c5">To use opacity in the HSL color scheme,
+                                use hsla instead of hsl, and four values
+                                instead of three. For example:</span></p>
+                <p class="c3"><span class="c5">color: hsla(34, 100%, 50%, 0.1);</span>
+                </p>
+                <p class="c0"><span>The first three values work the same as hsl. The
+                                fourth value (which we have not seen before) is
+                                the </span><span class="c20">alpha</span><span class="c5">. This last value is
+                                sometimes called
+                                opacity.</span></p>
+                <p class="c0"><span class="c5">Alpha is a decimal number from zero to
+                                one. If alpha is zero, the color will be
+                                completely transparent. If alpha is one, the color will
+                                be opaque. The value for half-transparent would be
+                                0.5.</span></p>
+                <p class="c0"><span class="c5">You can think of the alpha value as,
+                                &ldquo;the amount of the background to mix with
+                                the foreground&rdquo;. When a color&rsquo;s alpha is
+                                below one, any color behind it will be blended in. The
+                                blending happens for each pixel; no blurring
+                                occurs.</span></p>
+                <p class="c0"><span class="c5">The RGB color scheme has a similar syntax
+                                for opacity, rgba. Again, the first three
+                                values work the same as rgb and the last value is the
+                                alpha. Here&rsquo;s an example:</span></p>
+                <p class="c3"><span class="c5">color: rgba(234, 45, 98, 0.33);</span>
+                </p>
+                <p class="c0"><span class="c5">A little unconventional, but still worth
+                                mentioning is how hex colors can also have
+                                an alpha value. By adding a two-digit hexadecimal value
+                                to the end of the six-digit representation
+                                (#52BC8280), or a one-digit hexadecimal value to the end
+                                of the three-digit representation (#F003), you can
+                                change the opacity of a hexadecimal color. Hex opacity
+                                ranges from 00 (transparent) to FF (opaque).</span>
+                </p>
+                <p class="c0"><span class="c5">Alpha can only be used with HSL, RGB, and
+                                hex colors; we cannot add the alpha value
+                                to name colors like green.</span></p>
+                <p class="c0"><span class="c5">There is, however, a named color keyword
+                                for zero opacity, transparent. It&rsquo;s
+                                equivalent to rgba(0, 0, 0, 0), and it&rsquo;s used like
+                                any other color keyword:</span></p>
+                <p class="c3"><span class="c5">color: transparent;</span></p>
+                <p class="c3 c8"><span class="c15"></span></p>
+                <p class="c3 c8"><span class="c15"></span></p>
+                <h3 id="1e"><span class="c12">Review</span></h3>
+                <p class="c0"><span class="c5">There are four ways to represent color in
+                                CSS:</span></p>
+                <ul class="c4 lst-kix_umsf5tgtjegd-0 start">
+                        <li class="c0 c7 li-bullet-0"><span>Named colors&mdash;there are
+                                        more than 140 named colors, which you can
+                                        review</span><span><a class="c29"
+                                                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/CSS/color_value&amp;sa=D&amp;source=editors&amp;ust=1659358834343174&amp;usg=AOvVaw17xk4RPa21uj8mJ-KGbcvV">&nbsp;</a></span><span
+                                        class="c30"><a class="c29"
+                                                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/CSS/color_value&amp;sa=D&amp;source=editors&amp;ust=1659358834343509&amp;usg=AOvVaw3hcRP6Kv9VODJOL-BBl_-9">here</a></span><span
+                                        class="c5">.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Hexadecimal or
+                                        hex colors</span></li>
+                </ul>
+                <ul class="c4 lst-kix_umsf5tgtjegd-1 start">
+                        <li class="c0 c36 li-bullet-0"><span class="c5">Hexadecimal is a
+                                        number system with has sixteen digits, 0 to 9
+                                        followed by &ldquo;A&rdquo; to
+                                        &ldquo;F&rdquo;.</span></li>
+                        <li class="c0 c36 li-bullet-0"><span class="c5">Hex values
+                                        always begin with # and specify values of red,
+                                        blue,
+                                        and green using hexadecimal numbers such as
+                                        #23F41A.</span></li>
+                        <li class="c0 c36 li-bullet-0"><span class="c5">Six-digit hex
+                                        values with duplicate values for each RGB value
+                                        can be shorted to three digits.</span></li>
+                </ul>
+                <ul class="c4 lst-kix_umsf5tgtjegd-0">
+                        <li class="c0 c7 li-bullet-0"><span class="c5">RGB</span></li>
+                </ul>
+                <ul class="c4 lst-kix_umsf5tgtjegd-1 start">
+                        <li class="c0 c36 li-bullet-0"><span class="c5">RGB colors use
+                                        the rgb() syntax with one value for red, one
+                                        value for blue and one value for green.</span>
+                        </li>
+                        <li class="c0 c36 li-bullet-0"><span class="c5">RGB values range
+                                        from 0 to 255 and look like this: rgb(7, 210,
+                                        50).</span></li>
+                </ul>
+                <ul class="c4 lst-kix_umsf5tgtjegd-0">
+                        <li class="c0 c7 li-bullet-0"><span class="c5">HSL</span></li>
+                </ul>
+                <ul class="c4 lst-kix_umsf5tgtjegd-1 start">
+                        <li class="c0 c36 li-bullet-0"><span class="c5">HSL stands for
+                                        hue (the color itself), saturation (the
+                                        intensity
+                                        of the color), and lightness (how light or dark
+                                        a color is).</span></li>
+                        <li class="c0 c36 li-bullet-0"><span class="c5">Hue ranges from
+                                        0 to 360 and saturation and lightness are both
+                                        represented as percentages like this: hsl(200,
+                                        20%, 50%).</span></li>
+                </ul>
+                <ul class="c4 lst-kix_umsf5tgtjegd-0">
+                        <li class="c0 c7 li-bullet-0"><span class="c5">You can add
+                                        opacity to color in RGB and HSL by adding a
+                                        fourth
+                                        value, a, which is represented as a
+                                        percentage.</span></li>
+                </ul>
+                <p class="c3 c8"><span class="c15"></span></p>
+                <p class="c3 c8"><span class="c15"></span></p>
+                <h2 id="2"><span class="c13">Typography</span>
+                </h2>
+                <p class="c0"><span class="c5">the art of arranging text on a page.
+                                We&rsquo;ll look at:</span></p>
+                <ul class="c4 lst-kix_9exeb3nixkva-0 start">
+                        <li class="c0 c7 li-bullet-0"><span class="c5">How to style and
+                                        transform fonts.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">How to lay text
+                                        out on a page.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">and how to add
+                                        external fonts to your web pages.</span></li>
+                </ul>
+                <p class="c0"><span class="c5">Some of the most important information a
+                                user will see on a web page will be textual.
+                                Styling text to make page content accessible and
+                                engaging can significantly improve user experience.
+                                Let&rsquo;s begin!</span></p>
+                <h3 id="2a"><span class="c12">Font Family</span>
+                </h3>
+                <p class="c0"><span>You may remember from the</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://www.codecademy.com/content-items/1368d1ea90382cbe44b60eeac19e9573/exercises/font-family&amp;sa=D&amp;source=editors&amp;ust=1659358834345627&amp;usg=AOvVaw2o0veZ2ick_gscUQxYMIC4">&nbsp;</a></span><span
+                                class="c30"><a class="c29"
+                                        href="https://www.google.com/url?q=https://www.codecademy.com/content-items/1368d1ea90382cbe44b60eeac19e9573/exercises/font-family&amp;sa=D&amp;source=editors&amp;ust=1659358834345974&amp;usg=AOvVaw3FgNejNxqVQG5INJ82sF3z">Visual
+                                        Rules</a></span><span class="c5">&nbsp;lesson
+                                that the font of an element can be changed using the
+                                font-family property.</span></p>
+                <p class="c3"><span class="c14">h1 {</span></p>
+                <p class="c3"><span class="c14">&nbsp; font-family: Arial;</span></p>
+                <p class="c3"><span class="c14">}</span></p>
+                <p class="c0"><span class="c5">In the example above, the font family for
+                                all &lt;h1&gt; heading elements have been
+                                set to Arial.</span></p>
+                <p class="c0 c8"><span class="c5"></span></p>
+                <h3 id="2b"><span class="c12">Multi-Word
+                                Values</span></h3>
+                <p class="c0"><span class="c5">When specifying a typeface with multiple
+                                words, like Times New Roman, it is
+                                recommended to use quotation marks (&#39; &#39;) to
+                                group the words together, like so:</span></p>
+                <p class="c3"><span class="c14">h1 {</span></p>
+                <p class="c3"><span class="c14">&nbsp; font-family: &#39;Times New
+                                Roman&#39;;</span></p>
+                <p class="c3"><span class="c14">}</span></p>
+                <h3 id="2c"><span class="c12">Web Safe
+                                Fonts</span></h3>
+                <p class="c0"><span>There is a selection of fonts that will appear the
+                                same across all browsers and operating
+                                systems. These fonts are referred to as </span><span class="c20">web safe
+                                fonts</span><span>. You can check
+                                out a complete list of web safe fonts</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://www.cssfontstack.com/&amp;sa=D&amp;source=editors&amp;ust=1659358834347369&amp;usg=AOvVaw1Y0RVutNNg6GedPfBsDdO-">&nbsp;</a></span><span
+                                class="c30"><a class="c29"
+                                        href="https://www.google.com/url?q=https://www.cssfontstack.com/&amp;sa=D&amp;source=editors&amp;ust=1659358834347658&amp;usg=AOvVaw15yMuTzotRUqfiB5PIIMm9">here</a></span><span
+                                class="c5">.</span></p>
+                <h3 id="2d"><span class="c12">Fallback Fonts and
+                                Font Stacks</span></h3>
+                <p class="c0"><span>Web safe fonts are good </span><span class="c20">fallback fonts</span><span
+                                class="c5">&nbsp;that can be used if your preferred font
+                                is not available.</span></p>
+                <p class="c3"><span class="c14">h1 {</span></p>
+                <p class="c3"><span class="c14">&nbsp; font-family: Caslon, Georgia,
+                                &#39;Times New Roman&#39;;</span></p>
+                <p class="c3"><span class="c14">}</span></p>
+                <p class="c0"><span>In the example above, Georgia and Times New Roman
+                                are fallback fonts to Caslon. When you specify
+                                a group of fonts, you have what is known as a
+                        </span><span class="c20">font stack</span><span class="c5">. A
+                                font stack usually contains a list of similar-looking
+                                fonts. Here, the browser will first try to use the
+                                Caslon font. If that&rsquo;s not available, it will try
+                                to use a similar font, Georgia. And if Georgia is
+                                not available, it will try to use Times New
+                                Roman.</span></p>
+                <h3 id="2e"><span class="c12">Serif and
+                                Sans-Serif</span></h3>
+                <p class="c0"><span>You may be wondering what features make a font
+                                similar to another font. The fonts Caslon,
+                                Georgia, and Times New Roman are </span><span class="c20">Serif</span><span>&nbsp;fonts.
+                                Serif fonts
+                                have
+                                extra details on the ends of each letter, as opposed to
+                        </span><span class="c20">Sans-Serif</span><span class="c5">&nbsp;fonts, which do not
+                                have the extra
+                                details.</span></p>
+                <p class="c0 c8"><span class="c5"></span></p>
+                <p class="c0"><span class="c5">serif and sans-serif are also keyword
+                                values that can be added as a final fallback
+                                font if nothing else in the font stack is
+                                available.</span></p>
+                <p class="c3"><span class="c14">h1 {</span></p>
+                <p class="c3"><span class="c14">&nbsp; font-family: Caslon, Georgia,
+                                &#39;Times New Roman&#39;, serif;</span></p>
+                <p class="c3"><span class="c14">}</span></p>
+                <p class="c0"><span class="c5">In this final example, the font stack has
+                                4 fonts. If the first 3 fonts aren&rsquo;t
+                                available, the browser will use whatever serif font is
+                                available on the system.</span></p>
+                <h3 id="2f"><span class="c12">Font Weight</span>
+                </h3>
+                <p class="c0"><span class="c5">In CSS, the font-weight property controls
+                                how bold or thin text appears. It can be
+                                specified with keywords or numerical values.</span></p>
+                <p class="c39"><span class="c5">Keyword Values</span></p>
+                <p class="c0"><span class="c5">The font-weight property can take any one
+                                of these keyword values:</span></p>
+                <ul class="c4 lst-kix_j0tbo5wk3a8i-0 start">
+                        <li class="c0 c7 li-bullet-0"><span class="c5">bold: Bold font
+                                        weight.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">normal: Normal
+                                        font weight. This is the default value.</span>
+                        </li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">lighter: One font
+                                        weight lighter than the element&rsquo;s parent
+                                        value.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">bolder: One font
+                                        weight bolder than the element&rsquo;s parent
+                                        value</span></li>
+                </ul>
+                <p class="c39"><span class="c5">Numerical Values</span></p>
+                <p class="c0"><span class="c5">Numerical values can range from 1
+                                (lightest) to 1000 (boldest), but it is common
+                                practice to use increments of 100. A font weight of 400
+                                is equal to the keyword value normal, and a font
+                                weight of 700 is equal to bold.</span></p>
+                <p class="c3"><span class="c14">.left-section {</span></p>
+                <p class="c3"><span class="c14">&nbsp; font-weight: 700;</span></p>
+                <p class="c3"><span class="c14">}</span></p>
+                <p class="c3 c8"><span class="c14"></span></p>
+                <p class="c3"><span class="c14">.right-section {</span></p>
+                <p class="c3"><span class="c14">&nbsp; font-weight: bold;</span></p>
+                <p class="c3"><span class="c14">}</span></p>
+                <p class="c0"><span class="c5">In the example above, text in elements of
+                                both .left-section and .right-section
+                                classes will appear bold.</span></p>
+                <p class="c0"><span class="c5">It&rsquo;s important to note that not all
+                                fonts can be assigned a numeric font
+                                weight, and not all numeric font weights are available
+                                to all fonts. It&rsquo;s a good practice to look up
+                                the font you are using to see which font-weight values
+                                are available.</span></p>
+                <p class="c3 c8"><span class="c15"></span></p>
+                <h3 id="2g"><span class="c12">Font Style</span>
+                </h3>
+                <p class="c0"><span class="c5">You can also italicize text with the
+                                font-style property.</span></p>
+                <p class="c3"><span class="c14">h3 {</span></p>
+                <p class="c3"><span class="c14">&nbsp; font-style: italic;</span></p>
+                <p class="c3"><span class="c14">}</span></p>
+                <p class="c0"><span class="c5">The italic value causes text to appear in
+                                italics. The font-style property also has a
+                                normal value which is the default.</span></p>
+                <p class="c0 c8"><span class="c5"></span></p>
+                <p class="c0 c8"><span class="c31"></span></p>
+                <h3 id="2h"><span class="c12">Text
+                                Transformation</span></h3>
+                <p class="c0"><span class="c5">Text can also be styled to appear in
+                                either all uppercase or lowercase with the
+                                text-transform property.</span></p>
+                <p class="c0"><span class="c14">h1 {</span></p>
+                <p class="c0"><span class="c14">&nbsp; text-transform: uppercase;</span>
+                </p>
+                <p class="c0"><span class="c14">}</span></p>
+                <p class="c0"><span class="c5">The code in the example above formats all
+                                &lt;h1&gt; elements to appear in uppercase,
+                                regardless of the case used for the heading within the
+                                HTML code. Alternatively, the lowercase value could
+                                be used to format text in all lowercase.</span></p>
+                <p class="c0"><span>Since text can be directly typed in all uppercase or
+                                lowercase within an HTML file, what is the
+                                point of a CSS rule that allows you to
+                                format</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Letter_case&amp;sa=D&amp;source=editors&amp;ust=1659358834353293&amp;usg=AOvVaw1QyqRtePIj2ddfVcwJhOTX">&nbsp;</a></span><span
+                                class="c26"><a class="c29"
+                                        href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Letter_case&amp;sa=D&amp;source=editors&amp;ust=1659358834353629&amp;usg=AOvVaw2SeygdcCk3kgeUNFfg2LJQ">letter
+                                        case</a></span><span class="c5">?</span></p>
+                <p class="c0"><span class="c5">Depending on the type of content a web
+                                page displays, it may make sense to always
+                                style a specific element in all uppercase or lowercase
+                                letters. For example, a website that reports breaking
+                                news may decide to format all &lt;h1&gt; heading
+                                elements such that they always appear in all uppercase,
+                                as
+                                in the example above. It would also avoid uppercase text
+                                in the HTML file, which could make code difficult
+                                to read.</span></p>
+                <p class="c0 c8"><span class="c5"></span></p>
+                <h3 id="2i"><span class="c12">Text Layout</span>
+                </h3>
+                <p class="c3"><span class="c5">You&rsquo;ve learned how text can be
+                                defined by font family, weight, style, and
+                                transformations. Now you&rsquo;ll learn about some ways
+                                text can be displayed or laid out within the
+                                element&rsquo;s container.</span></p>
+                <h5 class="c34 c37" id="h.txpv24dhw74e"><span class="c30 c35">Letter
+                                Spacing</span></h5>
+                <p class="c3"><span class="c5">The letter-spacing property is used to
+                                set the horizontal spacing between the
+                                individual characters in an element. It&rsquo;s not
+                                common to set the spacing between letters, but it can
+                                sometimes help the readability of certain fonts or
+                                styles. The letter-spacing property takes length values
+                                in units, such as 2px or 0.5em.</span></p>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <p class="c3"><span class="c14">p {</span></p>
+                <p class="c3"><span class="c14">&nbsp; letter-spacing: 2px;</span></p>
+                <p class="c3"><span class="c14">}</span></p>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <p class="c3"><span class="c5">In the example above, each character in
+                                the paragraph element will be separated by 2
+                                pixels.</span></p>
+                <h5 class="c37 c34" id="h.9ybwrj3zwl09"><span class="c35 c30">Word
+                                Spacing</span></h5>
+                <p class="c3"><span class="c5">You can set the space between words with
+                                the word-spacing property. It&rsquo;s also
+                                not common to increase the spacing between words, but it
+                                may help enhance the readability of bolded or
+                                enlarged text. The word-spacing property also takes
+                                length values in units, such as 3px or 0.2em.</span></p>
+                <p class="c3"><span class="c14">h1 {</span></p>
+                <p class="c3"><span class="c14">&nbsp; word-spacing: 0.3em;</span></p>
+                <p class="c3"><span class="c14">}</span></p>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <p class="c3"><span class="c5">In the example above, the word spacing is
+                                set to 0.3em. For word spacing, using em
+                                values are recommended because the spacing can be set
+                                based on the size of the font.</span></p>
+                <h5 class="c37 c34" id="h.o13xajh4bpjt"><span class="c35 c30">Line
+                                Height</span></h5>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <p class="c3"><span class="c5">We can use the line-height property to
+                                set how tall we want each line containing our
+                                text to be. Line height values can be a unitless number,
+                                such as 1.2, or a length value, such as 12px, 5% or
+                                2em.</span></p>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <p class="c3"><span class="c14">p {</span></p>
+                <p class="c3"><span class="c14">&nbsp; line-height: 1.4;</span></p>
+                <p class="c3"><span class="c14">}</span></p>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <p class="c3"><span class="c5">In the example above, the height between
+                                lines is set to 1.4. Generally, the unitless
+                                value is preferred since it is responsive based on the
+                                current font size. In other words, if the line-height
+                                is specified by a unitless number, changing the font
+                                size will automatically readjust the line
+                                height.</span></p>
+                <h3 id="2j"><span class="c12">Text
+                                Alignment</span></h3>
+                <p class="c3"><span>The text-align property, which you may already be
+                                familiar with from the</span><span class="c26"><a class="c29"
+                                        href="https://www.google.com/url?q=https://www.codecademy.com/courses/learn-css/lessons/css-visual-rules/exercises/text-align&amp;sa=D&amp;source=editors&amp;ust=1659358834356542&amp;usg=AOvVaw3i0WrvTRQBIIH4tTYQJB6W">&nbsp;CSS
+                                        Visual Rules lesson</a></span><span class="c5">,
+                                aligns text to its parent element.</span></p>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <p class="c3"><span class="c14">h1 {</span></p>
+                <p class="c3"><span class="c14">&nbsp; text-align: right;</span></p>
+                <p class="c3"><span class="c14">}</span></p>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <p class="c3"><span>In the example above, the &lt;h1&gt; element is
+                                aligned to the right side, instead of the
+                                default left.</span></p>
+                <p class="c0 c8"><span class="c5"></span></p>
+                <h3 id="2k"><span class="c12">Web
+                                Fonts</span></h3>
+                <p class="c0"><span>Previously, we learned about web safe fonts, a group
+                                of fonts supported across browsers and
+                                operating systems. However, the fonts you can use for
+                                your website are limitless&mdash;</span><span class="c20">web fonts</span><span
+                                class="c5">&nbsp;allow
+                                you to express your unique style through a
+                                multitude of different fonts found on the web.</span>
+                </p>
+                <p class="c0"><span>Free font services, like</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://fonts.google.com/&amp;sa=D&amp;source=editors&amp;ust=1659358834358581&amp;usg=AOvVaw0pJ7C-z2F_MGcnEslH7lHC">&nbsp;</a></span><span
+                                class="c26"><a class="c29"
+                                        href="https://www.google.com/url?q=https://fonts.google.com/&amp;sa=D&amp;source=editors&amp;ust=1659358834359054&amp;usg=AOvVaw1x6tjnoQjZwrhYeuJv6QCp">Google
+                                        Fonts</a></span><span>&nbsp;and</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://fonts.adobe.com&amp;sa=D&amp;source=editors&amp;ust=1659358834359474&amp;usg=AOvVaw2gAzK6hujz2-FWamhgZ4uu">&nbsp;</a></span><span
+                                class="c26"><a class="c29"
+                                        href="https://www.google.com/url?q=https://fonts.adobe.com&amp;sa=D&amp;source=editors&amp;ust=1659358834359760&amp;usg=AOvVaw2-ygCqsX5-TwuGZAIBJQZ5">Adobe
+                                        Fonts</a></span><span class="c5">, host fonts
+                                that you can link to from your HTML document with a
+                                provided &lt;link&gt; element.</span></p>
+                <p class="c0"><span>You can also use fonts from paid font distributors
+                                like</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://www.fonts.com/&amp;sa=D&amp;source=editors&amp;ust=1659358834360170&amp;usg=AOvVaw3ITh8ibM70Mwmr0bFJG2IA">&nbsp;</a></span><span
+                                class="c26"><a class="c29"
+                                        href="https://www.google.com/url?q=https://www.fonts.com/&amp;sa=D&amp;source=editors&amp;ust=1659358834360395&amp;usg=AOvVaw0te4a83mkOVlKp-r9sLzAJ">fonts.com</a></span><span
+                                class="c5">&nbsp;by downloading and hosting them with
+                                the rest of your site&rsquo;s files. You can create a
+                                @font-face ruleset in your CSS stylesheet to link to the
+                                relative path of the font file.</span></p>
+                <p class="c0"><span class="c5">Both techniques for including web fonts
+                                into your site allow you to go beyond the
+                                sometimes &ldquo;traditional&rdquo; appearance of web
+                                safe fonts. In the next two exercises, you&rsquo;ll
+                                learn exactly how to use each of these
+                                techniques!</span></p>
+                <p class="c0 c8"><span class="c5"></span></p>
+                <h4 id="2ka"><span class="c32">Web Fonts Using
+                                &lt;link&gt;</span></h4>
+                <p class="c0"><span>Online font services, like</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://fonts.google.com/&amp;sa=D&amp;source=editors&amp;ust=1659358834361064&amp;usg=AOvVaw3ao1Jc8Tqlbf0M9MSWBtlP">&nbsp;</a></span><span
+                                class="c26"><a class="c29"
+                                        href="https://www.google.com/url?q=https://fonts.google.com/&amp;sa=D&amp;source=editors&amp;ust=1659358834361287&amp;usg=AOvVaw0psNnx0-pKCrdd6aoL_t2W">Google
+                                        Fonts</a></span><span class="c5">, make it easy
+                                to find and link to fonts from your site. You can browse
+                                and select fonts that match the style of your
+                                website.</span></p>
+                <p class="c0"><span
+                                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 349.33px;"><img
+                                        alt="Google Fonts Roboto Styles Page" src="./resources/images/stylingCSS/stylingCss3.png"
+                                        style="width: 601.70px; height: 349.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                                        title=""></span></p>
+                <p class="c0"><span class="c5">When you select a font in Google Fonts,
+                                you&rsquo;ll be shown all of the different
+                                styles available for that particular font. You can then
+                                select the styles you want to use on your
+                                site.</span></p>
+                <p class="c0"><span
+                                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 349.33px;"><img
+                                        alt="Showing Selected Font Families" src="./resources/images/stylingCSS/stylingCss2.png"
+                                        style="width: 601.70px; height: 349.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                                        title=""></span></p>
+                <p class="c0"><span class="c5">When you&rsquo;re done selecting a font
+                                and its styles, you can review your selected
+                                font family, and a &lt;link&gt; element will be
+                                automatically generated for you to use on your
+                                site!</span>
+                </p>
+                <p class="c0"><span class="c5">&lt;head&gt;</span></p>
+                <p class="c0"><span class="c5">&nbsp; &lt;!-- Add the link element for
+                                Google Fonts along with other metadata
+                                --&gt;</span></p>
+                <p class="c0"><span class="c5">&nbsp; &lt;link
+                                href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@100&amp;display=swap&quot;
+                                rel=&quot;stylesheet&quot;&gt;</span></p>
+                <p class="c0"><span class="c5">&lt;/head&gt;</span></p>
+                <p class="c0"><span class="c5">The generated &lt;link&gt; element needs
+                                to be added to the &lt;head&gt; element in
+                                your HTML document for it to be ready to be used in your
+                                CSS.</span></p>
+                <p class="c0"><span class="c5">p {</span></p>
+                <p class="c0"><span class="c5">&nbsp; font-family: &#39;Roboto&#39;,
+                                sans-serif;</span></p>
+                <p class="c0"><span class="c5">}</span></p>
+                <p class="c0"><span class="c5">You can then create font-family
+                                declarations in your CSS, just like how you learned
+                                to do with other fonts!</span></p>
+                <p class="c0 c8"><span class="c31"></span></p>
+                <h4 id="2kb"><span class="c32">Web Fonts Using
+                                @font-face</span></h4>
+                <p class="c0"><span>Fonts can also be added using a</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face&amp;sa=D&amp;source=editors&amp;ust=1659358834362877&amp;usg=AOvVaw3ET2Z_YmMYPokT2qK0DUCY">&nbsp;</a></span><span
+                                class="c26"><a class="c29"
+                                        href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face&amp;sa=D&amp;source=editors&amp;ust=1659358834363169&amp;usg=AOvVaw1luHonr_v_e5DMW9lekrfb">@font-face
+                                        ruleset</a></span><span class="c5">&nbsp;in your
+                                CSS stylesheet instead of using a &lt;link&gt; element
+                                in your HTML document. As mentioned earlier, fonts can
+                                be downloaded just like any other file on the web.
+                                They come in a few different file formats, such
+                                as:</span></p>
+                <ul class="c4 lst-kix_qk7s33zdoqj2-0 start">
+                        <li class="c0 c7 li-bullet-0"><span class="c5">OTF (OpenType
+                                        Font)</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">TTF (TrueType
+                                        Font)</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">WOFF (Web Open
+                                        Font Format)</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">WOFF2 (Web Open
+                                        Font Format 2)</span></li>
+                </ul>
+                <p class="c0"><span class="c5">The different formats are a progression
+                                of standards for how fonts will work with
+                                different browsers, with WOFF2 being the most
+                                progressive. It&rsquo;s a good idea to include TTF,
+                                WOFF, and
+                                WOFF2 formats with your @font-face rule to ensure
+                                compatibility on all browsers.</span></p>
+                <p class="c0"><span class="c5">Let&rsquo;s take a look at how to use
+                                @font-face using the same Roboto font as
+                                before:</span></p>
+                <p class="c0"><span
+                                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 332.00px;"><img
+                                        alt="Google Fonts Download" src="./resources/images/stylingCSS/stylingCss1.png"
+                                        style="width: 601.70px; height: 332.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                                        title=""></span></p>
+                <p class="c0"><span>Within the &ldquo;Selected Families&rdquo; section,
+                                you can use the &ldquo;Download&rdquo;
+                                button to download the font files to your computer. The
+                                files will be downloaded as a single format, in this
+                                case, TTF. You can use a tool such as</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://google-webfonts-helper.herokuapp.com/fonts&amp;sa=D&amp;source=editors&amp;ust=1659358834364209&amp;usg=AOvVaw0GyyOJbe0y_eCva5OWllJI">&nbsp;</a></span><span
+                                class="c26"><a class="c29"
+                                        href="https://www.google.com/url?q=https://google-webfonts-helper.herokuapp.com/fonts&amp;sa=D&amp;source=editors&amp;ust=1659358834364471&amp;usg=AOvVaw2jHGyEFuoejnivYwXpgs5s">Google
+                                        Web Fonts Helper</a></span><span class="c5">&nbsp;to generate additional
+                                file types for
+                                WOFF and
+                                WOFF2.</span></p>
+                <p class="c0"><span class="c5">When you have the files you need, move
+                                them to a folder inside your website&rsquo;s
+                                working directory, and you&rsquo;re ready to use them in
+                                a @font-face ruleset!</span></p>
+                <p class="c0"><span class="c5">@font-face {</span></p>
+                <p class="c0"><span class="c5">&nbsp; font-family:
+                                &#39;MyParagraphFont&#39;;</span></p>
+                <p class="c0"><span class="c5">&nbsp; src:
+                                url(&#39;fonts/Roboto.woff2&#39;)
+                                format(&#39;woff2&#39;),</span></p>
+                <p class="c0"><span class="c5">&nbsp; &nbsp; &nbsp;
+                                &nbsp;url(&#39;fonts/Roboto.woff&#39;)
+                                format(&#39;woff&#39;),</span></p>
+                <p class="c0"><span class="c5">&nbsp; &nbsp; &nbsp;
+                                &nbsp;url(&#39;fonts/Roboto.ttf&#39;)
+                                format(&#39;truetype&#39;);</span></p>
+                <p class="c0"><span class="c5">}</span></p>
+                <p class="c0"><span class="c5">Let&rsquo;s take a look at the example
+                                above, line by line:</span></p>
+                <ul class="c4 lst-kix_iht17jjv1yhi-0 start">
+                        <li class="c0 c7 li-bullet-0"><span class="c5">The @font-face
+                                        at-rule is used as the selector. It&rsquo;s
+                                        recommended to define the @font-face ruleset at
+                                        the top of your CSS stylesheet.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Inside the
+                                        declaration block, the font-family property is
+                                        used to
+                                        set a custom name for the downloaded font. The
+                                        name can be anything you choose, but it must be
+                                        surrounded by quotation marks. In the example,
+                                        the font is named &#39;MyParagraphFont&#39;, as
+                                        this font
+                                        will be used for all paragraphs.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">The src property
+                                        contains three values, each specifying the
+                                        relative path to the font file and its format.
+                                        In this example, the font files are stored
+                                        inside a
+                                        folder named fonts within the working
+                                        directory.</span></li>
+                </ul>
+                <p class="c0"><span class="c5">Once the @font-face at-rule is defined,
+                                you can use the font in your
+                                stylesheet!</span></p>
+                <p class="c0"><span class="c5">p {</span></p>
+                <p class="c0"><span class="c5">&nbsp; font-family:
+                                &#39;MyParagraphFont&#39;, sans-serif;</span></p>
+                <p class="c0"><span class="c5">}</span></p>
+                <p class="c0"><span class="c5">Like using any other fonts, you can use
+                                the font-family property to set the font on
+                                any HTML element. The downloaded font can be referenced
+                                with the name you provided as the font-family
+                                property&rsquo;s value in the @font-face
+                                ruleset&mdash;in this case,
+                                &#39;MyParagraphFont&#39;.</span></p>
+                <p class="c0 c8"><span class="c5"></span></p>
+                <h3 id="2l"><span class="c12">Review</span></h3>
+                <ul class="c4 lst-kix_vi88yo2kaw4k-0 start">
+                        <li class="c0 c7 li-bullet-0"><span class="c20">Typography</span><span class="c5">&nbsp;is the
+                                        art of arranging
+                                        text on a page.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Text can appear
+                                        bold or thin with the font-weight
+                                        property.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Text can appear
+                                        in italics with the font-style property.</span>
+                        </li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">The vertical
+                                        spacing between lines of text can be modified
+                                        with
+                                        the line-height property.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c20">Serif</span><span>&nbsp;fonts have
+                                        extra details on the ends of
+                                        each letter. </span><span class="c20">Sans-Serif</span><span
+                                        class="c5">&nbsp;fonts do not.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c20">Fallback
+                                        fonts</span><span class="c5">&nbsp;are used when
+                                        a
+                                        certain font is not installed on a user&rsquo;s
+                                        computer.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">The word-spacing
+                                        property changes how far apart individual words
+                                        are.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">The
+                                        letter-spacing property changes how far apart
+                                        individual
+                                        letters are.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">The text-align
+                                        property changes the horizontal alignment of
+                                        text.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Google Fonts
+                                        provides free fonts that can be used in an HTML
+                                        file
+                                        with the &lt;link&gt; tag or the @font-face
+                                        property.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Local fonts can
+                                        be added to a document with the @font-face
+                                        property and the path to the font&rsquo;s
+                                        source.</span></li>
+                </ul>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <p class="c3 c8"><span class="c40"></span></p>
+                <h2 id="3"><span class="c13">Learn Links and
+                                Buttons</span></h2>
+                <p class="c3 c8"><span class="c31"></span></p>
+                <h3 id="3a"><span class="c12">Tooltips and
+                                Titles</span></h3>
+                <p class="c0"><span class="c5">In addition to providing descriptive
+                                anchor text, it is sometimes helpful to provide
+                                additional context to explain links. This context can be
+                                particularly helpful when a link contains or
+                                consists of an image, icon, or another non-text
+                                element.</span></p>
+                <p class="c0"><span>Additional context can be provided as text using
+                                the</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title&amp;sa=D&amp;source=editors&amp;ust=1659358834367823&amp;usg=AOvVaw1aZYjrLwm5TEdGez84fy7W">&nbsp;</a></span><span
+                                class="c30"><a class="c29"
+                                        href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title&amp;sa=D&amp;source=editors&amp;ust=1659358834368168&amp;usg=AOvVaw0IjhXxAent6YJml2NWbZVA">HTML
+                                        title attribute</a></span><span class="c5">.
+                                Although the title attribute can be provided to any HTML
+                                element, it is often extremely useful as additional
+                                context or advisory text for clickable elements.</span>
+                </p>
+                <p class="c0"><span>Most browsers will display the text of a title
+                                attribute as a</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Tooltip&amp;sa=D&amp;source=editors&amp;ust=1659358834368535&amp;usg=AOvVaw25ewGFhYIjcBElWNLf9AWy">&nbsp;</a></span><span
+                                class="c30"><a class="c29"
+                                        href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Tooltip&amp;sa=D&amp;source=editors&amp;ust=1659358834368767&amp;usg=AOvVaw2Lpz40NTKmi2RlRP0Jha2I">tooltip</a></span><span
+                                class="c5">, meaning when a user hovers their cursor
+                                over an element, the text will appear in a small box
+                                near the cursor.</span></p>
+                <p class="c0"><span class="c5">To add tooltips to a clickable element
+                                like a link, add it as the title
+                                attribute.</span></p>
+                <p class="c3"><span class="c28">&lt;p&gt;</span></p>
+                <p class="c3"><span class="c28">&nbsp; &lt;a
+                                href=&quot;https://www.codecademy.com&quot;
+                                title=&quot;Codecademy is
+                                an online learning
+                                platform&quot;&gt;Codecademy&lt;/a&gt; is the best place
+                                to learn to code!</span></p>
+                <p class="c3"><span class="c28">&lt;/p&gt;</span></p>
+                <p class="c0 c8"><span class="c5"></span></p>
+                <h3 id="3b"><span class="c12">Hover States and
+                                Cursors</span></h3>
+                <p class="c0"><span>In addition to styling elements themselves, other
+                                signifiers and visual feedback can be utilized
+                                during user interaction. The</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/CSS/:hover&amp;sa=D&amp;source=editors&amp;ust=1659358834369618&amp;usg=AOvVaw14Z25gB0gKkS04qqB1jFJe">&nbsp;</a></span><span
+                                class="c30"><a class="c29"
+                                        href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/CSS/:hover&amp;sa=D&amp;source=editors&amp;ust=1659358834369864&amp;usg=AOvVaw0yzmmjoGGujDEMzWFyKj9L">CSS
+                                        pseudo-class :hover</a></span><span class="c5">&nbsp;can be used to
+                                style elements on mouse
+                                hover. For
+                                instance, to change the color of link anchor text from
+                                blue to orange when a user hovers over it, the
+                                following CSS could be used:</span></p>
+                <p class="c3"><span class="c28">a {</span></p>
+                <p class="c3"><span class="c28">&nbsp; color: blue;</span></p>
+                <p class="c3"><span class="c28">}</span></p>
+                <p class="c3 c8"><span class="c28"></span></p>
+                <p class="c3"><span class="c28">a:hover {</span></p>
+                <p class="c3"><span class="c28">&nbsp; color: orange;</span></p>
+                <p class="c3"><span class="c28">}</span></p>
+                <p class="c0"><span class="c5">The first rule sets link colors to blue
+                                by default, and when a user mouses over a
+                                link, the second rule will override the color attribute
+                                of the &lt;a&gt; tag and cause the text to turn
+                                orange. When the user moves the cursor away from the
+                                link, the text color will revert to blue.</span></p>
+                <p class="c0"><span>In addition to any text style changes when hovering
+                                over a link, the user&rsquo;s cursor should
+                                change from the default appearance to a pointing hand.
+                                The</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/CSS/cursor%23Examples&amp;sa=D&amp;source=editors&amp;ust=1659358834370774&amp;usg=AOvVaw3oOGE2Co_FwwudMZVANABO">&nbsp;</a></span><span
+                                class="c30"><a class="c29"
+                                        href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/CSS/cursor%23Examples&amp;sa=D&amp;source=editors&amp;ust=1659358834371064&amp;usg=AOvVaw2b3UdxMGU_C90RhTYYKuVC">CSS
+                                        cursor property</a></span><span class="c5">&nbsp;is used to control this
+                                behavior. For
+                                example, to add
+                                this behavior to all &lt;a&gt; tags, the following rule
+                                could be used:</span></p>
+                <p class="c3"><span class="c28">a {</span></p>
+                <p class="c3"><span class="c28">&nbsp; cursor: pointer;</span></p>
+                <p class="c3"><span class="c28">}</span></p>
+                <p class="c0"><span>Luckily, this behavior is generally included in
+                                browser user agent stylesheets, and it also
+                                exists in the</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://www.w3.org/TR/html5/rendering.html&amp;sa=D&amp;source=editors&amp;ust=1659358834371653&amp;usg=AOvVaw2pZohGJvmDm0IVlab6dYdq">&nbsp;</a></span><span
+                                class="c30"><a class="c29"
+                                        href="https://www.google.com/url?q=https://www.w3.org/TR/html5/rendering.html&amp;sa=D&amp;source=editors&amp;ust=1659358834371881&amp;usg=AOvVaw1sGnnl0Cmf9FlYPG-1aG4z">HTML5
+                                        default styles</a></span><span class="c5">.</span></p>
+                <p class="c0"><span class="c5">Hover state styling should never be used
+                                as the sole indication that something is a
+                                link. Users should not be forced to move their mouse
+                                over an entire document to tell what might be
+                                clickable. Additionally, hover states are not accessible
+                                in mobile browsers. Mobile devices do not generally
+                                have on-screen cursors, and users must actually touch
+                                the device (and possibly trigger a click event) to
+                                interact.</span></p>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <h3 id="3c"><span class="c12">Link States</span>
+                </h3>
+                <p class="c0"><span>Links have four main states: normal (not clicked),
+                                hover, active (clicked), and visited. These
+                                four states have associated</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes&amp;sa=D&amp;source=editors&amp;ust=1659358834372598&amp;usg=AOvVaw0HSy-VqDThlqHaiQ_j7aEG">&nbsp;</a></span><span
+                                class="c26"><a class="c29"
+                                        href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes&amp;sa=D&amp;source=editors&amp;ust=1659358834372850&amp;usg=AOvVaw0XLDtBSeWv1K5PndpWUWf_">CSS
+                                        pseudo-classes</a></span><span class="c5">:
+                                :link, :hover, :active, and :visited. These four states
+                                can
+                                be used to give a full range of visual feedback to users
+                                about the status of their link interaction.</span>
+                </p>
+                <p class="c0"><span class="c5">Each state should still make it clear
+                                that the element in question is a link, meaning
+                                it should not make text identical to non-link text or
+                                alter the link&rsquo;s appearance so much that users
+                                could perceive its behavior differently.</span></p>
+                <p class="c0"><span class="c5">The ordering of link state pseudo-class
+                                rules is important to reveal the proper
+                                information. When a user hovers and then clicks a link,
+                                those styles should always override the static
+                                styling surrounding a user&rsquo;s history with the link
+                                (unvisited :link and :visited). The proper order of
+                                these rules is:</span></p>
+                <ul class="c4 lst-kix_6f1d155lezt5-0 start">
+                        <li class="c0 c7 li-bullet-0"><span class="c5">:link</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">:visited</span>
+                        </li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">:hover</span>
+                        </li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">:active</span>
+                        </li>
+                </ul>
+                <p class="c0"><span>This ordering will ensure that the
+                                rules</span><span><a class="c29"
+                                        href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance&amp;sa=D&amp;source=editors&amp;ust=1659358834373936&amp;usg=AOvVaw3rP78GXzwvWwanAaHHUMmY">&nbsp;</a></span><span
+                                class="c26"><a class="c29"
+                                        href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance&amp;sa=D&amp;source=editors&amp;ust=1659358834374270&amp;usg=AOvVaw0-3lunQ_lGqdMLfeMmiE8M">cascade
+                                        properly</a></span><span class="c5">&nbsp;and
+                                the user can receive the most applicable visual feedback
+                                about the state of the link.</span></p>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <h3 id="3d"><span class="c12">Skeuomorphism and
+                                Flat Design</span></h3>
+                <p class="c0"><span>Buttons are another fundamental element of user
+                                interaction and navigation. They are called
+                                &lsquo;buttons&rsquo; because they are often modeled on
+                                the appearance and behavior of real-life buttons.
+                                The concept of UI elements that replicate or imitate
+                                real-life counterparts is known as </span><span class="c20">skeuomorphism</span><span
+                                class="c5">.</span></p>
+                <p class="c0"><span class="c5">In design, skeuomorphism is helpful for
+                                lowering the learning curve for users. If
+                                users can draw a metaphor between a familiar real-life
+                                object and an interface element, they are more likely
+                                to know how to use it without training. In the example
+                                of the button, if a web button appears similar to a
+                                real-life button on a physical interface, users can
+                                reliably figure out that the way to interact with the
+                                button is to press it.</span></p>
+                <p class="c0"><span class="c20">Flat design</span><span class="c5">&nbsp;is an alternative
+                                approach to
+                                skeuomorphism
+                                which embraces the fact that computer interfaces do not
+                                necessarily need to model real-life interfaces. As
+                                users grow more familiar with digital displays and
+                                interfaces, designers have felt less need to model
+                                physical interactions and instead rely on other
+                                signifiers to indicate interactive elements. To
+                                generalize,
+                                flat design uses simplicity and lack of clutter for its
+                                UI elements.</span></p>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <h3 id="3e"><span class="c12">Buttons:
+                                Skeuomorphic styling</span></h3>
+                <p class="c0"><span class="c5">Skeuomorphic button design aims to
+                                imitate the appearance and interactivity of a
+                                real-life button, often including a &lsquo;raised&rsquo;
+                                appearance while the button is unpressed and a
+                                &lsquo;pressed&rsquo; appearance when clicked.</span>
+                </p>
+                <p class="c0"><span class="c5">Skeuomorphic button design can be
+                                implemented using image files, CSS rules, or a
+                                combination of both. CSS styles should be preferred over
+                                image files if possible, since they are faster to
+                                load, have smaller file sizes, and allow for a more
+                                consistent scaling and appearance across different
+                                screen sizes and resolutions. Modern CSS3 has support
+                                for many 2-D and 3-D effects and animations and can
+                                create many skeuomorphic button designs on its
+                                own.</span></p>
+                <p class="c0"><span class="c5">If using CSS rules, the use of hover
+                                and/or active states is important in order to
+                                model interaction with a real button. For example, to
+                                implement a bare minimum 3-D button design, the
+                                following CSS ruleset could be used:</span></p>
+                <p class="c3"><span class="c28">.button {</span></p>
+                <p class="c3"><span class="c28">&nbsp; padding: 5px;</span></p>
+                <p class="c3"><span class="c28">&nbsp; border: 1px solid black;</span>
+                </p>
+                <p class="c3"><span class="c28">&nbsp; border-radius: 5px;</span></p>
+                <p class="c3"><span class="c28">&nbsp; text-decoration: none;</span></p>
+                <p class="c3"><span class="c28">&nbsp; box-shadow: 0px 5px;</span></p>
+                <p class="c3"><span class="c28">}</span></p>
+                <p class="c3 c8"><span class="c28"></span></p>
+                <p class="c3"><span class="c28">.button:hover {</span></p>
+                <p class="c3"><span class="c28">&nbsp; cursor: pointer;</span></p>
+                <p class="c3"><span class="c28">}</span></p>
+                <p class="c3 c8"><span class="c28"></span></p>
+                <p class="c3"><span class="c28">.button:active {</span></p>
+                <p class="c3"><span class="c28">&nbsp; margin-top: 5px;</span></p>
+                <p class="c3"><span class="c28">&nbsp; color: black;</span></p>
+                <p class="c3"><span class="c28">&nbsp; box-shadow: 0px 0px;</span></p>
+                <p class="c3"><span class="c28">}</span></p>
+                <p class="c0"><span class="c5">A button element can then be created with
+                                the following HTML:</span></p>
+                <p class="c3"><span class="c28">&lt;div
+                                class=&quot;button&quot;&gt;Click me&lt;/div&gt;</span>
+                </p>
+                <p class="c0"><span class="c5">The default state of the .button class
+                                has some basic &lsquo;buttony&rsquo;
+                                appearance with a rounded border (border and
+                                border-radius properties) and a slightly raised
+                                appearance with
+                                the use of the box-shadow. The :hover cursor is added
+                                for visual feedback. When the button is clicked
+                                (:active), the box-shadow is removed, and the margin-top
+                                moves the button down by 5px, make it appear to be
+                                pressed.</span></p>
+                <p class="c0"><span class="c5">The above example is only one very basic
+                                implementation of a 3-D button; there are
+                                many additional (and more attractive) ways to create
+                                skeuomorphic buttons.</span></p>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <h3 id="3f"><span class="c12">Buttons: Flat
+                                Design</span></h3>
+                <p class="c0"><span class="c5">Flat design is so-called because of its
+                                2-D appearance. Elements appear flat on the
+                                screen, and designers must rely on other styling and
+                                signifiers to indicate clickability.</span></p>
+                <p class="c0"><span class="c5">Flat design buttons commonly appear as
+                                rectangles, rounded rectangles, or circles.
+                                These shapes are used ubiquitously for button elements,
+                                so users often perceive them as buttons and expect
+                                them to be clickable.</span></p>
+                <p class="c0"><span class="c5">Since there are fewer obvious signifiers
+                                surrounding buttons in a flat design, they
+                                should be visually distinct from other page
+                                elements.</span></p>
+                <p class="c0"><span class="c5">In flat designs in particular, button
+                                text is very important for clarity&mdash;the
+                                possibility of user confusion is reduced by pairing
+                                buttons with specific, descriptive labels. A button with
+                                &lsquo;Click here&rsquo; leaves many more open questions
+                                than a button that reads &lsquo;Submit
+                                form&rsquo;.</span></p>
+                <h3 id="3g"><span class="c12">Buttons: Hover
+                                States</span></h3>
+                <p class="c0"><span class="c5">Just as with links, buttons should make
+                                use of hover states and the cursor: pointer
+                                declaration. All the caveats about the shortcomings of
+                                hover states on mobile devices apply to buttons, but
+                                their use is still encouraged.</span></p>
+                <p class="c0"><span class="c5">Users expect buttons to be clickable.
+                                Since buttons can consist of any number of
+                                total elements (rectangular/circular body, text,
+                                image(s)), all elements should be clickable, should
+                                display
+                                their clickability, and should result in the same
+                                behavior.</span></p>
+                <p class="c0 c8"><span class="c5"></span></p>
+                <h3 id="3h"><span class="c12">Review</span>
+                </h3>
+                <ol class="c4 lst-kix_v0isgd8pa9d9-0 start" start="1">
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Added styles to
+                                        make links recognizable and distinguishable from
+                                        ordinary text.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Added link styles
+                                        that depend upon mouse interaction state,
+                                        providing users with visual feedback for cursor
+                                        hovering and mouse clicks.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Added additional
+                                        context text with the HTML title
+                                        attribute.</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Styled buttons to
+                                        be easily recognizable (in both skeuomorphic
+                                        and flat design styles) using box shapes,
+                                        border, hover, and active states.</span></li>
+                </ol>
+                <p class="c0"><span class="c5">Remember that the styles that you
+                                implemented here are only one of countless ways to
+                                communicate clickability and provide users with visual
+                                feedback. There is a huge amount of opportunity for
+                                variety and creativity while still following best
+                                practices and common user experience patterns.</span>
+                </p>
+                <p class="c0 c8"><span class="c5"></span></p>
+                <h2 id="4"><span class="c13">Secondary
+                                navigation</span></h2>
+                <p class="c3 c8"><span class="c5"></span></p>
+
+                <h3 id="4a"><span class="c22">What is primary vs
+                                secondary navigation?</span></h3>
+                <ul class="c4 lst-kix_wamcegj2p23j-0 start">
+                        <li class="c0 c7 li-bullet-0"><span class="c5">The primary
+                                        navigation system typically contains the most
+                                        important links and buttons that need to be
+                                        displayed on every single page of the
+                                        site.<br></span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Secondary
+                                        navigation, or breadcrumb navigation, usually
+                                        consists
+                                        of a clickable list of pages or attributes that
+                                        led to the current page. It can help users
+                                        understand
+                                        the extent of the site and also where they are
+                                        currently.<br><br> For example, a shopping site
+                                        may have
+                                        a breadcrumb trail leading to a pair of shoes
+                                        like so:<br> </span></li>
+                </ul>
+                <h3 id="4b"><span class="c22">Why do we call
+                                them breadcrumbs?</span></h3>
+                <p class="c0"><span class="c5">Think about the story of Hansel and
+                                Gretel, where the kids drop breadcrumbs as they
+                                walked in the woods so that they would be able to find
+                                their way back.</span></p>
+                <h3 id="4c">Benefit of using
+                                breadcrumbs</span></h3>
+                <p class="c0"><span class="c5">Breadcrumb navigation provides a lot of
+                                benefits for users that come to random pages
+                                in a website through direct links or search results.
+                                Even if they enter to a seemingly random page on our
+                                site, they already have an idea of where they are in the
+                                website. The breadcrumb also hints at the extent of
+                                the site. For the example above, users could safely
+                                assume the site had shoes for other categories, shoes in
+                                different styles, and shoes in more colors.</span></p>
+                <p class="c0"><span class="c5">Breadcrumbs also provide a way for a user
+                                to quickly jump backward in their
+                                navigation of the site. For example, if a user wanted to
+                                browse another style of shoe, they could click
+                                directly on the &ldquo;Shoes&rdquo; page and navigate to
+                                their desired style. Without the breadcrumbs, they
+                                would likely need to click &ldquo;back&rdquo; twice in
+                                their browser or start their search over from the
+                                home page.</span></p>
+                <p class="c0"><span class="c5">The decision to use breadcrumbs is a
+                                judgment call depending on the type, depth, and
+                                complexity of your site. In this lesson, we&rsquo;ll
+                                discuss some of the benefits of including breadcrumb
+                                navigation, how to implement it using HTML and CSS, and
+                                some of the pitfalls to avoid.</span></p>
+                <h3 id="4d"><span class="c12">Simple Example of
+                                Breadcrumbs</span></h3>
+                <p class="c0"><span class="c5">As you saw in the introduction, it is
+                                difficult to understand where you are on a
+                                website that lacks breadcrumb navigation. By adding it
+                                to a site, users can get a quick feel for where they
+                                are on a site.</span></p>
+                <p class="c0"><span class="c5">It also hints at the breadth of the site.
+                                If a user sees something like
+                                &ldquo;Fashion &gt; Shoes&rdquo; in the breadcrumb
+                                structure, they could reasonably expect the site
+                                contains
+                                other clothing items or accessories besides
+                                shoes.</span></p>
+                <p class="c0"><span class="c5">Breadcrumbs are usually displayed as a
+                                horizontal list of pages and take up minimal
+                                space. Users expect to find them in the header,
+                                left-aligned, and below any primary navigation.
+                                Typically
+                                they are separated with a &ldquo;&gt;&rdquo; or a
+                                &ldquo;/&ldquo; symbol.</span></p>
+                <p class="c0"><span class="c5">Let&rsquo;s practice setting CSS rules to
+                                conform to the expectations for breadcrumb
+                                navigation. You will start with a plain looking list,
+                                but by the end you will have created a
+                                breadcrumb!</span></p>
+                <p class="c3"><span class="c5">ex: </span></p>
+                <p class="c3"><span class="c5">.(name of selector)
+                                &nbsp;li+li::before{</span></p>
+                <p class="c3"><span class="c5">content: &ldquo;&gt;&rdquo; &lt;!-- add
+                                this element between list&ndash;&gt;</span>
+                </p>
+                <p class="c3"><span class="c5">}</span></p>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <h3 id="4e"><span class="c12">Where do
+                                Breadcrumbs Lead</span></h3>
+                <p class="c0"><span class="c5">In the previous examples, if you clicked
+                                on any of the breadcrumbs, it wouldn&rsquo;t
+                                take you to a new page. This is because we have set
+                                href=&quot;#&quot;. With this value, a click on the link
+                                will cause the page to scroll to the top of the current
+                                page.</span></p>
+                <p class="c0"><span class="c5">In a full site, these breadcrumbs would
+                                link to their respective pages. This is
+                                accomplished by setting the href property to the
+                                appropriate page.</span></p>
+                <p class="c0"><span class="c5">Since breadcrumbs are typically relative
+                                to the current page, the breadcrumb list on
+                                each page needs to be different. However, as a user
+                                moves around the breadcrumb list, they should expect the
+                                breadcrumb style and list to stay consistent.</span></p>
+                <p class="c0"><span class="c5">For example, if the breadcrumb list
+                                was:</span></p>
+                <p class="c0"><span class="c5">Fashion &gt; Shoes &gt; Flats &gt;
+                                Brown</span></p>
+                <p class="c0"><span class="c5">and a user clicked on
+                                &ldquo;Flats&rdquo;, the breadcrumb list on that page
+                                should
+                                look like:</span></p>
+                <p class="c0"><span class="c5">Fashion &gt; Shoes &gt; Flats</span></p>
+                <p class="c0"><span class="c5">It would be confusing for a user if the
+                                categories or order of them changed
+                                like:</span></p>
+                <p class="c0"><span class="c5">Shoes &gt; Shopping &gt; Flats</span></p>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <p class="c3 c8"><span class="c31"></span></p>
+                <p class="c3 c8"><span class="c31"></span></p>
+                <p class="c3 c8"><span class="c31"></span></p>
+                <h3 id="4f"><span class="c12">CSS set up of a
+                                basic breadcrumb</span></h3>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <p class="c6 c8"><span class="c9 c41"></span></p>
+                <p class="c6"><span class="c9">.breadcrumb</span><span class="c2">&nbsp;</span><span class="c1">{</span>
+                </p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">text-align</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span class="c10">left</span><span
+                                class="c1">;</span></p>
+                <p class="c6"><span class="c1">}</span></p>
+                <p class="c6"><span class="c9">.breadcrumb</span><span class="c2">&nbsp;</span><span
+                                class="c16">li</span><span class="c2">&nbsp;</span><span class="c1">{</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">float</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span class="c10">left</span><span
+                                class="c1">;</span></p>
+                <p class="c6"><span class="c1">}</span></p>
+                <p class="c6 c8"><span class="c1"></span></p>
+                <p class="c6"><span class="c9">.breadcrumb</span><span class="c2">&nbsp;</span><span
+                                class="c16">a</span><span class="c2">&nbsp;</span><span class="c1">{</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">color</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span class="c16">#fff</span><span
+                                class="c1">;</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">background</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span class="c17">darkcyan</span><span
+                                class="c1">;</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">text-decoration</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span class="c17">none</span><span
+                                class="c1">;</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">position</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span class="c18">relative</span><span
+                                class="c1">;</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">height</span><span
+                                class="c19">:</span><span class="c2">&nbsp;30px</span><span class="c1">;</span>
+                </p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">line-height</span><span
+                                class="c19">:</span><span class="c2">&nbsp;30px</span><span class="c1">;</span>
+                </p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">text-align</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span class="c18">center</span><span
+                                class="c1">;</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">margin-right</span><span
+                                class="c19">:</span><span class="c2">&nbsp;15px</span><span class="c1">;</span>
+                </p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">padding</span><span
+                                class="c19">:</span><span class="c2">&nbsp;0
+                                5px</span><span class="c1">;</span></p>
+                <p class="c6"><span class="c1">}</span></p>
+                <p class="c6 c8"><span class="c1"></span></p>
+                <p class="c6"><span class="c9">.breadcrumb</span><span class="c2">&nbsp;</span><span
+                                class="c16">a</span><span class="c2">::</span><span class="c16">before</span><span
+                                class="c1">,</span></p>
+                <p class="c6"><span class="c9">.breadcrumb</span><span class="c2">&nbsp;</span><span
+                                class="c16">a</span><span class="c2">::</span><span class="c16">after</span><span
+                                class="c2">&nbsp;</span><span class="c1">{</span>
+                </p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">content</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span
+                                class="c42">&quot;&quot;</span><span class="c1">;</span>
+                </p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">position</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span class="c18">absolute</span><span
+                                class="c1">;</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">border-color</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span class="c17">darkcyan</span><span
+                                class="c1">;</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">border-style</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span class="c18">solid</span><span
+                                class="c1">;</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">border-width</span><span
+                                class="c19">:</span><span class="c2">&nbsp;15px
+                                5px</span><span class="c1">;</span></p>
+                <p class="c6"><span class="c1">}</span></p>
+                <p class="c6"><span class="c9">.breadcrumb</span><span class="c2">&nbsp;</span><span
+                                class="c16">a</span><span class="c2">::</span><span class="c16">before</span><span
+                                class="c2">&nbsp;</span><span class="c1">{</span>
+                </p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">left</span><span class="c19">:</span><span
+                                class="c2">&nbsp;</span><span class="c19">-</span><span class="c2">10px</span><span
+                                class="c1">;</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">border-color</span><span
+                                class="c19">:</span><span class="c17">darkcyan</span><span class="c2">&nbsp;</span><span
+                                class="c1">;</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">border-left-color</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span
+                                class="c18">transparent</span><span class="c1">;</span>
+                </p>
+                <p class="c6"><span class="c1">}</span></p>
+                <p class="c6"><span class="c9">.breadcrumb</span><span class="c2">&nbsp;</span><span
+                                class="c16">a</span><span class="c2">::</span><span class="c16">after</span><span
+                                class="c2">&nbsp;</span><span class="c1">{</span>
+                </p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">left</span><span class="c19">:</span><span
+                                class="c2">&nbsp;100%</span><span class="c1">;</span>
+                </p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">border-color</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span
+                                class="c18">transparent</span><span class="c1">;</span>
+                </p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">border-left-color</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span class="c17">darkcyan</span><span
+                                class="c1">;</span>
+                </p>
+                <p class="c6"><span class="c1">}</span></p>
+                <p class="c6 c8"><span class="c1"></span></p>
+                <p class="c6"><span class="c9">.breadcrumb</span><span class="c2">&nbsp;</span><span
+                                class="c16">a</span><span class="c2">:</span><span class="c16">hover</span><span
+                                class="c2">&nbsp;</span><span class="c1">{</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">background-color</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span class="c17">blue</span><span
+                                class="c1">;</span></p>
+                <p class="c6"><span class="c1">}</span></p>
+                <p class="c6"><span class="c9">.breadcrumb</span><span class="c2">&nbsp;</span><span
+                                class="c16">a</span><span class="c2">:</span><span class="c16">hover</span><span
+                                class="c2">::</span><span class="c16">before</span><span class="c2">&nbsp;</span><span
+                                class="c1">{</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">border-color</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span class="c17">blue</span><span
+                                class="c1">;</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">border-left-color</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span
+                                class="c18">transparent</span><span class="c1">;</span>
+                </p>
+                <p class="c6"><span class="c1">}</span></p>
+                <p class="c6"><span class="c9">.breadcrumb</span><span class="c2">&nbsp;</span><span
+                                class="c16">a</span><span class="c2">:</span><span class="c16">hover</span><span
+                                class="c2">::</span><span class="c16">after</span><span class="c2">&nbsp;</span><span
+                                class="c1">{</span></p>
+                <p class="c6"><span class="c2">&nbsp;</span><span class="c10">border-left-color</span><span
+                                class="c19">:</span><span class="c2">&nbsp;</span><span class="c17">blue</span><span
+                                class="c1">;</span></p>
+                <p class="c6"><span class="c1">}</span></p>
+                <p class="c3 c8"><span class="c5"></span></p>
+                <h3 id="4g"><span>Review</span></h3>
+                <p class="c0"><span class="c5">In this lesson we covered the concept of
+                                using breadcrumbs as a secondary navigation
+                                method for a site:</span></p>
+                <ul class="c4 lst-kix_bivehqkw1imp-0 start">
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Use breadcrumbs
+                                        to indicate where a user is and the extent of
+                                        the
+                                        site</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Breadcrumbs are
+                                        implemented using unordered lists in HTML with
+                                        custom CSS styling</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Three types of
+                                        breadcrumbs exist:</span></li>
+                </ul>
+                <ul class="c4 lst-kix_bivehqkw1imp-1 start">
+                        <li class="c0 c36 li-bullet-0"><span class="c38">location</span><span class="c5">&nbsp;-
+                                        based on hierarchical
+                                        structure of site</span></li>
+                        <li class="c0 c36 li-bullet-0"><span class="c38">attribute</span><span class="c5">&nbsp;- based
+                                        on attributes of
+                                        current page or item</span></li>
+                        <li class="c0 c36 li-bullet-0"><span class="c38">path</span><span class="c5">&nbsp;-
+                                        unique to a user&rsquo;s
+                                        journey on the site</span></li>
+                </ul>
+                <ul class="c4 lst-kix_bivehqkw1imp-0">
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Path-based
+                                        breadcrumbs can be confusing, only use if
+                                        needed</span></li>
+                        <li class="c0 c7 li-bullet-0"><span class="c5">Ensure
+                                        breadcrumbs will add value before adding to a
+                                        site</span>
+                        </li>
+                </ul>
+                <p class="c3 c8"><span class="c5"></span></p>
+
+
+        </main>
+</body>
+
+</html>
