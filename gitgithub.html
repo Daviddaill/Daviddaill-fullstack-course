@@ -49,6 +49,7 @@
                 <li> <a href="#3d"> Git commit amend </a> </li>
                 <li> <a href="#3e"> Git alias commands </a> </li>
                 <li> <a href="#3f"> Version control in VS Code </a> </li>
+                <li> <a href="#3g"> Top git commands </a> </li>
             </ul>
 
 
@@ -457,6 +458,50 @@
         <h3 id="3f"><span class="c11 c8">Version control in VS Code</span></h3>
         <p class="c4"><span class="c8">https://code.visualstudio.com/docs/introvideos/versioncontrol</span></p>
         <p class="c4 c7"><span class="c1"></span></p>
+       
+        <h3 id="3g"> Top Git Command  </h3>
+                <ol>
+    <li>git config –global user.name “[name]” ->sets author name <br>
+        git config –global user.email “[email address]” ->sets author email id</li>
+    <li> git init [repository name] ->start new repository</li>
+    <li> git clone [url] ->obtain a repository from an existing URL.</li>
+    <li>git add [file] ->adds a file to the staging area.</li>
+    <li>git commit -m “[ Type in the commit message]” ->records or snapshots the file permanently in the version history. <br>
+        git commit -a ->commits any files you’ve changed since then.&commits any files you’ve added
+    </li>
+    <li> git diff ->shows the file differences which are not yet staged. <br>
+        git diff –staged ->differences between the files in the staging area and the latest version present. <br>
+        git diff [first branch] [second branch] ->differences between the two branches mentioned.</li>
+    <li>git reset [file] ->unstages the file, but it preserves the file contents. <br>
+        git reset [commit] ->undoes all the commits after the specified commit and preserves the changes locally. <br>
+        git reset –hard [commit] ->discards all history and goes back to the specified commit.</li>
+    <li>git status ->command lists all the files that have to be committed.</li>
+    <li>git rm [file] ->deletes the file from your working directory and stages the deletion.</li>
+
+    <li>git log ->used to list the version history for the current branch. br
+        git log –follow[file] ->lists version history for a file, including the renaming of files also.</li> 
+    <li>git show [commit] ->shows the metadata and content changes of the specified commit.</li>
+    <li>git tag [commitID] ->used to give tags to the specified commit.</li>
+    <li>git branch ->lists all the local branches in the current repository. <br>
+        git branch [branch name] -> creates a new branch. <br>
+        git branch -d [branch name] -> deletes the feature branch.</li>
+    <li>git checkout [branch name] -> used to switch from one branch to another <br>
+        git checkout -b [branch name] ->creates a new branch and also switches to it. <br>      
+        git checkout -d [name of the branch] -> to delete the branch</li>
+    <li> git merge [branch name] ->merges the specified branch’s history into the current branch.</li>
+    <li>git remote add [variable name] [Remote Server Link] ->used to connect your local repository to the remote server. </li>
+    <li>   git push [variable name] master ->sends the committed changes of master branch to your remote repository. <br>
+        git push [variable name] [branch] ->sends the branch commits to your remote repository. <br>
+        git push –all [variable name] ->pushes all branches to your remote repository. <br>
+        git push [variable name] :[branch name] ->deletes a branch on your remote repository.</li>
+    <li>git pull [Repository Link] ->fetches and merges changes on the remote server to your working directory.</li>
+    <li>git stash save ->stores all the modified tracked files.</li>
+    <li>git stash pop ->restores the most recently stashed files.</li>
+    <li>git stash list ->lists all stashed changesets.</li>
+    <li>git stash drop ->discards the most recently stashed changeset.</li>
+
+                </ol>
+        
         <h2 id="4"><span class="c17">The GitHub Flow</span></h2>
         <h3 id="4a"><span class="c11">Introduction</span></h3>
         <p class="c4"><span class="c1">In this lesson, we&rsquo;ll discuss the flow of using GitHub with your code
