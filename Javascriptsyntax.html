@@ -193,7 +193,51 @@
                 <li> <a href="#11h"> Finding Documentation </a> </li>
                 <li> <a href="#11i"> Stack Overflow </a> </li>
                 <li> <a href="#11j"> Debugging Review </a> </li>
+            </ul>
+                <li> <a href="#12"> Classes </a> </li>
+            <ul>
+                <li> <a href="#12a">Introduction to Classes </a> </li>
+                <li> <a href="#12b">Constructor</a> </li>
+                <li> <a href="#12c"> Instance</a> </li>
+                <li> <a href="#12d"> Methods </a> </li>
+                <li> <a href="#12e"> Method Calls </a> </li>
+                <li> <a href="#12f"> Inheritance (intro)</a> </li>
+                <li> <a href="#12g"> Inheritance (class) </a> </li>
+                <li> <a href="#12h">Inheritance (extends and super keywords) </a> </li>
+                <li> <a href="#12i"> Inheritance (create new instance) </a> </li>
+                <li> <a href="#12j"> Inheritance (methods) </a> </li>
+                <li> <a href="#12k">Inheritance (new properties and methods) </a> </li>
+                <li> <a href="#12l"> Static Methods </a> </li>
+                <li> <a href="#12m"> Review: Classes </a> </li>
 
+            </ul>
+
+            <li> <a href="#13">Implementing Modules using ES6 Syntax </a> </li>
+            <ul>
+                <li> <a href="#13a">What are Modules? </a> </li>
+                <li> <a href="#13b">Implementations of Modules in JavaScript: Node.js vs ES6 </a> </li>
+                <li> <a href="#13c"> A Brief History of JavaScript Modules in the Browser</a> </li>
+                <li> <a href="#13d"> Implementing Modules in the Browser</a> </li>
+                <li> <a href="#13e">ES6 Named Export Syntax </a> </li>
+                <li> <a href="#13f">ES6 Import Syntax </a> </li>
+                <li> <a href="#13g"> Renaming Imports to Avoid Naming Collisions</a> </li>
+                <li> <a href="#13h"> Default Exports and Imports </a> </li>
+                <li> <a href="#13i">Importing default values. </a> </li>
+                <li> <a href="#13bj">Review</a> </li>
+ 
+            </ul>
+
+            <li> <a href="#14"> Error Handling </a> </li>
+            <ul>
+                <li> <a href="#14a">Introduction to Error Handling </a> </li>
+                <li> <a href="#14b">Constructing an Error </a> </li>
+                <li> <a href="#14c"> The throw Keyword</a> </li>
+                <li> <a href="#14d"> The try...catch Statement </a> </li>
+                <li> <a href="#14e"> Handling with try...catch </a> </li>
+                <li> <a href="#14f"> Error Handling Review</a> </li>
+            </ul>
+
+            <li> <a href="#15"> Review: JavaScript Syntax, Part III </a> </li>
             </ul>
 
         </ol>
@@ -3829,10 +3873,996 @@
         <p class="c1"><span class="c0">It may take some time and practice, but this is how all developers work through
                 their
                 issues, so don&rsquo;t give up, and you&rsquo;ll be an expert in no time.</span></p>
-        <p class="c1"><span class="c0">Congratulations again on learning all of these new techniques. Let&rsquo;s give
-                them
-                one more round of practice so you can see how much progress you&rsquo;ve made!</span></p>
-        <p class="c1 c4"><span class="c0"></span></p>
+       
+        
+        
+    <h2 id="12"><span class="c17">Classes</span></h2>
+    <h3 id="12a"><span class="c4">Introduction to Classes</span></h3>
+    <p class="c0"><span>JavaScript is an </span><span class="c16">object-oriented programming</span><span>&nbsp;(OOP)
+            language we can use to model real-world items. In this lesson, you will learn how to make </span><span
+            class="c16">classes</span><span class="c1">. Classes are a tool that developers use to quickly produce
+            similar objects.</span></p>
+    <p class="c0"><span class="c1">Take, for example, an object representing a dog named halley. This dog&rsquo;s name
+            (a key) is &quot;Halley&quot; (a value) and has a behavior (another key) of 0 (another value). We create the
+            halley object below:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 366.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image18.png"
+                style="width: 372.00px; height: 366.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">Now, imagine you own a dog daycare and want to create a catalog of all the dogs who
+            belong to the daycare. Instead of using the syntax above for every dog that joins the daycare, we can create
+            a Dog class that serves as a template for creating new Dog objects. For each new dog, you can provide a
+            value for their name.</span></p>
+    <p class="c0"><span class="c1">As you can see, classes are a great way to reduce duplicate code and debugging
+            time.</span></p>
+    <p class="c0"><span class="c1">After we lay the foundation for classes in the first few exercises, we will introduce
+            inheritance and static methods &mdash; two features that will make your code more efficient and
+            meaningful.</span></p>
+    <h3 id="12b"><span class="c4">Constructor</span></h3>
+    <p class="c0"><span class="c1">In the last exercise, you created a class called Dog, and used it to produce a Dog
+            object.</span></p>
+    <p class="c0"><span>Although you may see similarities between class and object syntax, there is one important method
+            that sets them apart. It&rsquo;s called the </span><span class="c16">constructor</span><span>&nbsp;method.
+            JavaScript calls the constructor() method every time it creates a new </span><span
+            class="c16">instance</span><span class="c1">&nbsp;of a class.</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 368.00px; height: 154.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image46.png"
+                style="width: 368.00px; height: 154.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <ul class="c7 lst-kix_likyk8etu0ob-0 start">
+        <li class="c0 c3 li-bullet-0"><span class="c1">Dog is the name of our class. By convention, we capitalize and
+                CamelCase class names.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">JavaScript will invoke the constructor() method every time we
+                create a new instance of our Dog class.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">This constructor() method accepts one argument, name.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">Inside of the constructor() method, we use the this keyword. In
+                the context of a class, this refers to an instance of that class. In the Dog class, we use this to set
+                the value of the Dog instance&rsquo;s name property to the name argument.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">Under this.name, we create a property called behavior, which will
+                keep track of the number of times a dog misbehaves. The behavior property is always initialized to
+                zero.</span></li>
+    </ul>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <h3 id="12c"><span class="c4">Instance</span></h3>
+    <p class="c0"><span>Now, we&rsquo;re ready to create class instances. An </span><span
+            class="c16">instance</span><span class="c1">&nbsp;is an object that contains the property names and methods
+            of a class, but with unique property values. Let&rsquo;s look at our Dog class example.</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 282.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image24.png"
+                style="width: 370.00px; height: 282.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <p class="c0"><span class="c1">Below our Dog class, we use the new keyword to create an instance of our Dog class.
+            Let&rsquo;s consider the line of code step-by-step.</span></p>
+    <ul class="c7 lst-kix_euhtn7683bif-0 start">
+        <li class="c0 c3 li-bullet-0"><span class="c1">We create a new variable named halley that will store an instance
+                of our Dog class.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">We use the new keyword to generate a new instance of the Dog
+                class. The new keyword calls the constructor(), runs the code inside of it, and then returns the new
+                instance.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">We pass the &#39;Halley&#39; string to the Dog constructor, which
+                sets the name property to &#39;Halley&#39;.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">Finally, we log the value saved to the name key in our halley
+                object, which logs &#39;Halley&#39; to the console.</span></li>
+    </ul>
+    <p class="c0"><span class="c1">Now you know how to create instances. In the next exercise, you will learn how to add
+            getters, setters, and methods.</span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <h3 id="12d"><span class="c4">Methods</span></h3>
+    <p class="c0"><span class="c1">At this point, we have a Dog class that spins up objects with name and behavior
+            properties. Below, we will add getters and a method to bring our class to life.</span></p>
+    <p class="c0"><span>Class method and getter syntax is the same as it is for objects </span><span class="c2">except
+            you can not include commas between methods</span><span class="c1">.</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 368.00px; height: 408.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image41.png"
+                style="width: 368.00px; height: 408.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span>In the example above, we add getter methods for name and behavior. Notice, we also prepended our
+            property names with underscores (_name and _behavior), which indicate these properties should not be
+            accessed directly. Under the getters, we add a method named .incrementBehavior(). When you call
+            .incrementBehavior() on a Dog instance, it adds 1 to the _behavior property. Between each of our methods, we
+            did </span><span class="c16">not</span><span class="c1">&nbsp;include commas.</span></p>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <h3 id="12e"><span class="c4">Method Calls</span></h3>
+    <p class="c0"><span class="c1">Finally, let&rsquo;s use our new methods to access and manipulate data from Dog
+            instances.</span></p>
+    <p class="c0"><span>&nbsp; </span><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 432.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image31.png"
+                style="width: 372.00px; height: 432.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">In the example above, we create the Dog class, then create an instance, and save it
+            to a variable named halley.</span></p>
+    <p class="c0"><span class="c1">The syntax for calling methods and getters on an instance is the same as calling them
+            on an object &mdash; append the instance with a period, then the property or method name. For methods, you
+            must also include opening and closing parentheses.</span></p>
+    <p class="c0"><span class="c1">Let&rsquo;s take a moment to create two Dog instances and call our
+            .incrementBehavior() method on one of them.</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.00px; height: 236.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image32.png"
+                style="width: 369.00px; height: 236.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">In the example above, we create two new Dog instances, nikko and bradford. Because we
+            increment the behavior of our nikko instance, but not bradford, accessing nikko.behavior returns 1 and
+            accessing bradford.behavior returns 0.</span></p>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <h3 id="12f"><span class="c4">Inheritance (intro)</span></h3>
+    <p class="c0"><span class="c1">Imagine our doggy daycare is so successful that we decide to expand the business and
+            open a kitty daycare. Before the daycare opens, we need to create a Cat class so we can quickly generate Cat
+            instances. We know that the properties in our Cat class (name, behavior) are similar to the properties in
+            our Dog class, though, there will be some differences, because of course, cats are not dogs.</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 380.00px; height: 411.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image26.png"
+                style="width: 380.00px; height: 411.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">In the example above, we create a Cat class. It shares a couple of properties (_name
+            and _behavior) and a method (.incrementBehavior()) with the Dog class from earlier exercises. The Cat class
+            also contains one additional property (_usesLitter), that holds a boolean value to indicate whether a cat
+            can use their litter box.</span></p>
+    <p class="c0"><span>When multiple classes share properties or methods, they become candidates for </span><span
+            class="c16">inheritance</span><span class="c1">&nbsp;&mdash; a tool developers use to decrease the amount of
+            code they need to write.</span></p>
+    <p class="c0"><span>With inheritance, you can create a </span><span class="c16">parent</span><span>&nbsp;class (also
+            known as a superclass) with properties and methods that multiple </span><span class="c16">child</span><span
+            class="c1">&nbsp;classes (also known as subclasses) share. The child classes inherit the properties and
+            methods from their parent class.</span></p>
+    <p class="c0"><span class="c1">Let&rsquo;s abstract the shared properties and methods from our Cat and Dog classes
+            into a parent class called Animal.</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 381.00px; height: 328.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image6.png"
+                style="width: 381.00px; height: 328.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">In the example above, the Animal class contains the properties and methods that the
+            Cat and Dog classes share (name, behavior, .incrementBehavior()).</span></p>
+    <p class="c0"><span class="c1">The diagram bellow shows the relationships we want to create between the Animal, Cat,
+            and Dog classes.</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 372.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image16.png"
+                style="width: 601.70px; height: 372.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <h3 id="12g"><span class="c4">Inheritance (class)</span></h3>
+    <p class="c0"><span class="c1">In the last exercise, we created a parent class named Animal for two child classes
+            named Cat and Dog.</span></p>
+    <p class="c0"><span class="c1">The Animal class below contains the shared properties and methods of Cat and
+            Dog.</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 383.00px; height: 328.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image7.png"
+                style="width: 383.00px; height: 328.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">The code below shows the Cat class that will inherit information from the Animal
+            class.</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 380.00px; height: 410.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image27.png"
+                style="width: 380.00px; height: 410.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <h3 id="12h"><span class="c4">Inheritance (extends and super keywords)</span></h3>
+    <p class="c0"><span class="c1">We&rsquo;ve abstracted the shared properties and methods of our Cat and Dog classes
+            into a parent class called Animal (See below).</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 378.00px; height: 326.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image51.png"
+                style="width: 378.00px; height: 326.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">Now that we have these shared properties and methods in the parent Animal class, we
+            can extend them to the subclass, Cat.</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 376.00px; height: 123.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image36.png"
+                style="width: 376.00px; height: 123.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <p class="c0"><span class="c1">In the example above, we create a new class named Cat that extends the Animal class.
+            Let&rsquo;s pay special attention to our new keywords: extends and super.</span></p>
+    <ul class="c7 lst-kix_62lqxap445lx-0 start">
+        <li class="c0 c3 li-bullet-0"><span class="c1">The extends keyword makes the methods of the animal class
+                available inside the cat class.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">The constructor, called when you create a new Cat object, accepts
+                two arguments, name and usesLitter.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">The super keyword calls the constructor of the parent class. In
+                this case, super(name) passes the name argument of the Cat class to the constructor of the Animal class.
+                When the Animal constructor runs, it sets this._name = name; for new Cat instances.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">_usesLitter is a new property that is unique to the Cat class, so
+                we set it in the Cat constructor.</span></li>
+    </ul>
+    <p class="c0"><span class="c1">Notice, we call super on the first line of our constructor(), then set the usesLitter
+            property on the second line. In a constructor(), you must always call the super method before you can use
+            the this keyword &mdash; if you do not, JavaScript will throw a reference error. To avoid reference errors,
+            it is best practice to call super on the first line of subclass constructors.</span></p>
+    <h3 id="12i"><span class="c4">Inheritance (create new instance)</span></h3>
+    <p class="c0"><span class="c1">Below, we create a new Cat instance and call its name with the same syntax as we did
+            with the Dog class:</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 376.00px; height: 57.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image4.png"
+                style="width: 376.00px; height: 57.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">In the example above, we create a new instance the Cat class, named bryceCat. We pass
+            it &#39;Bryce&#39; and false for our name and usesLitter arguments. When we call console.log(bryceCat._name)
+            our program prints, Bryce.</span></p>
+    <p class="c0"><span class="c1">In the example above, we abandoned best practices by calling our _name property
+            directly. In the next exercise, we&rsquo;ll address this by calling an inherited getter method for our name
+            property.</span></p>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <h3 id="12j"><span class="c4">Inheritance (methods)</span></h3>
+    <p class="c0"><span class="c1">Now that we know how to create an object that inherits properties from a parent class
+            let&rsquo;s turn our attention to methods.</span></p>
+    <p class="c0"><span class="c1">When we call extends in a class declaration, all of the parent methods are available
+            to the child class.</span></p>
+    <p class="c0"><span class="c1">Below, we extend our Animal class to a Cat subclass.</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 507.96px; height: 550.84px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image8.png"
+                style="width: 507.96px; height: 550.84px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">In the example above, our Cat class extends Animal. As a result, the Cat class has
+            access to the Animal getters and the .incrementBehavior() method.</span></p>
+    <p class="c0"><span class="c1">Also in the code above, we create a Cat instance named bryceCat. Because bryceCat has
+            access to the name getter, the code below logs &#39;Bryce&#39; to the console.</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 374.00px; height: 54.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image5.png"
+                style="width: 374.00px; height: 54.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">Since the extends keyword brings all of the parent&rsquo;s getters and methods into
+            the child class, bryceCat.name accesses the name getter and returns the value saved to the name
+            property.</span></p>
+    <p class="c0"><span class="c1">Now consider a more involved example and try to answer the following question: What
+            will the code below log to the console?</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 114.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image10.png"
+                style="width: 370.00px; height: 114.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">The correct answer is 1. But why?</span></p>
+    <ul class="c7 lst-kix_3giil44rd6oq-0 start">
+        <li class="c0 c3 li-bullet-0"><span class="c1">The Cat class inherits the _behavior property, behavior getter,
+                and the .incrementBehavior() method from the Animal class.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">When we created the bryceCat instance, the Animal constructor set
+                the _behavior property to zero.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">The first line of code calls the inherited .incrementBehavior()
+                method, which increases the bryceCat _behavior value from zero to one.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">The second line of code calls the behavior getter and logs the
+                value saved to _behavior (1).</span></li>
+    </ul>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <h3 id="12k"><span class="c4">Inheritance (new properties and methods)</span></h3>
+    <p class="c0"><span class="c1">In addition to the inherited features, child classes can contain their own
+            properties, getters, setters, and methods.</span></p>
+    <p class="c0"><span class="c1">Below, we will add a usesLitter getter. The syntax for creating getters, setters, and
+            methods is the same as it is in any other class.</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 242.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image3.png"
+                style="width: 370.00px; height: 242.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">In the example above, we create a usesLitter getter in the Cat class that returns the
+            value saved to _usesLitter.</span></p>
+    <p class="c0"><span class="c1">Compare the Cat class above to the one we created without inheritance:</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 368.00px; height: 448.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image12.png"
+                style="width: 368.00px; height: 448.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <p class="c0"><span class="c1">We decreased the number of lines required to create the Cat class by about half. Yes,
+            it did require an extra class (Animal), making the reduction in the size of our Cat class seem moot.
+            However, the benefits (time saved, readability, efficiency) of inheritance grow as the number and size of
+            your subclasses increase.</span></p>
+    <p class="c0"><span class="c1">One benefit is that when you need to change a method or property that multiple
+            classes share, you can change the parent class, instead of each subclass.</span></p>
+    <p class="c0"><span class="c1">Before we move past inheritance, take a moment to see how we would create an
+            additional subclass, called Dog.</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 373.00px; height: 119.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image14.png"
+                style="width: 373.00px; height: 119.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">This Dog class has access to the same properties, getters, setters, and methods as
+            the Dog class we made without inheritance, and is a quarter the size.</span></p>
+    <p class="c0"><span class="c1">Now that we&rsquo;ve abstracted animal daycare features, it&rsquo;s easy to see how
+            you can extend Animal to support other classes, like Rabbit, Bird or even Snake.</span></p>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <h3 id="12l"><span class="c4">Static Methods</span></h3>
+    <p class="c0"><span class="c1">Sometimes you will want a class to have methods that aren&rsquo;t available in
+            individual instances, but that you can call directly from the class.</span></p>
+    <p class="c0"><span>Take the Date class, for example &mdash; you can both create Date instances to represent
+            whatever date you want, and call </span><span class="c16">static</span><span class="c1">&nbsp;methods, like
+            Date.now() which returns the current date, directly from the class. The .now() method is static, so you can
+            call it directly from the class, but not from an instance of the class.</span></p>
+    <p class="c0"><span class="c1">Let&rsquo;s see how to use the static keyword to create a static method called
+            generateName method in our Animal class:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 375.00px; height: 291.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image19.png"
+                style="width: 375.00px; height: 291.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <p class="c8"><span class="c1">In the example above, we create a static method called .generateName() that returns a
+            random name when it&rsquo;s called. Because of the static keyword, we can only access .generateName() by
+            appending it to the Animal class.</span></p>
+    <p class="c0"><span class="c1">We call the .generateName() method with the following syntax:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 375.00px; height: 63.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image37.png"
+                style="width: 375.00px; height: 63.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">You cannot access the .generateName() method from instances of the Animal class or
+            instances of its subclasses (See below).</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 377.00px; height: 64.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image53.png"
+                style="width: 377.00px; height: 64.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c8"><span class="c1">The example above will result in an error, because you cannot call static methods
+            (.generateName()) on an instance (tyson).</span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <h3 id="12m"><span class="c4">Review: Classes</span></h3>
+    <p class="c0"><span class="c1">Way to go! Let&rsquo;s review what you learned.</span></p>
+    <ul class="c7 lst-kix_ah6d5khu4jb3-0 start">
+        <li class="c0 c3 li-bullet-0"><span class="c16">Classes</span><span class="c1">&nbsp;are templates for
+                objects.</span></li>
+        <li class="c0 c3 li-bullet-0"><span>Javascript calls a </span><span class="c16">constructor</span><span
+                class="c1">&nbsp;method when we create a new instance of a class.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c16">Inheritance</span><span class="c1">&nbsp;is when we create a
+                parent class with properties and methods that we can extend to child classes.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">We use the extends keyword to create a subclass.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">The super keyword calls the constructor() of a parent
+                class.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">Static methods are called on the class, but not on instances of
+                the class.</span></li>
+    </ul>
+    <p class="c5 c14"><span class="c1"></span></p>
+    <p class="c14"><span class="c1">Documentation: JavaScript Classes</span></p>
+    <p class="c23"><span class="c15"><a class="c9"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes&amp;sa=D&amp;source=editors&amp;ust=1661416913459098&amp;usg=AOvVaw2bYW5B3zmxlWc-oewZrYdx">MDN</a></span>
+    </p>
+    <p class="c0"><span class="c1">In this resource, you will find the documentation for JavaScript classes. This is
+            helpful if you&rsquo;d like a deeper and more comprehensive understanding of the JavaScript class and
+            subclass syntax and their relationship with regard to methods, mix-ins, and instances.</span></p>
+    <p class="c0"><span class="c1">Instead of trying to remember it all, use this documentation as a readily available
+            resource for syntax or implementation help!</span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <h2 id="13"><span class="c17">Implementing Modules using ES6 Syntax</span></h2>
+    <p class="c0"><span class="c1">Article on implementing modules in a browser&rsquo;s runtime environment using ES6
+            modules syntax.</span></p>
+    <h3 id="13a"><span class="c4">What are Modules?</span></h3>
+    <p class="c0"><span class="c16">Modules</span><span>&nbsp;are reusable pieces of code in a file that can be exported
+            and then imported for use in another file. A </span><span class="c16">modular</span><span
+            class="c1">&nbsp;program is one whose components can be separated, used individually, and recombined to
+            create a complex system.</span></p>
+    <p class="c0"><span>Consider the diagram below of an imaginary program written in a file </span><span
+            class="c2">my_app.js</span><span class="c1">:</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 476.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image54.png"
+                style="width: 601.70px; height: 476.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0 c26"><span class="c13">Note: The words &ldquo;module&rdquo; and &ldquo;file&rdquo; are often used
+            interchangeably</span></p>
+    <p class="c0"><span>Instead of having the entire program written within </span><span
+            class="c2">my_app.js</span><span>, its components are broken up into separate modules that each handle a
+            particular task. For example, the </span><span class="c2">database_logic.js</span><span>&nbsp;module may
+            contain code for storing and retrieving data from a database. Meanwhile, the </span><span
+            class="c2">date_formatting.js</span><span class="c1">&nbsp;module may contain functions designed to easily
+            convert date values from one format to another (a common headache among programmers!).</span></p>
+    <p class="c0"><span>This modular strategy is sometimes called </span><span class="c16">separation of
+            concerns</span><span class="c1">&nbsp;and is useful for a number of reasons. What do you think those reasons
+            might be?</span></p>
+    <p class="c8"><span class="c1">Write down a few of your ideas before revealing the reasons below:</span></p>
+    <p class="c0"><span class="c1">By isolating code into separate files, called modules, you can:</span></p>
+    <ul class="c7 lst-kix_66zy9rlgmu0f-0 start">
+        <li class="c0 c3 li-bullet-0"><span class="c1">find, fix, and debug code more easily.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">reuse and recycle defined logic in different parts of your
+                application.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">keep information private and protected from other modules.</span>
+        </li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">prevent pollution of the global namespace and potential naming
+                collisions, by cautiously selecting variables and behavior we load into a program.</span></li>
+    </ul>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <p class="c0"><span class="c1">Implementing modules in your program requires a small bit of management. In the
+            remainder of this article, we will be covering:</span></p>
+    <ul class="c7 lst-kix_ji619sn17xec-0 start">
+        <li class="c0 c3 li-bullet-0"><span>How to use the ES6 export statement to </span><span
+                class="c16">export</span><span class="c1">&nbsp;code from a file - meaning its functions and/or data can
+                be used by other files/modules.</span></li>
+        <li class="c0 c3 li-bullet-0"><span>How to use the ES6 import statement to </span><span
+                class="c16">import</span><span class="c1">&nbsp;functions and/or data from another module.</span></li>
+    </ul>
+    <h3 id="13b"><span class="c4">Implementations of Modules in JavaScript: Node.js vs ES6</span>
+    </h3>
+    <p class="c0"><span>Before we dive in, it should be noted that there are multiple ways of implementing modules
+            depending on the </span><span class="c16">runtime environment</span><span class="c1">&nbsp;in which your
+            code is executed. In JavaScript, there are two runtime environments and each has a preferred module
+            implementation:</span></p>
+    <ol class="c7 lst-kix_evd5dikjavr0-0 start" start="1">
+        <li class="c0 c3 li-bullet-0"><span>The</span><span><a class="c9"
+                    href="https://www.google.com/url?q=https://nodejs.org/en/about/&amp;sa=D&amp;source=editors&amp;ust=1661416913462794&amp;usg=AOvVaw2y4RFUVEgS-pWO5RXmgv2z">&nbsp;</a></span><span
+                class="c19"><a class="c9"
+                    href="https://www.google.com/url?q=https://nodejs.org/en/about/&amp;sa=D&amp;source=editors&amp;ust=1661416913463349&amp;usg=AOvVaw1fH5w8m9p49dUZRHTxLKua">Node</a></span><span
+                class="c1">&nbsp;runtime environment and the module.exports and require() syntax.</span></li>
+        <li class="c0 c3 li-bullet-0"><span>The browser&rsquo;s runtime environment and the</span><span><a class="c9"
+                    href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules&amp;sa=D&amp;source=editors&amp;ust=1661416913463894&amp;usg=AOvVaw29RmFqwknAiMseSPMi_L3A">&nbsp;</a></span><span
+                class="c19"><a class="c9"
+                    href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules&amp;sa=D&amp;source=editors&amp;ust=1661416913464211&amp;usg=AOvVaw0VzMZWWfOsnUSfjBIJVGIP">ES6</a></span><span
+                class="c1">&nbsp;import/export syntax.</span></li>
+    </ol>
+    <p class="c0"><span class="c1">This article will focus on using the ES6 import/export syntax in a browser&rsquo;s
+            runtime environment. For more information, you can read the articles linked below.</span></p>
+    <ul class="c7 lst-kix_xnksa2qn88xe-0 start">
+        <li class="c0 c3 li-bullet-0"><span class="c19"><a class="c9"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/courses/learn-intermediate-javascript/articles/implementing-modules-in-node&amp;sa=D&amp;source=editors&amp;ust=1661416913464822&amp;usg=AOvVaw0e0B_YpQvVgY-9QbIgbD2K">Implementing
+                    Modules In Node</a></span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c19"><a class="c9"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/introduction-to-javascript-runtime-environments&amp;sa=D&amp;source=editors&amp;ust=1661416913465288&amp;usg=AOvVaw0d5soiX28EyGHSQHVgVvqF">Introduction
+                    to Runtime Environments</a></span></li>
+    </ul>
+    <h3 id="13c"><span class="c4">A Brief History of JavaScript Modules in the Browser</span>
+    </h3>
+    <p class="c0"><span>In the early days of web development, JavaScript usage was fairly minimal. A script here to add
+            some interactivity to a page and a script there to automate away some simple task. Nowadays, however,
+            JavaScript dominates the web and scripts have ballooned into large and cumbersome behemoths. According to
+            some studies, the average size of a website, in terms of kilobytes of JavaScript data
+            transferred,</span><span><a class="c9"
+                href="https://www.google.com/url?q=https://httparchive.org/reports/state-of-javascript?start%3Dearliest%26end%3Dlatest%26view%3Dlist&amp;sa=D&amp;source=editors&amp;ust=1661416913466040&amp;usg=AOvVaw3BkW267WiI-XO0Rw9jZg2e">&nbsp;</a></span><span
+            class="c19"><a class="c9"
+                href="https://www.google.com/url?q=https://httparchive.org/reports/state-of-javascript?start%3Dearliest%26end%3Dlatest%26view%3Dlist&amp;sa=D&amp;source=editors&amp;ust=1661416913466278&amp;usg=AOvVaw18Q6h18YGvCpGuW1C9htDH">has
+                grown over 5 times from 2010 to 2020</a></span><span class="c1">!</span></p>
+    <p class="c0"><span class="c1">These stats aren&rsquo;t meant to paint a dreary future of web development. Web
+            applications drive much of modern society and are far more capable than could have been imagined when the
+            World Wide Web was created in 1989. Instead, it is to make clear the need for modularity as the
+            capabilities, and size, of these scripts grow.</span></p>
+    <p class="c0"><span>Though libraries for implementing modules have existed for some time, syntax for natively
+            implementing modules was only introduced in 2015 with the release of</span><span><a class="c9"
+                href="https://www.google.com/url?q=http://es6-features.org/%23ValueExportImport&amp;sa=D&amp;source=editors&amp;ust=1661416913466745&amp;usg=AOvVaw1tZybfBnHfFY7FXmDF_zFA">&nbsp;</a></span><span
+            class="c19"><a class="c9"
+                href="https://www.google.com/url?q=http://es6-features.org/%23ValueExportImport&amp;sa=D&amp;source=editors&amp;ust=1661416913466946&amp;usg=AOvVaw2pSm-bMFt2aMFQR46LWBg9">ECMAScript
+                6 (ES6)</a></span><span class="c1">. Since then, it has been adopted by most modern browsers and is the
+            de facto approach for implementing modular applications in the browser.</span></p>
+    <h3 id="13d"><span class="c4">Implementing Modules in the Browser</span></h3>
+    <p class="c0"><span class="c1">Let&rsquo;s take a look at implementing modules in the browser through an example.
+            Suppose you wanted to build a simple web application with some hidden text that is revealed when a button is
+            pressed.</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 600.00px; height: 384.00px;"><img
+                alt="A demo of a simple website. There is a button that says &quot;Press me... if you dare&quot;. Clicking on the button reveals a hidden message that says &quot;Modules are fancy!&quot;"
+                src="./resources/images/javascriptSyntax3/image40.gif"
+                style="width: 600.00px; height: 384.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span>To create this website, you could create two files, </span><span
+            class="c2">secret-messages.html</span><span>&nbsp;and </span><span
+            class="c2">secret-messages.js</span><span>, and store them together in a folder called </span><span
+            class="c2">secret-messages</span><span class="c1">:</span></p>
+    <p class="c8"><span class="c1">secret-messages/</span></p>
+    <p class="c8"><span class="c1">|-- secret-messages.html</span></p>
+    <p class="c8"><span class="c1">|-- secret-messages.js</span></p>
+    <p class="c0"><span class="c1">Let&rsquo;s take a look at the HTML file first:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 241.33px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image22.png"
+                style="width: 601.70px; height: 241.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span><span>The </span><span class="c2">secret-messages.html</span><span class="c1">&nbsp;page
+            renders a button element and a hidden paragraph element.</span></p>
+    <ul class="c7 lst-kix_jb0jq7bcc72f-0 start">
+        <li class="c0 c3 li-bullet-0"><span>It then loads the script </span><span
+                class="c2">secret-messages.js</span><span>&nbsp;using the</span><span><a class="c9"
+                    href="https://www.google.com/url?q=https://www.geeksforgeeks.org/html-file-paths/&amp;sa=D&amp;source=editors&amp;ust=1661416913468324&amp;usg=AOvVaw3S7zUYRmxDeTLuNgI0yJhA">&nbsp;</a></span><span
+                class="c19"><a class="c9"
+                    href="https://www.google.com/url?q=https://www.geeksforgeeks.org/html-file-paths/&amp;sa=D&amp;source=editors&amp;ust=1661416913468529&amp;usg=AOvVaw3Y8tgKWs4cUm_VSPDN-BYD">file
+                    path</a></span><span>&nbsp;&quot;./secret-messages.js&quot;. The ./ before the file name is how you
+                indicate that the file being referenced (</span><span class="c2">secret-messages.js</span><span>) is in
+                the same folder as the file referencing it (</span><span class="c2">secret-messages.html</span><span
+                class="c1">).</span></li>
+    </ul>
+    <p class="c0"><span class="c1">Speaking of which, let&rsquo;s take a look at the JavaScript file:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 308.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image39.png"
+                style="width: 601.70px; height: 308.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <ul class="c7 lst-kix_ii489oajff3l-0 start">
+        <li class="c0 c3 li-bullet-0"><span>In </span><span class="c2">secret-messages.js</span><span>, DOM objects are
+                created to reference the button element and paragraph element using the</span><span><a class="c9"
+                    href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById&amp;sa=D&amp;source=editors&amp;ust=1661416913469257&amp;usg=AOvVaw37aUKTNPcnmPaey52YOtaY">&nbsp;</a></span><span
+                class="c19"><a class="c9"
+                    href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById&amp;sa=D&amp;source=editors&amp;ust=1661416913469561&amp;usg=AOvVaw0rrIMM-89PT657aoWvoBrZ">DOM
+                    API</a></span><span class="c1">. These objects are stored in buttonElement and pElement,
+                respectively.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">The function toggleHiddenElement() is declared. It can accept
+                either of these elements as an input called domElement and will either show or hide that element
+                depending on its current style.display value.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">An event listener is added to buttonElement to listen for
+                &#39;click&#39; events and respond by calling toggleHiddenElement() with pElement as the
+                argument.</span></li>
+    </ul>
+    <p class="c0"><span class="c1">Now, suppose you wanted to create a second webpage with similar features. There is
+            still a button, but this time clicking it reveals an image. Using similar logic as the program above, this
+            can be achieved with the following file structure:</span></p>
+    <p class="c8"><span class="c1">secret-image/</span></p>
+    <p class="c8"><span class="c1">|-- secret-image.html</span></p>
+    <p class="c8"><span class="c1">|-- secret-image.js</span></p>
+    <p class="c0"><span class="c1">The HTML might look like this:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 237.33px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image43.png"
+                style="width: 601.70px; height: 237.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">&hellip; and the JavaScript might look like this:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 305.33px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image25.png"
+                style="width: 601.70px; height: 305.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span>Given that much of the code in these two programs is similar, creating this second website was
+            fairly straightforward. In particular, notice that the toggleHiddenElement() function is copied line for
+            line from </span><span class="c2">secret-messages.js</span><span class="c1">.</span></p>
+    <p class="c0"><span class="c1">Having two identical, but separate, copies of a function can lead to maintenance
+            issues in the future. For example, any bugs that may exist within the function would need to be fixed in two
+            places rather than one.</span></p>
+    <p class="c0"><span>Instead, creating a single copy of toggleHiddenElement() within a module that </span><span
+            class="c16">exports</span><span>&nbsp;it would allow these two websites to </span><span
+            class="c16">import</span><span class="c1">&nbsp;and use the exact same function. With this approach, updates
+            to the function only need to occur within the module that defines them, and all programs that import this
+            function will receive the same update. Furthermore, additional functions could be exported by the module and
+            used by both programs, further reducing repetition.</span></p>
+    <h3 id="13e"><span class="c4">ES6 Named Export Syntax</span></h3>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <p class="c0"><span>A module must be entirely contained within a file. So, let&rsquo;s first consider where a new
+            module may be placed within the file system. Since it needs to be used by both of these projects, you may
+            want to put it in a mutually accessible location. The entire file structure containing both projects and
+            this new module, let&rsquo;s call it </span><span class="c2">dom-functions.js</span><span class="c1">, could
+            look like this:</span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <p class="c8"><span class="c1">secret-image/</span></p>
+    <p class="c8"><span class="c1">|-- secret-image.html</span></p>
+    <p class="c8"><span class="c1">|-- secret-image.js</span></p>
+    <p class="c8"><span class="c1">secret-messages/</span></p>
+    <p class="c8"><span class="c1">|-- secret-messages.html</span></p>
+    <p class="c8"><span class="c1">|-- secret-messages.js</span></p>
+    <p class="c8"><span class="c1">modules/</span></p>
+    <p class="c8"><span class="c1">|-- dom-functions.js &nbsp; &nbsp;&lt;-- new module file</span></p>
+    <p class="c0"><span>Inside </span><span class="c2">dom-functions.js</span><span>, the functions you wish to reuse
+            can be exported using the </span><span class="c16">named export</span><span>&nbsp;syntax below:</span><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 40.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image49.png"
+                style="width: 601.70px; height: 40.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <p class="c0"><span>Using this syntax, the name of each exported resource is listed between curly braces and
+            separated by commas. Below, you can see how this is implemented in the new module file </span><span
+            class="c2">dom-functions.js</span><span class="c1">:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 378.67px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image13.png"
+                style="width: 601.70px; height: 378.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <p class="c0"><span class="c1">Let&rsquo;s briefly break down how this module works:</span></p>
+    <ul class="c7 lst-kix_idc4e4steeft-0 start">
+        <li class="c0 c3 li-bullet-0"><span class="c1">The function toggleHiddenElement() is declared. It accepts a
+                domElement as an input and either shows or hides that element depending on its current display style
+                value.</span></li>
+        <li class="c0 c3 li-bullet-0"><span>A new function changeToFunkyColor() is declared. It accepts a domElement as
+                an input and then sets its background color to a random</span><span><a class="c9"
+                    href="https://www.google.com/url?q=https://www.w3schools.com/colors/colors_rgb.asp&amp;sa=D&amp;source=editors&amp;ust=1661416913472427&amp;usg=AOvVaw0pAqWbIDeLAIDF7onkmp7u">&nbsp;</a></span><span
+                class="c19"><a class="c9"
+                    href="https://www.google.com/url?q=https://www.w3schools.com/colors/colors_rgb.asp&amp;sa=D&amp;source=editors&amp;ust=1661416913472633&amp;usg=AOvVaw1kKWHKmvc3Wv3zXhNUt804">rgb()
+                    color value</a></span><span class="c1">.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">The two functions are exported using the ES6 export
+                statement.</span></li>
+    </ul>
+    <p class="c0"><span class="c1">These exported functions are now available to be imported and used by other
+            files!</span></p>
+    <p class="c0 c22"><span>If you want to try this out on your own computer, you will need to spin up a local server or
+            else you will run into</span><span><a class="c9"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS&amp;sa=D&amp;source=editors&amp;ust=1661416913473187&amp;usg=AOvVaw0x-JrhO4_jjBoIQ7GEazNU">&nbsp;</a></span><span
+            class="c19"><a class="c9"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS&amp;sa=D&amp;source=editors&amp;ust=1661416913473402&amp;usg=AOvVaw3oI9nBuTg4Fgj7D5wlmRvZ">CORS</a></span><span>&nbsp;issues.</span><span><a
+                class="c9"
+                href="https://www.google.com/url?q=https://www.codecademy.com/articles/spinning-up-a-local-server&amp;sa=D&amp;source=editors&amp;ust=1661416913473623&amp;usg=AOvVaw3GEY0AMaasey8qyJbhUXcJ">&nbsp;</a></span><span
+            class="c19"><a class="c9"
+                href="https://www.google.com/url?q=https://www.codecademy.com/articles/spinning-up-a-local-server&amp;sa=D&amp;source=editors&amp;ust=1661416913473861&amp;usg=AOvVaw2wyjVylT8NkFu5Hr-1b9xA">Check
+                out this article</a></span><span class="c1">&nbsp;on creating a local server with VSCode and the Live
+            Server extension.</span></p>
+    <p class="c0"><span class="c1">In addition to the syntax above, in which all named exports are listed together,
+            individual values may be exported as named exports by simply placing the export keyword in front of the
+            variable&rsquo;s declaration. Here is the same example using this syntax:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 176.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image20.png"
+                style="width: 601.70px; height: 176.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <h3 id="13f"><span class="c4">ES6 Import Syntax</span></h3>
+    <p class="c0"><span class="c1">The ES6 syntax for importing named resources from modules is similar to the export
+            syntax:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 33.33px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image17.png"
+                style="width: 601.70px; height: 33.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span>Let&rsquo;s update the </span><span class="c2">secret-messages</span><span>&nbsp;program such
+            that it now imports functionality from </span><span class="c2">dom-functions.js</span><span>. Doing so
+            requires two important steps. First, update </span><span class="c2">secret-messages.js</span><span
+            class="c1">:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 230.67px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image11.png"
+                style="width: 601.70px; height: 230.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">Let&rsquo;s break down these changes:</span></p>
+    <ul class="c7 lst-kix_f86ye9y3b5of-0 start">
+        <li class="c0 c3 li-bullet-0"><span>In </span><span class="c2">secret-messages.js</span><span>, the functions
+                toggleHiddenElement() and changeToFunkyColor() are imported from the module </span><span
+                class="c2">../modules/dom-functions.js</span><span>. The ../ indicates that the </span><span
+                class="c2">modules/</span><span>&nbsp;folder is in the same folder as the parent folder, </span><span
+                class="c2">secret-messages/</span><span class="c1">.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">When the button is clicked, the now imported
+                toggleHiddenElement() function is called with pElement as an argument.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">In addition, changeToFunkyColor() is called with buttonElement as
+                an argument, changing its background color to a random one!</span></li>
+    </ul>
+    <p class="c0"><span>Now, you must also update </span><span class="c2">secret-messages.html</span><span
+            class="c1">:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 232.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image52.png"
+                style="width: 601.70px; height: 232.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span><span>The change here is subtle, can you spot it? In </span><span
+            class="c2">secret-messages.html</span><span class="c1">, the only thing that changes is the addition of the
+            attribute type=&#39;module&#39; to the &lt;script&gt; element. Failure to do so can cause some browsers to
+            throw an error. For example, in Chrome you might see this error:</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 460.00px; height: 132.00px;"><img
+                alt="Uncaught SyntaxError: Cannot use import statement outside a module" src="./resources/images/javascriptSyntax3/image2.png"
+                style="width: 460.00px; height: 132.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span>And those are the basics of exporting and importing using the ES6 export and import syntax! If
+            you have been following along with these code examples, see if you can update the </span><span
+            class="c2">secret-image</span><span>&nbsp;project to use the exported functions from the module </span><span
+            class="c2">dom-functions.js</span><span class="c1">&nbsp;before continuing on to the challenges
+            below.</span></p>
+    <p class="c5 c8"><span class="c1"></span></p>
+    <h3 id="13g"><span class="c4">Renaming Imports to Avoid Naming Collisions</span></h3>
+    <p class="c0"><span class="c1">Inevitably, you will run into a situation where the resources you wish to import
+            share a name with some other value that already exists in your program (or from another imported
+            module).</span></p>
+    <p class="c0"><span>For example, suppose you had access to two modules, </span><span
+            class="c2">greeterEspanol.js</span><span>&nbsp;and </span><span class="c2">greeterFrancais.js</span><span
+            class="c1">. Each exports a function called greet():</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 234.67px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image9.png"
+                style="width: 601.70px; height: 234.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span>Now, let&rsquo;s say you wanted to use each of these functions in a program, called </span><span
+            class="c2">main.js</span><span class="c1">, that simulates a conversation between a spanish-speaker and a
+            french-speaker.</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 58.67px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image1.png"
+                style="width: 601.70px; height: 58.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">The code above will throw an error on line 2 due to the fact that the identifier
+            greet has already been defined on line 1. Thankfully, ES6 includes syntax for renaming imported resources by
+            adding in the keyword as. It looks like this:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 37.33px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image45.png"
+                style="width: 601.70px; height: 37.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span>Let&rsquo;s see how this could work within </span><span class="c2 c27">main.js</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 132.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image21.png"
+                style="width: 601.70px; height: 132.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span>Now, both of the imported functions can be called within </span><span
+            class="c2">main.js</span><span class="c1">&nbsp;using their new identifiers, greetEspanol() and
+            greetFrancais().</span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <h3 id="13h"><span class="c4">Default Exports and Imports</span></h3>
+    <p class="c0"><span>So far, the examples shown have used the named export syntax, in which a module&rsquo;s
+            resources are exported individually by name. Every module also has the option to export a single value to
+            represent the entire module called the </span><span class="c16">default export</span><span class="c1">.
+            Often, though not always, the default export value is an object containing the entire set of functions
+            and/or data values of a module.</span></p>
+    <p class="c0"><span class="c1">The syntax for exporting a default object looks like this:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 114.67px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image29.png"
+                style="width: 601.70px; height: 114.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">With this syntax, the object containing the module&rsquo;s resources is first
+            declared and then is exported on the next line. At first glance, it looks like the resources object is being
+            exported as a named export. However, the clause as default renames the exported object to default, a
+            reserved identifier that can only be given to a single exported value.</span></p>
+    <p class="c0"><span class="c1">You may also see this shorthand syntax where the value follows export default is the
+            default value to be exported:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 120.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image30.png"
+                style="width: 601.70px; height: 120.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <h3 id="13i"><span class="c2 c25">Importing default values.</span></h3>
+    <p class="c0"><span class="c1">The syntax for importing default exports looks like this:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 37.33px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image38.png"
+                style="width: 601.70px; height: 37.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">Notice that the curly braces are gone from the import statement. This syntax is
+            actually shorthand for import { default as importedResources } from &#39;module.js and the imported default
+            value may be given any name the programmer chooses.</span></p>
+    <p class="c0"><span class="c1">It should be noted that if the default export is an object, the values inside cannot
+            be extracted until after the object is imported, like so:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 136.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image23.png"
+                style="width: 601.70px; height: 136.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span>Let&rsquo;s return to the prior example. The </span><span
+            class="c2">dom-functions.js</span><span class="c1">&nbsp;module from above could be rewritten to use default
+            exports like so:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 449.33px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image50.png"
+                style="width: 601.70px; height: 449.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <p class="c0"><span>This default exports object can now be used within </span><span
+            class="c2">secret-messages.js</span><span class="c1">&nbsp;like so:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 237.33px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image48.png"
+                style="width: 601.70px; height: 237.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <p class="c8"><span>Notice how toggleHiddenElement() and changeToFunkyColor() are now methods of the imported object
+            called domFunctions and are extracted using</span><span><a class="c9"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment&amp;sa=D&amp;source=editors&amp;ust=1661416913479355&amp;usg=AOvVaw3y1n0NiH09xWbq2Mweg4DS">&nbsp;</a></span><span
+            class="c19"><a class="c9"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment&amp;sa=D&amp;source=editors&amp;ust=1661416913479724&amp;usg=AOvVaw3Z1oGtgvRQ6J0MpOZuEcN_">ES6
+                destructuring syntax</a></span><span class="c1">! It should be noted that the identifier domFunctions
+            can be chosen as the programmer sees fit. If you recall, the syntax used in the snippet above is shorthand
+            for:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 42.67px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image28.png"
+                style="width: 601.70px; height: 42.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <h3 id="13j"><span class="c4">Review</span></h3>
+    <p class="c0"><span class="c1">In this article, you have learned the following:</span></p>
+    <ul class="c7 lst-kix_lcw5xyyuphm4-0 start">
+        <li class="c0 c3 li-bullet-0"><span class="c1">The benefits of implementing modular programs.</span></li>
+        <li class="c0 c3 li-bullet-0"><span>How to use the ES6 export statement to </span><span
+                class="c16">export</span><span class="c1">&nbsp;code from a file - meaning its functions and/or data can
+                be used by other files/modules.</span></li>
+        <li class="c0 c3 li-bullet-0"><span>How to use the ES6 import statement to </span><span
+                class="c16">import</span><span class="c1">&nbsp;functions and/or data from another module.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">How to rename imported resources using the as keyword.</span>
+        </li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">How to export and import a default value.</span></li>
+    </ul>
+    <p class="c0"><span>Though this article covers the basics of using ES6 syntax to import and export
+            modules,</span><span><a class="c9"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules&amp;sa=D&amp;source=editors&amp;ust=1661416913481068&amp;usg=AOvVaw1DW6WobuXRVQ7-SaZmHlkf">&nbsp;</a></span><span
+            class="c19"><a class="c9"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules&amp;sa=D&amp;source=editors&amp;ust=1661416913481316&amp;usg=AOvVaw1aGDP3Pwmse183MyS2Ki5J">MDN
+                has an excellent article</a></span><span class="c1">&nbsp;that provides an in-depth look at some
+            additional features that ES6 has to offer.</span></p>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <h2 id="14"><span class="c17">Error Handling</span></h2>
+    <h3 id="14a"><span class="c4">Introduction to Error Handling</span></h3>
+    <p class="c8"><span>We can&rsquo;t always stop errors before they occur, but we can include a backup plan in our
+            program to anticipate and respond to the errors to ensure that our program continues running. </span><span
+            class="c16">Error handling</span><span class="c1">&nbsp;is the process of programmatically anticipating and
+            addressing errors. In JavaScript, we handle errors using the keywords try and catch. We try to move the soup
+            to the table, making sure there&rsquo;s someone or something nearby to catch the soup in case we drop
+            it.</span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <p class="c8"><span class="c1">Runtime Errors</span></p>
+    <p class="c0"><span>Errors contain useful messages that tell us why our program isn&rsquo;t working or why the error
+            was </span><span class="c16">thrown</span><span class="c1">. When an error is thrown, our program stops
+            running and the console displays the error message in red text like so:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.00px; height: 203.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image35.png"
+                style="width: 369.00px; height: 203.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span>When we execute code and a line of code throws an error, that error is referred to as a
+        </span><span class="c16">runtime error</span><span class="c1">. In JavaScript, there are built-in error objects
+            that have a name and message property which tell us what went wrong. Examples of built-in runtime errors
+            include:</span></p>
+    <ul class="c7 lst-kix_bbqt95k5sksq-0 start">
+        <li class="c0 c3 li-bullet-0"><span class="c1">ReferenceError: when a variable or function cannot be
+                found.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">TypeError: when a value is not a valid type, see the example
+                below:</span></li>
+    </ul>
+    <h3 id="14b"><span class="c4">Constructing an Error</span></h3>
+    <p class="c0"><span class="c1">Let&rsquo;s say we need to inform a user that a string passed in as an argument is
+            too short with a custom message. Such a message isn&rsquo;t covered by a built-in error, but we could use
+            the Error function to make our own error object with a message that is unique to our program!</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 365.00px; height: 115.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image34.png"
+                style="width: 365.00px; height: 115.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c8"><span class="c1">In the code snippet above, we used the Error function to create an error object that
+            has the message &#39;Your password is too weak.&#39;.</span></p>
+    <p class="c0"><span class="c1">You might also see errors created with the new keyword. Both methods will lead to the
+            same functionality. Take a look:</span></p>
+    <p class="c8"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 116.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image15.png"
+                style="width: 370.00px; height: 116.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">Keep in mind that creating an error is not the same as throwing an error. A thrown
+            error will cause the program to stop running. We cover how to throw our created errors in the next
+            exercise!</span></p>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <h3 id="14c"><span class="c4">The throw Keyword</span></h3>
+    <p class="c0"><span class="c1">Creating an error doesn&rsquo;t cause our program to stop &mdash; remember, an error
+            must be thrown for it to halt the program.</span></p>
+    <p class="c0"><span class="c1">To throw an error in JavaScript, we use the throw keyword like so:</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 374.00px; height: 72.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image33.png"
+                style="width: 374.00px; height: 72.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">When we use the throw keyword, the error is thrown and code after throw statement
+            will not execute. Take for example:</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 115.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image42.png"
+                style="width: 370.00px; height: 115.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">After throw Error(&#39;Something wrong happened&#39;); is executed and the error
+            object is thrown, the console.log() statement will not run (just like when a built-in JavaScript error was
+            thrown!).</span></p>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <h3 id="14d"><span class="c4">The try...catch Statement</span></h3>
+    <p class="c0"><span>We have the ability to anticipate and </span><span class="c16">handle</span><span
+            class="c1">&nbsp;these errors by writing code to address the error and allow our program to continue
+            running.</span></p>
+    <p class="c0"><span class="c1">In JavaScript, we use try...catch statement to anticipate and handle errors. Take a
+            look at example below:</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 368.00px; height: 281.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image44.png"
+                style="width: 368.00px; height: 281.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <p class="c0"><span class="c1">Now, let&rsquo;s break down what happened in the try...catch statement above:</span>
+    </p>
+    <ul class="c7 lst-kix_snr9wxfnxbl2-0 start">
+        <li class="c0 c3 li-bullet-0"><span>We have code that follows try inside curly braces {} known as the
+            </span><span class="c16">try block</span><span class="c1">.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">Inside the try block we insert code that we anticipate might
+                throw an error.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">Since we want to see what happens if an error is thrown in the
+                try block, we throw an error with the message &#39;This error will get caught&#39;.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">Following the try block is the catch statement which accepts the
+                thrown error from the try block . The e represents the thrown error.</span></li>
+        <li class="c0 c3 li-bullet-0"><span>The curly braces that follow catch(e) is known as the </span><span
+                class="c16">catch block</span><span class="c1">&nbsp;and contains code that executes to handle the
+                error.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">Since the error is caught, our console.log() after the
+                try...catch statement prints &#39;The thrown error that was caught in the try...catch
+                statement!&#39;.</span></li>
+    </ul>
+    <p class="c0"><span class="c1">Generally speaking, in a try...catch statement, we evaluate code in the try block and
+            if the code throws an error, the code inside the catch block will handle the error for us. The provided
+            example just showcases how a try...catch statement works because we know an error is being thrown.
+            Let&rsquo;s first practice writing our own try...catch statement and afterwards we will go over a more
+            practical usage of try...catch.</span></p>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <h3 id="14e"><span class="c4">Handling with try...catch</span></h3>
+    <p class="c0"><span>In the previous exercise we caught an error that we threw, but we can also use a try...catch
+            statement to handle built-in errors that are thrown by the </span><span class="c16">JavaScript
+            engine</span><span class="c1">&nbsp;that is reading and evaluating our code.</span></p>
+    <p class="c0"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 371.00px; height: 197.00px;"><img
+                alt="" src="./resources/images/javascriptSyntax3/image47.png"
+                style="width: 371.00px; height: 197.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c1">In the example above, we didn&rsquo;t use the throw keyword to throw a custom error,
+            rather we tried to re-assign a const variable and a TypeError was thrown. Then, in our catch block, we
+            logged the error to the console.</span></p>
+    <p class="c0"><span class="c1">Using a try...catch statement for built-in JavaScript errors is really beneficial
+            when we need to use data from an external source that&rsquo;s not written directly in our program.</span>
+    </p>
+    <p class="c0"><span class="c1">Let&rsquo;s say we expect to grab an array from a database but the information we get
+            back is a string. In our program, we could have a function that only works on arrays. If that function was
+            called with a string instead of an array we would get an error and our program would stop running!</span>
+    </p>
+    <p class="c0"><span class="c1">However, we can use a try...catch statement to handle the thrown error for us which
+            allows our program to continue running and we receive a message knowing what went wrong! Let&rsquo;s see how
+            we can implement this in our code.</span></p>
+    <h3 id="14f"><span class="c4">Error Handling Review</span></h3>
+    <p class="c0"><span class="c1">Great job with handling errors!</span></p>
+    <p class="c0"><span class="c1">In this lesson we went over:</span></p>
+    <ul class="c7 lst-kix_a5v2pdm5ocvu-0 start">
+        <li class="c0 c3 li-bullet-0"><span class="c1">How mistakes in programming leads to errors.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">Why errors are useful for developers.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">Errors will prevent a program from executing unless it is
+                handled.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">How to create an error using the Error() function.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">How to throw an error object using the throw keyword.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">How to use the try...catch statement to handle thrown
+                errors.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">Evaluating code in a try block to anticipate errors.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">Catching the error in a catch block to allow our program to
+                continue running.</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">Why the try...catch statement would be useful in a
+                program.</span></li>
+    </ul>
+    <p class="c8 c5"><span class="c1"></span></p>
+    <h2 id="15"><span class="c17">Review: JavaScript Syntax, Part III</span></h2>
+    <p class="c0"><span class="c1">In this unit, you learned intermediate JavaScript concepts.</span></p>
+    <p class="c0"><span class="c1">Congratulations! The goal of this unit was to understand intermediate JavaScript
+            concepts, such as classes and modules. Knowing these concepts should improve your ability to write
+            JavaScript programs and prepare you for creating web applications.</span></p>
+    <p class="c0"><span class="c1">Having completed this unit, you are now able to:</span></p>
+    <ul class="c7 lst-kix_w6rgrvvhiugn-0 start">
+        <li class="c0 c3 li-bullet-0"><span class="c1">Create classes in JavaScript</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">Implement JavaScript Modules</span></li>
+        <li class="c0 c3 li-bullet-0"><span class="c1">Create JavaScripts errors and handle them</span></li>
+    </ul>
+    <p class="c0"><span class="c1">If you are interested in learning more about these topics, here are some additional
+            resources:</span></p>
+    <ul class="c7 lst-kix_m6yhlcqf02fo-0 start">
+        <li class="c0 c3 li-bullet-0"><span>Article:</span><span><a class="c9"
+                    href="https://www.google.com/url?q=https://addyosmani.com/resources/essentialjsdesignpatterns/book/&amp;sa=D&amp;source=editors&amp;ust=1661416913487500&amp;usg=AOvVaw0-VJ-2eL6_Ad874hEyswgO">&nbsp;</a></span><span
+                class="c19"><a class="c9"
+                    href="https://www.google.com/url?q=https://addyosmani.com/resources/essentialjsdesignpatterns/book/&amp;sa=D&amp;source=editors&amp;ust=1661416913487841&amp;usg=AOvVaw0jWcbbr3U9Ej8AT72DXnBO">JavaScript
+                    Design Patterns by Andy Osmani</a></span></li>
+        <li class="c0 c3 li-bullet-0"><span>Article:</span><span><a class="c9"
+                    href="https://www.google.com/url?q=https://engineering.helpscout.com/reducing-complexity-with-guard-clauses-in-php-and-javascript-74600fd865c7&amp;sa=D&amp;source=editors&amp;ust=1661416913488255&amp;usg=AOvVaw2F2x7GJyYIGk9aXxZBrG1y">&nbsp;</a></span><span
+                class="c19"><a class="c9"
+                    href="https://www.google.com/url?q=https://engineering.helpscout.com/reducing-complexity-with-guard-clauses-in-php-and-javascript-74600fd865c7&amp;sa=D&amp;source=editors&amp;ust=1661416913488621&amp;usg=AOvVaw1fjufSG0f7InYa-ZvfP3Rz">Reducing
+                    Complexity with Guard Clauses in PHP and JavaScript by Craig Davis</a></span></li>
+        <li class="c0 c3 li-bullet-0"><span>Documentation:</span><span><a class="c9"
+                    href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain&amp;sa=D&amp;source=editors&amp;ust=1661416913489045&amp;usg=AOvVaw3oklM04sPOdsNUkCcOA9wS">&nbsp;</a></span><span
+                class="c19"><a class="c9"
+                    href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain&amp;sa=D&amp;source=editors&amp;ust=1661416913489272&amp;usg=AOvVaw0LcUEG0Z-IYj8FCQBbvpDO">Inheritance
+                    and the Prototype Chain</a></span></li>
+        <li class="c0 c3 li-bullet-0"><span>Article:</span><span><a class="c9"
+                    href="https://www.google.com/url?q=https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript&amp;sa=D&amp;source=editors&amp;ust=1661416913489671&amp;usg=AOvVaw21WWU8eOnBNnrHJKOJa3Zi">&nbsp;</a></span><span
+                class="c19"><a class="c9"
+                    href="https://www.google.com/url?q=https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript&amp;sa=D&amp;source=editors&amp;ust=1661416913489901&amp;usg=AOvVaw37Fv8W3yFRGbFViAaS6x4v">Understanding
+                    Prototypes and Inheritance in JavaScript</a></span></li>
+        <li class="c0 c3 li-bullet-0"><span>Article:</span><span><a class="c9"
+                    href="https://www.google.com/url?q=https://www.taniarascia.com/understanding-classes-in-javascript/&amp;sa=D&amp;source=editors&amp;ust=1661416913490257&amp;usg=AOvVaw2-KndkFfaOw6n5EpoJ0CZ_">&nbsp;</a></span><span
+                class="c19"><a class="c9"
+                    href="https://www.google.com/url?q=https://www.taniarascia.com/understanding-classes-in-javascript/&amp;sa=D&amp;source=editors&amp;ust=1661416913490532&amp;usg=AOvVaw2NA54n6mgekk0FqmGRuwFD">Understanding
+                    Classes in JavaScript</a></span></li>
+    </ul>
+    <p class="c0 c5"><span class="c1"></span></p>
+    <p class="c8 c5"><span class="c1"></span></p>
+</body>
+
+</html>
+        
 </body>
 
 </html>
