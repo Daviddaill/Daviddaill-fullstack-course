@@ -1,0 +1,742 @@
+<html>
+
+
+
+        <head>
+            <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+            <link rel="stylesheet" href="./resources/css/courses.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Making a website accessible</title>
+            <link
+                href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap"
+                rel="stylesheet">
+        </head>
+
+<body class="c18 doc-content">
+    <header>
+        <p id="main"><a href="index.html">Main page </a></p>
+        <h1>Making a website accessible</h1>
+    </header>
+    <nav>
+        <ol>
+            <li> <a href="#1">What is Digital Accessibility? </a></li>
+            <ul>
+                <li> <a href="#1a">What is Accessibility?</a> </li>
+                <li><a href="#1b">What is Digital Accessibility?</a> </li>
+                <li><a href="#1c">Why is Digital Accessibility Important?</a>
+                </li>
+                <li><a href="#1d">Conclusion</a> </li>
+
+            </ul>
+
+            <li> <a href="#2">Accessible Design</a> </li>
+            <ul>
+                <li> <a href="#2a">Contrast </a> </li>
+                <li> <a href="#2b">Introduction to Headings </a> </li>
+                <li> <a href="#2c"> Text Accessibility</a> </li>
+                <li> <a href="#2d"> Color Accessibility </a> </li>
+                <li> <a href="#2e"> Color Blindness </a> </li>
+                <li> <a href="#2f"> Best Practices </a> </li>
+                <li> <a href="#2g"> Review</a> </li>
+            </ul>
+
+            <li> <a href="#3">Accessibility</a> </li>
+            <ul>
+                <li> <a href="#3a">Introduction to Accessibility </a> </li>
+                <li> <a href="#3b">Semantic HTML Elements </a> </li>
+                <li> <a href="#3c"> ARIA Role </a> </li>
+                <li> <a href="#3d"> ARIA Role: Presentation </a>
+                </li>
+                <li> <a href="#3e"> ARIA Properties </a>
+                </li>
+                <li> <a href="#3f"> Alt Attribute </a> </li>
+                <li> <a href="#3g"> Review: Accessibility </a> </li>
+            </ul>
+
+
+            <li> <a href="#4">Setting Up and Using Screen Readers</a></li>
+            <ul>
+                <li> <a href="#4a">Screen Reader Options </a> </li>
+                <li> <a href="#4b">Testing Accessibility </a> </li>
+                <li> <a href="#4c">Conclusion </a></li>
+
+            </ul>
+            <li> <a href="#5"> Review: Making a Website Accessible </a> </li>
+        </ol>
+    </nav>
+    <main>
+    <h2 id="1"><span class="c15">What is Digital Accessibility?</span></h2>
+    <p class="c2"><span class="c5">In this article, you&rsquo;ll learn about digital accessibility and why it is
+            important to incorporate aspects of digital accessibility into websites.</span></p>
+    <h3 id="1a"><span class="c11">What is Accessibility?</span></h3>
+    <p class="c2"><span class="c5">Accessibility refers to designing devices, products, and environments such that
+            individuals with disabilities or sensory impairments can successfully use the device or product.</span></p>
+    <p class="c2"><span class="c5">In 1990, the United States Congress passed the Americans with Disabilities Act,
+            commonly referred to as the ADA. The ADA mandates that public and private spaces be made accessible to
+            individuals with disabilities that include (but are not limited to):</span></p>
+    <ul class="c10 lst-kix_gzinsm6ao3bo-0 start">
+        <li class="c2 c3 li-bullet-0"><span class="c5">Sensory impairments</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Cognitive impairments</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Physical limitations</span></li>
+    </ul>
+    <p class="c2"><span class="c5">For example, the ADA requires on-ramps as an alternative way of accessing a staircase
+            for individuals who may use a wheelchair. Another example is that stop lights use hues of green, yellow, or
+            red that are readily discernable to individuals with visual impairments (like colorblindness).</span></p>
+    <p class="c2"><span class="c5">Although the ADA has forced public and private spaces to incorporate accessibility
+            best practices, one frontier that has been mostly untouched has been digital accessibility, or,
+            accessibility in digital media, like websites and mobile apps. In this article, we&rsquo;ll explore digital
+            accessibility and why it is essential on the Internet.</span></p>
+    <h3 id="1b"><span class="c11">What is Digital Accessibility?</span></h3>
+    <p class="c2"><span class="c5">Although the concept of digital accessibility refers specifically to digital media,
+            it&rsquo;s not much different from the general idea of accessibility.</span></p>
+    <p class="c2"><span class="c5">The requirements for accessibility in digital media are, of course, very different,
+            however.</span></p>
+    <p class="c2"><span class="c5">Some examples include (but are not limited to):</span></p>
+    <ul class="c10 lst-kix_2r9qjwq9mmg7-0 start">
+        <li class="c2 c3 li-bullet-0"><span class="c5">Screen readers that parse a website for a user with visual
+                impairments</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Videos on websites are closed-captioned for individuals with
+                hearing impairments</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Images include &ldquo;alt text&rdquo; for individuals with visual
+                impairments</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Websites must be navigable by keyboard for users who may not be
+                able to operate a mouse (i.e., navigating using the &ldquo;Tab&rdquo; on a keyboard)</span></li>
+    </ul>
+    <p class="c2"><span>The examples above demonstrate only a subset of how websites or mobile apps incorporate digital
+            accessibility. For the full list of digital accessibility guidelines, there is a global standard known as
+            the </span><span class="c22">Web Content Accessibility Guidelines 2.1</span><span class="c5">&nbsp;(WCAG).
+            Per WCAG&rsquo;s abstract, WCAG &ldquo;covers a wide range of recommendations for making Web content more
+            accessible.&rdquo;</span></p>
+    <p class="c2"><span class="c5">To learn more, visit WCAG at the following link:</span></p>
+    <ul class="c10 lst-kix_3ptpwq2qy9ww-0 start">
+        <li class="c2 c3 li-bullet-0"><span class="c9"><a class="c0"
+                    href="https://www.google.com/url?q=https://www.w3.org/TR/WCAG21/&amp;sa=D&amp;source=editors&amp;ust=1661421448385245&amp;usg=AOvVaw2__OJgjXwpvMSSok61iUr9">Web
+                    Content Accessibility Guidelines 2.1</a></span></li>
+    </ul>
+    <h3 id="1c"><span class="c11">Why is Digital Accessibility Important?</span></h3>
+    <p class="c2"><span class="c1">Evolving Technology</span></p>
+    <p class="c2"><span class="c5">The ADA was passed during a time where the Internet was still growing and evolving
+            (1990). Since that time, the popularity of the Internet (and general accessibility to it) has exploded. As
+            new technologies are invented, the methods they use to incorporate elements of accessibility will have to be
+            revisited, perhaps even by challenging the current ADA.</span></p>
+    <p class="c2"><span class="c1">Legal Ramifications</span></p>
+    <p class="c2"><span class="c5">The Internet&rsquo;s explosion in popularity has emphasized the accessibility of
+            websites and other digital media. As such, it also has pushed the ADA to new limits. Should the statutes in
+            the ADA cover digital media as well? The U.S. Department of Justice certainly thinks so:</span></p>
+    <p class="c2"><span class="c17">&ldquo;[T]he Department has long considered websites to be covered by Title III
+            despite the fact that there are no specific technical requirements for websites currently in the regulation
+            or ADA Standards&rdquo;.</span></p>
+    <p class="c2"><span class="c5">In the past, accessibility lawsuits focused on lack of on-ramps, lack of braille in
+            signs, and the like. Today, accessibility lawsuits also focus on the lack of accessibility in digital media,
+            which emphasizes the user demand behind incorporating accessibility best practices.</span></p>
+    <p class="c2"><span class="c1">Capturing Total Markets</span></p>
+    <p class="c2"><span>Upwards of</span><span><a class="c0"
+                href="https://www.google.com/url?q=https://techcrunch.com/2016/12/19/79-percent-of-americans-now-shop-online-but-its-cost-more-than-convenience-that-sways-them/&amp;sa=D&amp;source=editors&amp;ust=1661421448386513&amp;usg=AOvVaw01MkVKsRMWws21W8IpE6t5">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://techcrunch.com/2016/12/19/79-percent-of-americans-now-shop-online-but-its-cost-more-than-convenience-that-sways-them/&amp;sa=D&amp;source=editors&amp;ust=1661421448386818&amp;usg=AOvVaw0atwxnm_E61D-GngpunUzN">80%
+                of the United States population shops online</a></span><span class="c5">, which, naturally, was unheard
+            of before the widespread popularity of the Internet.</span></p>
+    <p class="c2"><span class="c5">For individuals with physical impairments, what might&rsquo;ve been an inconvenient
+            shopping experience in the past may now be much more convenient online. For individuals with visual or
+            auditory impairments, however, an online shopping experience can be inconvenient if there is a lack of
+            digital accessibility. This lack of accessibility can prevent them from shopping online. For business
+            owners, this also represents a failure to capture the total market, demonstrating how digital accessibility,
+            overall, is best for business.</span></p>
+    <p class="c2"><span class="c1">New Jobs</span></p>
+    <p class="c2"><span>The recognition that accessible web design is good for business is also reflected in the job
+            market. Simply searching &ldquo;web accessibility&rdquo; on job search websites like</span><span><a
+                class="c0"
+                href="https://www.google.com/url?q=https://www.linkedin.com&amp;sa=D&amp;source=editors&amp;ust=1661421448387318&amp;usg=AOvVaw1NAY6sVIMCJd1DvDY7BsDL">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://www.linkedin.com&amp;sa=D&amp;source=editors&amp;ust=1661421448387534&amp;usg=AOvVaw1OnH2xu3eFnjR96N8HzboI">LinkedIn</a></span><span>&nbsp;or</span><span><a
+                class="c0"
+                href="https://www.google.com/url?q=https://www.indeed.com&amp;sa=D&amp;source=editors&amp;ust=1661421448387740&amp;usg=AOvVaw1e4R7Lx_gD8r-RAJl5OKBh">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://www.indeed.com&amp;sa=D&amp;source=editors&amp;ust=1661421448387946&amp;usg=AOvVaw2sbJ-A6pCgXrE0_Gxm5vbr">Indeed</a></span><span
+            class="c5">&nbsp;demonstrates the immense amount of job postings for developers, designers, and UI designers
+            related to web accessibility.</span></p>
+    <p class="c2"><span class="c1">Universal Design Benefits All</span></p>
+    <p class="c2"><span class="c5">Earlier, you read about one example that showcases an ADA mandate: on-ramps should
+            accompany staircases to accommodate individuals with physical impairments. The reality is that this mandate
+            doesn&rsquo;t just benefit those with physical impairments; it also benefits individuals with baby
+            strollers, bicycles, and more.</span></p>
+    <p class="c2"><span class="c5">The same is true for digital accessibility. For example, having alt tags that explain
+            the content of images are useful to all users whenever images don&rsquo;t load due to connectivity problems.
+            Writing more semantic HTML tags and image captions also can improve your website&rsquo;s standing in search
+            engines, as they provide the search engine more information about the content that your site delivers. In
+            short, incorporating accessibility (digital or otherwise) contributes to a universal design that ultimately
+            benefits all, which can improve the user experience for everyone.</span></p>
+    <h3 id="1d"><span class="c11">Conclusion</span></h3>
+    <p class="c2"><span class="c5">The general concept of accessibility, which previously applied mostly to physical,
+            public and private spaces, now applies to the digital world, thanks to the widespread popularity of a new
+            technology: the Internet.</span></p>
+    <p class="c2"><span class="c5">New technologies, litigation, business strategies, and more continue to push the
+            definition of accessibility. Today, this definition has expanded to included digital media, like websites
+            and mobile apps. The Internet continues to provide digital solutions to a wider audience, making it
+            imperative for web developers to incorporate elements of digital accessibility.</span></p>
+    <p class="c12 c14"><span class="c5"></span></p>
+    <h2 id="2"><span class="c15">Accessible Design</span></h2>
+    <h3 id="2a"><span class="c11">Contrast</span></h3>
+    <p class="c2"><span class="c5">Contrast refers to the opposition of different properties (color, size, shape, font,
+            etc) to make one object visually distinct from another.</span></p>
+    <p class="c2"><span class="c5">Careful use of contrast will aid all users in skimming or navigating our pages, by
+            directing our user&rsquo;s attention, and by visually communicating what is most important and what is not
+            as important.</span></p>
+    <p class="c2"><span class="c5">Making sure that enough contrast exists between different elements can help us ensure
+            that our site is accessible to users with vision impairments.</span></p>
+    <p class="c2"><span class="c5">In this lesson, we will cover creating accessibility-enhancing contrast
+            through:</span></p>
+    <ul class="c10 lst-kix_4u3cj6scvf16-0 start">
+        <li class="c2 c3 li-bullet-0"><span class="c5">Headings</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Font choices</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Color</span></li>
+    </ul>
+    <p class="c12 c14"><span class="c5"></span></p>
+    <h3 id="2b"><span class="c11">Introduction to Headings</span></h3>
+    <p class="c2"><span class="c5">Text is used differently on the web than it is in a book. Users are often trying to
+            navigate websites as quickly as possible.</span></p>
+    <p class="c2"><span class="c5">Breaking large chunks of text into different sections that have their own headings
+            and subheadings is essential to helping them find the content that they are looking for.</span></p>
+    <p class="c2"><span class="c5">In HTML, there are six heading elements, &lt;h1&gt; - &lt;h6&gt;. The heading
+            elements decrease in importance and size as the heading number increases. This means that an &lt;h1&gt;
+            carries a higher rank than an &lt;h6&gt;.</span></p>
+    <p class="c2"><span class="c5">Heading elements in HTML accomplish several things:</span></p>
+    <ul class="c10 lst-kix_j7fwek9mv600-0 start">
+        <li class="c2 c3 li-bullet-0"><span class="c5">they create structure, dividing your page into groups of
+                increasingly specific content</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">they create visual contrast, with lower-numbered headers like h1
+                displaying in a larger and more striking format</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">they provide navigation and contextual information to web
+                browsers, plugins, and assistive technologies like screen readers.</span></li>
+    </ul>
+    <p class="c2"><span class="c5">As an added benefit, having a keyword in an h1 tag will typically impact search
+            results more than having the same keyword in a p tag, because it is assumed that words used in your main
+            heading are very important to the topic of your entire website.</span></p>
+    <p class="c12"><span class="c5">Font Accessibility</span></p>
+    <h3 id="2c"><span class="c11">Text Accessibility</span></h3>
+    <p class="c2"><span class="c5">Highly accessible websites use real text instead of images of text, use text with
+            high contrast with its background, and choose highly legible font sizes.</span></p>
+    <p class="c2"><span class="c5">Let&rsquo;s dive into each of these concepts a bit more.</span></p>
+    <p class="c13"><span class="c1">Real text vs text within images</span></p>
+    <p class="c2"><span class="c5">Using real text instead of text within graphics provides a website with several key
+            benefits:</span></p>
+    <ul class="c10 lst-kix_n7ya1zi6eq02-0 start">
+        <li class="c2 c3 li-bullet-0"><span class="c5">screen readers can transform the text into a voice-over</span>
+        </li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">users can scale or magnify the text for better legibility without
+                losing image quality</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">it&rsquo;s less taxing on the browser to load real text versus
+                requesting large image assets from a server.</span></li>
+    </ul>
+    <p class="c13"><span class="c1">Contrasting colors</span></p>
+    <p class="c2"><span class="c5">Text is much easier to read when there is a high level of contrast between the text
+            and the text&rsquo;s background color. According to the Web Content Accessibility Guidelines, a ratio of at
+            least 4.5:1 should be used on all standard text sizes. This means the lighter color must have four and a
+            half times the luminance of its paired darker color.</span></p>
+    <p class="c2"><span class="c5">Readability can be preserved with less contrast for larger font sizes, 24 pixels or
+            larger. A ratio of at least 3:1 should be used for larger text sizes.</span></p>
+    <p class="c2"><span>Interested in testing a set of colors to see if they pass the WCAG&rsquo;s guidelines? Head over
+            to</span><span><a class="c0"
+                href="https://www.google.com/url?q=https://webaim.org/resources/contrastchecker/&amp;sa=D&amp;source=editors&amp;ust=1661421448391676&amp;usg=AOvVaw0UvDhp5VM1v25jJUaswptI">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://webaim.org/resources/contrastchecker/&amp;sa=D&amp;source=editors&amp;ust=1661421448391924&amp;usg=AOvVaw1cMT9uPDbMfP9BdfjAnKCc">WebAIM</a></span><span
+            class="c5">&nbsp;and use their color contrast checker.</span></p>
+    <p class="c13"><span class="c1">Font sizes</span></p>
+    <p class="c2"><span class="c5">Lastly, we need to consider setting proper font sizes on our websites. The standard
+            font size for most modern web browsers is 16 pixels. This allows users to scan your website and consume
+            information without straining their eyes. While smaller type sizes can be used, they should be reserved for
+            nonessential content or design aesthetic only.</span></p>
+    <h3 id="2d"><span class="c11">Color Accessibility</span></h3>
+    <p class="c2"><span class="c5">When using color in our designs, it&rsquo;s important to note the contrast between
+            elements in the foreground and those in the background.</span></p>
+    <p class="c2"><span class="c5">Sufficient color contrast can improve the usability of your site for users with low
+            vision or color blindness.</span></p>
+    <p class="c2"><span class="c5">For instance, using the combination of black (#00000) as a foreground color and white
+            (#ffffff) as a background color provides maximum contrast.</span></p>
+    <p class="c2"><span class="c5">While this is a fairly common color combination for text on a page, the high contrast
+            can also cause glare that will increase strain on the user&rsquo;s eyes over time.</span></p>
+    <p class="c2"><span class="c5">On the other hand, using colors that are too similar, or lacking adequate contrast,
+            can hinder users from being able to comprehend the content on the screen.</span></p>
+    <h3 id="2e"><span class="c11">Color Blindness</span></h3>
+    <p class="c2"><span class="c5">A user with color blindness has a reduced ability to differentiate between colors. In
+            general, about 8% of men and 0.5% of women have a color vision deficiency.</span></p>
+    <p class="c2"><span class="c5">Designing color combinations for color-blind users can enhance the overall impact it
+            will have on everyone visiting your site.</span></p>
+    <p class="c2"><span class="c5">There are many forms of color blindness. The most common is red-green color
+            blindness, where those two colors are often indistinguishable. For instance, if a red-green colorblind user
+            is looking at the color purple, it may appear blue as they do not perceive the red pigment.</span></p>
+    <p class="c2"><span class="c5">People can also have blue-yellow color vision deficiency, and total color blindness,
+            however, these affect a much smaller percentage of the population.</span></p>
+    <p class="c2"><span class="c5">Here are some practical steps you can take to improve the color accessibility of your
+            design:</span></p>
+    <ul class="c10 lst-kix_g5u8piklpbo-0 start">
+        <li class="c2 c3 li-bullet-0"><span>Choosing highly contrasting colors (opposite from each other on
+                a</span><span><a class="c0"
+                    href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Color_wheel&amp;sa=D&amp;source=editors&amp;ust=1661421448393487&amp;usg=AOvVaw39sdoYPsev0gdOQ71FXOru">&nbsp;</a></span><span
+                class="c9"><a class="c0"
+                    href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Color_wheel&amp;sa=D&amp;source=editors&amp;ust=1661421448393714&amp;usg=AOvVaw0BYMHOzJMXUpIx6kX-bDpi">color
+                    wheel</a></span><span class="c5">) will aid users with partial color blindness.</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Using a color scheme with multiple shades of brightness for a
+                single color will create contrast for users with partial or total color blindness. Think about how it
+                would look in grayscale: light blue would still be differentiable from dark blue.</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Pairing color with other forms of conveying information (text,
+                icons, etc) is the most general solution. For example, an invalid entry in a form on a website should
+                not just turn the entry field red, it should also display text that explains the error.</span></li>
+    </ul>
+    <p class="c2"><span class="c5">Color is a valuable tool for conveying information, but it should never be the only
+            tool that your site uses to communicate any essential content.</span></p>
+    <p class="c2"><span class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://www.toptal.com/designers/colorfilter&amp;sa=D&amp;source=editors&amp;ust=1661421448394329&amp;usg=AOvVaw0oIIpwSw-ecdXQ3lzj4cRC">Toptal</a></span><span
+            class="c5">&nbsp;has created a colorblind web page filter tool to test your designs with different types of
+            color blindness.</span></p>
+    <h3 id="2f"><span class="c11">Best Practices</span></h3>
+    <p class="c2"><span class="c5">New web design trends come and go, and many times they are aesthetically appealing,
+            but they are not always the most usable or accessible.</span></p>
+    <p class="c2"><span class="c5">You now know enough principles of accessibility and usability to be able to judge if
+            these trends will create problems for your users. Let&rsquo;s reason through a few examples.</span></p>
+    <p class="c13"><span class="c1">Text Overlaid on Images</span></p>
+    <p class="c2"><span class="c5">White text overlaid on an image is a popular design trend. However, it doesn&rsquo;t
+            adhere to standards as the contrast is often too low. Adding a dark transparent overlay on top of the image
+            could increase the contrast and provide better legibility.</span></p>
+    <p class="c13"><span class="c1">Removing Input Labels</span></p>
+    <p class="c2"><span class="c5">Another trend often seen in web design is the removal of labels above input fields,
+            sometimes relying on placeholder text instead to identify the input field.</span></p>
+    <p class="c2"><span class="c5">While this enhances the aesthetic quality of a design in some instances, it can
+            hinder a user&rsquo;s ability to identify which input they are attempting to fill out. This is particularly
+            true for low vision users because the placeholder text is often light gray and low contrast. This also
+            creates problems for users employing screen readers, because the form&rsquo;s placeholder text is not always
+            narrated.</span></p>
+    <p class="c13"><span class="c1">Buttons and Links</span></p>
+    <p class="c2"><span>There has been a trend towards</span><span><a class="c0"
+                href="https://www.google.com/url?q=https://www.nngroup.com/articles/flat-design/&amp;sa=D&amp;source=editors&amp;ust=1661421448395708&amp;usg=AOvVaw0Wxb3Gl62qaxp9GL9wZAYY">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://www.nngroup.com/articles/flat-design/&amp;sa=D&amp;source=editors&amp;ust=1661421448395945&amp;usg=AOvVaw33D850BJ0KMHKCdYtUWO4O">flat
+                and minimal design</a></span><span class="c9">&nbsp;</span><span class="c5">in recent years. This trend
+            has improved usability in some ways, as it has encouraged designers to remove visual effects that are not
+            contributing to the usability of their site.</span></p>
+    <p class="c2"><span class="c5">However, minimalism can go too far, especially if it obscures how users should
+            navigate the site. Visual contrast is especially important for buttons and links because these are the tools
+            our users employ to navigate. Color alone should not be used to indicate clickability, as this will cause
+            challenges for low vision and color-blind users.</span></p>
+    <p class="c2"><span class="c5">Taking into consideration color choices, contrast, and font legibility will help you
+            evaluate new design trends, and reduce the chance of new designs introducing accessibility barriers.</span>
+    </p>
+    <h3 id="2g"><span class="c15">Review</span></h3>
+    <p class="c2"><span class="c5">Congratulations! You made the cupcake recipe site look much better! You practiced
+            some new CSS syntax, and you learned the power of visual contrast, for both overall design, and for
+            accessibility.</span></p>
+    <p class="c2"><span class="c5">You gained some knowledge on web accessibility and how to make your websites usable
+            for all users.</span></p>
+    <p class="c2"><span class="c5">Remember, the keys to building a more visually inclusive Web are:</span></p>
+    <ul class="c10 lst-kix_cj8fh243m60k-0 start">
+        <li class="c2 c3 li-bullet-0"><span class="c5">Using contrast so our text and colors provide better visual
+                cues</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Using correct font size so our content is legible</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Creating user interfaces that are enhanced by, but not dependent
+                on, color</span></li>
+    </ul>
+    <p class="c2"><span class="c5">Following these guidelines can increase the usability of our websites. In the next
+            lesson, you will learn semantic HTML tags, which improve the accessibility of sites for people using a
+            screen reader.</span></p>
+    <p class="c12 c14"><span class="c5"></span></p>
+    <p class="c12 c14"><span class="c5"></span></p>
+    <h2 id="3"><span class="c15">Accessibility</span></h2>
+    <h3 id="3a"><span class="c11">Introduction to Accessibility</span></h3>
+    <p class="c2"><span class="c5">When designing a website, it is important to keep in mind that some users access the
+            Internet in many different ways. For example, many users with a visual impairment use screen readers to
+            access content on the Internet.</span></p>
+    <p class="c2"><span class="c5">A screen reader is a piece of software that provides an audio description of a web
+            page&rsquo;s content. A screen reader not only reads the visual content out loud, it also reads out element
+            names and other attributes that make it easier for visually impaired users to navigate a web page.</span>
+    </p>
+    <p class="c2"><span>In the early days of the Internet, many pages were saturated with graphics and flash animations.
+            Screen readers, unfortunately, could not interpret these types of elements. As such, a person with a visual
+            impairment might not have been able to perceive important information on a website. For this reason,
+            the</span><span><a class="c0"
+                href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Web_Accessibility_Initiative&amp;sa=D&amp;source=editors&amp;ust=1661421448397720&amp;usg=AOvVaw3rz9Lf9pw-nLjO8PRk_GJu">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Web_Accessibility_Initiative&amp;sa=D&amp;source=editors&amp;ust=1661421448397962&amp;usg=AOvVaw1nptxMoq03M2ZfDC5iHyl0">Web
+                Accessibility Initiative</a></span><span class="c5">&nbsp;(led by W3C) developed standards for making
+            information on the Internet accessible to all.</span></p>
+    <p class="c2"><span>These standards fall under a group of guidelines called</span><span><a class="c0"
+                href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/WAI-ARIA&amp;sa=D&amp;source=editors&amp;ust=1661421448398266&amp;usg=AOvVaw3cEtjTSGEutSHdDSTA6pIf">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/WAI-ARIA&amp;sa=D&amp;source=editors&amp;ust=1661421448398491&amp;usg=AOvVaw0mwiIrN6IvKLyr_7xmX6us">ARIA</a></span><span
+            class="c5">, or Accessible Rich Internet Applications. These guidelines are easily implemented and make web
+            pages accessible to a broader audience. We&rsquo;ll learn how to use ARIA roles and properties in this
+            lesson to improve access for people who are visually impaired.</span></p>
+    <p class="c2"><span class="c5">In this lesson, we will cover these practices:</span></p>
+    <ol class="c10 lst-kix_js8tg9azo6ww-0 start" start="1">
+        <li class="c2 c3 li-bullet-0"><span class="c5">Semantic Elements</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">ARIA Roles</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">ARIA Properties</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">alt Attributes</span></li>
+    </ol>
+    <p class="c12 c14"><span class="c5"></span></p>
+    <h3 id="3b"><span class="c11">Semantic HTML Elements</span></h3>
+    <p class="c2"><span class="c5">The quickest way of improving accessibility for screen readers is to use the
+            appropriate tags for a given task.</span></p>
+    <p class="c2"><span>For example, developers should wrap a navigation bar in a &lt;header&gt; element. Although the
+            navigation bar could be wrapped in a &lt;div&gt; element with a class=&quot;header&quot;, the </span><span
+            class="c23">native semantics</span><span class="c5">&nbsp;of a &lt;header&gt; element allows someone using a
+            screen reader to understand and navigate a web page more efficiently.</span></p>
+    <p class="c2"><span class="c5">&lt;div id=&quot;header&quot;&gt;</span></p>
+    <p class="c2"><span class="c5">&nbsp; &lt;!-- Header Elements --&gt;</span></p>
+    <p class="c2"><span class="c5">&lt;/div&gt;</span></p>
+    <p class="c2"><span class="c5">In the example above, header content is wrapped in a &lt;div&gt; element with
+            id=&quot;header&quot;. While this is valid HTML, an individual using a screen reader will not understand the
+            purpose of the &lt;div&gt; and will have to piece the web page together as child elements are read out loud
+            to them.</span></p>
+    <p class="c2"><span class="c5">Native semantics of an element describes the element&rsquo;s intended purpose. For
+            example, the &lt;header&gt; element is intended to contain introductory and navigational elements such as a
+            logo, links, or a search bar.</span></p>
+    <p class="c2"><span class="c5">&lt;header&gt;</span></p>
+    <p class="c2"><span class="c5">&nbsp; &lt;!--Header Elements--&gt;</span></p>
+    <p class="c2"><span class="c5">&lt;/header&gt;</span></p>
+    <p class="c2"><span class="c5">In the example above, the HTML will render the same exact content present in the
+            first example. However, this example uses the correct semantic element (&lt;header&gt;), which allows an
+            individual using a screen reader to easily identify the purpose of the elements inside of the header.</span>
+    </p>
+    <p class="c2"><span class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/HTML/Element&amp;sa=D&amp;source=editors&amp;ust=1661421448400567&amp;usg=AOvVaw3xYIC-jlgxPSjQnouOSK9c">Here</a></span><span
+            class="c5">&nbsp;is a list of all the semantic HTML elements that exist.</span></p>
+    <p class="c2 c14"><span class="c5"></span></p>
+    <h3 id="3c"><span class="c11">ARIA Role</span></h3>
+    <p class="c2"><span class="c5">Text on a web page can communicate different types of information. Some text may make
+            up the main content of the page, other text may describe navigation icons, still other text might describe
+            input fields or menus. It can be challenging to place text in the context of a web page without knowing
+            where it is positioned or the type of information it is meant to communicate.</span></p>
+    <p class="c2"><span class="c5">Take a moment to think about how a screen reader would interpret the Codecademy web
+            page you are looking at right now. It would be difficult for someone using a screen reader to understand the
+            difference in significance between the code editor to the right and what you are currently reading.</span>
+    </p>
+    <p class="c2"><span class="c5">To help add context to web page information, ARIA provides an HTML attribute called
+            role. The value of an element&rsquo;s role changes how a screen reader communicates the element.</span></p>
+    <p class="c12"><span class="c5">&lt;div id=&quot;code-editor&quot; role=&quot;complementary&quot;&gt;</span></p>
+    <p class="c12"><span class="c5">&nbsp; ...</span></p>
+    <p class="c12"><span class="c5">&lt;/div&gt;</span></p>
+    <p class="c2"><span class="c5">In the example above, imagine the ... represents an exercise&rsquo;s code editor
+            &mdash; the section of the page containing the files of code you edit in an exercise. The role for the div
+            is set to complementary. Visually, it makes sense that the information in the code editor is related to the
+            information in the narrative (what you are reading right now). A user who uses a screen reader does not
+            receive that visual cue.</span></p>
+    <p class="c2"><span>Instead, the role=&quot;complementary&quot; attribute and value can help a screen reader user
+            understand that the information in the code editor is </span><span class="c23">complementary</span><span
+            class="c5">&nbsp;(or supporting) to the information you are reading right now. It helps users of screen
+            readers identify the relationship between the two sections of the page.</span></p>
+    <p class="c2"><span class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://www.w3.org/TR/html-aria/%23allowed-aria-roles-states-and-properties&amp;sa=D&amp;source=editors&amp;ust=1661421448401732&amp;usg=AOvVaw35EHnE8TF_Hn2gKRdxPEOp">This</a></span><span
+            class="c5">&nbsp;link has a list of acceptable ARIA roles, where you can read more about the complementary
+            role and other roles as well.</span></p>
+    <p class="c12 c14"><span class="c5"></span></p>
+    <p class="c12 c14"><span class="c5"></span></p>
+    <h3 id="3d"><span class="c11">ARIA Role: Presentation</span></h3>
+    <p class="c2"><span class="c5">Some HTML elements, like &lt;ul&gt; and &lt;ol&gt;, only serve to organize
+            information on a web page. When a screen reader navigates a page, however, it reads out to the user each
+            element&rsquo;s name as it encounters them. Therefore, reading &ldquo;ol&ldquo; outloud will slow down
+            visually impaired users.</span></p>
+    <p class="c2"><span class="c5">We can instruct screen readers to skip reading unnecessary elements by setting the
+            role attribute to presentation.</span></p>
+    <p class="c12"><span class="c5">&lt;ol role=&quot;presentation&quot;&gt;</span></p>
+    <p class="c12"><span class="c5">&nbsp; &lt;li&gt;List Item 1&lt;/li&gt;</span></p>
+    <p class="c12"><span class="c5">&nbsp; &lt;li&gt;List Item 2&lt;/li&gt;</span></p>
+    <p class="c12"><span class="c5">&lt;/ol&gt;</span></p>
+    <p class="c2"><span class="c5">In the example above, the &lt;ol&gt; element is assigned a role of presentation,
+            meaning a screen reader will not read the element&rsquo;s name (&ldquo;ordered list&rdquo;). This is
+            acceptable, as a user does not need to hear the element&rsquo;s name (&ldquo;ordered list&rdquo;) to
+            understand the content of a list.</span></p>
+    <p class="c2"><span>The presentation role skips over elements and their </span><span
+            class="c23">necessary</span><span class="c5">&nbsp;children. The &lt;ol&gt; and &lt;ul&gt; elements require
+            &lt;li&gt; children. Therefore, adding role=&quot;presentation&quot; to an &lt;ol&gt; tag will cause the
+            screen reader to skip directly to the text between the &lt;li&gt; tags (it will not read the names of the
+            &lt;li&gt; elements).</span></p>
+    <p class="c12"><span class="c5">&lt;div id=&quot;container&quot; role=&quot;presentation&quot;&gt;</span></p>
+    <p class="c12"><span class="c5">&nbsp; &lt;p&gt;I&#39;m content you want to hear!&lt;/p&gt;</span></p>
+    <p class="c12"><span class="c5">&lt;/div&gt;</span></p>
+    <p class="c2"><span class="c5">In the example above, a screen reader won&rsquo;t read &ldquo;div&rdquo; outloud, but
+            it will read the name of the paragraph element and the content of the paragraph. This happens because the
+            paragraph is not a necessary child of the div.</span></p>
+    <p class="c2"><span>To read more about the presentation role, click</span><span><a class="c0"
+                href="https://www.google.com/url?q=https://w3c.github.io/using-aria/%23presentation&amp;sa=D&amp;source=editors&amp;ust=1661421448403201&amp;usg=AOvVaw3xAkq7bYb5H0Z_MSwGXfMG">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://w3c.github.io/using-aria/%23presentation&amp;sa=D&amp;source=editors&amp;ust=1661421448403446&amp;usg=AOvVaw1xGJX5tta0xrPSP93CNypq">here</a></span><span
+            class="c5">.</span></p>
+    <p class="c12 c14"><span class="c5"></span></p>
+    <h3 id="3e"><span class="c11">ARIA Properties</span></h3>
+    <p class="c2"><span class="c5">ARIA properties are attributes that you can add to HTML elements. These attributes
+            provide additional information about elements that might not be obvious to users of screen readers.
+            Let&rsquo;s explore a property called aria-label.</span></p>
+    <p class="c12"><span class="c5">&lt;img src=&quot;#&quot; alt=&quot;A painting of the Shenandoah
+            Valley&quot;/&gt;</span></p>
+    <p class="c12"><span class="c5">&lt;p&gt;Armand Cabrera, 2010&lt;/p&gt;</span></p>
+    <p class="c2"><span class="c5">In the example above, a person looking at the web page would likely see &ldquo;Armand
+            Cabrera&rdquo; below the image and use visual clues to infer that he is the artist. However, for someone
+            using a screen reader it might not be clear what the paragraph below the image means. The property
+            aria-label gives the screen reader additional information to read out loud to the user.</span></p>
+    <p class="c12"><span class="c5">&lt;img src=&quot;#&quot; alt=&quot;A painting of the Shenandoah
+            Valley&quot;/&gt;</span></p>
+    <p class="c12"><span class="c5">&lt;p aria-label=&quot;Artist&quot;&gt;Armand Cabrera, 2010&lt;/p&gt;</span></p>
+    <p class="c2"><span class="c5">In the improved HTML above, a user of a screen reader will know how this paragraph
+            relates to the image above it.</span></p>
+    <p class="c2"><span class="c5">Other ARIA properties are useful in more complex websites using HTML forms,
+            JavaScript, and other advanced tools.</span></p>
+    <p class="c2"><span class="c5">For a complete list of ARIA properties, visit the following resource:</span></p>
+    <ul class="c10 lst-kix_meic6tedz5te-0 start">
+        <li class="c2 c3 li-bullet-0"><span class="c9"><a class="c0"
+                    href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques&amp;sa=D&amp;source=editors&amp;ust=1661421448405434&amp;usg=AOvVaw1kRDT6nsbkA1awiCfIcn_2">ARIA
+                    Techniques</a></span></li>
+    </ul>
+    <p class="c12 c14"><span class="c5"></span></p>
+    <h3 id="3f"><span class="c11">Alt Attribute</span></h3>
+    <p class="c2"><span class="c5">Some HTML elements have a built-in attribute called alt that works like aria-label
+            but has additional functionality.</span></p>
+    <p class="c2"><span class="c5">The alt attribute is used to describe an image (or several other elements). A screen
+            reader will read the value of the alt attribute out loud. However, if the element cannot be visually seen
+            &mdash; whether it is because the user is visually impaired, an incorrect source is referenced, or the page
+            is being accessed over a slow connection &mdash; the alt attribute will be displayed in its place.</span>
+    </p>
+    <p class="c2"><span class="c5">On the other hand, the value of aria-label will never be displayed on the screen and
+            is a better choice for elements that do not support the alt attribute.</span></p>
+    <p class="c12"><span class="c5">&lt;img src=&quot;#&quot; alt=&quot;a kitten snuggling a puppy&quot;/&gt;</span></p>
+    <p class="c2"><span class="c5">In the example above, a screen reader will read out loud &ldquo;image: a kitten
+            snuggling a puppy&rdquo; to the user. If the image doesn&rsquo;t load properly, the browser will display
+            this text as a tooltip.</span></p>
+    <p class="c2"><span class="c5">When using the alt attribute, you should adhere to these conventions:</span></p>
+    <ol class="c10 lst-kix_ykn7emzic02v-0 start" start="1">
+        <li class="c2 c3 li-bullet-0"><span class="c5">In general, the value of alt should concisely describe the
+                image.</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">For images that are also &lt;a&gt; elements, the alt attribute
+                should describe the source that the link targets.</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">If an image conveys no information (such as a decorative border),
+                the alt attribute should be empty, but should never be omitted.</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">If an image is described by text near the image, do not duplicate
+                the description in the alt attribute. Use an empty alt attribute instead.</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">The value of an alt attribute should be no more than 150
+                characters.</span></li>
+    </ol>
+    <h3 id="3g"><span class="c11">Review: Accessibility</span></h3>
+    <p class="c2"><span class="c5">Using ARIA roles and properties, alt attributes, and semantic elements in your HTML
+            is a simple way to make your website accessible to visually-impaired Internet users.</span></p>
+    <ol class="c10 lst-kix_boklerd9s0bm-0 start" start="1">
+        <li class="c2 c3 li-bullet-0"><span class="c5">Using semantic HTML elements whenever possible (such as
+                &lt;header&gt; instead of &lt;div id=&quot;header&quot;&gt;) will allow screen reader users to navigate
+                your website more efficiently.</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">The role attribute is used to communicate information about the
+                role of specific elements.</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">role=&quot;presentation&quot; allows a screen reader to skip
+                markup elements that don&rsquo;t directly contain useful information.</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">aria-label and other ARIA properties can be used to help users
+                perceive information that is communicated visually but not through text.</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">The alt attribute should be added to every image element (and all
+                other elements that support it) instead of aria-label. When used, its value should be a useful
+                description of the image.</span></li>
+    </ol>
+    <p class="c12 c14"><span class="c5"></span></p>
+    <h2 id="4"><span class="c15">Setting Up and Using Screen Readers</span></h2>
+    <p class="c2"><span class="c5">This article explains how to set up and use a screen reader in order to think
+            critically about the accessibility of the websites that you&rsquo;re building.</span></p>
+    <p class="c2"><span class="c5">Creating a good user experience requires us to think carefully about the diverse
+            needs and devices of our users. We as designers and developers know that not everyone sees, hears, or reads
+            content in the same way.</span></p>
+    <p class="c2"><span class="c5">A screen reader is an assistive technology that is used by individuals who are blind,
+            visually impaired, or need additional assistance navigating a website. This article will guide you through
+            how to set up and use a screen reader in order to assess the web accessibility of various websites,
+            including your own.</span></p>
+    <p class="c2"><span>More users than you might expect are using some kind of assistive device. According to
+            the</span><span><a class="c0"
+                href="https://www.google.com/url?q=https://nei.nih.gov/eyedata/pbd1&amp;sa=D&amp;source=editors&amp;ust=1661421448408332&amp;usg=AOvVaw1lsE0aQ329ejwUath_FFms">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://nei.nih.gov/eyedata/pbd1&amp;sa=D&amp;source=editors&amp;ust=1661421448408549&amp;usg=AOvVaw0NizKBycuW-ktuCWEcvrKY">National
+                Institute of Health</a></span><span class="c5">, about 1 in 30 Americans over the age of 40 will
+            experience visual impairment. Producing accessible websites is both equitable and good for business.</span>
+    </p>
+    <p class="c2"><span class="c5">The screen reader provides a text-to-speech (TTS) experience for the user to
+            translate the information on the screen into speech, which can be heard through speakers, headphones or
+            braille. This is why it&rsquo;s extremely important to utilize semantic HTML code and appropriate WAI-ARIA
+            attributes.</span></p>
+    <p class="c2"><span class="c5">A visually impaired user will use a combination of screen reader commands and
+            operating system commands to accomplish the many tasks a computer is capable of performing. These commands
+            are prompted through keyboard shortcuts or mouse actions, like scrolling and clicking.</span></p>
+    <p class="c2"><span class="c5">Although basic screen readers will not help blind users navigate a computer, screen
+            readers with additional features can give individuals with visual impairments much more independence.</span>
+    </p>
+    <p class="c2"><span class="c5">Screen readers can vary based on the operating system you are using. However, they
+            can also be implemented through the browser. Please note that when using a browser&rsquo;s screen reader,
+            it&rsquo;s best to turn off the operating system&rsquo;s screen reader.</span></p>
+    <h3 id="4a"><span class="c6">Screen Reader Options</span></h3>
+    <p class="c2"><span class="c5">Here are a few screen reader options that are free for your computer or
+            browser.</span></p>
+    <h4 class="c13" id="h.o0v5et2ojxzu"><span class="c1">(OS X) VoiceOver</span></h4>
+    <p class="c2"><span class="c5">Apple computers come with a screen reader built in, called VoiceOver. You can access
+            it easily by pressing Command-F5. If VoiceOver is on, pressing Command-F5 turns it off.</span></p>
+    <p class="c2"><span class="c5">If this is your first time opening VoiceOver, you can listen to the Quick Start
+            Tutorial, which will give you an interactive tour of VoiceOver navigation and interaction basics.</span></p>
+    <p class="c2"><span class="c5">The benefit to VoiceOver is that it is already installed and ready to use on your
+            Apple computer and also works with websites.</span></p>
+    <h4 class="c13" id="h.72sgtnqgper2"><span class="c1">(Windows) NVDA</span></h4>
+    <p class="c2"><span class="c5">NVDA (NonVisual Desktop Access) is a free screen reader for Windows, which allows
+            blind and vision-impaired people to use computers. It reads the text on the screen in a computerized
+            voice.</span></p>
+    <p class="c2"><span>The user can easily control what is read to them by moving the cursor to the relevant area of
+            text with a mouse or using the arrows on the keyboard. NVDA provides the key to education and employment for
+            many blind people. It also provides access to social networking, online shopping, banking, and news. NVDA
+            can also convert the text into braille if the computer user owns a device called a &ldquo;braille
+            display&rdquo;.</span><span><a class="c0"
+                href="https://www.google.com/url?q=https://www.nvaccess.org/&amp;sa=D&amp;source=editors&amp;ust=1661421448410035&amp;usg=AOvVaw09uzrIljQLIVl_GMD01sLX">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://www.nvaccess.org/&amp;sa=D&amp;source=editors&amp;ust=1661421448410253&amp;usg=AOvVaw32CZzId_jBJJwByzEy8J3K">NVDA
+                can be installed</a></span><span class="c5">&nbsp;on your Windows machine or used on a USB stick. This
+            screen reader is unique because it&rsquo;s an open source program, which means developers can contribute to
+            improving this software.</span></p>
+    <h4 class="c13" id="h.gnfvxy9g6dyj"><span class="c1">(Google Chrome) ChromeVox</span></h4>
+    <p class="c2"><span class="c5">ChromeVox is built using only web technologies like HTML5, CSS, and Javascript.
+            ChromeVox (Classic) was designed from the start to enable unprecedented access to modern web apps, including
+            those that utilize W3C ARIA (Access to Rich Internet Applications) to provide a rich, desktop-like
+            experience.</span></p>
+    <p class="c2"><span class="c5">This enables visually impaired users to experience the power of web applications
+            while also giving developers a way to verify the accessibility of their web applications.</span></p>
+    <p class="c2"><span>ChromeVox can be easily added to your Chrome browser as an extension through the</span><span><a
+                class="c0"
+                href="https://www.google.com/url?q=https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl%3Den&amp;sa=D&amp;source=editors&amp;ust=1661421448410988&amp;usg=AOvVaw0Q1lDRD2ornSXADcpumXwQ">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl%3Den&amp;sa=D&amp;source=editors&amp;ust=1661421448411305&amp;usg=AOvVaw3FNnvN5o5E6Kwe5TDQDIOF">Chrome
+                Web Store</a></span><span>. Once installed, you can use</span><span><a class="c0"
+                href="https://www.google.com/url?q=http://www.chromevox.com/keyboard_shortcuts.html&amp;sa=D&amp;source=editors&amp;ust=1661421448411645&amp;usg=AOvVaw3XSVnjInv0VMcEprZtqpH8">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=http://www.chromevox.com/keyboard_shortcuts.html&amp;sa=D&amp;source=editors&amp;ust=1661421448411908&amp;usg=AOvVaw2Ry65ObnZ5MC-hkDgWHtuu">these
+                keyboard shortcuts</a></span><span class="c5">. If you want to change the keyboard shortcuts, just click
+            the browser extension icon, then click &ldquo;options&rdquo;.</span></p>
+    <h3 id="4b"><span class="c6">Testing Accessibility</span></h3>
+    <p class="c2"><span class="c5">Now, let&rsquo;s test one of them out.</span></p>
+    <p class="c2"><span class="c5">Choose one of the screen readers listed above that fits your operating system or
+            browser to test websites such as NY Times, Facebook, GitHub, and Dribbble. Getting the full experience
+            through the screen reader will help you understand how it&rsquo;s used and the difficulties the visually
+            impaired experience when a website lacks accessibility.</span></p>
+    <p class="c2"><span class="c5">Be sure to mouse and click around or use your keyboard to have the screen reader
+            focus on specific areas.</span></p>
+    <p class="c2"><span class="c5">Starting with the New York Times and moving down the list, let&rsquo;s check out the
+            screen reader experience.</span></p>
+    <h4 class="c13" id="h.9p4z2h28dkiw"><span class="c1">New York Times</span></h4>
+    <ul class="c10 lst-kix_mzdcklsnaxfm-0 start">
+        <li class="c2 c3 li-bullet-0"><span class="c5">Click on the main section of the page</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Tab through and notice the focus is on the headlines and the
+                comments</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Hit enter when you land on comments</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Tab through this experience</span></li>
+    </ul>
+    <p class="c2"><span class="c5">Was it easy to read the comments on the article or were you prompted to read about
+            the article first? How could this experience be improved?</span></p>
+    <h4 class="c13" id="h.24y54vfzxmsv"><span class="c1">Facebook</span></h4>
+    <ul class="c10 lst-kix_n126g1t20t6p-0 start">
+        <li class="c2 c3 li-bullet-0"><span class="c5">Tab through the content to get to the main section of the
+                page</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">On your keyboard click &ldquo;Alt + /&rdquo;</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Tab through the &ldquo;jump to&rdquo; menu to get to the news
+                feed</span></li>
+    </ul>
+    <h4 class="c13" id="h.4v8c20ppk88v"><span class="c1">GitHub</span></h4>
+    <p class="c2"><span class="c5">GitHub is a development platform that provides tools for people to share their code
+            with others, make edits to shared projects, and keep track of all versions and changes.</span></p>
+    <ul class="c10 lst-kix_oyw79hs4w16u-0 start">
+        <li class="c2 c3 li-bullet-0"><span class="c5">Click on a repository to go to it&rsquo;s landing page.</span>
+        </li>
+        <li class="c2 c3 li-bullet-0"><span>If there isn&rsquo;t a repository you want to explore, try looking
+                at</span><span><a class="c0"
+                    href="https://www.google.com/url?q=https://github.com/expressjs/express&amp;sa=D&amp;source=editors&amp;ust=1661421448414597&amp;usg=AOvVaw3Cb3Mqi_F2tvOF0WkpyQj3">&nbsp;</a></span><span
+                class="c9"><a class="c0"
+                    href="https://www.google.com/url?q=https://github.com/expressjs/express&amp;sa=D&amp;source=editors&amp;ust=1661421448414848&amp;usg=AOvVaw0PkYLfHBJxP-eubcrTsdQT">Express</a></span><span
+                class="c5">, a common JavaScript framework that we teach at Codecademy</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Tab through until you reach the section that tells you how many
+                commits, branches, releases and contributors the repository contains</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Notice how these are considered &ldquo;list items&rdquo;</span>
+        </li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Tab once more until you can see the list of languages used</span>
+        </li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Notice how this is considered an ordered list and lists each tab
+                by number</span></li>
+    </ul>
+    <p class="c2"><span class="c5">What did you think about this experience? Did it lack any critical information? Is
+            there anything you think GitHub needs to consider or improve?</span></p>
+    <h4 class="c13" id="h.f3n83akwuxg6"><span class="c1">Dribbble</span></h4>
+    <p class="c2"><span class="c5">Dribble is a design-focused social network that allows designers to share their own
+            work and explore the work of others.</span></p>
+    <ul class="c10 lst-kix_gp05p9prtyzm-0 start">
+        <li class="c2 c3 li-bullet-0"><span class="c5">On the landing page tab through until you reach the first
+                item</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Notice how the screen reader reads the numbers without the
+                description of what the number correlates to</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">On the top right under the black navigation bar, choose a
+                different display layout</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Allow the screen reader to read through the posts in the
+                different layouts</span></li>
+    </ul>
+    <p class="c2"><span class="c5">What did you think about the experience when you changed the layout? Was it easier to
+            follow along on a larger layout vs. another?</span></p>
+    <h4 class="c13" id="h.k9po6i55wfn7"><span class="c1">Your Own Website</span></h4>
+    <p class="c2"><span class="c5">If you have ever made your own website, maybe for a course on Codecademy, or for your
+            personal portfolio, try visiting it with a screen reader now. What is or is not possible for users visiting
+            your site using a screen reader?</span></p>
+    <h3 id="4c"><span class="c11">Conclusion</span></h3>
+    <p class="c2"><span class="c5">Of the websites that you visited, which one was easier or more accessible to visit?
+            What issues did you face that you think would get better with more practice using a screen reader, and what
+            issues were problems with the designs of the sites that you visited?</span></p>
+    <p class="c2"><span>After considering which one was easier, check out</span><span><a class="c0"
+                href="https://www.google.com/url?q=https://www.facebook.com/help/141636465971794&amp;sa=D&amp;source=editors&amp;ust=1661421448416562&amp;usg=AOvVaw1hBXtCLEBTbrYrymGyVqnD">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://www.facebook.com/help/141636465971794&amp;sa=D&amp;source=editors&amp;ust=1661421448416751&amp;usg=AOvVaw2xh1lEZac9zgUvnjDCV-TY">this
+                accessibility guide from Facebook</a></span><span>&nbsp;to read about how to get the most out of
+            Facebook as a user with disabilities. You can also look at the</span><span><a class="c0"
+                href="https://www.google.com/url?q=https://www.facebook.com/accessibility&amp;sa=D&amp;source=editors&amp;ust=1661421448416961&amp;usg=AOvVaw3xbNaaEZ2IBJj3dbI3FyHr">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://www.facebook.com/accessibility&amp;sa=D&amp;source=editors&amp;ust=1661421448417168&amp;usg=AOvVaw1eDD_PZavBQWDwyM5BPxQ8">Facebook
+                Accessibility page</a></span><span class="c5">&nbsp;to get news and updates from the Facebook
+            Accessibility team.</span></p>
+    <p class="c2"><span class="c5">As you can see, it can be somewhat challenging to use a screen reader. That&rsquo;s
+            why it&rsquo;s our job as designers to make the web an accessible place for everyone. Next time you design a
+            website, keep these tests and your experience in mind.</span></p>
+    <p class="c12 c14"><span class="c5"></span></p>
+    <h2 id="5"><span class="c15">Review: Making a Website Accessible</span></h2>
+    <p class="c2"><span class="c5">In this unit, you learned about web accessibility (a11y) practices.</span></p>
+    <p class="c2"><span class="c5">Congratulations! The goal of this unit was to introduce you to website accessibility
+            (a11y), why it is necessary and how to include it in your website design.</span></p>
+    <p class="c2"><span class="c5">Having completed this unit, you are now able to:</span></p>
+    <ul class="c10 lst-kix_txschubelcsi-0 start">
+        <li class="c2 c3 li-bullet-0"><span class="c5">Understand what accessibility (a11y) means</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Understand the necessity for a11y on the web</span></li>
+        <li class="c2 c3 li-bullet-0"><span class="c5">Add features for improved screen reader usage</span></li>
+    </ul>
+    <p class="c2"><span class="c5">If you are interested in learning more about these topics, here are some additional
+            resources:</span></p>
+    <ul class="c10 lst-kix_stelxt4pdcd5-0 start">
+        <li class="c2 c3 li-bullet-0"><span>Article:</span><span><a class="c0"
+                    href="https://www.google.com/url?q=https://www.boia.org/blog/what-is-a11y&amp;sa=D&amp;source=editors&amp;ust=1661421448418535&amp;usg=AOvVaw0VvOy_ws9l7hNhnZ4JD5D4">&nbsp;</a></span><span
+                class="c9"><a class="c0"
+                    href="https://www.google.com/url?q=https://www.boia.org/blog/what-is-a11y&amp;sa=D&amp;source=editors&amp;ust=1661421448418821&amp;usg=AOvVaw0FVHO_zj0ACKiFDUncziNZ">What
+                    is a11y?</a></span></li>
+        <li class="c2 c3 li-bullet-0"><span>Resource:</span><span><a class="c0"
+                    href="https://www.google.com/url?q=https://www.a11yproject.com/checklist/&amp;sa=D&amp;source=editors&amp;ust=1661421448419244&amp;usg=AOvVaw2H2arZnM4y6s-rTZ7SBt_7">&nbsp;</a></span><span
+                class="c9"><a class="c0"
+                    href="https://www.google.com/url?q=https://www.a11yproject.com/checklist/&amp;sa=D&amp;source=editors&amp;ust=1661421448419449&amp;usg=AOvVaw2Z952nzLtURHlElxEPKKCX">The
+                    a11y Project Checklist</a></span></li>
+        <li class="c2 c3 li-bullet-0"><span>Article:</span><span><a class="c0"
+                    href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript&amp;sa=D&amp;source=editors&amp;ust=1661421448419800&amp;usg=AOvVaw3ZXofVxTpVqkffzn3a6DCD">&nbsp;</a></span><span
+                class="c9"><a class="c0"
+                    href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript&amp;sa=D&amp;source=editors&amp;ust=1661421448420048&amp;usg=AOvVaw2X1wXfX7E7E_W8Q-m6dPum">CSS
+                    and JavaScript accessibility best practices</a></span></li>
+    </ul>
+    <p class="c2"><span>Learning is social. Whatever you&rsquo;re working on, be sure to connect with the Codecademy
+            community in the</span><span><a class="c0"
+                href="https://www.google.com/url?q=https://discuss.codecademy.com/&amp;sa=D&amp;source=editors&amp;ust=1661421448420357&amp;usg=AOvVaw3eeBcfuZk1srNIBT4GjMHD">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://discuss.codecademy.com/&amp;sa=D&amp;source=editors&amp;ust=1661421448420547&amp;usg=AOvVaw2Q3nm8Ao3qVkt62HRmALZ8">forums</a></span><span>.
+            Remember to check in with the community regularly, including for things like asking for code reviews on your
+            project work and providing code reviews to others in the</span><span><a class="c0"
+                href="https://www.google.com/url?q=https://discuss.codecademy.com/c/project/1833&amp;sa=D&amp;source=editors&amp;ust=1661421448420769&amp;usg=AOvVaw1B1U63g02QdFkzQVjMi_td">&nbsp;</a></span><span
+            class="c9"><a class="c0"
+                href="https://www.google.com/url?q=https://discuss.codecademy.com/c/project/1833&amp;sa=D&amp;source=editors&amp;ust=1661421448420976&amp;usg=AOvVaw15vnQh9Bgj91zfvLY5-JP_">projects
+                category</a></span><span class="c5">, which can help to reinforce what you&rsquo;ve learned.</span></p>
+    <p class="c12 c14"><span class="c5"></span></p>
+</main>
+</body>
+
+</html>
