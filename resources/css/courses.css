@@ -1,114 +1,158 @@
 * {
     box-sizing: border-box;
-   
-    
-  }
-  
-nav{
-    position: absolute; 
-    display: inline-block;  
-    width: 30%;
-    top: 120px;
-    border-right:3px double gray;
-   
-    height: 500px;
-    overflow-y: scroll; 
-    padding:5px;
-    margin: 5px;
-    
-    
+    margin: 0;
+
 }
 
-main{
-    position: absolute;
-    display: inline-block;
-    left: 30%;  
-    margin: 10px;
-    width:70%;
-    height: 550px;
-    overflow-y: scroll;
-   top: 120px;
-    padding: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-   
-    
-    
-}
-header{
-    width:100%;
+/* header*/
+header {
+
+    padding: 40px 0px 20px 0px;
+    width: 100%;
     height: 100px;
-    position:absolute ;
+    position: absolute;
     z-index: 1;
     background-color: rgb(25, 147, 187);
 }
 
+/*page title */
+h1 {
 
-
-
-
-h1{
     display: inline-block;
-    
+
     text-align: center;
-    font-size: 50px ;
-    color:white;
-    font-family: ''Merriweather'', serif;
+    font-size: 50px;
+    color: white;
+    font-family: '' Merriweather'', serif;
 }
 
-h2{
-    font-family: 'Merriweather', serif;
-    text-decoration:underline;
-}
-h3{
-    color:rgb(2, 69, 92);
-    font-family: 'Merriweather', serif;
-    text-decoration:underline;
-}
-
-
-
-.exemple{
-    color: rgb(241, 139, 6);
-}
-
- table , th , td {
-    border: solid black 1px;
-    border-collapse: collapse;
-    padding:5px;
-}
-
-nav a {
-    
-    color: rgb(25, 147, 187);
-    text-decoration: none;
-}
-
-a:hover{
-    color: rgb(45, 187, 247);  
-}
-
-#main{
-    padding-left: 20px;
-    color:white;
-    font-size: 20px ;
-    display: inline-block;
-    width:30%;
-    
-    font-family: ''Merriweather'', serif;
-}
-
-header a{
+/* mainpage link*/
+header a {
     color: white;
     text-decoration: none;
 }
 
 
+/* Fixed sidenav, full height */
+nav {
+    height: 85% ;
+    width: 350px;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    border-right: 3px double gray;
+    left: 0;
+    overflow-y: scroll;
+    margin-top:5px;
+    padding-top: 20px;
+    padding: 0px;
+    padding-bottom: 100px;
+    background-color: white;
+}
+
+nav a {
+    color: rgb(25, 147, 187);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(45, 187, 247);
+}
 
 
+/* Style the sidenav links and the dropdown button */
+nav a,
+.dropdown-btn,
+.notDropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+    background-color:rgb(25, 147, 187);
+    color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+background-color: white;
+    padding-left: 8px;
+    overflow-y: scroll;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
 
 
+/* course section*/
+main {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: inline-block;
+    left: 30%;
+
+    width: 70%;
+    height: 550px;
+    overflow-y: scroll;
+    top: 120px;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    margin: 40px 10px 25px 10px;
+    font-family: 'Merriweather', serif;
+    text-decoration: underline;
+}
+
+h3 {
+    margin: 20px 10px 15px 10px;
+    color: rgb(2, 69, 92);
+    font-family: 'Merriweather', serif;
+    text-decoration: underline;
+}
+
+.exemple {
+    color: rgb(241, 139, 6);
+}
+
+table,
+th,
+td {
+    border: solid black 1px;
+    border-collapse: collapse;
+    padding: 5px;
+
+}
 
 
+#main {
+
+    padding-left: 20px;
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    width: 30%;
+    font-family: '' Merriweather'', serif;
+}
 
 
-
+main p {
+    margin: 10px;
+}

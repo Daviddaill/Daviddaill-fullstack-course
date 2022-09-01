@@ -7,6 +7,8 @@
     <title>Fundamentals Of HTML</title>
     <link rel="stylesheet" href="resources/css/courses.css">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/0196cd3152.js" crossorigin="anonymous"></script>
+    <script src="./resources/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -14,10 +16,11 @@
         <h1>Fundamentals Of HTML</h1>
     </header>
     <nav>
-        <ol>
-            <li> <a href="#intro">Introduction to HTML </a></li>
-            <li> <a href="#html structure"> HTML Structure </a></li>
-            <ul>
+        
+             <a href="#intro" class="notDropdown-btn">Introduction to HTML </a>
+             <a href="#html structure" class="dropdown-btn"> HTML Structure <i class="fa-solid fa-caret-down"></i> </a>
+             <div class="dropdown-container">
+             <ul>
                 <li> <a href="#attributes">Attributes</a> </li>  
                   <li> <a href="#displaying text"> Displaying Text</li> </a>
                   <ul>
@@ -30,8 +33,10 @@
                   <li> <a href="#video"> Video </a></li>
                   <li><a href="#video">Review </a></li>  
               </ul>
-            <li> <a href="#preparing html">Preparing For HTML</a></li>
-              <ul>
+             </div>
+             <a href="#preparing html" class="dropdown-btn">Preparing For HTML <i class="fa-solid fa-caret-down"></i></a>
+             <div class="dropdown-container">
+                <ul>
                 <li> <a href="#html tag"> The &lt;html&gt; tag</a></li>
                 <li> <a href="#the head"> The Head</a></li>
                 <li> <a href="#page title"> Page Title</a></li>
@@ -45,9 +50,11 @@
                 <li> <a href="#indentation"> Whitespace, Indentation & comments</a></li>
                 <li> <a href="#review tags"> review</a></li>
               </ul>
+            </div>
            
-            <li> <a href="#table">Table</a></li>
-              <ul>
+             <a href="#table" class="dropdown-btn">Table <i class="fa-solid fa-caret-down"></i></a>
+             <div class="dropdown-container">
+                <ul>
                   <li> <a href="#table rows">Table Rows</a> </li>
                   <li> <a href="#table headings">Table Headings</a> </li>
                   <li> <a href="#spanning columns">Spanning Columns</a> </li>
@@ -57,8 +64,10 @@
                   <li> <a href="#table footer">Table Footer</a> </li>
                   <li> <a href="#review table">Review Table</a> </li>
               </ul>
-            <li> <a href="#semantic"> Introduction to Semantic HTML</a></li>
-              <ul>
+             </div>
+             <a href="#semantic" class="dropdown-btn"> Introduction to Semantic HTML <i class="fa-solid fa-caret-down"></i></a>
+             <div class="dropdown-container">
+                <ul>
                   <li> <a href="#Why use Semantic HTML?">Why use Semantic HTML?</a>  </li>
                   <li> <a href="#Header and Nav">Header and Nav</a> </li>
                   <li> <a href="#Main and Footer">Main and Footer</a>  </li>
@@ -71,8 +80,8 @@
 
 
               </ul>
-            
-        </ol>
+             </div>
+        
     </nav>
 
     <main>
