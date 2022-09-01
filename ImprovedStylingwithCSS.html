@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="resources/css/courses.css">
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap"
                 rel="stylesheet">
+        <script src="https://kit.fontawesome.com/0196cd3152.js" crossorigin="anonymous"></script>
+        <script src="./resources/script.js" defer></script>
 </head>
 
 <body>
@@ -16,8 +18,9 @@
                 <h1>Improves Styling With CSS</h1>
         </header>
         <nav>
-                <ol>
-                        <li> <a href="#1">Color </a></li>
+
+                <a href="#1" class="dropdown-btn">Color <i class="fa-solid fa-caret-down"></i> </a>
+                <div class="dropdown-container">
                         <ul>
                                 <li> <a href="#1a">Introduction to Color</a> </li>
                                 <li><a href="#1b">Foreground vs Background</a> </li>
@@ -26,8 +29,9 @@
                                 <li><a href="#1d">Opacity and Alpha</a> </li>
                                 <li><a href="#1e">Review</a> </li>
                         </ul>
-
-                        <li> <a href="#2"> Typography </a> </li>
+                </div>
+                <a href="#2" class="dropdown-btn"> Typography <i class="fa-solid fa-caret-down"></i></a>
+                <div class="dropdown-container">
                         <ul>
                                 <li> <a href="#2a">Font Family </a> </li>
                                 <li> <a href="#2b">Multi-Word Values </a> </li>
@@ -50,8 +54,9 @@
                                 </ul>
                                 <li> <a href="#2l"> Review </a> </li>
                         </ul>
-
-                        <li> <a href="#3">Learn Links and Buttons</a> </li>
+                </div>
+                <a href="#3" class="dropdown-btn">Links and Buttons <i class="fa-solid fa-caret-down"></i></a>
+                <div class="dropdown-container">
                         <ul>
                                 <li> <a href="#3a">Tooltips and Titles </a> </li>
                                 <li> <a href="#3b">Hover States and Cursors </a> </li>
@@ -64,9 +69,10 @@
                                 <li> <a href="#3g"> Buttons: Hover States </a> </li>
                                 <li> <a href="#3h"> Review </a> </li>
                         </ul>
+                </div>
 
-
-                        <li> <a href="#4">Secondary navigation</a></li>
+                <a href="#4" class="dropdown-btn">Secondary navigation <i class="fa-solid fa-caret-down"></i></a>
+                <div class="dropdown-container">
                         <ul>
                                 <li> <a href="#4a">What is primary vs secondary
                                                 navigation? </a> </li>
@@ -81,12 +87,10 @@
                                         </a> </li>
                                 <li> <a href="#4g"> Review </a> </li>
                         </ul>
-
-
-                </ol>
+                </div>
         </nav>
         <main>
-                
+
                 <ul class="c4 lst-kix_v9q81ew640pv-0 start">
                         <li class="c27 c7 li-bullet-0"><span class="c5">Apply more
                                         custom colors and fonts</span></li>
@@ -95,7 +99,7 @@
                         <li class="c27 c7 li-bullet-0"><span class="c5">Create secondary
                                         (breadcrumb) navigation</span></li>
                 </ul>
-                <h2 id="1" ><span class="c13">Color</span></h2>
+                <h2 id="1"><span class="c13">Color</span></h2>
                 <p class="c3 c8"><span class="c15"></span></p>
                 <h3 id="1a"><span class="c12">Introduction to
                                 Color</span></h3>
@@ -605,7 +609,8 @@
                                 website.</span></p>
                 <p class="c0"><span
                                 style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 349.33px;"><img
-                                        alt="Google Fonts Roboto Styles Page" src="./resources/images/stylingCSS/stylingCss3.png"
+                                        alt="Google Fonts Roboto Styles Page"
+                                        src="./resources/images/stylingCSS/stylingCss3.png"
                                         style="width: 601.70px; height: 349.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                                         title=""></span></p>
                 <p class="c0"><span class="c5">When you select a font in Google Fonts,
@@ -615,7 +620,8 @@
                                 site.</span></p>
                 <p class="c0"><span
                                 style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 349.33px;"><img
-                                        alt="Showing Selected Font Families" src="./resources/images/stylingCSS/stylingCss2.png"
+                                        alt="Showing Selected Font Families"
+                                        src="./resources/images/stylingCSS/stylingCss2.png"
                                         style="width: 601.70px; height: 349.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                                         title=""></span></p>
                 <p class="c0"><span class="c5">When you&rsquo;re done selecting a font
@@ -1126,7 +1132,7 @@
                                 walked in the woods so that they would be able to find
                                 their way back.</span></p>
                 <h3 id="4c">Benefit of using
-                                breadcrumbs</span></h3>
+                        breadcrumbs</span></h3>
                 <p class="c0"><span class="c5">Breadcrumb navigation provides a lot of
                                 benefits for users that come to random pages
                                 in a website through direct links or search results.
