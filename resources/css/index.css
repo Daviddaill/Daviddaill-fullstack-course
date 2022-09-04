@@ -1,56 +1,105 @@
 * {
     box-sizing: border-box;
-
+    margin:0;
+    padding: 0;
   }
 
-a {
-    
-    color: rgb(25, 147, 187);
-    text-decoration: none;
-}
-
-a:hover{
-    color: rgb(45, 187, 247);  
-}
 
 header{
     width:100%;
     height: 100px;
     position:absolute ;
+    padding: 30px 0 20px 0;
     z-index: 1;
-    background-color: rgb(25, 147, 187);
+    
 }
 
-
-
-
-
 h1{
-    
-    
     text-align: center;
     font-size: 50px ;
-    color:white;
+    color: rgb(25, 147, 187);
     font-family: ''Merriweather'', serif;
 }
 
 
 
-nav{
-    position: absolute; 
-    display:flex;
-    justify-content: center;
+/* Fixed sidenav, full height */
+nav {
+    height: 85% ;
     width: 100%;
+    position: fixed;
+    z-index: 1;
     top: 100px;
-      
-    height: 500px;
-    overflow-y: scroll; 
-    padding:5px;
-    margin: 5px ;
+    overflow-y: scroll;
+    background-color: white; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items:flex-start;
+    justify-items: flex-start;
+    background-color:  rgb(25, 147, 187);
 
-
-   
 }
+
+nav a {
+    color: rgb(25, 147, 187);
+    text-decoration: none;
+}
+
+a:hover, h2:hover {
+    color: rgb(45, 187, 247);
+}
+
+
+
+/* Style the sidenav links and the dropdown button */
+nav a,
+.dropdown-btn,
+.notDropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+
+}
+.module{
+    width:220px;
+    padding: 20px 0;
+    margin:20px 20px;
+    background-color: white;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+    color: rgb(25, 147, 187);
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    position:absolute;   
+    background-color: rgb(239, 251, 254);
+    color:white;
+    overflow-y: scroll;
+    width:220px;
+    padding: 20px 0 30px 0;
+    box-shadow: 0px 10px 10px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
 
 
 
