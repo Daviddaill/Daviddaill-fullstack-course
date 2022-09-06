@@ -1,0 +1,1426 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="./resources/css/courses.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JavaScript and HTTP Requests
+    </title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0196cd3152.js" crossorigin="anonymous"></script>
+    <script src="./resources/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <p id="main"><a href="index.html">Main page </a></p>
+        <h1>JavaScript Testing</h1>
+    </header>
+    <nav>
+
+        <a href="#1" class="dropdown-btn">Why Test? <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#1a">Introduction </a> </li>
+                <li><a href="#1b">Manual Testing </a> </li>
+                <li><a href="#1c">Automated Testing</a> </li>
+                <li><a href="#1d">The Test Suite</a> </li>
+                <li><a href="#1e">Tests As Documentation</a> </li>
+                <li><a href="#1f">Regression</a> </li>
+                <li><a href="#1g">Review</a> </li>
+            </ul>
+        </div>
+
+        <a href="#2" class="dropdown-btn"> Testing Types <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#2a">What are the Types of Testing? </a> </li>
+                <li> <a href="#2b">Unit Tests </a> </li>
+                <li> <a href="#2c"> Integration Tests</a> </li>
+                <li> <a href="#2d"> End to End Tests </a> </li>
+                <li> <a href="#2e"> How do these tests relate? </a> </li>
+                <li> <a href="#2f">Summary </a> </li>
+            
+
+            </ul>
+        </div>
+
+        <a href="#3" class="dropdown-btn">Software Testing Methodologies <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#3a">What is a software testing methodology? </a> </li>
+                <li> <a href="#3b">Why Use Software Testing Methodologies?
+                    </a> </li>
+                <li> <a href="#3c"> Different types of methodologies </a> </li>
+                <li> <a href="#3d"> Test-driven development </a>
+                </li>
+                <li> <a href="#3e"> Behavior-driven development </a>
+                </li>
+                <li> <a href="#3f"> Review </a> </li>
+                    </a> </li>
+
+            </ul>
+        </div>
+
+
+        <a href="#4" class="dropdown-btn">Automate and Organize Tests <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#4a">Introduction
+                    </a> </li>
+                <li> <a href="#4b">Install Mocha I </a> </li>
+                <li> <a href="#4c">Install Mocha II </a></li>
+                <li> <a href="#4d"> describe and it blocks </a></li>
+                <li> <a href="#4e"> assert </a> </li>
+                <li> <a href="#4f">Setup, Exercise, and Verify </a> </li>
+                <li> <a href="#4g">Teardown </a></li>
+                <li> <a href="#4h"> Hooks </a></li>
+                <li> <a href="#4i">Review</a> </li>
+            </ul>
+        </div>
+
+        <a href="#5" class="dropdown-btn">Write Expressive Tests<i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#5a"> Introduction </a> </li>
+                <li> <a href="#5b"> assert.ok </a> </li>
+                <li> <a href="#5c"> assert.equal </a> </li>
+                <li> <a href="#5d"> assert.strictEqual </a> </li>
+                <li> <a href="#5e"> assert.deepEqual I </a> </li>
+                <li> <a href="#5f"> assert.deepEqual II </a> </li>
+                <li> <a href="#5g"> Other assert methods </a> </li>
+                <li> <a href="#5h"> Review </a> </li>
+
+
+            </ul>
+        </div>
+
+        <a href="#51" class="dropdown-btn"> Learn TDD With Mocha <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#51a"> Red </a> </li>
+                <li> <a href="#51b"> Green </a> </li>
+                <li> <a href="#51c"> Refactor </a> </li>
+            </ul>
+        </div>
+
+        <a href="#6" class="notDropdown-btn"> Documentation </a>
+
+        <a href="#7" class="dropdown-btn">Code Coverage <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#7a">What is Code Coverage?</a> </li>
+                <li> <a href="#7b">Code Coverage Criteria </a> </li>
+                <li> <a href="#7c">The 100% Code Coverage Myth</a></li>
+                <li> <a href="#7d"> Test Coverage </a></li>
+                <li> <a href="#7e">Conclusion</a> </li>
+            </ul>
+        </div>
+
+        <a href="#8" class="dropdown-btn"> Mocking In Tests <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#8a">What is Mocking? </a> </li>
+                <li> <a href="#8b">Mocking in Unit Tests </a> </li>
+                <li> <a href="#8c"> Mocking in Integration Tests</a> </li>
+                <li> <a href="#8d"> Summary</a> </li>
+            </ul>
+        </div>
+
+        <a href="#9" class="dropdown-btn">Spies with Sinon <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#9a">What are Spies? </a> </li>
+                <li> <a href="#9b">What is Sinon? </a> </li>
+                <li> <a href="#9c"> How to Spy?</a> </li>
+                <li> <a href="#9d"> Summary </a> </li>
+            </ul>
+        </div>
+
+        <a href="#10" class="notDropdown-btn"> Review: JavaScript Testing </a>
+
+
+        
+
+
+    </nav>
+    <main>
+        <h2 id="1"><span class="c7">Why Test?</span></h2>
+        <h3 id="1a"><span class="c3">Introduction</span></h3>
+        <p class="c0"><span class="c1">Errors in software are inevitable. Unchecked, these errors can have painful and
+                costly impacts on users and developers. In 2002, a study commissioned by the US Department of
+                Commerce&rsquo;s National Institute of Standards and Technology concluded that software errors cost the
+                US
+                economy about $59 billion annually.</span></p>
+        <p class="c0"><span>To avoid those costs, software professionals use </span><span class="c8">automated
+                testing</span><span>. During and after production, they can run an </span><span class="c8">automated
+                test
+                suite</span><span class="c1">&nbsp;to give themselves confidence that their products are free of errors
+                and
+                work as expected.</span></p>
+        <p class="c0"><span class="c1">This lesson will give you the knowledge and practice to discuss these concepts.
+                By
+                the end of this lesson you will be able to:</span></p>
+        <ul class="c13 lst-kix_9cs4aso5sfer-0 start">
+            <li class="c0 c5 li-bullet-0"><span>Define an </span><span class="c8 c22">automated test suite</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Describe how a test suite is used in software
+                    development</span>
+            </li>
+            <li class="c0 c5 li-bullet-0"><span>Explain the benefits of </span><span class="c22 c8">automated
+                    testing</span>
+            </li>
+        </ul>
+        <p class="c0"><span>*Study available here:</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://web.archive.org/web/20090610052743/http://www.nist.gov/public_affairs/releases/n02-10.htm&amp;sa=D&amp;source=editors&amp;ust=1662467019214275&amp;usg=AOvVaw3b_Z6rbZ3K_VCgsFNKCIhV">&nbsp;</a></span><span
+                class="c2 c8"><a class="c4"
+                    href="https://www.google.com/url?q=https://web.archive.org/web/20090610052743/http://www.nist.gov/public_affairs/releases/n02-10.htm&amp;sa=D&amp;source=editors&amp;ust=1662467019214657&amp;usg=AOvVaw1Rf2v0dERXcA5D1q-naRmQ">Software
+                    Errors Cost U.S. Economy $59.5 Billion Annually</a></span><span class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://web.archive.org/web/20090610052743/http://www.nist.gov/public_affairs/releases/n02-10.htm&amp;sa=D&amp;source=editors&amp;ust=1662467019214931&amp;usg=AOvVaw0ppmrE5Nf0o0pVImV9M_uc">,
+                    2002</a></span><span class="c1">.</span></p>
+        <h3 id="1b"><span class="c3">Manual Testing</span></h3>
+        <p class="c0"><span class="c8">Software testing</span><span class="c1">&nbsp;is the process of assessing the
+                completeness and quality of computer software. Usually this is done by running a part of a system (like
+                a
+                web application) and comparing the actual behavior to the expected behavior.</span></p>
+        <p class="c0"><span>One way to perform software testing is </span><span class="c8">manual testing</span><span
+                class="c1">. Manual testing is a form of testing done by a human interacting with a system. With web
+                apps,
+                this might be clicking, dragging, and typing through a webpage. A list of actions and expected behaviors
+                would be given. If the observed behavior doesn&rsquo;t match the expected behavior, the application has
+                an
+                error.</span></p>
+        <p class="c0"><span>Errors, like the ones you may have found in the provided web app, are also called
+            </span><span class="c8">bugs</span><span class="c1">. A bug is an error, fault, or flaw in software that
+                makes a system
+                behave in unexpected ways. Ideally testing catches bugs before they are sent to users.</span></p>
+        <h3 id="1c"><span class="c3">Automated Testing</span></h3>
+        <p class="c0 c15"><span class="c1"></span></p>
+        <p class="c0"><span class="c8">Automated testing</span><span class="c1">&nbsp;is the use of software to control
+                the
+                execution of tests and the comparison of actual behavior to expected behavior. </span></p>
+        <p class="c0"><span class="c1">Compared to manual testing, automated testing is</span></p>
+        <ul class="c13 lst-kix_6vt01m7yq1i1-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Faster: it tests more of your product in less time.</span>
+            </li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">More reliable: it&rsquo;s less prone to error than a human is
+                    .</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Maintainable: you can review, edit, and extend a collection
+                    of
+                    tests.</span></li>
+        </ul>
+        <p class="c0"><span class="c1">Rather than hire a testing team at the end of development, professional
+                developers
+                can run their automated tests after every change. The workflow might look like this:</span></p>
+        <ol class="c13 lst-kix_qe0pvhau1vw8-0 start" start="1">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Write code and corresponding tests</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Enter a command into a terminal to run tests</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">If the app behaves as intended, all tests should pass.
+                    Development is complete.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">If it does not behave as intended, at least one test should
+                    fail.
+                    Fix code and return to step 2.</span></li>
+        </ol>
+        <h3 id="1d"><span class="c3">The Test Suite</span></h3>
+        <p class="c0"><span>Tests are written with code, just like the rest of your web app. You can refer to the code
+                defining your app as </span><span class="c8">implementation code</span><span>, and the code defining
+                your
+                tests as </span><span class="c8">test code</span><span class="c1">.</span></p>
+        <p class="c0"><span>A collection of tests for a web application is called a </span><span class="c8">test
+                suite</span><span class="c1">. In the last exercise, you ran a test suite with npm test. In that case
+                the
+                test suite contained all tests for the application.</span></p>
+        <p class="c0"><span class="c1">Test code is included with and structured similarly to implementation code. Often
+                times changes to test code are associated with changes to implementation code and vice versa. Both are
+                easier to maintain when they are stored in the same place.</span></p>
+        <p class="c0"><span class="c1">For example, if implementation code is written in index.js then the corresponding
+                test code may be written in index-test.js.</span></p>
+        <p class="c12"><span class="c1"></span></p>
+        <h3 id="1e"><span class="c3">Tests As Documentation</span></h3>
+        <p class="c0"><span>Imagine explaining this Cake Bar app to someone else. How does it behave? Does it rely on
+                other
+                software? How do you run it on a computer? You could read every line in every file to figure that out.
+                Or
+                you could read the </span><span class="c8">documentation</span><span class="c1">.</span></p>
+        <p class="c0"><span class="c1">Documentation is any content separate from implementation code that explains how
+                it
+                works or how to use it. It may provide more concise summaries and explanation than the implementation
+                code
+                can.</span></p>
+        <p class="c0"><span class="c1">Documentation can come in many forms, including plain text, diagrams&hellip;and
+                tests! Tests as documentation provide what many other forms cannot: both human-readable text to describe
+                the
+                application and machine-executable code to confirm the app works as described.</span></p>
+        <p class="c0"><span class="c1">This code block from the Cake Bar app describes and tests the &ldquo;name&rdquo;
+                functionality.</span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 510.00px; height: 244.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image3.png"
+                    style="width: 510.00px; height: 244.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c1">You can read the description in plain English terms: it accepts the customer
+                name.
+                You can run the test to confirm the functionality works as described.</span></p>
+        <p class="c12"><span class="c1"></span></p>
+        <h3 id="1f"><span class="c3">Regression</span></h3>
+        <p class="c0"><span class="c1">The new &ldquo;clear order&rdquo; button feature has been implemented to satisfy
+                the
+                new test.</span></p>
+        <p class="c0"><span>When adding a new feature to your product, it&rsquo;s possible that something will break. If
+                that break occurs within a feature developed earlier, it is called </span><span
+                class="c8">regression</span><span>. When functionality previously developed and tested stops working,
+                you
+                may say the </span><span class="c8">functionality regressed</span><span class="c1">.</span></p>
+        <p class="c0"><span class="c1">Running an automated test suite is fast and repeatable, which means you can run
+                tests
+                after every change to confirm that old features still work. If they have regressed, the test output
+                should
+                notify you.</span></p>
+        <p class="c0 c15"><span class="c1"></span></p>
+        <h3 id="1g"><span class="c3">Review</span></h3>
+        <p class="c0"><span class="c1">Writing automated tests takes time, but the cost is outweighed by the benefits.
+                Automated testing</span></p>
+        <ul class="c13 lst-kix_m074kpsml1a0-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Increases confidence that your product works as expected
+                    (compared to manual testing)</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Improves upon documentation</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Reduces the likelihood of regression</span></li>
+        </ul>
+        <p class="c0"><span class="c1">You also learned</span></p>
+        <ul class="c13 lst-kix_yltltjerrkfb-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Where and why test code is stored alongside implementation
+                    code</span></li>
+            <li class="c0 c5 li-bullet-0"><span>Terms to help communicate the benefit of testing: </span><span
+                    class="c8">manual testing</span><span>, </span><span class="c8">automated testing</span><span>,
+                </span><span class="c8">test suite</span><span>, </span><span class="c8">bug</span><span>, </span><span
+                    class="c8">documentation</span><span>, and </span><span class="c22 c8">regression</span></li>
+        </ul>
+        <h2 id="2"><span class="c7">Testing Types</span></h2>
+        <p class="c0"><span class="c1">In this article, you will be introduced to the different types of testing that
+                may be
+                used throughout the various stages of a project from local development to shipping to real users.</span>
+        </p>
+        <h3 id="2a"><span class="c3">What are the Types of Testing?</span></h3>
+        <p class="c0"><span class="c1">At different stages of production for a particular project, you may encounter the
+                opportunity for different types of tests, which can vary in scale and resource intensity, as well as
+                serve
+                different purposes. The types of testing we will discuss in this article are:</span></p>
+        <ul class="c13 lst-kix_h1s3ppuocugo-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Unit tests</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Integration tests</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">End to end tests</span></li>
+        </ul>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 454.67px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image1.png"
+                    style="width: 601.70px; height: 454.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c1">Throughout this article, we will discuss how each of these types of tests can be
+                applied to a basic weather application.</span></p>
+        <h3 id="2b"><span class="c3">Unit Tests</span></h3>
+        <p class="c0"><span>A </span><span class="c8">unit test</span><span>&nbsp;covers the smallest possible unit of
+                testable code, such as a single function. In order to keep the scope of a unit test focused on the unit
+                being tested, any data or behavior from other units or external sources that the unit relies on should
+                be
+                replaced with fake (</span><span class="c8">mock</span><span class="c1">) data or behavior.</span></p>
+        <p class="c0"><span class="c1">For example, in a weather application, we might have a number of functions that
+                each
+                handle a small piece of computation, such as converting fahrenheit to celsius or formatting incoming
+                weather
+                data from an API. Unit tests would be written first to ensure that these functions can perform
+                independently
+                before we move on to testing how they work together. Any data that might come in from an external
+                database
+                or API would be mocked.</span></p>
+        <h3 id="2c"><span class="c3">Integration Tests</span></h3>
+        <p class="c0"><span>An </span><span class="c8">integration test</span><span class="c1">&nbsp;covers how the
+                units of
+                a particular program work with one another. When testing integrations with external services, only the
+                handling of incoming data is tested while the data itself remains mocked.</span></p>
+        <p class="c0"><span class="c1">For example, in a weather application, integration tests would be written to
+                ensure
+                that weather data fetched from an API will be properly formatted to be displayed to the user. It would
+                also
+                ensure that delays, errors, or invalid data from the external service would be handled properly once
+                they
+                are introduced. The data itself would be mocked.</span></p>
+        <h3 id="2d"><span class="c3">End to End Tests</span></h3>
+        <p class="c0"><span>An </span><span class="c8">end to end test</span><span>&nbsp;(sometimes referred to as a
+            </span><span class="c8">UI layer test</span><span>&nbsp;or </span><span class="c8">e2e</span><span
+                class="c1">)
+                automates user flow to test the application in the way that a real user would experience it. To closely
+                match the end user&rsquo;s experience, this type of testing would also test interactions with external
+                services such as databases and APIs.</span></p>
+        <p class="c0"><span class="c1">For example, in a weather application, end to end tests might be written to
+                simulate
+                a user searching for a particular location, selecting that location, choosing celsius or fahrenheit, and
+                clicking through various aspects of the UI. In this test, the actual database and external API is
+                used.</span></p>
+        <h3 id="2e"><span class="c3">How do these tests relate?</span></h3>
+        <p class="c0"><span class="c1">The order of tests in this article (unit -&gt; integration -&gt; end to end)
+                represent an increase in resource intensity (time, computation, money) and the scope of the tests
+                (amount of
+                code being tested). Due to the increase in complexity, tests of these types may initially be written in
+                this
+                order. However, as an application is developed, new features may be tested using all three types
+                simultaneously, with each providing different feedback to the developer or testing team.</span></p>
+        <p class="c0"><span class="c1">A typical developer&rsquo;s feedback loop using these various test types might
+                be:</span></p>
+        <ol class="c13 lst-kix_57c2gm288dx7-0 start" start="1">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Make code changes</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Make a pull request</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">The code change has tests run against it (unit, integration,
+                    sometimes e2e)</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">If there are any failures then the dev will work on fixes in
+                    their local development environment.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Repeat steps 1-4 until all tests pass.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">The pull request is allowed to be merged.</span></li>
+        </ol>
+        <h3 id="2f"><span class="c3">Summary</span></h3>
+        <p class="c0"><span class="c1">In this article, we learned about the different types of tests that are written
+                and
+                performed throughout the production process. These include:</span></p>
+        <ul class="c13 lst-kix_qz3ecladxbsb-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Unit tests, which test the smallest unit of code
+                    possible.</span>
+            </li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Integration tests, which test the interactions between
+                    internal
+                    services in the application.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">End to end tests, which test the whole application including
+                    the
+                    external services it depends on.</span></li>
+        </ul>
+        <p class="c0"><span class="c1">These types of tests increase respectively in terms of resource intensity and
+                amount
+                of code being tested and each provide developers and/or testing teams with distinct feedback during the
+                development cycle.</span></p>
+        <p class="c0 c15"><span class="c1"></span></p>
+        <h2 id="3"><span class="c7">Software Testing Methodologies</span></h2>
+        <p class="c0"><span class="c1">Learn about software testing methodologies and some specific strategies that use
+                a
+                test-first approach to software development.</span></p>
+        <p class="c0"><span class="c1">Imagine this scenario: you&rsquo;ve written some code for a new feature and
+                it&rsquo;s time to test it. You deploy your development version of the code and interact with all of the
+                features of your application that were impacted. This could include features you built in the past and
+                anything new. You repeat that process for different browsers and devices, and a few hours later,
+                you&rsquo;re confident that it&rsquo;s ready to go. But then you deploy it to production and the error
+                reports start to come in!</span></p>
+        <p class="c0"><span>This scenario describes the process of </span><span class="c9">manual testing</span><span>,
+                which is time-consuming, can result in errors being overlooked, and can&rsquo;t be repeated easily. To
+                get
+                around the issues related to manual testing, organizations generally use software to </span><span
+                class="c8">automate</span><span class="c1">&nbsp;their testing processes to validate code.</span></p>
+        <h3 id="3a"><span class="c3">What is a software testing methodology?</span></h3>
+        <p class="c0"><span class="c9">Testing methodologies</span><span>&nbsp;are specific strategies for testing all
+                of
+                the pieces of your software to make sure it behaves as expected. These strategies include many ways
+                to</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/general/software-testing&amp;sa=D&amp;source=editors&amp;ust=1662467019224294&amp;usg=AOvVaw3UkKIB3CAaMVYgoWYqjsU6">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/general/software-testing&amp;sa=D&amp;source=editors&amp;ust=1662467019224791&amp;usg=AOvVaw3BzloCnk3l7qYeI0cdO9KB">test
+                    software</a></span><span class="c1">, such as unit testing, integration testing, performance
+                testing,
+                and more. In this article, we&rsquo;ll take a closer look at testing practices that use a test-first
+                approach to software development.</span></p>
+        <h3 id="3b"><span class="c3">Why Use Software Testing Methodologies?</span></h3>
+        <p class="c0"><span class="c1">There are many reasons that organizations adopt software testing
+                methodologies:</span></p>
+        <ul class="c13 lst-kix_eqav50xssneu-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Software errors can cost companies resources such as money
+                    and
+                    users.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Testing results in better reliability.</span></li>
+            <li class="c0 c5 li-bullet-0"><span>Testing can provide a better</span><span><a class="c4"
+                        href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/uiux/user-and-end-user&amp;sa=D&amp;source=editors&amp;ust=1662467019225655&amp;usg=AOvVaw2HrYtCMgh9a74tqHdDtsIg">&nbsp;</a></span><span
+                    class="c2"><a class="c4"
+                        href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/uiux/user-and-end-user&amp;sa=D&amp;source=editors&amp;ust=1662467019225899&amp;usg=AOvVaw0mzjVukR3_ZVkWo5gamtNj">end-user</a></span><span
+                    class="c1">&nbsp;experience.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Failing tests help indicate which part of the software is not
+                    working when bugs occur</span></li>
+        </ul>
+        <p class="c0"><span class="c1">Overall, the primary goal of testing is to make software development more
+                efficient,
+                reliable, and future-proof.</span></p>
+        <h3 id="3c"><span class="c3">Different types of methodologies</span></h3>
+        <p class="c0"><span class="c1">Some software testing methodologies prioritize writing test cases before writing
+                the
+                code those test cases will validate. Those types include:</span></p>
+        <ul class="c13 lst-kix_6p1dahr5tw4g-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Test-driven Development (TDD)</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Behavior-driven Development (BDD)</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Specification by Example (SBE)</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Acceptance Test-driven Development (ATDD)</span></li>
+        </ul>
+        <p class="c0"><span class="c1">These methodologies are particularly relevant for teams that use an agile, or
+                iterative, approach to software development. Teams don&rsquo;t have to pick one testing solution and
+                stop
+                there &mdash; several approaches can be used by the same team at different stages of development. The
+                following sections take a closer look at TDD and BDD and where they fit into the development cycle to
+                give
+                some more context on testing methodologies in practice.</span></p>
+        <h3 id="3d"><span class="c3">Test-driven development</span></h3>
+        <p class="c0"><span>Testing doesn&rsquo;t necessarily have to occur after code has been written. </span><span
+                class="c9">Test-driven development</span><span class="c1">&nbsp;is a methodology that flips the order,
+                where
+                tests are written before the functioning code is written. By writing tests in this order, test cases can
+                start with the definition of their purpose, or use case.</span></p>
+        <p class="c0"><span>Those use cases define the specification and documentation on what actions are to be
+                supported
+                by new code. TDD tests look at the </span><span class="c8">components</span><span>&nbsp;of code,
+                like</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/general/function&amp;sa=D&amp;source=editors&amp;ust=1662467019227339&amp;usg=AOvVaw18vBPjwwHUYwdzCrHGSJtI">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/general/function&amp;sa=D&amp;source=editors&amp;ust=1662467019227588&amp;usg=AOvVaw0lmB5DZEGt7BWMZeHtBEje">functions</a></span><span>&nbsp;and</span><span><a
+                    class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/general/class&amp;sa=D&amp;source=editors&amp;ust=1662467019227828&amp;usg=AOvVaw2Tz2-R1gkfKqmwpRktri-d">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/general/class&amp;sa=D&amp;source=editors&amp;ust=1662467019228070&amp;usg=AOvVaw3GUjLXun2GIGL6c1su6aUo">classes</a></span><span
+                class="c1">, as the smallest unit to test.</span></p>
+        <p class="c0"><span class="c1">In practice, TDD can accelerate software development since it dictates short
+                development cycles with direct test cases. There are many other benefits of test-driven
+                development:</span>
+        </p>
+        <ul class="c13 lst-kix_tnlqgdxe18k-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Developers can better understand the requirements of code,
+                    before
+                    writing the code.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Code that will never be executed won&rsquo;t be added to the
+                    codebase.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">The scope of development is reduced.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Code is written with testability in mind.</span></li>
+        </ul>
+        <p class="c0"><span class="c1">TDD is not the only testing methodology that takes a test-first approach to
+                software
+                development.</span></p>
+        <h3 id="3e"><span class="c3">Behavior-driven development</span></h3>
+        <p class="c0"><span>Another testing methodology that uses the strategy of writing test cases before code is
+            </span><span class="c9">behavior-driven development</span><span class="c1">, or BDD. It is extremely similar
+                to
+                TDD in terms of process. Where these two methodologies differ is in why or when tests are written, what
+                an
+                individual unit is considered to be, and how the language of the test is composed.</span></p>
+        <p class="c0"><span class="c1">Since BDD tests are driven by behavior, the language of the test cases are
+                simplified
+                and written via collaboration between engineers, product owners, and other stakeholders, to ensure the
+                specified behaviors make sense from a user perspective.</span></p>
+        <p class="c0"><span class="c1">It can be said that BDD is more specific than TDD. Changes to the code base, such
+                as
+                changing the design of the code, will not occur unless there is a relevant change in the product. Since
+                those changes are feature-related, the unit of tests is called a &ldquo;feature.&rdquo; Test cases are
+                related to whether or not the feature works, rather than if the individual functions or classes you are
+                writing to develop features work. Altogether, the tests are about how the product behaves &mdash; not
+                the
+                nitty-gritty technical details.</span></p>
+        <h3 id="3f"><span class="c3">Review</span></h3>
+        <p class="c0"><span class="c1">Nice work, you now know more about software testing methodologies! Let&rsquo;s
+                quickly recap the main ideas:</span></p>
+        <ul class="c13 lst-kix_kpgwzinikay6-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Automated testing makes code production more reliable thanks
+                    to
+                    the ease of running frequent tests on all new and old code in a software application.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Software companies don&rsquo;t need to pick a singular
+                    software
+                    testing methodology &mdash; they can be combined and used at various stages during software
+                    development.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Some organizations take a test-first approach to software
+                    development, with testing methodologies such as TDD and BDD being the first step of code
+                    production.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Since software errors can cost businesses money and customer
+                    trust, testing is an integral part of the development process and used in some flavor by every
+                    software
+                    company.</span></li>
+        </ul>
+        <p class="c0"><span>As you continue with testing content, you&rsquo;ll see TDD as the main methodology we teach
+                (such as</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/learn/learn-testing-for-web-development/modules/learn-tdd-feature-test&amp;sa=D&amp;source=editors&amp;ust=1662467019230122&amp;usg=AOvVaw3SYvDGnqPYdMeu9O2NT80O">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/learn/learn-testing-for-web-development/modules/learn-tdd-feature-test&amp;sa=D&amp;source=editors&amp;ust=1662467019230418&amp;usg=AOvVaw0c3HpgdQDgofn2zm3uZTGY">this
+                    course</a></span><span class="c1">). Now you have some insight into what TDD is and how it can be
+                used
+                as an example of how to guide the software development process!</span></p>
+        <p class="c12"><span class="c1"></span></p>
+        <h2 id="4"><span class="c7">Automate and Organize Tests</span></h2>
+        <h3 id="4a"><span class="c3">Introduction</span></h3>
+        <p class="c0"><span>Testing is an essential part of development. When used properly, testing can catch and
+                identify
+                issues with your implementation code before you deploy it to users. Instead of testing every function
+                manually, developers automate their tests with a </span><span class="c8">test framework</span><span
+                class="c1">.</span></p>
+        <p class="c0"><span>Developers use test frameworks to organize and automate tests that provide useful feedback
+                when
+                errors occur. In this lesson we will use the</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://mochajs.org/&amp;sa=D&amp;source=editors&amp;ust=1662467019231363&amp;usg=AOvVaw1A5frRxbxOPBEp5O207Xrf">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://mochajs.org/&amp;sa=D&amp;source=editors&amp;ust=1662467019231577&amp;usg=AOvVaw3BsxlRCc-yo1AUbck8N4KJ">Mocha
+                    test framework</a></span><span class="c1">&nbsp;to write tests against JavaScript methods.</span>
+        </p>
+        <p class="c0"><span class="c1">In this lesson you will:</span></p>
+        <ul class="c13 lst-kix_1itb0bk3uvbk-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Learn to write a basic Mocha test suite</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Use Node&rsquo;s assert.ok method to verify the expected
+                    output
+                    of your code</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Understand and apply the four phases of a test to create an
+                    expressive testing suite</span></li>
+            <li class="c0 c5 li-bullet-0"><span>Evaluate the quality of your tests against the</span><span><a class="c4"
+                        href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019232225&amp;usg=AOvVaw01fP6XU5h2ifhG39P-hhYW">&nbsp;</a></span><span
+                    class="c2"><a class="c4"
+                        href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019232454&amp;usg=AOvVaw39MF2PUKaZXRruTXuDbPQp">characteristics
+                        of a good test</a></span></li>
+        </ul>
+        <h3 id="4b"><span class="c3">Install Mocha I</span></h3>
+        <p class="c0"><span>Before writing any tests you&rsquo;ll need to use</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/what-is-node&amp;sa=D&amp;source=editors&amp;ust=1662467019232978&amp;usg=AOvVaw0ZPyjteZutb7sJnEJlmV9W">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/what-is-node&amp;sa=D&amp;source=editors&amp;ust=1662467019233244&amp;usg=AOvVaw09zGlfBTfhZrJT-ezvKko0">Node.js
+                    and npm</a></span><span class="c1">&nbsp;to set up a JavaScript project and install Mocha.</span>
+        </p>
+        <ul class="c13 lst-kix_p4icym1olrss-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c8">Node</span><span class="c1">&nbsp;allows you to run
+                    JavaScript in
+                    the terminal</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c8">npm</span><span class="c1">&nbsp;is a Node tool that allows
+                    you
+                    to download packages from the web, and manage them in a JavaScript project</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c8">Mocha</span><span class="c1">&nbsp;is one of those packages
+                    and
+                    is used to test other JavaScript code</span></li>
+        </ul>
+        <p class="c0"><span>A JavaScript project is a directory of files. The following command creates a file
+            </span><span class="c9">package.json</span><span class="c1">&nbsp;that can be used to manage packages for
+                the
+                project.</span></p>
+        <p class="c17"><span class="c14 c9">$ npm init</span></p>
+        <p class="c0"><span class="c1">After running this command you will be prompted to enter information about your
+                project. It&rsquo;s okay to skip some fields if you&rsquo;re not ready to enter that information.</span>
+        </p>
+        <p class="c0"><span class="c1">With your project setup, you can install packages.</span></p>
+        <p class="c17"><span class="c14 c9">$ npm install mocha -D</span></p>
+        <p class="c0"><span class="c1">Here&rsquo;s what this command means:</span></p>
+        <ul class="c13 lst-kix_lgykl6agzyw9-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">npm install tells npm to install a package from the internet
+                    and
+                    any other packages it depends on</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">mocha is the package you want to download</span></li>
+            <li class="c0 c5 li-bullet-0"><span>-D signifies that this package is a development dependency and will show
+                    up
+                    under the devDependecies section in </span><span class="c9">package.json</span><span class="c1">.
+                    This
+                    means that the package will only be included in development mode and will not be included in the
+                    production bundle.</span></li>
+        </ul>
+        <p class="c0"><span>Once you npm install packages, you can find the packages and all their dependencies in the
+            </span><span class="c9">node_modules</span><span class="c1">&nbsp;folder. The new directory structure
+                contains
+                the following:</span></p>
+        <p class="c17"><span class="c1">project</span></p>
+        <p class="c17"><span class="c1">|_ node_modules</span></p>
+        <p class="c17"><span class="c1">|___ .bin</span></p>
+        <p class="c17"><span class="c1">|___ mocha</span></p>
+        <p class="c17"><span class="c1">|___ ...</span></p>
+        <p class="c17"><span class="c1">|_ package.json</span></p>
+        <p class="c0"><span class="c1">The ... in the file structure represents other packages that are a dependency for
+                Mocha.</span></p>
+        <h3 id="4c"><span class="c3">Install Mocha II</span></h3>
+        <p class="c0"><span class="c1">After installing Mocha as a dependency we can run it in two ways.</span></p>
+        <p class="c0"><span>The first (and more tedious) method is to call it directly from </span><span
+                class="c9">node_modules</span><span class="c1">:</span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 375.00px; height: 50.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image19.png"
+                    style="width: 375.00px; height: 50.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>The second (and recommended) method is to add a script to </span><span
+                class="c9">package.json</span><span>. In the scripts object in </span><span
+                class="c9">package.json</span><span class="c1">, set the value of &quot;test&quot; to mocha. It should
+                look
+                like this:</span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 366.00px; height: 94.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image13.png"
+                    style="width: 366.00px; height: 94.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c1">Now you can call Mocha with the following command:</span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 359.00px; height: 58.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image15.png"
+                    style="width: 359.00px; height: 58.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>Instead of manually running each test in the </span><span class="c9">test</span><span
+                class="c1">&nbsp;directory, you can use this command to run the full test suite automatically.</span>
+        </p>
+        <p class="c0 c15"><span class="c1"></span></p>
+        <h3 id="4d"><span class="c3">describe and it blocks</span></h3>
+        <p class="c0"><span>In Mocha we group tests using the describe function and define tests using the it function.
+                These two functions can be used to make your test suite </span><span class="c8">complete</span><span>,
+            </span><span class="c8">maintainable</span><span>, and </span><span class="c8">expressive</span><span
+                class="c1">&nbsp;in the following ways:</span></p>
+        <ul class="c13 lst-kix_79um6pbzu5xd-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Structure your test suite: you can organize tests into nested
+                    groups that reflect the structure of your implementation code.<br></span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Provide informative messages: you can define your tests using
+                    human-readable strings.<br></span></li>
+        </ul>
+        <p class="c0"><span class="c1">If you are testing a Math object with the method .max, you could use the
+                following
+                test code.</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 283.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image25.png"
+                    style="width: 370.00px; height: 283.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>Both the describe and it functions accept two parameters: a descriptive string and a
+                callback
+                function. Though the functions are flexible, they are commonly used in the structure above: nest
+                describe
+                blocks to resemble the structure of your implementation code and write individual tests in it blocks.
+                This
+                makes your test suite </span><span class="c8">isolated</span><span>, </span><span
+                class="c8">maintainable</span><span>, and </span><span class="c8">expressive</span><span
+                class="c1">.</span>
+        </p>
+        <p class="c0 c15"><span class="c1"></span></p>
+        <h3 id="4e"><span class="c3">assert</span></h3>
+        <p class="c0"><span class="c1">In the last exercise, you learned how to organize and automate tests using the
+                Mocha
+                test framework. To write the tests themselves, we can use the assert.ok method provided by
+                Node.js.</span>
+        </p>
+        <p class="c0"><span class="c1">In programming, a test compares an expected outcome to an actual outcome. For
+                example, we expect the outcome of the following code&hellip;</span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 52.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image7.png"
+                    style="width: 362.00px; height: 52.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c1">&hellip;to be: a has a value of 3.</span></p>
+        <p class="c0"><span class="c1">To test the value saved to a with plain JavaScript, you would need to write a
+                conditional statement comparing a to the expected result. Inside the statement, you would construct an
+                error
+                when the actual outcome does not match the expected.</span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 367.00px; height: 92.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image18.png"
+                    style="width: 367.00px; height: 92.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>assert.ok() allows you to compare values and throw errors as needed using one function call.
+                The
+                small, human-readable format of the functions will help you make a more </span><span
+                class="c8">expressive</span><span class="c1">&nbsp;test suite.</span></p>
+        <p class="c0"><span class="c1">As a Node module, assert can be imported at the top of your files with</span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 375.00px; height: 182.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image23.png"
+                    style="width: 375.00px; height: 182.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c1">In this case a === 3 evaluates to true, so no error is thrown.</span></p>
+        <p class="c0"><span class="c1">If an argument passed to assert.ok() evaluates to false, an AssertionError is
+                thrown.
+                The error communicates to Mocha that a test has failed, and Mocha logs the error message to the
+                console.</span></p>
+        <p class="c12"><span class="c1"></span></p>
+        <h3 id="4f"><span class="c3">Setup, Exercise, and Verify</span></h3>
+        <p class="c0"><span>In this exercise you will be separating a test into </span><span
+                class="c8">setup</span><span>,
+            </span><span class="c8">exercise</span><span>, and </span><span class="c8">verify</span><span>&nbsp;phases.
+                This
+                distinct and well-defined separation of steps makes your test more </span><span
+                class="c8">reliable</span><span>, </span><span class="c8">maintainable</span><span>, and </span><span
+                class="c8">expressive</span><span class="c1">.</span></p>
+        <p class="c0"><span class="c1">The phases are defined as follows:</span></p>
+        <ul class="c13 lst-kix_o36soufsmmhq-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c8">Setup</span><span class="c1">&nbsp;- create objects,
+                    variables,
+                    and set conditions that your test depends on<br></span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c8">Exercise</span><span class="c1">&nbsp;- execute the
+                    functionality
+                    you are testing<br></span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c8">Verify</span><span class="c1">&nbsp;- check your expectations
+                    against the result of the exercise phase. You can use the assert library here<br></span></li>
+        </ul>
+        <p class="c0"><span class="c1">Clear separation of each phase makes a test easier to read, change, and
+                validate.</span></p>
+        <h3 id="4g"><span class="c3">Teardown</span></h3>
+        <p class="c0"><span class="c1">So far, we&rsquo;ve been writing just one test using a single it() block.
+                However, in
+                most situations, we will need to write many tests for a particular feature that get executed in
+                succession.</span></p>
+        <p class="c0"><span class="c1">Running multiple tests can introduce issues if the tests make changes to the
+                testing
+                environment: changes to the environment in one test might affect the next test. Some common changes to
+                an
+                environment include:</span></p>
+        <ul class="c13 lst-kix_f44nyybq4zy-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">altering files and directory structure</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">changing read and write permissions on a file</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">editing records in a database</span></li>
+        </ul>
+        <p class="c0"><span>To address this issue, we often add a </span><span
+                class="c8">teardown</span><span>&nbsp;step to
+                the end of our tests. The teardown phase makes our tests </span><span class="c8">isolated</span><span
+                class="c1">&nbsp;by resetting the environment before the next test runs. This provides two key
+                benefits:</span></p>
+        <ul class="c13 lst-kix_3ucueid8wwzc-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Changes to the environment caused by one test do not affect
+                    the
+                    other tests.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Isolated tests can be executed in any order!</span></li>
+        </ul>
+        <p class="c0 c23"><span class="c9">Note</span><span>: In some cases &mdash; including the previous exercises
+                &mdash;
+                the </span><span class="c8">teardown</span><span class="c1">&nbsp;phase isn&rsquo;t needed because there
+                are
+                no conditions to reset.</span></p>
+        <p class="c17"><span class="c1">fs keyword:</span></p>
+        <p class="c12"><span class="c1"></span></p>
+        <ul class="c13 lst-kix_wy6qx13ch0u1-0 start">
+            <li class="c18 c5 li-bullet-0"><span class="c1">fs.appendFileSync(path, str) creates a new file at path with
+                    the
+                    string str as content. If a file at path exists, the string str will be appended to the end.</span>
+            </li>
+            <li class="c5 c18 li-bullet-0"><span class="c1">fs.readFileSync(path) returns the contents of the file found
+                    at
+                    path.</span></li>
+        </ul>
+        <h3 id="4h"><span>Hooks</span></h3>
+        <p class="c0"><span class="c1">While execution and verification are unique to each test, setup and teardown are
+                often similar or even identical for multiple tests within a test suite. The Mocha test framework
+                provides
+                functions that enable us to reduce repetition, simplify the scope of each test, and more finely control
+                the
+                execution of our tests.</span></p>
+        <p class="c0"><span>These functions (also referred to as </span><span class="c8">hooks</span><span class="c1">)
+                are:</span></p>
+        <ul class="c13 lst-kix_h1v0nnnv88qx-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">beforeEach(callback) - callback is run before each
+                    test</span>
+            </li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">afterEach(callback) - callback is run after each test</span>
+            </li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">before(callback) - callback is run before the first
+                    test</span>
+            </li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">after(callback) - callback is run after the last test</span>
+            </li>
+        </ul>
+        <p class="c0"><span class="c1">Each hook accepts a callback to be executed at various times during a test. The
+                before... hooks naturally happen before tests and are useful for separating out the setup steps of your
+                tests. Meanwhile, the after... hooks are executed after tests and are useful for separating out the
+                teardown
+                steps of your tests.</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 521.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image22.png"
+                    style="width: 372.00px; height: 521.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c1">In this example, while each it() block could have set the testValue to 5, using
+                the
+                beforeEach() hook allows us to avoid that repetition while keeping each test isolated.</span></p>
+        <p class="c0"><span class="c1">Keep in mind that not all setup and teardown steps should be included in these
+                hooks.
+                Occasionally, you may find that you need to perform some unique setup or teardown for a single test that
+                you
+                don&rsquo;t want to include in other tests.</span></p>
+        <h3 id="4i"><span class="c3">Review</span></h3>
+        <p class="c0"><span class="c1">You can now write tests with Mocha and Node&rsquo;s assert.ok() ! In this lesson
+                you
+                learned to:</span></p>
+        <ul class="c13 lst-kix_98uecemvoztj-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Install Mocha with npm</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Organize tests with describe() and it()</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Ensure your tests are isolated and expressive with the four
+                    phases of a test</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Ensure your tests are reliable with hooks</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Write assertions with assert.ok()</span></li>
+        </ul>
+        <p class="c0"><span>As you continue to write tests, remember to always evaluate them against</span><span><a
+                    class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019244211&amp;usg=AOvVaw1xYl6DufKBymDOW2AVKI8_">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019244605&amp;usg=AOvVaw3hxfgr9iPtkako-H_LrPWl">the
+                    characteristics of a good test</a></span><span class="c1">: fast, complete, reliable, isolated,
+                maintainable, and expressive. If you are meeting these six criteria, you are creating high quality test
+                frameworks!</span></p>
+        <h2 id="5"><span class="c7">Write Expressive Tests</span></h2>
+        <h3 id="5a"><span class="c3">Introduction</span></h3>
+        <p class="c0"><span>A good test framework is</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019245286&amp;usg=AOvVaw2V-kKfDdj5MZEcaub8mdq7">&nbsp;</a></span><span
+                class="c2 c8"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019245522&amp;usg=AOvVaw184ta2TF4XtJQLnb_nYSil">fast</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019245743&amp;usg=AOvVaw3qPwsksf32AJ-iimN-o8Yo">,
+                </a></span><span class="c2 c8"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019245954&amp;usg=AOvVaw0UtTqTUZ_5dh4fp0QXKbDX">complete</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019246162&amp;usg=AOvVaw3cYIduPT0oczw_Q6z8wtrD">,
+                </a></span><span class="c2 c8"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019246394&amp;usg=AOvVaw2jQmSaQjX6ukXMnqz04IPG">reliable</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019246617&amp;usg=AOvVaw0lwwsHa9Xd6K2MYOrw30y0">,
+                </a></span><span class="c2 c8"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019246834&amp;usg=AOvVaw08PZNk3kFJANfRtZzjUZa4">isolated</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019247040&amp;usg=AOvVaw0PiRqWswfKsNtIyfrPjb9j">,
+                </a></span><span class="c2 c8"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019247267&amp;usg=AOvVaw1uGgg3AfAxz7Cyd4HHxqJW">maintainable</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019247482&amp;usg=AOvVaw1rspEvN-M2PKK1V_RYSL7I">,
+                    and </a></span><span class="c2 c8"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019247701&amp;usg=AOvVaw2CrP6Il6wD5wx7jt684q0o">expressive</a></span><span>.
+                In this lesson you will learn how to use Node&rsquo;s assert library to write more </span><span
+                class="c8">expressive</span><span class="c1">&nbsp;tests.</span></p>
+        <p class="c0"><span>An expressive test is easy to read and descriptive, making it useful as a form of
+                documentation
+                for your implementation code. One way to make a test more expressive is clarifying its </span><span
+                class="c8">verify</span><span class="c1">&nbsp;phase &mdash; the step where expected outcome is compared
+                to
+                actual outcome.</span></p>
+        <p class="c0"><span class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/what-is-node&amp;sa=D&amp;source=editors&amp;ust=1662467019248234&amp;usg=AOvVaw2ZutYnDvbITjqgSi3o0AXl">Node.js</a></span><span
+                class="c1">&nbsp;provides a library called assert with methods that help you write more expressive
+                verification code. You can use the methods in this library in place of conditional statements to write
+                less
+                code and use human-readable language. It can be used within the Mocha testing framework, and you will be
+                using both throughout this lesson.</span></p>
+        <p class="c0 c15"><span class="c1"></span></p>
+        <h3 id="5b"><span class="c3">assert.ok</span></h3>
+        <p class="c0"><span class="c1">As a Node module, assert can be imported at the top of your files with</span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 373.00px; height: 54.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image2.png"
+                    style="width: 373.00px; height: 54.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>The</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://nodejs.org/api/assert.html&amp;sa=D&amp;source=editors&amp;ust=1662467019248957&amp;usg=AOvVaw2XqAKBKHH5R1e4aLr9Enr6">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://nodejs.org/api/assert.html&amp;sa=D&amp;source=editors&amp;ust=1662467019249167&amp;usg=AOvVaw0sgWoxc1GjRHfqdZAgRnD_">functions
+                    in the assert library</a></span><span>&nbsp;compare values and throw errors as needed using one
+                function
+                call. The small, human-readable format of the functions will help you make a more </span><span
+                class="c8">expressive</span><span class="c1">&nbsp;test suite.</span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 52.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image10.png"
+                    style="width: 372.00px; height: 52.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c1">In this case 6 - 1 === 5 evaluates to true, so no error is thrown.</span></p>
+        <p class="c0"><span class="c1">If an argument passed to assert.ok() evaluates to false, an AssertionError is
+                thrown.
+                The error communicates to Mocha that a test has failed, and Mocha logs the error message to the
+                console.</span></p>
+        <p class="c12"><span class="c1"></span></p>
+        <h3 id="5c"><span class="c3">assert.equal</span></h3>
+        <p class="c0"><span class="c1">You can use assert.ok() for most verifications, but sometimes it can be difficult
+                to
+                determine the condition you are evaluating.</span></p>
+        <p class="c0"><span class="c1">Read the example code below. Will this assertion throw an error?</span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 240.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image8.png"
+                    style="width: 372.00px; height: 240.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c12"><span class="c1"></span></p>
+        <p class="c17"><span class="c1">The above assertion is checking for equality. In order to understand this you
+                must
+                evaluate the entire expression within the parentheses of .ok().</span></p>
+        <p class="c0"><span class="c1">You can instead use assert.equal() which does the == comparison for us.</span>
+        </p>
+        <p class="c0"><span class="c1">In the example below, the two methods achieve the same outcome.</span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 117.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image6.png"
+                    style="width: 370.00px; height: 117.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>The second line is more </span><span class="c8">expressive:</span><span
+                class="c1">&nbsp;instead
+                of parsing the entire statement, a reader only needs to read the first two words to know the test is
+                verifying equality!</span></p>
+        <h3 id="5d"><span class="c3">assert.strictEqual</span></h3>
+        <p class="c0"><span class="c1">Take a look at the code below. Will these assertions throw errors?</span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.00px; height: 117.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image21.png"
+                    style="width: 369.00px; height: 117.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <ul class="c13 lst-kix_8ozkhrbxvts4-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">The first assertion will not throw an error because it uses
+                    loose
+                    (==) equality. It performs a type conversion when comparing two things.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">The second will throw an error because it uses strict (===)
+                    equality. It returns false if the types differ.</span></li>
+        </ul>
+        <p class="c0"><span class="c1">If you need to be strict in evaluating equality, you can use
+                assert.strictEqual().</span></p>
+        <ul class="c13 lst-kix_pvdrupeefc72-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">assert.equal() performs a == comparison</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">assert.strictEqual() performs a === comparison</span></li>
+        </ul>
+        <p class="c0"><span>Compare the following code to the first example. This code performs the same verifications,
+                but
+                it is more </span><span class="c8">expressive</span><span class="c1">. Without parsing any logic, a
+                reader
+                would know the intention of your tests by reading the method names.</span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.00px; height: 115.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image17.png"
+                    style="width: 369.00px; height: 115.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0 c23"><span>July 2021 Update: the</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://nodejs.org/api/assert.html%23assert_assert_equal_actual_expected_message&amp;sa=D&amp;source=editors&amp;ust=1662467019251728&amp;usg=AOvVaw0dwrF9zRx9j_Rv-nldPFYy">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://nodejs.org/api/assert.html%23assert_assert_equal_actual_expected_message&amp;sa=D&amp;source=editors&amp;ust=1662467019251986&amp;usg=AOvVaw3_c4Z2LTDpn14bY_QGnQY1">assert
+                    documentation</a></span><span class="c1">&nbsp;recommends always using assert.strictEqual() instead
+                of
+                assert.equal().</span></p>
+        <p class="c12"><span class="c1"></span></p>
+        <h3 id="5e"><span class="c3">assert.deepEqual I</span></h3>
+        <p class="c0"><span class="c1">Do you think these assertions will throw errors?</span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.00px; height: 115.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image9.png"
+                    style="width: 369.00px; height: 115.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c1">Both assertions will throw an error because distinct objects are not considered
+                equal
+                when using either loose or strict equality in JavaScript.</span></p>
+        <p class="c0"><span class="c1">If you need to compare the values within two objects, you can use
+                assert.deepEqual().
+                This method compares the values of each object using loose (==) equality.</span></p>
+        <p class="c0"><span class="c1">The following code will not throw an error&hellip;</span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 50.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image20.png"
+                    style="width: 370.00px; height: 50.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c1">&hellip;and you can confirm by manually comparing the relation and age properties
+                of
+                each object.</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 72.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image26.png"
+                    style="width: 372.00px; height: 72.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <h3 id="5f"><span class="c3">assert.deepEqual II</span></h3>
+        <p class="c0"><span class="c1">In the last exercise you used deepEqual() to compare the values of two objects
+                with
+                loose equality. Arrays are also objects, so deepEqual() also compares their values with loose
+                equality.</span></p>
+        <p class="c12"><span class="c1"></span></p>
+        <p class="c17"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 368.00px; height: 200.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image14.png"
+                    style="width: 368.00px; height: 200.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>If you&rsquo;d like to learn more about deepEqual(), the documentation is
+                available</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://nodejs.org/api/assert.html%23assert_assert_deepequal_actual_expected_message&amp;sa=D&amp;source=editors&amp;ust=1662467019253627&amp;usg=AOvVaw0z4fGDpQOxoEspC-XqaPh7">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://nodejs.org/api/assert.html%23assert_assert_deepequal_actual_expected_message&amp;sa=D&amp;source=editors&amp;ust=1662467019253879&amp;usg=AOvVaw3VPac4hWZK-jGJ2Qb0ZJV4">here</a></span><span
+                class="c1">.</span></p>
+        <p class="c12"><span class="c1"></span></p>
+        <h3 id="5g"><span class="c3">Other assert methods</span></h3>
+        <p class="c0"><span>Node&rsquo;s assert library includes more than the four methods covered so far. You can find
+                them all in the</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://nodejs.org/api/assert.html&amp;sa=D&amp;source=editors&amp;ust=1662467019254410&amp;usg=AOvVaw0FGehyU748rh5xY_YjVKuO">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://nodejs.org/api/assert.html&amp;sa=D&amp;source=editors&amp;ust=1662467019254624&amp;usg=AOvVaw0q5q4mSUn9sMFpRAd0Vrxn">Node.js
+                    documentation</a></span><span class="c1">.</span></p>
+        <p class="c0"><span>Many of the methods can be implemented using other methods, like using assert.ok(1 == 1) to
+                implement assert.equal(1,1). Although this can be used for many types of tests, more descriptive
+                functions
+                like assert.equal, assert.strictEqual, and assert.deepEqual allow us to be more </span><span
+                class="c8">expressive:</span><span class="c1">&nbsp;the expected functionality of the implementation
+                code is
+                clear to anyone reading your tests.</span></p>
+        <h3 id="5h"><span class="c3">Review</span></h3>
+        <p class="c0"><span class="c1">You can now write tests with Node&rsquo;s assert library! In this lesson you
+                learned
+                to:</span></p>
+        <ul class="c13 lst-kix_ac66tzsxpdh9-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Check for loose (==) equality with assert.equal()</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Check for strict (===) equality with
+                    assert.strictEqual()</span>
+            </li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Check the equality of two object&rsquo;s values with
+                    assert.deepEqual()</span></li>
+            <li class="c0 c5 li-bullet-0"><span>Make your tests expressive by using different assert methods found in
+                    the</span><span><a class="c4"
+                        href="https://www.google.com/url?q=https://nodejs.org/api/assert.html&amp;sa=D&amp;source=editors&amp;ust=1662467019255555&amp;usg=AOvVaw3B_iriKqPPGbG62awVLdUF">&nbsp;</a></span><span
+                    class="c2"><a class="c4"
+                        href="https://www.google.com/url?q=https://nodejs.org/api/assert.html&amp;sa=D&amp;source=editors&amp;ust=1662467019255781&amp;usg=AOvVaw2f23sg4J0vr3nvIHYD7n6t">Node.js
+                        documentation</a></span><span class="c1">.</span></li>
+        </ul>
+        <p class="c0"><span>As you continue to write tests, remember to always evaluate them against</span><span><a
+                    class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019256132&amp;usg=AOvVaw2uJYxA9F-o8cGr71en4STI">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/tdd-u1-good-test&amp;sa=D&amp;source=editors&amp;ust=1662467019256370&amp;usg=AOvVaw07qL8VTT5d2EaggyyksKFE">the
+                    characteristics of a good test</a></span><span class="c1">: fast, complete, reliable, isolated,
+                maintainable, and expressive. If you are meeting these six criteria, you are creating high quality test
+                frameworks!</span></p>
+        <p class="c0 c15"><span class="c1"></span></p>
+        <p class="c0 c15"><span class="c1"></span></p>
+        <p class="c12"><span class="c1"></span></p>
+        <p class="c12"><span class="c1"></span></p>
+        <h2 id="51"><span class="c7">Learn TDD With Mocha</span></h2>
+        <p class="c12"><span class="c1"></span></p>
+        <p class="c0"><span class="c1">We have just covered Test Driven Development with Mocha.</span></p>
+        <p class="c0"><span class="c9 c14">At a high-level the process is:</span></p>
+        <ul class="c13 lst-kix_cndcrpidt4vp-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">Write The Test &mdash; Start with a test describing the
+                    functionality we&rsquo;d like to see.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Fail The Test &mdash; Write code in response to the test that
+                    fails.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Pass The Test &mdash; The tests fail and communicate feedback
+                    to
+                    developers through error messages. It&rsquo;s our responsibility to read those messages, then
+                    respond by
+                    writing the minimum amount of code to address those messages.</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Refactor Your Code &mdash; See below.</span></li>
+        </ul>
+        <p class="c0"><span class="c14 c9">The development process is guided by the red-green-refactor cycle.</span></p>
+        <h3 id="51a"><span class="c10 c9">Red</span></h3>
+        <p class="c0"><span class="c1">Write a test that covers the functionality you would like to see implemented. You
+                don&rsquo;t have to know what your code looks like at this point, you just have to know what it will
+                do.</span></p>
+        <p class="c0"><span class="c1">Run the test. You should see it fail. Most test runners will output red for
+                failure
+                and green for success. While we say &ldquo;failure&rdquo; do not take this negatively. It&rsquo;s a good
+                sign! By seeing the test fail first, we know that once we make it pass, our code works.</span></p>
+        <h3 id="51b"><span class="c10 c9">Green</span></h3>
+        <p class="c0"><span class="c1">Read the error message from the failing test, and write as little code as
+                possible to
+                fix the current error message. By only writing enough code to see our test pass, we tend to write less
+                code
+                as a whole. Continue this process until the test passes.</span></p>
+        <p class="c0"><span>This may involve writing intermediary features covering lower level functionality which
+                require
+                their own Red, Green, Refactor cycle. The </span><span class="c9">edge-case</span><span
+                class="c1">&nbsp;was
+                an example of this.</span></p>
+        <p class="c0"><span class="c1">Do not focus on code quality at this point. Be shameless! We simply want to get
+                our
+                new test passing.</span></p>
+        <h3 id="51c"><span class="c9 c10">Refactor</span></h3>
+        <p class="c0"><span class="c1">Clean up your code, reducing any duplication you may have introduced. This
+                includes
+                your code as well as your tests.</span></p>
+        <p class="c0"><span class="c1">Treat your test suite with as much respect as you would your live code, as it can
+                quickly become difficult to maintain if not handled with care. You should feel confident enough in the
+                tests
+                you&rsquo;ve written that you can make your changes without breaking anything.</span></p>
+        <h2 id="6"><span class="c7">Documentation</span></h2>
+        <p class="c16"><span class="c21 c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://www.chaijs.com/guide/&amp;sa=D&amp;source=editors&amp;ust=1662467019258943&amp;usg=AOvVaw1yvICxRwLcEGH4df6JtBx8">Chai</a></span>
+        </p>
+        <p class="c0"><span class="c1">The Chai assertion library. This is helpful if you want a comprehensive resource
+                for
+                this library that pairs with many JavaScript testing frameworks.</span></p>
+        <p class="c16"><span class="c21 c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://mochajs.org/%23getting-started&amp;sa=D&amp;source=editors&amp;ust=1662467019259499&amp;usg=AOvVaw3Ep37lMvg0_HGG3ge7mvrO">Mocha</a></span>
+        </p>
+        <p class="c0"><span class="c1">The Mocha testing framework. This is helpful if you want a comprehensive resource
+                for
+                this JavaScript testing framework that allows asynchronous testing.</span></p>
+        <h2 id="7"><span class="c7">Code Coverage</span></h2>
+        <p class="c0"><span>In this article, you will learn about </span><span class="c8">code
+                coverage</span><span>&nbsp;and </span><span class="c8">test coverage</span><span
+                class="c1">&nbsp;&ndash;
+                two metrics that organizations can use to determine the extent to which an application&rsquo;s code has
+                been
+                tested &ndash; and why these metrics are useful.</span></p>
+        <h3 id="7a"><span class="c3">What is Code Coverage?</span></h3>
+        <p class="c0"><span class="c1">Code coverage is the metric that measures the amount of application code that has
+                been executed in testing, represented as a percentage. For example, if 90% of our code has been executed
+                in
+                our tests, then we would say that we have &ldquo;90% code coverage&rdquo;.</span></p>
+        <p class="c0"><span class="c1">But what does it mean for code to be executed in a test? How rigorous does a test
+                need to be in order to qualify as having executed the entirety of a program? And does 100% test coverage
+                mean that a program is bug-free?</span></p>
+        <h3 id="7b"><span class="c3">Code Coverage Criteria</span></h3>
+        <p class="c0"><span class="c1">Measuring code coverage is conducted using one or more criteria, depending on the
+                organization&rsquo;s standards for code coverage. Though this is not an exhaustive list, some key
+                criteria
+                to use when measuring code coverage include:</span></p>
+        <ul class="c13 lst-kix_p138yvm7qbpp-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c8">Function Coverage</span><span class="c1">: Has each function
+                    been
+                    called?</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c8">Statement Coverage</span><span class="c1">: Has each
+                    statement
+                    been executed?</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c8">Path Coverage</span><span>: Has every edge in
+                    the</span><span><a class="c4"
+                        href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Control-flow_graph&amp;sa=D&amp;source=editors&amp;ust=1662467019262733&amp;usg=AOvVaw0pbfIFS4gez1boB60n8vcx">&nbsp;</a></span><span
+                    class="c2"><a class="c4"
+                        href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Control-flow_graph&amp;sa=D&amp;source=editors&amp;ust=1662467019263347&amp;usg=AOvVaw1z0LNL3nkfzJeFXa-mkicX">control-flow
+                        graph</a></span><span class="c1">&nbsp;been executed?</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c8">Condition Coverage</span><span class="c1">: Has each boolean
+                    sub-expression evaluated to be both true and false?</span></li>
+        </ul>
+        <p class="c0"><span class="c1">Let&rsquo;s look at an example of how these criteria can be used to determine
+                code
+                coverage. Here we have a very simple function that returns the sum of two arguments, if two arguments
+                have
+                been provided, and returns null otherwise:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 157.33px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image12.png"
+                    style="width: 601.70px; height: 157.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span><span class="c1">The most basic test of this function would include calling the
+                function
+                at least once, thus achieving 100% function coverage.</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 33.33px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image24.png"
+                    style="width: 601.70px; height: 33.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c1">By executing the function only once and with the arguments above, we will execute
+                some, but not all, of the lines of code in the function. So, we can test our function by calling it with
+                arguments that will return null:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 58.67px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image5.png"
+                    style="width: 601.70px; height: 58.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c1">With these two calls together, both paths in the if / else blocks are taken and
+                both
+                return statements are executed. Thus, we have 100% statement coverage and 100% path coverage.</span></p>
+        <p class="c0"><span class="c1">Finally, to achieve 100% condition coverage, we need to call our function with
+                arguments such that x and y each evaluate to true and false in the function&rsquo;s if condition
+                statement.</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 96.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image16.png"
+                    style="width: 601.70px; height: 96.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <h3 id="7c"><span class="c3">The 100% Code Coverage Myth</span></h3>
+        <p class="c0"><span class="c1">And there we have it, we&rsquo;ve achieved 100% coverage in each of the four
+                criteria! So, we&rsquo;re done testing, right? Well, not quite.</span></p>
+        <p class="c0"><span class="c1">Having 100% code coverage does not guarantee bug-free code &ndash; it simply
+                validates the completeness of our tests using a given set of criteria relative to other test suites with
+                lower code coverage. We still must be vigilant about writing robust test suites that specifically
+                address
+                both the intended use cases, and unintended edge cases, of our application.</span></p>
+        <p class="c0"><span class="c1">For example, as written, the numSum function will concatenate numeric string
+                arguments rather than performing addition.</span></p>
+        <p class="c0"><span class="c1">numSum(&#39;1&#39;, &#39;2&#39;) // This will return &#39;12&#39; instead of
+                3</span>
+        </p>
+        <p class="c0"><span>While there are</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Code_coverage%23Parameter_value_coverage&amp;sa=D&amp;source=editors&amp;ust=1662467019267608&amp;usg=AOvVaw0hHasbQk1q6lsEipJ1ckyW">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Code_coverage%23Parameter_value_coverage&amp;sa=D&amp;source=editors&amp;ust=1662467019268256&amp;usg=AOvVaw39WAGTF2sDra0Gqo8l_3UX">other
+                    coverage criteria</a></span><span class="c1">&nbsp;we can use to identify the full range of function
+                parameters, code coverage is an insufficient metric to determine if our tests confirm the intended
+                functionality of our program as defined by the end user&rsquo;s requirements.</span></p>
+        <p class="c0"><span class="c1">Instead, we should consider the code coverage criteria as a set of guidelines to
+                help
+                you develop intuition for testing your code while remaining determined to write robust test suites that
+                are
+                specific in targeting the various use cases of our programs.</span></p>
+        <h3 id="7d"><span class="c3">Test Coverage</span></h3>
+        <p class="c0"><span>Another term you may hear with regards to testing is called </span><span class="c8">test
+                coverage</span><span>. Test coverage differs from code coverage in that test coverage measures the
+                percentage of the required </span><span class="c9">features/specs</span><span>&nbsp;that are tested, as
+                opposed to the percentage of lines executed. These features/specs are typically defined in
+                a</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Product_requirements_document&amp;sa=D&amp;source=editors&amp;ust=1662467019269859&amp;usg=AOvVaw3acY1aRRcD0s1iXVA0w6DR">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Product_requirements_document&amp;sa=D&amp;source=editors&amp;ust=1662467019270381&amp;usg=AOvVaw3829V2xUKO9_DOOTGHskyi">requirements
+                    document</a></span><span class="c1">&nbsp;provided by a client or product designer.</span></p>
+        <p class="c0"><span class="c1">Suppose you are building a mobile-native application that needs to work on phones
+                using the Android and iOS operating systems but is not expected to work on desktop browsers.
+                Accordingly, to
+                achieve high test coverage, you will be expected to write tests for your application&rsquo;s performance
+                on
+                Android and iOS but not on browsers.</span></p>
+        <p class="c0"><span class="c1">Like code coverage, test coverage cannot guarantee that our program will not have
+                unexpected behavior. However, the pursuit of high test coverage can lead us to identify bugs and
+                unexpected
+                behavior earlier on in the development process.</span></p>
+        <h3 id="7e"><span class="c3">Conclusion</span></h3>
+        <p class="c0"><span class="c1">Code coverage measures the percentage of lines of code that are executed in a
+                test
+                while test coverage measures the percentage of required features that are tested. Though these metrics
+                cannot guarantee bug-free code, by incorporating these two metrics into your test analysis, you can
+                increase
+                your confidence that your test suites are robust and that your products can satisfy your end
+                users.</span>
+        </p>
+        <h2 id="8"><span class="c7">Mocking In Tests</span></h2>
+        <p class="c0"><span class="c1">In this article, you&rsquo;ll be introduced to the practice of mocking and how it
+                can
+                be used in unit and integration tests.</span></p>
+        <h3 id="8a"><span class="c3">What is Mocking?</span></h3>
+        <p class="c0"><span class="c8">Mocking</span><span class="c1">&nbsp;is the process of creating a fake version of
+                an
+                external service for testing purposes, particularly in unit tests and integration tests. Mocking is
+                effective in testing individual units of code without relying on the functionality of other services or
+                units such as APIs or databases.</span></p>
+        <p class="c0 c23"><span>Another word that is used to describe this practice is </span><span
+                class="c8">stubbing</span><span>.</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://dev.to/snird/the-difference-between-mocks-and-stubs-explained-with-js-kkc&amp;sa=D&amp;source=editors&amp;ust=1662467019273220&amp;usg=AOvVaw2hBN3Z9DTuR6KhJWTu8YSz">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://dev.to/snird/the-difference-between-mocks-and-stubs-explained-with-js-kkc&amp;sa=D&amp;source=editors&amp;ust=1662467019273772&amp;usg=AOvVaw0xKro3yBtvBXBeS-CI6Hr5">While
+                    there is a difference</a></span><span class="c1">, it&rsquo;s not a very relevant difference in this
+                scope and context.</span></p>
+        <p class="c0"><span class="c1">Let&rsquo;s say we&rsquo;re testing a feature for a blog website which renders
+                profile data (i.e. name and bio) of the author of a certain blog post. How might mocking help us better
+                test
+                this feature?</span></p>
+        <h3 id="8b"><span class="c3">Mocking in Unit Tests</span></h3>
+        <p class="c0"><span class="c1">As mentioned above, mocking allows us to test a particular feature without
+                needing to
+                rely on other services or units. By removing dependencies, we are limiting the sources of potential bugs
+                and
+                unintended results to just the feature being tested.</span></p>
+        <p class="c0"><span class="c1">In our blog application, the new feature has three steps:</span></p>
+        <ol class="c13 lst-kix_485x83ppmfnk-0 start" start="1">
+            <li class="c0 c5 li-bullet-0"><span class="c1">profile data must first be fetched from a database</span>
+            </li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">the data received must be parsed and formatted</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">the formatted data is rendered</span></li>
+        </ol>
+        <p class="c0"><span class="c1">When unit testing how the data is displayed (step 3), we can skip the first two
+                steps
+                (fetching and formatting) by mocking the formatted data we need, allowing us to focus solely on testing
+                how
+                our feature renders that data. We can even mock bad or unexpected inputs to test how our feature might
+                display an error message.</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 501.33px;"><img
+                    alt="Mocking in unit tests diagram" src="./resources/images/jsTesting-images/image4.png"
+                    style="width: 601.70px; height: 501.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <h3 id="8c"><span class="c3">Mocking in Integration Tests</span></h3>
+        <p class="c0"><span class="c1">While it&rsquo;s helpful to use mocks in unit tests, we should avoid using mocks
+                in
+                integration tests to better simulate interactions between internal services (though external services
+                should
+                remain mocked).</span></p>
+        <p class="c0"><span class="c1">In our blog application, we use an intermediate function to format incoming data
+                from
+                the database for our new feature that will render the data. To test this integration, we would no longer
+                mock how that raw data is formatted and then displayed. We would, however, still mock the raw data
+                coming in
+                from the database.</span></p>
+        <h3 id="8d"><span class="c3">Summary</span></h3>
+        <p class="c0"><span class="c1">Mocks are helpful tools that allow us to more accurately test units of code by
+                limiting the impacts of other potential sources for bugs to emerge from. Though they can be useful in
+                unit
+                testing, we should make sure to use mocks sparingly to ensure that integration of internal services can
+                be
+                tested comprehensively.</span></p>
+        <p class="c0 c15"><span class="c1"></span></p>
+        <h2 id="9"><span class="c7">Spies with Sinon</span></h2>
+        <p class="c0"><span class="c1">Step aside, James Bond! In this article, you&rsquo;ll learn about spies in the
+                context of testing and about the Sinon.js library.</span></p>
+        <h3 id="9a"><span class="c3">What are Spies?</span></h3>
+        <p class="c0"><span>In testing, a </span><span class="c8">spy</span><span class="c1">&nbsp;is a function that
+                observes and records information about another function&rsquo;s calls including arguments, return value,
+                the
+                this value, and exceptions thrown (if any). The information that is observed by the spy can then be used
+                in
+                assertions for testing.</span></p>
+        <p class="c0"><span class="c1">As an example, let&rsquo;s say we are testing a top-secret application with a
+                feature
+                to receive a message, display for 5 seconds, then delete it. We can wrap a spy around this unit to keep
+                track of how many messages were received, what the messages said, if any errors were thrown, etc. Using
+                its
+                stealthy powers of espionage, a spy won&rsquo;t change anything about how the function operates, it will
+                just observe what happens.</span></p>
+        <h3 id="9b"><span class="c3">What is Sinon?</span></h3>
+        <p class="c0"><span>Sinon.js is a JavaScript library that includes standalone fakes, spies, and mocks that can
+                be
+                used in any unit testing framework. The</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://sinonjs.org/releases/latest/spies/&amp;sa=D&amp;source=editors&amp;ust=1662467019278978&amp;usg=AOvVaw3Z4Y5tTwtH5OrVQtUWQC-y">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://sinonjs.org/releases/latest/spies/&amp;sa=D&amp;source=editors&amp;ust=1662467019279545&amp;usg=AOvVaw07Ke3NEzOa-_8mEqUGQr-T">Sinon
+                    spies documentation</a></span><span class="c1">&nbsp;highlights the different information that can
+                be
+                pulled from spies.</span></p>
+        <h3 id="9c"><span class="c3">How to Spy?</span></h3>
+        <p class="c0"><span>There are multiple ways to use a spy, they can be anonymous functions or they can wrap
+                around
+                existing methods in a program. You can see all the many ways to use spies in the</span><span><a
+                    class="c4"
+                    href="https://www.google.com/url?q=https://sinonjs.org/releases/latest/spies/&amp;sa=D&amp;source=editors&amp;ust=1662467019280589&amp;usg=AOvVaw25BiACW0QTaAerdq5mTp6W">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://sinonjs.org/releases/latest/spies/&amp;sa=D&amp;source=editors&amp;ust=1662467019281095&amp;usg=AOvVaw0nXeNy_bXQfmPnoRKbkVg5">Sinon
+                    spies documentation</a></span><span class="c1">, but we&rsquo;ll focus on one type in particular:
+                wrapping methods.</span></p>
+        <p class="c0"><span class="c1">Our spy will be wrapped around a method and, as we use the method in our tests,
+                will
+                observe everything that happens involving that method. We can think of a spy with a wiretap, taking
+                notes on
+                every interaction that method has.</span></p>
+        <p class="c0"><span>The following example demonstrates some basics of using the</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://sinonjs.org/releases/latest/spies/%23using-a-spy-to-wrap-an-existing-method&amp;sa=D&amp;source=editors&amp;ust=1662467019282226&amp;usg=AOvVaw1WCsHBCzEhpFCdUdyJIyrd">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://sinonjs.org/releases/latest/spies/%23using-a-spy-to-wrap-an-existing-method&amp;sa=D&amp;source=editors&amp;ust=1662467019282819&amp;usg=AOvVaw2BKzLtZ8zrPyyB5BFo-XXx">sinon.spy()
+                    method</a></span><span class="c1">&nbsp;to test the method of an object.</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 292.00px;"><img
+                    alt="" src="./resources/images/jsTesting-images/image11.png"
+                    style="width: 601.70px; height: 292.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c1">In the example above, the sinon.spy() method is used to wrap the robot
+                object&rsquo;s
+                .greet() method. Doing so adds a number of useful properties and methods that allow us to monitor its
+                behavior after we call robot.greet(&#39;codey&#39;). Using a few of these methods, we test if the
+                .greet()
+                method&hellip;</span></p>
+        <ul class="c13 lst-kix_gpto0fuxbkyf-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">has been called using the .called property</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">is called with the correct argument using the .calledWith()
+                    method</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">returns what we expect it to return using the .returned()
+                    property</span></li>
+        </ul>
+        <p class="c0"><span class="c1">Finally, to ensure that the method returns to its original, un-spied-on state, we
+                use
+                the .restore() method.</span></p>
+        <p class="c0"><span>There are too many properties and methods available to spied-on functions to cover in one
+                article and even to commit to memory, so we recommend that you check out the</span><span><a class="c4"
+                    href="https://www.google.com/url?q=https://sinonjs.org/releases/latest/spies/&amp;sa=D&amp;source=editors&amp;ust=1662467019284934&amp;usg=AOvVaw0FtNqwHI_D6IQUmYQ03KRB">&nbsp;</a></span><span
+                class="c2"><a class="c4"
+                    href="https://www.google.com/url?q=https://sinonjs.org/releases/latest/spies/&amp;sa=D&amp;source=editors&amp;ust=1662467019285373&amp;usg=AOvVaw2xLi3_q_a6Cs7_cbg7onBd">documentation</a></span><span
+                class="c1">&nbsp;to find the right tools for your needs.</span></p>
+        <h3 id="9d"><span class="c3">Summary</span></h3>
+        <p class="c0"><span class="c1">Spies are an incredibly useful tool that serves as a means for observing and
+                recording information about how our methods are used in tests. Though there are a number of JavaScript
+                libraries that provide spying functionality, Sinon.js is well known and used widely, including at
+                Codecademy!</span></p>
+        <h2 id="10"><span class="c7">Review: JavaScript Testing</span></h2>
+        <p class="c0 c15"><span class="c1"></span></p>
+        <p class="c0"><span class="c1">Having completed this unit, you are now able to:</span></p>
+        <ul class="c13 lst-kix_w3r5pksoipda-0 start">
+            <li class="c0 c5 li-bullet-0"><span class="c1">State the benefits of testing</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Identify different types of testing and methodologies</span>
+            </li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Write tests using Mocha and Chai</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Apply TDD techniques to software development</span></li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Describe how code coverage is used as a metric for
+                    testing</span>
+            </li>
+            <li class="c0 c5 li-bullet-0"><span class="c1">Incorporate mocking and spies into tests</span></li>
+        </ul>
+        <p class="c0"><span class="c1">If you are interested in learning more about these topics, here are some
+                additional
+                resources:</span></p>
+        <ul class="c13 lst-kix_q3iy6ug0jiz0-0 start">
+            <li class="c0 c5 li-bullet-0"><span>Article:</span><span><a class="c4"
+                        href="https://www.google.com/url?q=https://hackernoon.com/introduction-to-test-driven-development-tdd-61a13bc92d92&amp;sa=D&amp;source=editors&amp;ust=1662467019288347&amp;usg=AOvVaw2awbrAL_vg7l29yv32PYWB">&nbsp;</a></span><span
+                    class="c2"><a class="c4"
+                        href="https://www.google.com/url?q=https://hackernoon.com/introduction-to-test-driven-development-tdd-61a13bc92d92&amp;sa=D&amp;source=editors&amp;ust=1662467019288884&amp;usg=AOvVaw3LxzcWYS2Fq2FSscYkhMAw">Hackernoon&rsquo;s
+                        Introduction to Test Driven Development</a></span></li>
+        </ul>
+        <p class="c0 c15"><span class="c1"></span></p>
+    </main>
+</body>
+
+</html>
