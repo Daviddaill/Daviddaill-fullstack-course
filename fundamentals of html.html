@@ -11,12 +11,13 @@
     <script src="./resources/script.js" defer></script>
 </head>
 <body>
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
     <header>
-        <p id="main"><a href="index.html">Main page </a></p>
+        <p id="mainPage"><a href="index.html">Main page </a></p>
         <h1>Fundamentals Of HTML</h1>
     </header>
     <nav>
-        
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
              <a href="#intro" class="notDropdown-btn">Introduction to HTML </a>
              <a href="#html structure" class="dropdown-btn"> HTML Structure <i class="fa-solid fa-caret-down"></i> </a>
              <div class="dropdown-container">

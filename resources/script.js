@@ -15,3 +15,16 @@ for (i = 0; i < dropdown.length; i++) {
     }
   });
 }
+
+/* Set the width of the sidebar to 300px (show it) */
+function openNav() {
+  document.getElementsByTagName("nav")[0].style.width = "300px";
+
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementsByTagName("nav")[0].style.width = "0";
+ 
+} 
+

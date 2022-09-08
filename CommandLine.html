@@ -8,16 +8,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap"
         rel="stylesheet">
+        <script src="./resources/script.js" defer></script>
 </head>
 
 <body>
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
     <header>
-        <p id="main"><a href="index.html">Main page </a></p>
+        <p id="mainPage"><a href="index.html">Main page </a></p>
         <h1>Command Line</h1>
     </header>
     <nav>
-        <ol>
-            <li> <a href="#1">Introduction </a></li>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+        <ul>
+            <li> <a href="#1" >Introduction </a></li>
             <li> <a href="#2"> ls</a> </li>
             <li> <a href="#3">pwd</a> </li>
             <li> <a href="#4">cd I  </a></li>
@@ -26,7 +30,7 @@
             <li> <a href="#7">touch</a></li>
             <li> <a href="#8"> Helper Commands </a> </li>
             <li> <a href="#9"> review </a> </li>
-        </ol>
+        </ul>
     </nav>
     <main>
         <h2 id="1"><span class="c7">Introduction</span></h2>

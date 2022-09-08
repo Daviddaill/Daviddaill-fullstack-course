@@ -21,6 +21,19 @@ h1{
     font-family: ''Merriweather'', serif;
 }
 
+@media screen and (max-width: 800px) {
+   
+    h1{       
+        font-size: 38px ;    
+    }
+}
+
+@media screen and (max-width: 400px) {  
+    h1{       
+        font-size: 28px ;    
+    }
+}
+
 
 
 /* Fixed sidenav, full height */

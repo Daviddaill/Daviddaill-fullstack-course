@@ -14,13 +14,15 @@
 </head>
 
 <body>
-
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
     <header>
-        <p id="main"><a href="index.html">Main page </a></p>
+        <p id="mainPage"><a href="index.html">Main page </a></p>
         <h1>JavaScript Testing</h1>
     </header>
-    <nav>
 
+    <nav>
+       
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#1" class="dropdown-btn">Why Test? <i class="fa-solid fa-caret-down"></i></a>
         <div class="dropdown-container">
             <ul>
@@ -147,7 +149,7 @@
 
 
     </nav>
-    <main>
+    <main onclick="closeNav()">
         <h2 id="1"><span class="c7">Why Test?</span></h2>
         <h3 id="1a"><span class="c3">Introduction</span></h3>
         <p class="c0"><span class="c1">Errors in software are inevitable. Unchecked, these errors can have painful and
@@ -256,9 +258,9 @@
         <p class="c0"><span class="c1">This code block from the Cake Bar app describes and tests the &ldquo;name&rdquo;
                 functionality.</span></p>
         <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 510.00px; height: 244.00px;"><img
+                ><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image3.png"
-                    style="width: 510.00px; height: 244.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    
                     title=""></span></p>
         <p class="c0"><span class="c1">You can read the description in plain English terms: it accepts the customer
                 name.
@@ -313,7 +315,7 @@
             <li class="c0 c5 li-bullet-0"><span class="c1">End to end tests</span></li>
         </ul>
         <p class="c0"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 454.67px;"><img
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 454.67px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image1.png"
                     style="width: 601.70px; height: 454.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -593,12 +595,12 @@
             </span><span class="c9">package.json</span><span class="c1">&nbsp;that can be used to manage packages for
                 the
                 project.</span></p>
-        <p class="c17"><span class="c14 c9">$ npm init</span></p>
+        <p ><span class="c14 c9">$ npm init</span></p>
         <p class="c0"><span class="c1">After running this command you will be prompted to enter information about your
                 project. It&rsquo;s okay to skip some fields if you&rsquo;re not ready to enter that information.</span>
         </p>
         <p class="c0"><span class="c1">With your project setup, you can install packages.</span></p>
-        <p class="c17"><span class="c14 c9">$ npm install mocha -D</span></p>
+        <p ><span class="c14 c9">$ npm install mocha -D</span></p>
         <p class="c0"><span class="c1">Here&rsquo;s what this command means:</span></p>
         <ul class="c13 lst-kix_lgykl6agzyw9-0 start">
             <li class="c0 c5 li-bullet-0"><span class="c1">npm install tells npm to install a package from the internet
@@ -616,36 +618,36 @@
             </span><span class="c9">node_modules</span><span class="c1">&nbsp;folder. The new directory structure
                 contains
                 the following:</span></p>
-        <p class="c17"><span class="c1">project</span></p>
-        <p class="c17"><span class="c1">|_ node_modules</span></p>
-        <p class="c17"><span class="c1">|___ .bin</span></p>
-        <p class="c17"><span class="c1">|___ mocha</span></p>
-        <p class="c17"><span class="c1">|___ ...</span></p>
-        <p class="c17"><span class="c1">|_ package.json</span></p>
+        <p ><span class="c1">project</span></p>
+        <p ><span class="c1">|_ node_modules</span></p>
+        <p ><span class="c1">|___ .bin</span></p>
+        <p ><span class="c1">|___ mocha</span></p>
+        <p ><span class="c1">|___ ...</span></p>
+        <p ><span class="c1">|_ package.json</span></p>
         <p class="c0"><span class="c1">The ... in the file structure represents other packages that are a dependency for
                 Mocha.</span></p>
         <h3 id="4c"><span class="c3">Install Mocha II</span></h3>
         <p class="c0"><span class="c1">After installing Mocha as a dependency we can run it in two ways.</span></p>
         <p class="c0"><span>The first (and more tedious) method is to call it directly from </span><span
                 class="c9">node_modules</span><span class="c1">:</span></p>
-        <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 375.00px; height: 50.00px;"><img
+        <p ><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 375.00px; height: 50.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image19.png"
-                    style="width: 375.00px; height: 50.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                   
                     title=""></span></p>
         <p class="c0"><span>The second (and recommended) method is to add a script to </span><span
                 class="c9">package.json</span><span>. In the scripts object in </span><span
                 class="c9">package.json</span><span class="c1">, set the value of &quot;test&quot; to mocha. It should
                 look
                 like this:</span></p>
-        <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 366.00px; height: 94.00px;"><img
+        <p ><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 366.00px; height: 94.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image13.png"
                     style="width: 366.00px; height: 94.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
         <p class="c0"><span class="c1">Now you can call Mocha with the following command:</span></p>
-        <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 359.00px; height: 58.00px;"><img
+        <p ><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 359.00px; height: 58.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image15.png"
                     style="width: 359.00px; height: 58.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -668,9 +670,9 @@
                 following
                 test code.</span></p>
         <p class="c0"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 283.00px;"><img
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 283.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image25.png"
-                    style="width: 370.00px; height: 283.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    
                     title=""></span></p>
         <p class="c0"><span>Both the describe and it functions accept two parameters: a descriptive string and a
                 callback
@@ -691,8 +693,8 @@
         </p>
         <p class="c0"><span class="c1">In programming, a test compares an expected outcome to an actual outcome. For
                 example, we expect the outcome of the following code&hellip;</span></p>
-        <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 52.00px;"><img
+        <p ><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 52.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image7.png"
                     style="width: 362.00px; height: 52.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -701,8 +703,8 @@
                 conditional statement comparing a to the expected result. Inside the statement, you would construct an
                 error
                 when the actual outcome does not match the expected.</span></p>
-        <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 367.00px; height: 92.00px;"><img
+        <p ><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 367.00px; height: 92.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image18.png"
                     style="width: 367.00px; height: 92.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -711,8 +713,8 @@
                 small, human-readable format of the functions will help you make a more </span><span
                 class="c8">expressive</span><span class="c1">&nbsp;test suite.</span></p>
         <p class="c0"><span class="c1">As a Node module, assert can be imported at the top of your files with</span></p>
-        <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 375.00px; height: 182.00px;"><img
+        <p ><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 375.00px; height: 182.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image23.png"
                     style="width: 375.00px; height: 182.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -774,7 +776,7 @@
                 the </span><span class="c8">teardown</span><span class="c1">&nbsp;phase isn&rsquo;t needed because there
                 are
                 no conditions to reset.</span></p>
-        <p class="c17"><span class="c1">fs keyword:</span></p>
+        <p ><span class="c1">fs keyword:</span></p>
         <p class="c12"><span class="c1"></span></p>
         <ul class="c13 lst-kix_wy6qx13ch0u1-0 start">
             <li class="c18 c5 li-bullet-0"><span class="c1">fs.appendFileSync(path, str) creates a new file at path with
@@ -812,7 +814,7 @@
                 teardown
                 steps of your tests.</span></p>
         <p class="c0"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 521.00px;"><img
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 521.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image22.png"
                     style="width: 372.00px; height: 521.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -888,8 +890,8 @@
         <p class="c0 c15"><span class="c1"></span></p>
         <h3 id="5b"><span class="c3">assert.ok</span></h3>
         <p class="c0"><span class="c1">As a Node module, assert can be imported at the top of your files with</span></p>
-        <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 373.00px; height: 54.00px;"><img
+        <p ><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 373.00px; height: 54.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image2.png"
                     style="width: 373.00px; height: 54.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -901,8 +903,8 @@
                 function
                 call. The small, human-readable format of the functions will help you make a more </span><span
                 class="c8">expressive</span><span class="c1">&nbsp;test suite.</span></p>
-        <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 52.00px;"><img
+        <p ><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 52.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image10.png"
                     style="width: 372.00px; height: 52.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -917,20 +919,20 @@
                 to
                 determine the condition you are evaluating.</span></p>
         <p class="c0"><span class="c1">Read the example code below. Will this assertion throw an error?</span></p>
-        <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 240.00px;"><img
+        <p ><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 240.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image8.png"
                     style="width: 372.00px; height: 240.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
         <p class="c12"><span class="c1"></span></p>
-        <p class="c17"><span class="c1">The above assertion is checking for equality. In order to understand this you
+        <p ><span class="c1">The above assertion is checking for equality. In order to understand this you
                 must
                 evaluate the entire expression within the parentheses of .ok().</span></p>
         <p class="c0"><span class="c1">You can instead use assert.equal() which does the == comparison for us.</span>
         </p>
         <p class="c0"><span class="c1">In the example below, the two methods achieve the same outcome.</span></p>
-        <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 117.00px;"><img
+        <p ><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 117.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image6.png"
                     style="width: 370.00px; height: 117.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -940,8 +942,8 @@
                 verifying equality!</span></p>
         <h3 id="5d"><span class="c3">assert.strictEqual</span></h3>
         <p class="c0"><span class="c1">Take a look at the code below. Will these assertions throw errors?</span></p>
-        <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.00px; height: 117.00px;"><img
+        <p ><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.00px; height: 117.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image21.png"
                     style="width: 369.00px; height: 117.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -963,8 +965,8 @@
                 it is more </span><span class="c8">expressive</span><span class="c1">. Without parsing any logic, a
                 reader
                 would know the intention of your tests by reading the method names.</span></p>
-        <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.00px; height: 115.00px;"><img
+        <p ><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.00px; height: 115.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image17.png"
                     style="width: 369.00px; height: 115.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -978,8 +980,8 @@
         <p class="c12"><span class="c1"></span></p>
         <h3 id="5e"><span class="c3">assert.deepEqual I</span></h3>
         <p class="c0"><span class="c1">Do you think these assertions will throw errors?</span></p>
-        <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.00px; height: 115.00px;"><img
+        <p ><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.00px; height: 115.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image9.png"
                     style="width: 369.00px; height: 115.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -990,8 +992,8 @@
                 assert.deepEqual().
                 This method compares the values of each object using loose (==) equality.</span></p>
         <p class="c0"><span class="c1">The following code will not throw an error&hellip;</span></p>
-        <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 50.00px;"><img
+        <p ><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 50.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image20.png"
                     style="width: 370.00px; height: 50.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -999,7 +1001,7 @@
                 of
                 each object.</span></p>
         <p class="c0"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 72.00px;"><img
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 372.00px; height: 72.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image26.png"
                     style="width: 372.00px; height: 72.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -1009,8 +1011,8 @@
                 loose equality. Arrays are also objects, so deepEqual() also compares their values with loose
                 equality.</span></p>
         <p class="c12"><span class="c1"></span></p>
-        <p class="c17"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 368.00px; height: 200.00px;"><img
+        <p ><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 368.00px; height: 200.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image14.png"
                     style="width: 368.00px; height: 200.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -1167,14 +1169,14 @@
                 have
                 been provided, and returns null otherwise:</span></p>
         <p class="c0"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 157.33px;"><img
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 157.33px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image12.png"
                     style="width: 601.70px; height: 157.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span><span class="c1">The most basic test of this function would include calling the
                 function
                 at least once, thus achieving 100% function coverage.</span></p>
         <p class="c0"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 33.33px;"><img
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 33.33px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image24.png"
                     style="width: 601.70px; height: 33.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -1182,7 +1184,7 @@
                 some, but not all, of the lines of code in the function. So, we can test our function by calling it with
                 arguments that will return null:</span></p>
         <p class="c0"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 58.67px;"><img
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 58.67px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image5.png"
                     style="width: 601.70px; height: 58.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -1193,7 +1195,7 @@
                 arguments such that x and y each evaluate to true and false in the function&rsquo;s if condition
                 statement.</span></p>
         <p class="c0"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 96.00px;"><img
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 96.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image16.png"
                     style="width: 601.70px; height: 96.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -1292,7 +1294,7 @@
                 our feature renders that data. We can even mock bad or unexpected inputs to test how our feature might
                 display an error message.</span></p>
         <p class="c0"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 501.33px;"><img
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 501.33px;"><img class="courseImages"
                     alt="Mocking in unit tests diagram" src="./resources/images/jsTesting-images/image4.png"
                     style="width: 601.70px; height: 501.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
@@ -1364,7 +1366,7 @@
                     href="https://www.google.com/url?q=https://sinonjs.org/releases/latest/spies/%23using-a-spy-to-wrap-an-existing-method&amp;sa=D&amp;source=editors&amp;ust=1662467019282819&amp;usg=AOvVaw2BKzLtZ8zrPyyB5BFo-XXx">sinon.spy()
                     method</a></span><span class="c1">&nbsp;to test the method of an object.</span></p>
         <p class="c0"><span
-                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 292.00px;"><img
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 292.00px;"><img class="courseImages"
                     alt="" src="./resources/images/jsTesting-images/image11.png"
                     style="width: 601.70px; height: 292.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                     title=""></span></p>
