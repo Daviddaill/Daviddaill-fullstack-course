@@ -215,10 +215,7 @@ main p {
     margin: 10px;
 }
 
-.courseImages{
-    max-width: 80%;
-    max-height: auto;
-    }
+
 
 @media screen and (max-width: 950px)  {
     main {
@@ -226,7 +223,10 @@ main p {
         padding: 10px 0px 10px 60px ;
         width:100%;
     } 
-   
+    img{
+        max-width: 400px !important;
+        height: auto !important;
+        } 
 
 
 
@@ -234,9 +234,9 @@ main p {
 
 @media screen and (max-width: 400px)  {
     
-    .courseImages{
-        max-width: 300px;
-        max-height: auto;
+    img{
+        max-width: 250px !important;
+        height: auto !important;
         }  
     
 
