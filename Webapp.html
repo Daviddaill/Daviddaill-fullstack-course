@@ -1,0 +1,291 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Apps</title>
+    <link rel="stylesheet" href="resources/css/courses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap"
+            rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0196cd3152.js" crossorigin="anonymous"></script>
+    <script src="./resources/script.js" defer></script>
+</head>
+</head>
+
+<body class="c15 doc-content">
+
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <header>
+            <p id="mainPage"><a href="index.html">Main page </a></p>
+            <h1>Web Apps</h1>
+    </header>
+    <nav>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#1" class="notDropdown-btn">Introduction to Web App </a>
+
+
+            <a href="#2" class="dropdown-btn"> What is a Web App? <i class="fa-solid fa-caret-down"></i></a>
+            <div class="dropdown-container">
+                    <ul>
+                            <li> <a href="#2a">What is a Web Application? </a> </li>
+                            <li> <a href="#2b">What is the Difference Between a Website and a Web Application? </a> </li>
+                            <li> <a href="#2c"> Web Application Architecture</a> </li>
+
+                    </ul>
+            </div>
+
+            <a href="#3" class="dropdown-btn">What is a SPA? <i class="fa-solid fa-caret-down"></i></a>
+            <div class="dropdown-container">
+                    <ul>
+                            <li> <a href="#3a">Introduction </a> </li>
+                            <li> <a href="#3b">Multi-Page Applications
+                                    </a> </li>
+                            <li> <a href="#3c"> Single-Page Applications </a> </li>
+                            <li> <a href="#3d"> SPA Frameworks </a>
+                            </li>
+                            <li> <a href="#3e"> SPA Pros and Cons </a>
+                            </li>
+                            <li> <a href="#3f"> Conclusion </a> </li>
+
+
+                    </ul>
+            </div>
+
+
+
+                    <a href="#4" class="notDropdown-btn"> Review: Web Apps</a>
+
+
+
+
+    </nav>
+    <main>
+
+
+
+
+    <h2 id="1"><span class="c0">Introduction to Web App</span></h2>
+    <p class="c5"><span class="c8">In this unit, you will be introduced to web applications.</span></p>
+    <p class="c5"><span class="c8">The goal of this unit is to introduce you to web applications. You will learn about
+            web apps and single page applications (SPAs) and how they are different from static websites. You&rsquo;ll
+            find the knowledge that you gained in the previous units to be very useful for continuing to present and
+            style information.</span></p>
+    <p class="c5"><span class="c8">After this unit, you will be able to:</span></p>
+    <ul class="c11 lst-kix_qpeg6t8iavgl-0 start">
+        <li class="c5 c10 li-bullet-0"><span class="c8">Define what a web app is and how it is built</span></li>
+        <li class="c5 c10 li-bullet-0"><span class="c8">Know the differences between a web app and a static
+                website</span></li>
+        <li class="c5 c10 li-bullet-0"><span class="c8">Define what single page application (SPA) is</span></li>
+    </ul>
+    <p class="c14"><span class="c8"></span></p>
+    <h3 id="2"><span class="c12">What is a Web App?</span></h3>
+    <p class="c5"><span class="c8">Learn about web apps and what goes into building them.</span></p>
+    <h4 id="2a"><span class="c2">What is a Web Application?</span></h4>
+    <p class="c5"><span class="c8">A web application is an application software that does not require installation and
+            can instead be accessed from a remote server via web browser. Web applications are made for interaction,
+            allowing users to send and consume data between the browser and the web server. This interaction can be as
+            simple as logging in to an account, or as complex as making a payment with your credit card.</span></p>
+    <h4 id="2b"><span class="c2">What is the Difference Between a Website and a Web
+            Application?</span></h4>
+    <p class="c5"><span class="c8">While the terms website and web application are often used interchangeably, they can
+            denote somewhat different things. Most commonly, a website is defined as a set of information-carrying pages
+            that are inter-related and accessed through a web browser. A web application, on the other hand, is an
+            application software that runs on a web server and is accessed by the user through a web browser.</span></p>
+    <p class="c5"><span class="c8">If a website could be said to be defined by its content, then a web application would
+            be defined by its interaction with the user. As such, web applications are significantly more complicated
+            than static websites, both in general architecture and features.</span></p>
+    <h4 id="2c"><span class="c2">Web Application Architecture</span></h4>
+    <p class="c5"><span class="c8">In order to facilitate this complex flow of data, web applications are usually
+            designed with different layers. The most common design paradigm is a three-layered design consisting of a
+            presentation layer (web browser), application layer (server), and storage layer (database). In this system,
+            the presentation layer is responsible for relaying user data to the application layer, which can process
+            that data and do any number of things, including passing it to the storage layer for
+            &ldquo;safe-keeping.&rdquo;</span></p>
+    <p class="c5"><span class="c8">Many times, web applications can grow to be very complex. In these cases, a
+            three-layered design may fall short. This may necessitate the introduction of additional layers to handle
+            this complexity. For instance, the introduction of an integration layer between the application and storage
+            layers can help provide a uniform interface for data access, allowing the application layer to be insulated
+            from changes that occur to the storage layer implementation.</span></p>
+    <p class="c5"><span>If you&rsquo;re interested in learning more about the technology that&rsquo;s behind your
+            favorite web applications, install the</span><span><a class="c3"
+                href="https://www.google.com/url?q=https://www.wappalyzer.com/&amp;sa=D&amp;source=editors&amp;ust=1663324173496095&amp;usg=AOvVaw2cmQZG2GZymM2Qzfg8Y8Gk">&nbsp;</a></span><span
+            class="c1"><a class="c3"
+                href="https://www.google.com/url?q=https://www.wappalyzer.com/&amp;sa=D&amp;source=editors&amp;ust=1663324173496437&amp;usg=AOvVaw3ItA3wVSDTLPASQMes04DN">Wappalyzer
+                chrome extension</a></span><span class="c8">. If you navigate to a site, you can click on it and it will
+            give you a list of the different technologies used to build it.</span></p>
+    <h3 id="3"><span class="c12">What is a SPA?</span></h3>
+    <p class="c5"><span class="c8">Learn what a Single-Page Application (SPA) is and why you would use it.</span></p>
+    <h4 id="3a"><span class="c2">Introduction</span></h4>
+    <p class="c5"><span class="c8">At this point in your web development journey, you have learned HTML to create web
+            pages, CSS to style those pages, and JavaScript to sprinkle some magic throughout for functionality. With
+            these foundational skills, you are now ready to explore the exciting web development practice of the
+            Single-Page Application (SPA). SPAs combine the content of traditional websites with the smooth user
+            experience of mobile applications. Learning to develop and maintain SPAs is an exciting venture that
+            challenges developers to improve the web experience for users all over the world.</span></p>
+    <h4 id="3b"><span class="c2">Multi-Page Applications</span></h4>
+    <p class="c5"><span>Prior to reading this article, you should be familiar with the concept of a</span><span><a
+                class="c3"
+                href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Web_application&amp;sa=D&amp;source=editors&amp;ust=1663324173497572&amp;usg=AOvVaw3WriPWmuH2ndflPI1sdOP3">&nbsp;</a></span><span
+            class="c1"><a class="c3"
+                href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Web_application&amp;sa=D&amp;source=editors&amp;ust=1663324173497837&amp;usg=AOvVaw0WnGxIIgVp4mZq6xVQ3Mpw">web
+                app</a></span><span class="c8">. Whether talking about delivering content through static websites or
+            interactivity through web applications, the article is referring to a multi-page file structure that lives
+            on a server. Each time new data is needed for the browser view, a request is sent to the server, which
+            returns a new set of page files. For a static website, this approach is generally fine, but web applications
+            that require faster and more complicated interaction sometimes struggle to keep up.</span></p>
+    <p class="c5"><span class="c8">Imagine if there was a restaurant where you can only eat one part of your meal at a
+            time. For an order including a burger, fries, and salad, the server(server!) brings out just the burger.
+            After a few bites you want some fries, so the server takes the burger back to the kitchen and brings back
+            just the fries. The server may have even had to wait for the fries to process&ndash;I mean prepare, before
+            returning to the table. Repeat the request, prepare, and serve steps with the salad, then the burger again
+            and then more fries and you&rsquo;ve now eaten at the weirdest, most inefficient restaurant ever. Thankfully
+            this doesn&rsquo;t happen in the food industry but something similar is happening on the web.</span></p>
+    <p class="c5"><span>In the following video, a user is navigating around</span><span><a class="c3"
+                href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Wikipedia:Contents&amp;sa=D&amp;source=editors&amp;ust=1663324173498452&amp;usg=AOvVaw1dXuGJVp8FY-ejUR8lII60">&nbsp;</a></span><span
+            class="c1"><a class="c3"
+                href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Wikipedia:Contents&amp;sa=D&amp;source=editors&amp;ust=1663324173498710&amp;usg=AOvVaw30oBNZyNr_kMtCbe5U6jt5">Wikipedia</a></span><span
+            class="c8">. On the right, you may recognize the Elements tab of Chrome DevTools displaying an HTML file
+            associated with the page in the browser.</span></p>
+    <p class="c5"><span class="c8">Every time a link is clicked a new page is displayed in DevTools, which means a
+            request to the server was made and a new set of files was sent to be rendered in the browser. This is just
+            like our burger, fries, and salad from our favorite restaurant. In terms of a web application where
+            interactivity is key, these file requests can mean a slow user experience. That&rsquo;s where the
+            Single-Page Application comes in.</span></p>
+    <h4 id="3c"><span class="c2">Single-Page Applications</span></h4>
+    <p class="c5"><span class="c1"><a class="c3"
+                href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Single-page_application&amp;sa=D&amp;source=editors&amp;ust=1663324173499343&amp;usg=AOvVaw0RoIBXfd5M3rR4bAeRFoUW">Wikipedia
+                defines</a></span><span class="c8">&nbsp;a single-page application (SPA) as &ldquo;a web application
+            that interacts with the web browser by dynamically rewriting the current web page with new data from a web
+            server, instead of the default method of the browser loading entire new pages.&rdquo; The name single-page
+            application generally refers to the application consisting of one page that is constantly updated by
+            JavaScript. Requests to the server are now quicker since they contain just the data needed to update the
+            view. SPAs are full applications, running in the browser yet still connected to a server to update any
+            application data.</span></p>
+    <p class="c5"><span class="c8">If our favorite restaurant converts to the single-page approach, when we order our
+            meal the server brings the fully prepared burger, fries, and a salad at once. We now have access to devour
+            what we want without the server going to and from the kitchen. At times we may want ketchup for the fries,
+            or some dressing for the salad, but those are delivered quickly and come from the kitchen already prepared.
+            Just like a single-page application, you are given almost everything you need upfront but can still request
+            smaller items to help with each item of the meal.</span></p>
+    <p class="c5"><span>Now we have a video of user interactions on the</span><span><a class="c3"
+                href="https://www.google.com/url?q=https://reactjs.org/&amp;sa=D&amp;source=editors&amp;ust=1663324173499941&amp;usg=AOvVaw1zTI1kn5XOikdDkIjYi7-F">&nbsp;</a></span><span
+            class="c1"><a class="c3"
+                href="https://www.google.com/url?q=https://reactjs.org/&amp;sa=D&amp;source=editors&amp;ust=1663324173500155&amp;usg=AOvVaw1DiTJQeffiq1JuhHU0zRpw">React
+                home page</a></span><span class="c8">, which is built as a single-page application. When looking at the
+            Elements panel this time, each interaction changes only parts of the HTML file.</span></p>
+    <p class="c5"><span class="c8">The file stays constant while logic from the client-side JavaScript changes only what
+            is needed to update the view. Requests for data are retrieved a lot quicker than files that need to be
+            processed on a server and then rendered in the browser. SPAs focus on speed when it comes to user
+            interaction and browser rendering times.</span></p>
+    <h4 id="3d"><span class="c2">SPA Frameworks</span></h4>
+    <p class="c5"><span class="c8">To create a SPA you can use vanilla JavaScript for controlling all the required
+            logic. In practice, the complexity of SPAs scales rapidly so just using JavaScript is not recommended.
+            Luckily, there are several tools available to help with the creation of a SPA. These tools help with many
+            tasks from controlling the view of the page to managing the application build.</span></p>
+    <ul class="c11 lst-kix_mqzeb9pb251r-0 start">
+        <li class="c5 c10 li-bullet-0"><span class="c1"><a class="c3"
+                    href="https://www.google.com/url?q=https://reactjs.org/&amp;sa=D&amp;source=editors&amp;ust=1663324173500825&amp;usg=AOvVaw1jn-FVmO2Lz1LJFYkdokgg">React</a></span><span
+                class="c8">&nbsp;is a popular JavaScript library for building single-page applications. It focuses on
+                creating components that can render themselves differently based on an application&rsquo;s current state
+                and user data.</span></li>
+        <li class="c5 c10 li-bullet-0"><span class="c1"><a class="c3"
+                    href="https://www.google.com/url?q=https://vuejs.org/&amp;sa=D&amp;source=editors&amp;ust=1663324173501170&amp;usg=AOvVaw2IJk6M-qctBDAWTBQjI3Yf">Vue.js</a></span><span
+                class="c8">&nbsp;is a framework that uses templating within a single HTML file while the application
+                logic controls what is rendered. This approach is sometimes thought to be more traditional and therefore
+                easier to learn.</span></li>
+        <li class="c5 c10 li-bullet-0"><span>Other libraries and frameworks include</span><span><a class="c3"
+                    href="https://www.google.com/url?q=https://angular.io/&amp;sa=D&amp;source=editors&amp;ust=1663324173501538&amp;usg=AOvVaw0novxQvpm6EGctGl_NG2kR">&nbsp;</a></span><span
+                class="c1"><a class="c3"
+                    href="https://www.google.com/url?q=https://angular.io/&amp;sa=D&amp;source=editors&amp;ust=1663324173501730&amp;usg=AOvVaw3uiqkcOPY7RMm4WENtUFwe">AngularJS</a></span><span>,</span><span><a
+                    class="c3"
+                    href="https://www.google.com/url?q=https://emberjs.com/&amp;sa=D&amp;source=editors&amp;ust=1663324173502004&amp;usg=AOvVaw1pt3TOiMqojHIEM0T1LbNx">&nbsp;</a></span><span
+                class="c1"><a class="c3"
+                    href="https://www.google.com/url?q=https://emberjs.com/&amp;sa=D&amp;source=editors&amp;ust=1663324173502195&amp;usg=AOvVaw1DuR3-FaWj6Ay27i_TQTUO">Ember.js</a></span><span>,</span><span><a
+                    class="c3"
+                    href="https://www.google.com/url?q=https://www.sencha.com/products/extjs/&amp;sa=D&amp;source=editors&amp;ust=1663324173502411&amp;usg=AOvVaw2DZGK84EIlRVwlZ8JJwiZp">&nbsp;</a></span><span
+                class="c1"><a class="c3"
+                    href="https://www.google.com/url?q=https://www.sencha.com/products/extjs/&amp;sa=D&amp;source=editors&amp;ust=1663324173502614&amp;usg=AOvVaw0dtLWbTpvKsvpHSkm00tn9">ExtJS</a></span><span>,</span><span><a
+                    class="c3"
+                    href="https://www.google.com/url?q=https://knockoutjs.com/&amp;sa=D&amp;source=editors&amp;ust=1663324173502815&amp;usg=AOvVaw3SnefPOzf90S0PiQi57dDk">&nbsp;</a></span><span
+                class="c1"><a class="c3"
+                    href="https://www.google.com/url?q=https://knockoutjs.com/&amp;sa=D&amp;source=editors&amp;ust=1663324173503026&amp;usg=AOvVaw3blKGR_2S2yAsSze2SBnjZ">Knockout.js</a></span><span>,
+                and</span><span><a class="c3"
+                    href="https://www.google.com/url?q=https://www.meteor.com/&amp;sa=D&amp;source=editors&amp;ust=1663324173503246&amp;usg=AOvVaw1OQGyVMQCPF2VkgsUQwpad">&nbsp;</a></span><span
+                class="c1"><a class="c3"
+                    href="https://www.google.com/url?q=https://www.meteor.com/&amp;sa=D&amp;source=editors&amp;ust=1663324173503451&amp;usg=AOvVaw3MDn94b0nFuRoVUS8s6p47">Meteor.js</a></span><span
+                class="c8">. While all of these share similar goals, they each take different approaches to building
+                SPAs.</span></li>
+    </ul>
+    <h4 id="3e"><span class="c2">SPA Pros and Cons</span></h4>
+    <p class="c5"><span class="c8">So, should your next project be a single-page application? Maybe. Maybe not. Like
+            most development endeavors you must consider the pros and cons before deciding how you will implement a new
+            project.</span></p>
+    <p class="c5"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 257.33px;"><img
+                alt="Single-page vs. Multi-page application" src="./resources/images/webApp/image1.png"
+                style="width: 601.70px; height: 257.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c13"><span class="c9">Pros</span></p>
+    <ul class="c11 lst-kix_dj1j8auadjpv-0 start">
+        <li class="c5 c10 li-bullet-0"><span class="c8">SPAs are fast. The main selling point of a SPA is that it feels
+                like a desktop or mobile application. By eliminating requests for new files and only relying on smaller
+                amounts of data from the server, SPAs provide a real-time interface with their users.</span></li>
+        <li class="c5 c10 li-bullet-0"><span class="c8">Reuse of code is a big bonus when using SPAs because it saves
+                time within a project and across multiple projects. Many SPA libraries and frameworks advise that
+                components be general enough that they can be reused from project to project.</span></li>
+        <li class="c5 c10 li-bullet-0"><span class="c8">SPAs provide an easier path to migrate code to a mobile
+                application. With a SPA, the back-end of the application feeds data to the decoupled front-end
+                interface. This separation of tasks allows the creation of a mobile app UI while maintaining the
+                back-end logic of the application.</span></li>
+    </ul>
+    <p class="c13"><span class="c9">Cons</span></p>
+    <ul class="c11 lst-kix_8i82jml046ph-0 start">
+        <li class="c5 c10 li-bullet-0"><span class="c8">SPAs require more files to run at startup so the load time of
+                the application can be longer. This is something to consider if a user will not want to visit a site
+                that takes too long to load. SPA load time can be minimized through strategically loading resources
+                throughout the run of an application.</span></li>
+        <li class="c5 c10 li-bullet-0"><span class="c8">Search Engine Optimization (SEO) has some pitfalls when it comes
+                to SPAs. Search engines, like Google or DuckDuckGo, index pages of a website to rank the content. This
+                can be difficult with only one page that may not have content until it is loaded by JavaScript. SEO is
+                an ever-changing world so strategies already exist to mitigate these downsides.</span></li>
+        <li class="c5 c10 li-bullet-0"><span class="c8">SPAs may not function as expected within the browser. For
+                example, the back button or browsing history can act differently while using a single-page application.
+                This can be frustrating for users who are expecting certain functionality within their browsers.</span>
+        </li>
+    </ul>
+    <h4 id="3f"><span class="c2">Conclusion</span></h4>
+    <p class="c5"><span class="c8">Single-page applications provide a better user experience while running within a web
+            browser. They are the right choice for applications that need to provide real-time or complex interaction
+            with their users. Creating a SPA involves more than just a handful of HTML, CSS, and JavaScript files, but
+            their complexity continues to be minimized by frameworks such as React and Vue.js. Even if your next
+            application is not a SPA, knowing how to implement them is a must-have skill for a front-end
+            developer.</span></p>
+    <h3 id="4"><span class="c12">Review: Web Apps</span></h3>
+    <p class="c5"><span class="c8">In this unit, you learned about web applications.</span></p>
+    <p class="c5"><span class="c8">Congratulations! The goal of this unit was to introduce you to web applications. You
+            learned about web apps and single page applications (SPAs) and how they are different from static websites.
+            Use the knowledge that you gained in the previous units as you continue to present and style
+            information.</span></p>
+    <p class="c5"><span class="c8">Having completed this unit, you are now able to:</span></p>
+    <ul class="c11 lst-kix_bb4b86xrbeqz-0 start">
+        <li class="c5 c10 li-bullet-0"><span class="c8">Define what a web app is and how it is built</span></li>
+        <li class="c5 c10 li-bullet-0"><span class="c8">Know the differences between a web app and a static
+                website</span></li>
+        <li class="c5 c10 li-bullet-0"><span class="c8">Define what single page application (SPA) is</span></li>
+    </ul>
+    <p class="c5"><span class="c8">If you are interested in learning more about these topics, here are some additional
+            resources:</span></p>
+    <ul class="c11 lst-kix_io6kx7mdki63-0 start">
+        <li class="c5 c10 li-bullet-0"><span>Resource:</span><span><a class="c3"
+                    href="https://www.google.com/url?q=https://css-tricks.com/poll-results-sites-vs-apps/&amp;sa=D&amp;source=editors&amp;ust=1663324173506507&amp;usg=AOvVaw0kezk22zqaaWzKyr572jA4">&nbsp;</a></span><span
+                class="c1"><a class="c3"
+                    href="https://www.google.com/url?q=https://css-tricks.com/poll-results-sites-vs-apps/&amp;sa=D&amp;source=editors&amp;ust=1663324173506771&amp;usg=AOvVaw1zv2dD-xAE2J3chiNeioHI">Poll
+                    Results: &ldquo;Sites&rdquo; vs &ldquo;Apps&rdquo;</a></span></li>
+    </ul>
+    <p class="c14"><span class="c8"></span></p>
+    <p class="c14"><span class="c8"></span></p>
+    <p class="c14"><span class="c8"></span></p>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,1647 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="./resources/css/courses.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React </title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0196cd3152.js" crossorigin="anonymous"></script>
+    <script src="./resources/script.js" defer></script>
+</head>
+
+<body>
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <header>
+        <p id="mainPage"><a href="index.html">Main page </a></p>
+        <h1>React</h1>
+    </header>
+    <nav>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#1" class="dropdown-btn">React: The Virtual DOM <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#1a">The Problem </a> </li>
+                <li><a href="#1b">The Virtual DOM </a> </li>
+                <li><a href="#1c">How it helps</a> </li>
+            </ul>
+        </div>
+
+        <a href="#2" class="notDropdown-btn"> Why React?</a>
+
+
+        <a href="#3" class="dropdown-btn">JSX <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#3a">What is JSX? </a> </li>
+                <li> <a href="#3b">JSX Elements
+                    </a> </li>
+                <li> <a href="#3c"> JSX Elements And Their Surroundings </a> </li>
+                <li> <a href="#3d"> Attributes In JSX </a>
+                </li>
+                <li> <a href="#3e"> Nested JSX </a>
+                </li>
+                <li> <a href="#3f"> JSX Outer Elements </a> </li>
+                <li> <a href="#3g"> ReactDOM.render() I</a> </li>
+                <li> <a href="#3h"> ReactDOM.render() II
+                    </a> </li>
+                <li> <a href="#3i"> Passing a Variable to ReactDOM.render()
+                    </a> </li>
+                <li> <a href="#3j"> The Virtual DOM
+                    </a> </li>
+
+            </ul>
+        </div>
+
+
+        <a href="#4" class="dropdown-btn">Advanced JSX <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#4a">class vs className
+                    </a> </li>
+                <li> <a href="#4b">Self-Closing Tags </a> </li>
+                <li> <a href="#4c">Curly Braces in JSX </a></li>
+                <li> <a href="#4d"> Variables in JSX </a></li>
+                <li> <a href="#4e">Variable Attributes in JSX </a> </li>
+                <li> <a href="#4f">Event Listeners in JSX</a> </li>
+                <li> <a href="#4g">JSX Conditionals: If Statements That Don't Work </a></li>
+                <li> <a href="#4h"> JSX Conditionals: If Statements That Do Work </a></li>
+                <li> <a href="#4i">JSX Conditionals: The Ternary Operator </a> </li>
+                <li> <a href="#4j">JSX Conditionals: &&</a> </li>
+                <li> <a href="#4k">.map in JSX </a></li>
+                <li> <a href="#4l">Keys </a> </li>
+                <li> <a href="#4m">React.createElement</a> </li>
+            </ul>
+        </div>
+
+        <a href="#5" class="dropdown-btn"> React Component <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#5a"> Your First React Component </a> </li>
+                <li> <a href="#5b"> Import React </a> </li>
+                <li> <a href="#5c"> Import ReactDOM </a> </li>
+                <li> <a href="#5d"> Create a Component Class </a> </li>
+                <li> <a href="#5e"> Name a Component Class </a> </li>
+                <li> <a href="#5f"> Component Class Instructions </a> </li>
+                <li> <a href="#5g"> The Render Function </a> </li>
+                <li> <a href="#5h"> Create a Component Instance </a> </li>
+                <li> <a href="#5i"> Render A Component </a> </li>
+            </ul>
+        </div>
+
+
+        <a href="#6" class="dropdown-btn"> Advanced Component <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#6a">Use Multiline JSX in a Component</a> </li>
+                <li> <a href="#6b">Use a Variable Attribute in a Component </a> </li>
+                <li> <a href="#6c"> Put Logic in a Render Function </a> </li>
+                <li> <a href="#6d"> Use a Conditional in a Render Function </a>
+                </li>
+                <li> <a href="#6e"> Use this in a Component</a> </li>
+                <li> <a href="#6f"> Use an Event Listener in a Component </a></li>
+                <li> <a href="#6g"> Components Recap</a></li>
+            </ul>
+        </div>
+
+
+        <a href="#7" class="dropdown-btn">Creating a React App <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#7a">Introduction</a> </li>
+                <li> <a href="#7b">Getting Ready </a> </li>
+                <li> <a href="#7c">1. Setting Up the Boilerplate Application</a></li>
+                <li> <a href="#7d"> 2. React App Structure </a></li>
+                <li> <a href="#7e">3. Starting the React App Development Server</a> </li>
+                <li> <a href="#7f">Next Steps </a> </li>
+                <li> <a href="#7g">Documentation: Create React App </a></li>
+            </ul>
+        </div>
+
+
+        <a href="#8" class="notDropdown-btn"> Review React Part 1</a>
+
+
+
+    </nav>
+    <main>
+        <h2 class="c21" id="h.loiv7xmhi7f9"><span class="c3">Introduction</span></h2>
+        <p class="c1"><span class="c4">In this unit, you will be introduced to React.</span></p>
+        <p class="c1"><span class="c4">The goal of this unit is to introduce you to the popular JavaScript library,
+                React.
+                React will help you build better, scalable front-ends for your website through the creation of
+                components.
+                An overview of ES6 and functional JavaScript concepts will help in your understanding of React.</span>
+        </p>
+        <p class="c1"><span class="c4">After this unit, you will be able to:</span></p>
+        <ul class="c17 lst-kix_tkt2r0cj1ag6-0 start">
+            <li class="c1 c16 li-bullet-0"><span class="c4">Understand ES6+ and functional JavaScript programming
+                    concepts</span></li>
+            <li class="c1 c16 li-bullet-0"><span class="c4">Know what a Virtual DOM is and how it is used in
+                    React</span>
+            </li>
+            <li class="c1 c16 li-bullet-0"><span class="c4">Learn JSX</span></li>
+            <li class="c1 c16 li-bullet-0"><span class="c4">Build first React components</span></li>
+        </ul>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h2 id="1"><span class="c3">React: The Virtual DOM</span></h2>
+        <p class="c1"><span class="c4">Fighting Wasteful DOM Manipulation</span></p>
+        <h3 id="1a"><span class="c0">The Problem</span></h3>
+        <p class="c1"><span class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/courses/build-interactive-websites/lessons/javascript-dom/exercises/document&amp;sa=D&amp;source=editors&amp;ust=1663325376132108&amp;usg=AOvVaw0AGm65rqgHtVBcFo4BAnAH">DOM
+                    manipulation</a></span><span class="c4">&nbsp;is the heart of the modern, interactive web.
+                Unfortunately, it is also a lot slower than most JavaScript operations.</span></p>
+        <p class="c1"><span>This slowness is made worse by the fact that </span><span class="c13 c11">most JavaScript
+                frameworks update the DOM much more than they have to.</span></p>
+        <p class="c1"><span>As an example, let&rsquo;s say that you have a list that contains ten items. You check off
+                the
+                first item. Most JavaScript frameworks would rebuild </span><span class="c8">the entire list</span><span
+                class="c4">. That&rsquo;s ten times more work than necessary! Only one item changed, but the remaining
+                nine
+                get rebuilt exactly how they were before.</span></p>
+        <p class="c1"><span class="c4">Rebuilding a list is no big deal to a web browser, but modern websites can use
+                huge
+                amounts of DOM manipulation. Inefficient updating has become a serious problem.</span></p>
+        <p class="c1"><span>To address this problem, the people at React popularized something called the </span><span
+                class="c8 c14">virtual DOM.</span></p>
+        <h3 id="1b"><span class="c0">The Virtual DOM</span></h3>
+        <p class="c1"><span>In React, for every</span><span><a class="c6"
+                    href="https://www.google.com/url?q=http://eloquentjavascript.net/13_dom.html&amp;sa=D&amp;source=editors&amp;ust=1663325376133051&amp;usg=AOvVaw3PKkrjLW_5rlyO2VrxAKD0">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=http://eloquentjavascript.net/13_dom.html&amp;sa=D&amp;source=editors&amp;ust=1663325376133248&amp;usg=AOvVaw2-VmYH0VpVexkzvQCvi5ro">DOM
+                    object</a></span><span>, there is a corresponding &ldquo;virtual DOM object.&rdquo; A virtual DOM
+                object
+                is a </span><span class="c8">representation</span><span class="c4">&nbsp;of a DOM object, like a
+                lightweight
+                copy.</span></p>
+        <p class="c1"><span class="c4">A virtual DOM object has the same properties as a real DOM object, but it lacks
+                the
+                real thing&rsquo;s power to directly change what&rsquo;s on the screen.</span></p>
+        <p class="c1"><span class="c4">Manipulating the DOM is slow. Manipulating the virtual DOM is much faster,
+                because
+                nothing gets drawn onscreen. Think of manipulating the virtual DOM as editing a blueprint, as opposed to
+                moving rooms in an actual house.</span></p>
+        <h3 id="1c"><span class="c0">How it helps</span></h3>
+        <p class="c1"><span class="c4">When you render a JSX element, every single virtual DOM object gets
+                updated.</span>
+        </p>
+        <p class="c1"><span class="c4">This sounds incredibly inefficient, but the cost is insignificant because the
+                virtual
+                DOM can update so quickly.</span></p>
+        <p class="c1"><span>Once the virtual DOM has updated, then React compares the virtual DOM with a virtual DOM
+            </span><span class="c8">snapshot</span><span class="c4">&nbsp;that was taken right before the update.</span>
+        </p>
+        <p class="c1"><span>By comparing the new virtual DOM with a pre-update version, React figures out </span><span
+                class="c8">exactly which virtual DOM objects have changed.</span><span class="c4">&nbsp;This process is
+                called &ldquo;diffing.&rdquo;</span></p>
+        <p class="c1"><span>Once React knows which virtual DOM objects have changed, then React updates those objects,
+            </span><span class="c8">and only those objects,</span><span class="c4">&nbsp;on the real DOM. In our example
+                from earlier, React would be smart enough to rebuild your one checked-off list-item, and leave the rest
+                of
+                your list alone.</span></p>
+        <p class="c1"><span class="c4">This makes a big difference! React can update only the necessary parts of the
+                DOM.
+                React&rsquo;s reputation for performance comes largely from this innovation.</span></p>
+        <p class="c1"><span class="c4">In summary, here&rsquo;s what happens when you try to update the DOM in
+                React:</span>
+        </p>
+        <ol class="c17 lst-kix_5sasqihibfu2-0 start" start="1">
+            <li class="c1 c16 li-bullet-0"><span class="c4">The entire virtual DOM gets updated.</span></li>
+            <li class="c1 c16 li-bullet-0"><span class="c4">The virtual DOM gets compared to what it looked like before
+                    you
+                    updated it. React figures out which objects have changed.</span></li>
+            <li class="c1 c16 li-bullet-0"><span>The changed objects, and the changed objects only, get updated on the
+                </span><span class="c8">real</span><span class="c4">&nbsp;DOM.</span></li>
+            <li class="c1 c16 li-bullet-0"><span class="c4">Changes on the real DOM cause the screen to change.</span>
+            </li>
+        </ol>
+        <p class="c1"><span>If you&rsquo;d like to learn more about the virtual DOM,</span><span><a class="c6"
+                    href="https://www.google.com/url?q=http://reactkungfu.com/2015/10/the-difference-between-virtual-dom-and-dom/&amp;sa=D&amp;source=editors&amp;ust=1663325376134824&amp;usg=AOvVaw3W9XncpNex0a61DIgAvak1">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=http://reactkungfu.com/2015/10/the-difference-between-virtual-dom-and-dom/&amp;sa=D&amp;source=editors&amp;ust=1663325376135057&amp;usg=AOvVaw3l1B0jBC2q1o0uQbWoLC3n">here&rsquo;s
+                    a good place to start</a></span><span class="c4">.</span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <h3 id="1d"><span class="c0"></span></h3>
+        <h2 id="2"><span class="c3">Why React?</span></h2>
+        <p class="c1"><span class="c4">React.js is a JavaScript library. It was developed by engineers at
+                Facebook.</span>
+        </p>
+        <p class="c1"><span class="c4">Here are just a few of the reasons why people choose to program with
+                React:</span>
+        </p>
+        <ul class="c17 lst-kix_ti67fxrro64x-0 start">
+            <li class="c1 c16 li-bullet-0"><span>React is </span><span class="c8">fast</span><span class="c4">. Apps
+                    made in
+                    React can handle complex updates and still feel quick and responsive.<br></span></li>
+            <li class="c1 c16 li-bullet-0"><span>React is </span><span class="c8">modular</span><span>. Instead of
+                    writing
+                    large, dense files of code, you can write many smaller, reusable files. React&rsquo;s modularity can
+                    be
+                    a beautiful solution to JavaScript&rsquo;s</span><span><a class="c6"
+                        href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Spaghetti_code&amp;sa=D&amp;source=editors&amp;ust=1663325376135928&amp;usg=AOvVaw0skznm_y77mw9GtvRVvDbj">&nbsp;</a></span><span
+                    class="c5"><a class="c6"
+                        href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Spaghetti_code&amp;sa=D&amp;source=editors&amp;ust=1663325376136125&amp;usg=AOvVaw0Nr5N9M02GY9u3buuWNG8N">maintainability
+                        problems</a></span><span class="c4">.<br></span></li>
+            <li class="c1 c16 li-bullet-0"><span>React is </span><span class="c8">scalable</span><span class="c4">.
+                    Large
+                    programs that display a lot of changing data are where React performs best.<br></span></li>
+            <li class="c1 c16 li-bullet-0"><span>React is </span><span class="c8">flexible</span><span>. You can use
+                    React
+                    for interesting projects that have nothing to do with making a web app. People are still figuring
+                    out
+                    React&rsquo;s potential.</span><span><a class="c6"
+                        href="https://www.google.com/url?q=https://github.com/jiwonbest/amazing-react-projects&amp;sa=D&amp;source=editors&amp;ust=1663325376136624&amp;usg=AOvVaw3npRHOmY8awSRxN8fbnWLT">&nbsp;</a></span><span
+                    class="c5"><a class="c6"
+                        href="https://www.google.com/url?q=https://github.com/jiwonbest/amazing-react-projects&amp;sa=D&amp;source=editors&amp;ust=1663325376136848&amp;usg=AOvVaw2gLBTWo3zw0R0eoWD6JNVM">There&rsquo;s
+                        room to explore.<br></a></span></li>
+            <li class="c1 c16 li-bullet-0"><span>React is </span><span class="c8">popular</span><span class="c4">. While
+                    this reason has admittedly little to do with React&rsquo;s quality, the truth is that understanding
+                    React will make you more employable.<br></span></li>
+        </ul>
+        <h2 id="3"><span class="c3">JSX</span></h2>
+
+        <h3 id="3a"><span class="c0">What is JSX?</span></h3>
+        <p class="c1"><span class="c8">JSX</span><span class="c4">&nbsp;is a syntax extension for JavaScript. It was
+                written
+                to be used with React. JSX code looks a lot like HTML.</span></p>
+        <p class="c1"><span class="c4">What does &ldquo;syntax extension&rdquo; mean?</span></p>
+        <p class="c1"><span class="c4">In this case, it means that JSX is not valid JavaScript. Web browsers can&rsquo;t
+                read it!</span></p>
+        <p class="c1"><span>If a JavaScript file contains JSX code, then that file will have to be </span><span
+                class="c8">compiled</span><span>. That means that before the file reaches a web browser, a </span><span
+                class="c8">JSX compiler</span><span class="c4">&nbsp;will translate any JSX into regular
+                JavaScript.</span>
+        </p>
+        <p class="c1"><span class="c4">Codecademy&rsquo;s servers already have a JSX compiler installed, so you
+                don&rsquo;t
+                have to worry about that for now. Eventually we&rsquo;ll walk through how to set up a JSX compiler on
+                your
+                personal computer.</span></p>
+        <h3 id="3b"><span class="c0">JSX Elements</span></h3>
+        <p class="c1"><span>A basic unit of JSX is called a JSX </span><span class="c8">element</span><span
+                class="c4">.</span></p>
+        <p class="c1"><span class="c4">Here&rsquo;s an example of a JSX element:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 284.00px; height: 73.00px;"><img
+                    alt="" src="./resources/images/react1/image39.png"
+                    style="width: 284.00px; height: 73.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">This JSX element looks exactly like HTML! The only noticeable difference is that
+                you
+                would find it in a JavaScript file, instead of in an HTML file.</span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <h3 id="3c"><span class="c0">JSX Elements And Their Surroundings</span></h3>
+        <p class="c1"><span>JSX elements are treated as JavaScript </span><span class="c8">expressions</span><span
+                class="c4">. They can go anywhere that JavaScript expressions can go.</span></p>
+        <p class="c1"><span class="c4">That means that a JSX element can be saved in a variable, passed to a function,
+                stored in an object or array&hellip;you name it.</span></p>
+        <p class="c1"><span class="c4">Here&rsquo;s an example of a JSX element being saved in a variable:</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 322.00px; height: 226.00px;"><img
+                    alt="" src="./resources/images/react1/image11.png"
+                    style="width: 322.00px; height: 226.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <h3 id="3d"><span class="c0">Attributes In JSX</span></h3>
+        <p class="c1"><span>JSX elements can have </span><span class="c8">attributes</span><span class="c4">, just like
+                HTML
+                elements can.</span></p>
+        <p class="c1"><span>A JSX attribute is written using HTML-like syntax: a </span><span
+                class="c8">name</span><span>,
+                followed by an equals sign, followed by a </span><span class="c8">value</span><span>. The </span><span
+                class="c8">value</span><span class="c4">&nbsp;should be wrapped in quotes, like this:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 338.00px; height: 55.00px;"><img
+                    alt="" src="./resources/images/react1/image32.png"
+                    style="width: 338.00px; height: 55.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span>Here are some JSX elements with </span><span class="c14 c8">attributes:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 358.00px; height: 159.00px;"><img
+                    alt="" src="./resources/images/react1/image41.png"
+                    style="width: 358.00px; height: 159.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">A single JSX element can have many attributes, just like in HTML:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 303.00px; height: 91.00px;"><img
+                    alt="" src="./resources/images/react1/image54.png"
+                    style="width: 303.00px; height: 91.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h3 id="3e"><span class="c0">Nested JSX</span></h3>
+        <p class="c1"><span>You can </span><span class="c8">nest</span><span class="c4">&nbsp;JSX elements inside of
+                other
+                JSX elements, just like in HTML.</span></p>
+        <p class="c1"><span>Here&rsquo;s an example of a JSX &lt;h1&gt; element, </span><span
+                class="c8">nested</span><span class="c4">&nbsp;inside of a JSX &lt;a&gt; element:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 307.00px; height: 69.00px;"><img
+                    alt="" src="./resources/images/react1/image58.png"
+                    style="width: 307.00px; height: 69.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">To make this more readable, you can use HTML-style line breaks and
+                indentation:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 313.00px; height: 133.00px;"><img
+                    alt="" src="./resources/images/react1/image24.png"
+                    style="width: 313.00px; height: 133.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">If a JSX expression takes up more than one line, then you must wrap the
+                multi-line
+                JSX expression in parentheses. This looks strange at first, but you get used to it:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 336.00px; height: 180.00px;"><img
+                    alt="" src="./resources/images/react1/image18.png"
+                    style="width: 336.00px; height: 180.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c8">Nested</span><span>&nbsp;JSX expressions can be saved as variables, passed to
+                functions, etc., just like non-nested JSX expressions can! Here&rsquo;s an example of a </span><span
+                class="c8">nested</span><span class="c4">&nbsp;JSX expression being saved as a variable:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 354.00px; height: 178.00px;"><img
+                    alt="" src="./resources/images/react1/image13.png"
+                    style="width: 354.00px; height: 178.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h3 id="3f"><span class="c0">JSX Outer Elements</span></h3>
+        <p class="c1"><span>There&rsquo;s a rule that we haven&rsquo;t mentioned: a JSX expression must have exactly
+            </span><span class="c8">one</span><span class="c4">&nbsp;outermost element.</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 157.00px;"><img
+                    alt="" src="./resources/images/react1/image46.png"
+                    style="width: 362.00px; height: 157.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">But this code will not work:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 306.00px; height: 119.00px;"><img
+                    alt="" src="./resources/images/react1/image15.png"
+                    style="width: 306.00px; height: 119.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span>The </span><span class="c8">first opening tag</span><span>&nbsp;and the </span><span
+                class="c8">final closing tag</span><span class="c4">&nbsp;of a JSX expression must belong to the same
+                JSX
+                element!</span></p>
+        <p class="c1"><span class="c4">It&rsquo;s easy to forget about this rule, and end up with errors that are tough
+                to
+                diagnose.</span></p>
+        <p class="c1"><span class="c4">If you notice that a JSX expression has multiple outer elements, the solution is
+                usually simple: wrap the JSX expression in a &lt;div&gt;&lt;/div&gt;.</span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h3 id="3g"><span class="c0">ReactDOM.render() I</span></h3>
+        <p class="c1"><span class="c4">Let&rsquo;s examine the code that you just wrote in the last exercise.</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 352.00px; height: 76.00px;"><img
+                    alt="" src="./resources/images/react1/image14.png"
+                    style="width: 352.00px; height: 76.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">You can see something called ReactDOM. What&rsquo;s that?</span></p>
+        <p class="c1"><span>ReactDOM is the name of a JavaScript library. This library contains several React-specific
+                methods, all of which deal with</span><span><a class="c6"
+                    href="https://www.google.com/url?q=http://www.w3schools.com/js/js_htmldom.asp&amp;sa=D&amp;source=editors&amp;ust=1663325376141926&amp;usg=AOvVaw1IgEgEYfMRFnp35GglrTfg">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=http://www.w3schools.com/js/js_htmldom.asp&amp;sa=D&amp;source=editors&amp;ust=1663325376142226&amp;usg=AOvVaw39cFC4rckRmucURVFzPU3z">the
+                    DOM</a></span><span class="c4">&nbsp;in some way or another.</span></p>
+        <p class="c1"><span class="c4">We&rsquo;ll talk more later about how ReactDOM got into your file. For now, just
+                understand that it&rsquo;s yours to use.</span></p>
+        <p class="c1"><span class="c4">Move slightly to the right, and you can see one of ReactDOM&lsquo;s methods:
+                ReactDOM.render().</span></p>
+        <p class="c1"><span>ReactDOM.render() is the most common way to </span><span class="c8">render</span><span
+                class="c4">&nbsp;JSX. It takes a JSX expression, creates a corresponding tree of DOM nodes, and adds
+                that
+                tree to the DOM. That is the way to make a JSX expression appear onscreen.</span></p>
+        <p class="c1"><span class="c4">Move to the right a little more, and you come to this expression:</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 205.00px; height: 56.00px;"><img
+                    alt="" src="./resources/images/react1/image33.png"
+                    style="width: 205.00px; height: 56.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span>This is the first </span><span class="c8">argument</span><span class="c4">&nbsp;being passed
+                to
+                ReactDOM.render(). ReactDOM.render()&lsquo;s first argument should be a JSX expression, and it will be
+                rendered to the screen.</span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <h3 id="3h"><span class="c0">ReactDOM.render() II</span></h3>
+        <p class="c1"><span class="c4">Move to the right a little more, and you will see this expression:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 277.00px; height: 55.00px;"><img
+                    alt="" src="./resources/images/react1/image7.png"
+                    style="width: 277.00px; height: 55.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span>You just learned that ReactDOM.render() makes its </span><span
+                class="c8">first</span><span>&nbsp;argument appear onscreen. But </span><span
+                class="c8">where</span><span class="c4">&nbsp;on the screen should that first argument appear?</span>
+        </p>
+        <p class="c1"><span>The first argument is </span><span class="c8">appended</span><span>&nbsp;to whatever element
+                is
+                selected by the </span><span class="c8">second</span><span class="c4">&nbsp;argument.</span></p>
+        <p class="c1"><span>In the code editor, select </span><span class="c11">index.html</span><span class="c4">. See
+                if
+                you can find an element that would be selected by document.getElementById(&#39;app&#39;).</span></p>
+        <p class="c1"><span>That element acted as a </span><span class="c8">container</span><span class="c4">&nbsp;for
+                ReactDOM.render()&lsquo;s first argument! At the end of the previous exercise, this appeared on the
+                screen:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 200.00px; height: 94.00px;"><img
+                    alt="" src="./resources/images/react1/image25.png"
+                    style="width: 200.00px; height: 94.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h3 id="3i"><span class="c0">Passing a Variable to ReactDOM.render()</span></h3>
+        <p class="c1"><span>ReactDOM.render()&lsquo;s first argument should </span><span
+                class="c8">evaluate</span><span>&nbsp;to a JSX expression, it doesn&rsquo;t have to literally
+            </span><span class="c8">be</span><span class="c4">&nbsp;a JSX expression.</span></p>
+        <p class="c1"><span class="c4">The first argument could also be a variable, so long as that variable evaluates
+                to a
+                JSX expression.</span></p>
+        <p class="c1"><span>In this example, we save a JSX expression as a </span><span class="c8">variable</span><span
+                class="c4">&nbsp;named toDoList. We then pass toDoList as the first argument to
+                ReactDOM.render():</span>
+        </p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 310.00px; height: 267.00px;"><img
+                    alt="" src="./resources/images/react1/image10.png"
+                    style="width: 310.00px; height: 267.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h3 id="3j"><span class="c0">The Virtual DOM</span></h3>
+        <p class="c1"><span>One special thing about ReactDOM.render() is that it </span><span class="c8">only updates
+                DOM
+                elements that have changed</span><span class="c4">.</span></p>
+        <p class="c1"><span class="c4">That means that if you render the exact same thing twice in a row, the second
+                render
+                will do nothing:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 350.00px; height: 282.00px;"><img
+                    alt="" src="./resources/images/react1/image6.png"
+                    style="width: 350.00px; height: 282.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">This is significant! Only updating the necessary DOM elements is a large part of
+                what
+                makes React so successful.</span></p>
+        <p class="c1"><span>React accomplishes this thanks to something called </span><span class="c8">the virtual
+                DOM.</span><span>&nbsp;Before moving on to the end of the lesson,</span><span><a class="c6"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/react-virtual-dom&amp;sa=D&amp;source=editors&amp;ust=1663325376145305&amp;usg=AOvVaw2Np96H2PC1BuRnCytnCRe9">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/react-virtual-dom&amp;sa=D&amp;source=editors&amp;ust=1663325376145573&amp;usg=AOvVaw3g7k30x7MCB28PNojGdXoT">read
+                    this article about the Virtual DOM</a></span><span class="c4">.</span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h2 id="4"><span class="c3">Advanced JSX</span></h2>
+        <h3 id="4a"><span class="c0">class vs className</span></h3>
+        <p class="c1"><span class="c4">This lesson will cover more advanced JSX. You&rsquo;ll learn some powerful
+                tricks,
+                and some common errors to avoid.</span></p>
+        <p class="c1"><span class="c4">Grammar in JSX is mostly the same as in HTML, but there are subtle differences to
+                watch out for. Probably the most frequent of these involves the word class.</span></p>
+        <p class="c1"><span class="c4">In HTML, it&rsquo;s common to use class as an attribute name:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 229.00px; height: 53.00px;"><img
+                    alt="" src="./resources/images/react1/image31.png"
+                    style="width: 229.00px; height: 53.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">In JSX, you can&rsquo;t use the word class! You have to use className
+                instead:</span>
+        </p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 285.00px; height: 54.00px;"><img
+                    alt="" src="./resources/images/react1/image60.png"
+                    style="width: 285.00px; height: 54.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">This is because JSX gets translated into JavaScript, and class is a reserved word
+                in
+                JavaScript.</span></p>
+        <p class="c1"><span>When JSX is </span><span class="c8">rendered</span><span class="c4">, JSX className
+                attributes
+                are automatically rendered as class attributes.</span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <h3 id="4b"><span class="c0">Self-Closing Tags</span></h3>
+        <p class="c1"><span>Another JSX &lsquo;gotcha&rsquo; involves </span><span class="c8">self-closing
+                tags</span><span class="c4">.</span></p>
+        <p class="c1"><span class="c4">What&rsquo;s a self-closing tag?</span></p>
+        <p class="c1"><span>Most HTML elements use two tags: an </span><span class="c8">opening
+                tag</span><span>&nbsp;(&lt;div&gt;), and a </span><span class="c8">closing
+                tag</span><span>&nbsp;(&lt;/div&gt;). However, some HTML elements such as &lt;img&gt; and &lt;input&gt;
+                use
+                only one tag. The tag that belongs to a single-tag element isn&rsquo;t an opening tag nor a closing tag;
+                it&rsquo;s a </span><span class="c14 c8">self-closing tag.</span></p>
+        <p class="c1"><span>When you write a self-closing tag in HTML, it is </span><span
+                class="c8">optional</span><span class="c4">&nbsp;to include a forward-slash immediately before the final
+                angle-bracket:</span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 280.00px; height: 180.00px;"><img
+                    alt="" src="./resources/images/react1/image40.png"
+                    style="width: 280.00px; height: 180.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <p class="c1"><span class="c4">But!</span></p>
+        <p class="c1"><span>In JSX, you </span><span class="c8">have to</span><span class="c4">&nbsp;include the slash.
+                If
+                you write a self-closing tag in JSX and forget the slash, you will raise an error:</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 218.00px; height: 179.00px;"><img
+                    alt="" src="./resources/images/react1/image44.png"
+                    style="width: 218.00px; height: 179.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <h3 id="4c"><span class="c0">Curly Braces in JSX</span></h3>
+        <p class="c1"><span class="c4">The code in the last exercise didn&rsquo;t behave as one might expect. Instead of
+                adding 2 and 3, it printed out &ldquo;2 + 3&rdquo; as a string of text. Why?</span></p>
+        <p class="c1"><span class="c4">This happened because 2 + 3 is located in between &lt;h1&gt; and &lt;/h1&gt;
+                tags.</span></p>
+        <p class="c1"><span class="c4">Any code in between the tags of a JSX element will be read as JSX, not as regular
+                JavaScript! JSX doesn&rsquo;t add numbers - it reads them as text, just like HTML.</span></p>
+        <p class="c1"><span class="c4">You need a way to write code that says, &ldquo;Even though I am located in
+                between
+                JSX tags, treat me like ordinary JavaScript and not like JSX.&rdquo;</span></p>
+        <p class="c1"><span>You can do this by wrapping your code in </span><span class="c8">curly braces</span><span
+                class="c4">.</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 178.00px; height: 52.00px;"><img
+                    alt="" src="./resources/images/react1/image38.png"
+                    style="width: 178.00px; height: 52.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h3 id="4d"><span class="c0">Variables in JSX</span></h3>
+        <p class="c1"><span class="c4">When you inject JavaScript into JSX, that JavaScript is part of the same
+                environment
+                as the rest of the JavaScript in your file.</span></p>
+        <p class="c1"><span class="c4">That means that you can access variables while inside of a JSX expression, even
+                if
+                those variables were declared on the outside.</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 350.00px; height: 154.00px;"><img
+                    alt="" src="./resources/images/react1/image50.png"
+                    style="width: 350.00px; height: 154.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h3 id="4e"><span class="c0">Variable Attributes in JSX</span></h3>
+        <p class="c1"><span>When writing JSX, it&rsquo;s common to use variables to set </span><span
+                class="c8">attributes</span><span class="c4">.</span></p>
+        <p class="c1"><span class="c4">Here&rsquo;s an example of how that might work:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 341.00px; height: 281.00px;"><img
+                    alt="" src="./resources/images/react1/image52.png"
+                    style="width: 341.00px; height: 281.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">Notice how in this example, the &lt;img /&gt;&lsquo;s attributes each get their
+                own
+                line. This can make your code more readable if you have a lot of attributes on one element.</span></p>
+        <p class="c1"><span class="c8">Object properties</span><span class="c4">&nbsp;are also often used to set
+                attributes:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 325.00px; height: 508.00px;"><img
+                    alt="" src="./resources/images/react1/image22.png"
+                    style="width: 325.00px; height: 508.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h3 id="4f"><span class="c0">Event Listeners in JSX</span></h3>
+        <p class="c1"><span>JSX elements can have </span><span class="c8">event listeners</span><span class="c4">, just
+                like
+                HTML elements can. Programming in React means constantly working with event listeners.</span></p>
+        <p class="c1"><span>You create an event listener by giving a JSX element a special </span><span
+                class="c8">attribute</span><span class="c4">. Here&rsquo;s an example:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 237.00px; height: 52.00px;"><img
+                    alt="" src="./resources/images/react1/image59.png"
+                    style="width: 237.00px; height: 52.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span>An event listener attribute&rsquo;s </span><span class="c8">name</span><span>&nbsp;should be
+                something like onClick or onMouseOver: the word on, plus the type of event that you&rsquo;re listening
+                for.
+                You can see a list of valid event names</span><span><a class="c6"
+                    href="https://www.google.com/url?q=http://facebook.github.io/react/docs/events.html%23supported-events&amp;sa=D&amp;source=editors&amp;ust=1663325376150386&amp;usg=AOvVaw2Dt9ZpCF9W816RKM1KcE4p">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=http://facebook.github.io/react/docs/events.html%23supported-events&amp;sa=D&amp;source=editors&amp;ust=1663325376150723&amp;usg=AOvVaw1J151JVmYu_mdgH_avpVLD">here</a></span><span
+                class="c4">.</span></p>
+        <p class="c1"><span>An event listener attribute&rsquo;s </span><span class="c8">value</span><span
+                class="c4">&nbsp;should be a function. The above example would only work if myFunc were a valid function
+                that had been defined elsewhere:</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 345.00px; height: 161.00px;"><img
+                    alt="" src="./resources/images/react1/image34.png"
+                    style="width: 345.00px; height: 161.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span>Note that in HTML, event listener </span><span class="c8">names</span><span
+                class="c4">&nbsp;are
+                written in all lowercase, such as onclick or onmouseover. In JSX, event listener names are written in
+                camelCase, such as onClick or onMouseOver.</span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h3 id="4g"><span class="c0">JSX Conditionals: If Statements That Don&#39;t Work</span>
+        </h3>
+        <p class="c1"><span class="c4">Great work! You&rsquo;ve learned how to use curly braces to inject JavaScript
+                into a
+                JSX expression!</span></p>
+        <p class="c1"><span class="c4">Here&rsquo;s a rule that you need to know: you can not inject an if statement
+                into a
+                JSX expression.</span></p>
+        <p class="c1"><span class="c4">This code will break:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 302.00px; height: 245.00px;"><img
+                    alt="" src="./resources/images/react1/image37.png"
+                    style="width: 302.00px; height: 245.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span>The reason why has to do with the way that JSX is compiled. You don&rsquo;t need to
+                understand
+                the mechanics of it for now, but if you&rsquo;re interested then you can learn more in
+                the</span><span><a class="c6"
+                    href="https://www.google.com/url?q=https://reactjs.org/docs/jsx-in-depth.html&amp;sa=D&amp;source=editors&amp;ust=1663325376151881&amp;usg=AOvVaw39LWaM6UGhYqDzoSxmSXp4">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://reactjs.org/docs/jsx-in-depth.html&amp;sa=D&amp;source=editors&amp;ust=1663325376152178&amp;usg=AOvVaw3F-JvCaS1_zr5k8Kxyxn5k">React
+                    documentation</a></span><span class="c4">.</span></p>
+        <p class="c1"><span class="c4">What if you want a JSX expression to render, but only under certain
+                circumstances?
+                You can&rsquo;t inject an if statement. What can you do?</span></p>
+        <p class="c1"><span>You have lots of options. In the next few lessons, we&rsquo;ll explore some simple ways to
+                write
+            </span><span class="c8">conditionals</span><span class="c4">&nbsp;(expressions that are only executed under
+                certain conditions) in JSX.</span></p>
+        <h3 id="4h"><span class="c0">JSX Conditionals: If Statements That Do Work</span></h3>
+        <p class="c1"><span>How can you write a </span><span class="c8">conditional</span><span class="c4">, if you
+                can&rsquo;t inject an if statement into JSX?</span></p>
+        <p class="c1"><span>Well, one option is to write an if statement, and </span><span class="c8">not</span><span
+                class="c4">&nbsp;inject it into JSX.</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 345.00px; height: 413.00px;"><img
+                    alt="" src="./resources/images/react1/image1.png"
+                    style="width: 345.00px; height: 413.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c11">this</span><span>&nbsp;works, because the words if and else are </span><span
+                class="c8">not</span><span class="c4">&nbsp;injected in between JSX tags. The if statement is on the
+                outside, and no JavaScript injection is necessary.</span></p>
+        <p class="c1"><span class="c4">This is a common way to express conditionals in JSX.</span></p>
+        <h3 id="4i"><span class="c0">JSX Conditionals: The Ternary Operator</span></h3>
+        <p class="c1"><span>There&rsquo;s a more compact way to write conditionals in JSX: the </span><span
+                class="c8">ternary operator</span><span class="c4">.</span></p>
+        <p class="c1"><span class="c4">The ternary operator works the same way in React as it does in regular
+                JavaScript.
+                However, it shows up in React surprisingly often.</span></p>
+        <p class="c1"><span>Recall how it works: you write x ? y : z, where x, y, and z are all JavaScript expressions.
+                When
+                your code is executed, x is evaluated as either &ldquo;truthy&rdquo; or &ldquo;falsy.&rdquo; If x is
+                truthy,
+                then the entire ternary operator returns y. If x is falsy, then the entire ternary operator returns
+                z.</span><span><a class="c6"
+                    href="https://www.google.com/url?q=http://stackoverflow.com/questions/6259982/how-to-use-the-ternary-operator-in-javascript&amp;sa=D&amp;source=editors&amp;ust=1663325376153822&amp;usg=AOvVaw1CkWPZXAZp9IG7bpHFoRoo">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=http://stackoverflow.com/questions/6259982/how-to-use-the-ternary-operator-in-javascript&amp;sa=D&amp;source=editors&amp;ust=1663325376154088&amp;usg=AOvVaw1B0uphGfh_RSaJE6aw6xMd">Here&rsquo;s</a></span><span
+                class="c4">&nbsp;a nice explanation if you need a refresher.</span></p>
+        <p class="c1"><span class="c4">Here&rsquo;s how you might use the ternary operator in a JSX expression:</span>
+        </p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 347.00px; height: 156.00px;"><img
+                    alt="" src="./resources/images/react1/image30.png"
+                    style="width: 347.00px; height: 156.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">In the above example, if age is greater than or equal to drinkingAge, then
+                headline
+                will equal &lt;h1&gt;Buy Drink&lt;/h1&gt;. Otherwise, headline will equal &lt;h1&gt;Do Teen
+                Stuff&lt;/h1&gt;.</span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h3 id="4j"><span class="c0">JSX Conditionals: &amp;&amp;</span></h3>
+        <p class="c1"><span class="c4">We&rsquo;re going to cover one final way of writing conditionals in React: the
+                &amp;&amp; operator.</span></p>
+        <p class="c1"><span class="c4">Like the ternary operator, &amp;&amp; is not React-specific, but it shows up in
+                React
+                surprisingly often.</span></p>
+        <p class="c1"><span>In the last two lessons, you wrote statements that would sometimes render a kitty and other
+                times render a doggy. &amp;&amp; would </span><span class="c8">not</span><span class="c4">&nbsp;have
+                been
+                the best choice for those lessons.</span></p>
+        <p class="c1"><span>&amp;&amp; works best in conditionals that will sometimes do an action, but other times do
+            </span><span class="c8">nothing at all</span><span class="c4">.</span></p>
+        <p class="c1"><span class="c4">Here&rsquo;s an example:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 329.00px; height: 248.00px;"><img
+                    alt="" src="./resources/images/react1/image21.png"
+                    style="width: 329.00px; height: 248.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">If the expression on the left of the &amp;&amp; evaluates as true, then the JSX
+                on
+                the right of the &amp;&amp; will be rendered. If the first expression is false, however, then the JSX to
+                the
+                right of the &amp;&amp; will be ignored and not rendered.</span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h3 id="4k"><span class="c0">.map in JSX</span></h3>
+        <p class="c1"><span class="c4">The array method .map() comes up often in React. It&rsquo;s good to get in the
+                habit
+                of using it alongside JSX.</span></p>
+        <p class="c1"><span class="c4">If you want to create a list of JSX elements, then .map() is often your best bet.
+                It
+                can look odd at first:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 361.00px; height: 176.00px;"><img
+                    alt="" src="./resources/images/react1/image51.png"
+                    style="width: 361.00px; height: 176.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">In the above example, we start out with an array of strings. We call .map() on
+                this
+                array of strings, and the .map() call returns a new array of &lt;li&gt;s.</span></p>
+        <p class="c1"><span>On the last line of the example, note that {listItems} will evaluate to an array, because
+                it&rsquo;s the returned value of .map()! JSX &lt;li&gt;s don&rsquo;t have to be in an array like this,
+                but
+                they </span><span class="c8">can</span><span class="c4">&nbsp;be.</span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 312.00px; height: 407.00px;"><img
+                    alt="" src="./resources/images/react1/image17.png"
+                    style="width: 312.00px; height: 407.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h3 id="4l"><span class="c0">Keys</span></h3>
+        <p class="c1"><span class="c4">When you make a list in JSX, sometimes your list will need to include something
+                called keys:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 309.00px; height: 136.00px;"><img
+                    alt="" src="./resources/images/react1/image5.png"
+                    style="width: 309.00px; height: 136.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span>A key is a JSX attribute. The attribute&rsquo;s </span><span
+                class="c8">name</span><span>&nbsp;is key. The attribute&rsquo;s </span><span
+                class="c8">value</span><span class="c4">&nbsp;should be something unique, similar to an id
+                attribute.</span></p>
+        <p class="c1"><span class="c4">keys don&rsquo;t do anything that you can see! React uses them internally to keep
+                track of lists. If you don&rsquo;t use keys when you&rsquo;re supposed to, React might accidentally
+                scramble
+                your list-items into the wrong order.</span></p>
+        <p class="c1"><span class="c4">Not all lists need to have keys. A list needs keys if either of the following are
+                true:</span></p>
+        <ol class="c17 lst-kix_8ubiqyn3ug33-0 start" start="1">
+            <li class="c1 c16 li-bullet-0"><span>The list-items have </span><span class="c8">memory</span><span
+                    class="c4">&nbsp;from one render to the next. For instance, when a to-do list renders, each item
+                    must
+                    &ldquo;remember&rdquo; whether it was checked off. The items shouldn&rsquo;t get amnesia when they
+                    render.<br></span></li>
+            <li class="c1 c16 li-bullet-0"><span class="c4">A list&rsquo;s order might be shuffled. For instance, a list
+                    of
+                    search results might be shuffled from one render to the next.<br></span></li>
+        </ol>
+        <p class="c1"><span class="c4">If neither of these conditions are true, then you don&rsquo;t have to worry about
+                keys. If you aren&rsquo;t sure then it never hurts to use them!</span></p>
+        <h3 id="4m"><span class="c0">React.createElement</span></h3>
+        <p class="c1"><span class="c4">You can write React code without using JSX at all!</span></p>
+        <p class="c1"><span class="c4">The majority of React programmers do use JSX, and we will use it for the
+                remainder of
+                this tutorial, but you should understand that it is possible to write React code without it.</span></p>
+        <p class="c1"><span class="c4">The following JSX expression:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 299.00px; height: 53.00px;"><img
+                    alt="" src="./resources/images/react1/image8.png"
+                    style="width: 299.00px; height: 53.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">can be rewritten without JSX, like this:</span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 291.00px; height: 138.00px;"><img
+                    alt="" src="./resources/images/react1/image55.png"
+                    style="width: 291.00px; height: 138.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span>When a JSX element is compiled, the compiler </span><span class="c8">transforms</span><span
+                class="c4">&nbsp;the JSX element into the method that you see above: React.createElement(). Every JSX
+                element is secretly a call to React.createElement().</span></p>
+        <p class="c1"><span>We won&rsquo;t go in-depth into how React.createElement() works, but you can start with
+                the</span><span><a class="c6"
+                    href="https://www.google.com/url?q=http://facebook.github.io/react/docs/top-level-api.html%23react.createelement&amp;sa=D&amp;source=editors&amp;ust=1663325376158184&amp;usg=AOvVaw0hSQ5C0AicUGzZ7GHgb-TX">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=http://facebook.github.io/react/docs/top-level-api.html%23react.createelement&amp;sa=D&amp;source=editors&amp;ust=1663325376158494&amp;usg=AOvVaw3VlSQL67mfCYbb4kg44-2q">documentation</a></span><span
+                class="c4">&nbsp;if you&rsquo;d like to learn more!</span></p>
+        <h2 id="5"><span class="c3">React Component</span></h2>
+        <h3 id="5a"><span class="c0">Your First React Component</span></h3>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <p class="c1"><span>React applications are made out of </span><span class="c14 c8">components.</span></p>
+        <p class="c1"><span class="c4">What&rsquo;s a component?</span></p>
+        <p class="c1"><span class="c4">A component is a small, reusable chunk of code that is responsible for one job.
+                That
+                job is often to render some HTML.</span></p>
+        <p class="c1"><span class="c4">Take a look at the code below. This code will create and render a new React
+                component:</span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 322.00px; height: 325.00px;"><img
+                    alt="" src="./resources/images/react1/image45.png"
+                    style="width: 322.00px; height: 325.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">A lot of that code is probably unfamiliar. However, you can recognize some JSX in
+                there, as well as ReactDOM.render().</span></p>
+        <p class="c1"><span class="c4">We are going to unpack that code, one small piece at a time. By the end of this
+                lesson, you&rsquo;ll understand how to build a React component!</span></p>
+        <p class="c1 c10"><span class="c11">A note from the Curriculum Developers</span><span>: In this course, we teach
+                both</span><span><a class="c6"
+                    href="https://www.google.com/url?q=https://reactjs.org/docs/components-and-props.html%23function-and-class-components&amp;sa=D&amp;source=editors&amp;ust=1663325376159815&amp;usg=AOvVaw0HFZtUbyAh_7X4W75kuzug">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://reactjs.org/docs/components-and-props.html%23function-and-class-components&amp;sa=D&amp;source=editors&amp;ust=1663325376160078&amp;usg=AOvVaw1AXqPhGDEu5rZ0H8VWK-ra">class
+                    components and function components</a></span><span class="c4">. We start with class components
+                because
+                they are still widely used in legacy code, are common in tutorials/documentation found online, and are
+                required for a few specific use-cases. In the module on Hooks, we introduce function components which
+                are
+                the recommended way of creating React components. From that point on, we use function components
+                throughout
+                the remainder of our React content.</span></p>
+        <h3 id="5b"><span class="c0">Import React</span></h3>
+        <p class="c1"><span class="c4">Wooo! Your first React component!</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 241.00px; height: 50.00px;"><img
+                    alt="" src="./resources/images/react1/image48.png"
+                    style="width: 241.00px; height: 50.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <p class="c1"><span class="c4">This creates an object named React which contains methods necessary to use the
+                React
+                library.</span></p>
+        <p class="c1"><span class="c4">Later, we&rsquo;ll go over where the React library is imported from, and how the
+                importing process works. For now, just know that this is how we import the React library.</span></p>
+        <p class="c1"><span>You&rsquo;ve already seen one of the methods contained in the React library:
+                React.createElement(). Recall that when a JSX element is </span><span class="c8">compiled</span><span
+                class="c4">, it transforms into a React.createElement() call.</span></p>
+        <p class="c1"><span>For this reason, you </span><span class="c8">have to</span><span class="c4">&nbsp;import the
+                React library, and save it in a variable named React, before you can use any JSX at all.
+                React.createElement() must be available in order for JSX to work.</span></p>
+        <h3 id="5c"><span class="c0">Import ReactDOM</span></h3>
+        <p class="c1"><span class="c4">In order to create our first component, we next imported the ReactDOM:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 306.00px; height: 51.00px;"><img
+                    alt="" src="./resources/images/react1/image16.png"
+                    style="width: 306.00px; height: 51.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <p class="c1"><span class="c4">Both import JavaScript objects. In both lines, the imported object contains
+                React-related methods.</span></p>
+        <p class="c1"><span class="c4">However, there is a difference!</span></p>
+        <p class="c1"><span class="c4">The methods imported from &#39;react-dom&#39; are meant for interacting with the
+                DOM.
+                You are already familiar with one of them: ReactDOM.render().</span></p>
+        <p class="c1"><span class="c4">The methods imported from &#39;react&#39; don&rsquo;t deal with the DOM at all.
+                They
+                don&rsquo;t engage directly with anything that isn&rsquo;t part of React.</span></p>
+        <p class="c1"><span>To clarify: the DOM is </span><span class="c8">used</span><span>&nbsp;in React applications,
+                but
+                it isn&rsquo;t </span><span class="c8">part</span><span class="c4">&nbsp;of React. After all, the DOM is
+                also used in countless non-React applications. Methods imported from &#39;react&#39; are only for pure
+                React
+                purposes, such as creating components or writing JSX elements.</span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h3 id="5d"><span class="c0">Create a Component Class</span></h3>
+        <p class="c1"><span>You&rsquo;ve learned that a </span><span class="c8">React component</span><span
+                class="c4">&nbsp;is a small, reusable chunk of code that is responsible for one job, which often
+                involves
+                rendering HTML.</span></p>
+        <p class="c1"><span>Here&rsquo;s another fact about components: we can use a JavaScript class to define a new
+                React
+                component. We can also define components with JavaScript functions, but we&rsquo;ll focus on
+            </span><span class="c8">class components</span><span class="c4">&nbsp;first.</span></p>
+        <p class="c1"><span class="c4">All class components will have some methods and properties in common (more on
+                this
+                later). Rather than rewriting those same properties over and over again every time, we extend the
+                Component
+                class from the React library. This way, we can use code that we import from the React library, without
+                having to write it over and over again ourselves.</span></p>
+        <p class="c1"><span>After we </span><span class="c8">define</span><span>&nbsp;our class component, we can use it
+                to
+            </span><span class="c8">render</span><span class="c4">&nbsp;as many instances of that component as we
+                want.</span></p>
+        <p class="c1"><span>What </span><span class="c8">is</span><span class="c4">&nbsp;React.Component, and how do you
+                use
+                it to make a component class?</span></p>
+        <p class="c1"><span>React.Component is a JavaScript </span><span class="c8">class</span><span>. To create your
+                own
+                component class, you must </span><span class="c8">subclass</span><span class="c4">&nbsp;React.Component.
+                You
+                can do this by using the syntax class YourComponentNameGoesHere extends React.Component {}.</span></p>
+        <p class="c1"><span>JavaScript classes and subclassing are a complex topic beyond the scope of this course. If
+                you
+                aren&rsquo;t comfortable with them, here are some good resources to consult:</span><span><a class="c6"
+                    href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes&amp;sa=D&amp;source=editors&amp;ust=1663325376163097&amp;usg=AOvVaw0-Pr3V989JhKMtnEo1Gx1H">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes&amp;sa=D&amp;source=editors&amp;ust=1663325376163369&amp;usg=AOvVaw3IONTVewVPF4HvXLZVHEyO">1</a></span><span><a
+                    class="c6"
+                    href="https://www.google.com/url?q=https://hacks.mozilla.org/2015/07/es6-in-depth-classes/&amp;sa=D&amp;source=editors&amp;ust=1663325376163563&amp;usg=AOvVaw1LetU7AfEwotAm-PsGxdCM">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://hacks.mozilla.org/2015/07/es6-in-depth-classes/&amp;sa=D&amp;source=editors&amp;ust=1663325376163774&amp;usg=AOvVaw0fEOa4f9E8ObAVT7VYFuYl">2</a></span><span><a
+                    class="c6"
+                    href="https://www.google.com/url?q=https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/&amp;sa=D&amp;source=editors&amp;ust=1663325376163986&amp;usg=AOvVaw0ICM4dpKDuYMJ85c_RHFWm">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/&amp;sa=D&amp;source=editors&amp;ust=1663325376164181&amp;usg=AOvVaw2jd83LmRMWJBAftAHYoKUB">3</a></span><span><a
+                    class="c6"
+                    href="https://www.google.com/url?q=http://exploringjs.com/es6/ch_classes.html&amp;sa=D&amp;source=editors&amp;ust=1663325376164357&amp;usg=AOvVaw3G3fDh7cvJc0ok6AuVvLKb">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=http://exploringjs.com/es6/ch_classes.html&amp;sa=D&amp;source=editors&amp;ust=1663325376164534&amp;usg=AOvVaw0imm6rTzMnjpw5cvaXLyhN">4</a></span><span
+                class="c4">.</span></p>
+        <p class="c1"><span class="c4">Take another look at the code from the first exercise:</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 321.00px; height: 326.00px;"><img
+                    alt="" src="./resources/images/react1/image23.png"
+                    style="width: 321.00px; height: 326.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <p class="c1"><span class="c4">A lot of it is still unfamiliar, but you can understand more than you could
+                before!</span></p>
+        <p class="c1"><span>On line 4, you know that you are declaring a new </span><span class="c8">component
+                class</span><span class="c4">, which is like a factory for building React components. You know that
+                React.Component is a class, which you must subclass in order to create a component class of your own.
+                You
+                also know that React.Component is a property on the object which was returned by import React from
+                &#39;react&#39; on line 1.</span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <h3 id="5e"><span class="c0">Name a Component Class</span></h3>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 300.00px; height: 159.00px;"><img
+                    alt="" src="./resources/images/react1/image4.png"
+                    style="width: 300.00px; height: 159.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">Component class variable names must begin with capital letters!</span></p>
+        <p class="c1"><span>This adheres to JavaScript&rsquo;s class syntax. This naming convention is also seen in
+                other
+                languages that write</span><span><a class="c6"
+                    href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Naming_convention_(programming)%23Java&amp;sa=D&amp;source=editors&amp;ust=1663325376165623&amp;usg=AOvVaw16qC4haajXQt5PlG87xz0-">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Naming_convention_(programming)%23Java&amp;sa=D&amp;source=editors&amp;ust=1663325376165855&amp;usg=AOvVaw0OhCeZz5zFqgi8CwgE0WG_">class
+                    names in UpperCamelCase, like Java</a></span><span class="c4">.</span></p>
+        <p class="c1"><span class="c4">In addition, there is a React-specific reason why component class names must
+                always
+                be capitalized. We&rsquo;ll get to that soon!</span></p>
+        <h3 id="5f"><span class="c0">Component Class Instructions</span></h3>
+        <p class="c1"><span>Let&rsquo;s review what you&rsquo;ve learned so far! Find each of these points in
+            </span><span class="c13 c11">app.js:</span></p>
+        <ul class="c17 lst-kix_o95b8giqfi1f-0 start">
+            <li class="c1 c16 li-bullet-0"><span class="c4">On line 1, import React from &#39;react&#39; creates a
+                    JavaScript object. This object contains properties that are needed to make React work, such as
+                    React.createElement() and React.Component.<br></span></li>
+            <li class="c1 c16 li-bullet-0"><span class="c4">On line 2, import ReactDOM from &#39;react-dom&#39; creates
+                    another JavaScript object. This object contains methods that help React interact with the DOM, such
+                    as
+                    ReactDOM.render().<br></span></li>
+            <li class="c1 c16 li-bullet-0"><span>On line 4, by subclassing React.Component, you create a new
+                </span><span class="c8">component class</span><span class="c4">. This is not a component! A component
+                    class is more
+                    like a factory that produces components. When you start making components, each one will come from a
+                    component class.<br></span></li>
+            <li class="c1 c16 li-bullet-0"><span class="c4">Whenever you create a component class, you need to give that
+                    component class a name. That name should be written in UpperCamelCase. In this case, your chosen
+                    name is
+                    MyComponentClass.<br></span></li>
+        </ul>
+        <p class="c1"><span>Something that we </span><span class="c8">haven&rsquo;t</span><span>&nbsp;talked about yet
+                is
+                the </span><span class="c8">body</span><span class="c4">&nbsp;of your component class: the pair of curly
+                braces after React.Component, and all of the code between those curly braces.</span></p>
+        <p class="c1"><span class="c4">Like all JavaScript classes, this one needs a body. The body will act as a set of
+                instructions, explaining to your component class how it should build a React component.</span></p>
+        <p class="c1"><span>Here&rsquo;s what your class body would look like on its own, without the rest of the class
+                declaration syntax. Find it in </span><span class="c11">app.js</span><span class="c4">:</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 302.00px; height: 143.00px;"><img
+                    alt="" src="./resources/images/react1/image63.png"
+                    style="width: 302.00px; height: 143.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">That doesn&rsquo;t look like a set of instructions explaining how to build a
+                React
+                component! Yet that&rsquo;s exactly what it is.</span></p>
+        <h3 id="5g"><span class="c0">The Render Function</span></h3>
+        <p class="c1"><span class="c4">A component class is like a factory that builds components. It builds these
+                components by consulting a set of instructions, which you must provide. Let&rsquo;s talk about these
+                instructions!</span></p>
+        <p class="c1"><span class="c4">For starters, these instructions should take the form of a class declaration
+                body.
+                That means that they will be delimited by curly braces, like this:</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 343.00px; height: 135.00px;"><img
+                    alt="" src="./resources/images/react1/image43.png"
+                    style="width: 343.00px; height: 135.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span>The instructions should be written in typical JavaScript</span><span><a class="c6"
+                    href="https://www.google.com/url?q=http://exploringjs.com/es6/ch_classes.html&amp;sa=D&amp;source=editors&amp;ust=1663325376167623&amp;usg=AOvVaw2O_OMVHcaLwDMzYh4_wkKc">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=http://exploringjs.com/es6/ch_classes.html&amp;sa=D&amp;source=editors&amp;ust=1663325376167833&amp;usg=AOvVaw3SqrI_swt7R2Vvt8iaIUnF">ES2015
+                    class syntax</a></span><span class="c4">.</span></p>
+        <p class="c1"><span>There is only one property that you </span><span class="c8">have
+                to</span><span>&nbsp;include in
+                your instructions: a </span><span class="c14 c8">render method.</span></p>
+        <p class="c1"><span>A render method is a property whose </span><span class="c8">name</span><span>&nbsp;is
+                render,
+                and whose </span><span class="c8">value</span><span class="c4">&nbsp;is a function. The term
+                &ldquo;render
+                method&rdquo; can refer to the entire property, or to just the function part.</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 281.00px; height: 117.00px;"><img
+                    alt="" src="./resources/images/react1/image36.png"
+                    style="width: 281.00px; height: 117.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">A render method must contain a return statement. Usually, this return statement
+                returns a JSX expression:</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 299.00px; height: 160.00px;"><img
+                    alt="" src="./resources/images/react1/image28.png"
+                    style="width: 299.00px; height: 160.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span>Of course, none of this explains the </span><span class="c8">point</span><span
+                class="c4">&nbsp;of a render method. All you know so far is that its name is render, it needs a return
+                statement for some reason, and you have to include it in the body of your component class declaration.
+                We&rsquo;ll get to the &lsquo;why&rsquo; of it soon!</span></p>
+        <h3 id="5h"><span class="c0">Create a Component Instance</span></h3>
+        <p class="c1"><span>MyComponentClass is now a working </span><span class="c8">component class!</span><span
+                class="c4">&nbsp;It&rsquo;s ready to follow its instructions and make some React components.</span></p>
+        <p class="c1"><span class="c4">So, let&rsquo;s make a React component! It only takes one more line:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 204.00px; height: 52.00px;"><img
+                    alt="" src="./resources/images/react1/image49.png"
+                    style="width: 204.00px; height: 52.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span>To make a React component, you write a </span><span class="c8">JSX
+                element.</span><span>&nbsp;Instead of naming your JSX element something like h1 or div like you&rsquo;ve
+                done before, give it the same name as a </span><span class="c8">component class</span><span>.
+                Voil&agrave;,
+                there&rsquo;s your </span><span class="c14 c8">component instance!</span></p>
+        <p class="c1"><span>JSX elements can be either HTML-like, or </span><span class="c8">component
+                instances</span><span>. JSX uses capitalization to distinguish between the two! </span><span
+                class="c8">That</span><span class="c4">&nbsp;is the React-specific reason why component class names must
+                begin with capital letters. In a JSX element, that capitalized first letter says, &ldquo;I will be a
+                component instance and not an HTML tag.&rdquo;</span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h3 id="5i"><span class="c0">Render A Component</span></h3>
+        <p class="c1"><span class="c4">You have learned that a component class needs a set of instructions, which tell
+                the
+                component class how to build components. When you make a new component class, these instructions are the
+                body of your class declaration:</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 356.00px; height: 242.00px;"><img
+                    alt="" src="./resources/images/react1/image20.png"
+                    style="width: 356.00px; height: 242.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">This class declaration results in a new component class, in this case named
+                MyComponentClass. MyComponentClass has one method, named render. This all happens via standard
+                JavaScript
+                class syntax.</span></p>
+        <p class="c1"><span>You </span><span class="c8">haven&rsquo;t</span><span class="c4">&nbsp;learned how these
+                instructions actually work to make components! When you make a component by using the expression
+                &lt;MyComponentClass /&gt;, what do these instructions do?</span></p>
+        <p class="c1"><span>Whenever you make a component, that component </span><span class="c8">inherits</span><span
+                class="c4">&nbsp;all of the methods of its component class. MyComponentClass has one method:
+                MyComponentClass.render(). Therefore, &lt;MyComponentClass /&gt; also has a method named render.</span>
+        </p>
+        <p class="c1"><span class="c4">You could make a million different &lt;MyComponentClass /&gt; instances, and each
+                one
+                would inherit this same exact render method.</span></p>
+        <p class="c1"><span>This lesson&rsquo;s final exercise is to </span><span
+                class="c8">render</span><span>&nbsp;your
+                component. In order to render a component, that component needs to have a method named render. Your
+                component has this! It </span><span class="c8">inherited</span><span class="c4">&nbsp;a method named
+                render
+                from MyComponentClass.</span></p>
+        <p class="c1"><span class="c4">Since your component has a render method, all that&rsquo;s left to do is call it.
+                This happens in a slightly unusual way.</span></p>
+        <p class="c1"><span class="c4">To call a component&rsquo;s render method, you pass that component to
+                ReactDOM.render(). Notice your component, being passed as ReactDOM.render()&lsquo;s first
+                argument:</span>
+        </p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 296.00px; height: 116.00px;"><img
+                    alt="" src="./resources/images/react1/image29.png"
+                    style="width: 296.00px; height: 116.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span>ReactDOM.render() will tell &lt;MyComponentClass /&gt; to call </span><span
+                class="c8">its</span><span class="c4">&nbsp;render method.</span></p>
+        <p class="c1"><span class="c4">&lt;MyComponentClass /&gt; will call its render method, which will return the JSX
+                element &lt;h1&gt;Hello world&lt;/h1&gt;. ReactDOM.render() will then take that resulting JSX element,
+                and
+                add it to the virtual DOM. This will make &ldquo;Hello world&rdquo; appear on the screen.</span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <h2 id="6"><span class="c3">Advanced Component</span></h2>
+        <h3 id="6a"><span class="c0">Use Multiline JSX in a Component</span></h3>
+        <p class="c1"><span class="c4">In this lesson, you will learn some common ways that JSX and React components
+                work
+                together. You&rsquo;ll get more comfortable with both JSX and components, while picking up some new
+                tricks.</span></p>
+        <p class="c1"><span class="c4">Take a look at this HTML:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 387.00px; height: 330.00px;"><img
+                    alt="" src="./resources/images/react1/image53.png"
+                    style="width: 387.00px; height: 330.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <p class="c1"><span class="c4">How might you make a React component that renders this HTML?</span></p>
+        <p class="c1"><span>Select </span><span class="c11">QuoteMaker.js</span><span class="c4">&nbsp;to see one way of
+                doing it.</span></p>
+        <p class="c1"><span class="c4">The key thing to notice in QuoteMaker is the parentheses in the return statement,
+                on
+                lines 6 and 18. Until now, your render function return statements have looked like this, without any
+                parentheses:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 276.00px; height: 53.00px;"><img
+                    alt="" src="./resources/images/react1/image2.png"
+                    style="width: 276.00px; height: 53.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">However, a multi-line JSX expression should always be wrapped in parentheses!
+                That is
+                why QuoteMaker&lsquo;s return statement has parentheses around it.</span></p>
+        <h3 id="6b"><span class="c0">Use a Variable Attribute in a Component</span></h3>
+        <p class="c1"><span class="c4">Take a look at this JavaScript object named redPanda:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 325.00px; height: 187.00px;"><img
+                    alt="" src="./resources/images/react1/image42.png"
+                    style="width: 325.00px; height: 187.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">How could you render a React component, and get a picture with redPanda&lsquo;s
+                properties?</span></p>
+        <p class="c1"><span>Select </span><span class="c11">RedPanda.js</span><span class="c4">&nbsp;to see one way to
+                do
+                it.</span></p>
+        <p class="c1"><span class="c4">Note all of the curly-brace JavaScript injections inside of the render function!
+                Lines 16, 17, and 18 all use JavaScript injections.</span></p>
+        <p class="c1"><span class="c4">You can, and often will, inject JavaScript into JSX inside of a render
+                function.</span></p>
+        <h3 id="6c"><span class="c0">Put Logic in a Render Function</span></h3>
+        <p class="c1"><span>A render() function must have a return statement. However, that isn&rsquo;t </span><span
+                class="c8">all</span><span class="c4">&nbsp;that it can have.</span></p>
+        <p class="c1"><span class="c4">A render() function can also be a fine place to put simple calculations that need
+                to
+                happen right before a component renders. Here&rsquo;s an example of some calculations inside of a render
+                function:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 355.00px; height: 282.00px;"><img
+                    alt="" src="./resources/images/react1/image19.png"
+                    style="width: 355.00px; height: 282.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">Watch out for this common mistake:</span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 358.00px; height: 245.00px;"><img
+                    alt="" src="./resources/images/react1/image56.png"
+                    style="width: 358.00px; height: 245.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <p class="c1"><span class="c4">In the above example, the line with the const n declaration will cause a syntax
+                error, as it should not be part of the class declaration itself, but should occur in a method like
+                render().</span></p>
+        <h3 id="6d"><span class="c0">Use a Conditional in a Render Function</span></h3>
+        <p class="c1"><span>How might you use a </span><span class="c8">conditional</span><span
+                class="c4">&nbsp;statement
+                inside of a render() function?</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 351.00px; height: 393.00px;"><img
+                    alt="" src="./resources/images/react1/image9.png"
+                    style="width: 351.00px; height: 393.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <p class="c1"><span>Notice that the if statement is located </span><span class="c8">inside</span><span>&nbsp;of
+                the
+                render function, but </span><span class="c8">before</span><span class="c4">&nbsp;the return statement.
+                This
+                is pretty much the only way that you will ever see an if statement used in a render function.</span></p>
+        <h3 id="6e"><span class="c0">Use this in a Component</span></h3>
+        <p class="c1"><span class="c4">The word this gets used in React a lot!</span></p>
+        <p class="c1"><span class="c4">You are especially likely to see this inside of the body of a component class
+                declaration. Here&rsquo;s an example:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 359.00px; height: 241.00px;"><img
+                    alt="" src="./resources/images/react1/image35.png"
+                    style="width: 359.00px; height: 241.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">In the code, what does this mean?</span></p>
+        <p class="c1"><span class="c4">The simple answer is that this refers to an instance of IceCreamGuy. The less
+                simple
+                answer is that this refers to the object on which this&lsquo;s enclosing method, in this case .render(),
+                is
+                called. It is almost inevitable that this object will be an instance of IceCreamGuy, but technically it
+                could be something else.</span></p>
+        <p class="c1"><span class="c4">Let&rsquo;s assume that this refers to an instance of your component class, as
+                will
+                be the case in all examples in this course. IceCreamGuy has two methods: .food and .render(). Since this
+                will evaluate to an instance of IceCreamGuy, this.food will evaluate to a call of IceCreamGuy&lsquo;s
+                .food
+                method. This method will, in turn, evaluate to the string &ldquo;ice cream.&rdquo;</span></p>
+        <p class="c1"><span class="c4">Why don&rsquo;t you need parentheses after this.food? Shouldn&rsquo;t it be
+                this.food()?</span></p>
+        <p class="c1"><span>You don&rsquo;t need those parentheses because .food is a </span><span
+                class="c8">getter</span><span class="c4">&nbsp;method. You can tell this from the get in the above class
+                declaration body.</span></p>
+        <p class="c1"><span class="c4">There&rsquo;s nothing React-specific about getter methods, nor about this
+                behaving in
+                this way! However, in React you will see this used in this way almost constantly.</span></p>
+        <p class="c1"><span>this in JavaScript can be a difficult concept! Here is a good resource for</span><span><a
+                    class="c6"
+                    href="https://www.google.com/url?q=https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/&amp;sa=D&amp;source=editors&amp;ust=1663325376175023&amp;usg=AOvVaw1B6VCz6fZA_pwDn9y8IdwU">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/&amp;sa=D&amp;source=editors&amp;ust=1663325376175307&amp;usg=AOvVaw3j_A45bjKf37N3K2Uj2Vra">understanding
+                    this in JavaScript</a></span><span class="c4">.</span></p>
+        <h3 id="6f"><span class="c0">Use an Event Listener in a Component</span></h3>
+        <p class="c1"><span class="c4">Render functions often contain event listeners. Here&rsquo;s an example of an
+                event
+                listener in a render function:</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 240.00px; height: 153.00px;"><img
+                    alt="" src="./resources/images/react1/image62.png"
+                    style="width: 240.00px; height: 153.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span>Recall that an event </span><span class="c8">handler</span><span class="c4">&nbsp;is a
+                function
+                that gets called in response to an event. In the above example, the event handler is myFunc().</span>
+        </p>
+        <p class="c1"><span>In React, you define event handlers as </span><span class="c8">methods</span><span
+                class="c4">&nbsp;on a component class. Like this:</span></p>
+        <p class="c7"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 351.00px; height: 282.00px;"><img
+                    alt="" src="./resources/images/react1/image12.png"
+                    style="width: 351.00px; height: 282.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span>Notice that the component class has two methods: .myFunc() and .render(). .myFunc() is being
+                used as an </span><span class="c8">event handler</span><span class="c4">. .myFunc() will be called any
+                time
+                that a user hovers over the rendered &lt;div&gt;&lt;/div&gt;.</span></p>
+        <h3 id="6g"><span class="c0">Components Recap</span></h3>
+        <p class="c1"><span class="c4">Congratulations! You have finished the unit on React components.</span></p>
+        <p class="c1"><span class="c4">React components are complicated. Their syntax is complicated, and the reasoning
+                behind their syntax is especially complicated.</span></p>
+        <p class="c1"><span class="c4">You have learned a lot about both their syntax and their reasoning. You have
+                learned
+                about component classes and component instances. You have learned about React.Component, and about the
+                instructions that you must provide to a component class. You have learned how to import, and how to
+                render a
+                component instance.</span></p>
+        <p class="c1"><span class="c4">You have been introduced to some common ways of using JSX in React components.
+                You
+                have rendered components using multiline JSX expressions, logic inside of the render function, a
+                conditional
+                statement, this, and an event listener.</span></p>
+        <p class="c1"><span class="c4">You have spent a lot of time studying React components in isolation! Now,
+                it&rsquo;s
+                time to start learning how components fit into with the world around them.</span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <p class="c1 c2"><span class="c4"></span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h2 id="7"><span class="c3">Creating a React App</span></h2>
+        <p class="c1"><span class="c4">Use create-react-app to bootstrap a React application on your own computer</span>
+        </p>
+        <h3 id="7a"><span class="c0">Introduction</span></h3>
+        <p class="c1"><span class="c8">React</span><span>&nbsp;is a user interface framework developed by Facebook. It
+                has a
+                quickly growing developer adoption rate and was ranked as the most loved web framework in
+                the</span><span><a class="c6"
+                    href="https://www.google.com/url?q=https://insights.stackoverflow.com/survey/2019%23most-loved-dreaded-and-wanted&amp;sa=D&amp;source=editors&amp;ust=1663325376177300&amp;usg=AOvVaw3Kbm9-jsEsdkXAzYH9Z6cW">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://insights.stackoverflow.com/survey/2019%23most-loved-dreaded-and-wanted&amp;sa=D&amp;source=editors&amp;ust=1663325376177538&amp;usg=AOvVaw1Fe8vl7LG3g1lR_MtaNo2K">2019
+                    Stack Overflow developer survey</a></span><span class="c4">. This article will walk you through
+                setting
+                up your first React app and assumes you are familiar with text editors and command line
+                navigation.</span>
+        </p>
+        <h3 id="7b"><span class="c0">Getting Ready</span></h3>
+        <p class="c1"><span>We will be using the </span><span class="c8">Node package manager (npm)</span><span>, so you
+                will need to have </span><span class="c8">Node</span><span class="c4">&nbsp;installed on your computer.
+                To
+                check if you have Node installed, run this command in your terminal:</span></p>
+        <p class="c7"><span class="c4">node -v</span></p>
+        <p class="c1"><span class="c4">If you have Node installed, this command will return a version number, like
+                v12.18.1.</span></p>
+        <p class="c1"><span>If it&rsquo;s not already installed, follow the steps in</span><span><a class="c6"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/content-items/c4fe3060dbc61fc82d810c4ea06c29a8&amp;sa=D&amp;source=editors&amp;ust=1663325376178275&amp;usg=AOvVaw3ytKXVSn41MbsI-3boUSkZ">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/content-items/c4fe3060dbc61fc82d810c4ea06c29a8&amp;sa=D&amp;source=editors&amp;ust=1663325376178496&amp;usg=AOvVaw19nmkT8m4br4nhKkUHnn5U">Setting
+                    Up Node Locally</a></span><span class="c4">&nbsp;before moving on.</span></p>
+        <p class="c1"><span class="c4">When you install Node, you automatically get npm installed on your computer as
+                well.
+                However, npm is a separate project from Node.js, and tends to update more frequently. As a result, even
+                if
+                you&rsquo;ve just installed Node (and therefore npm), it&rsquo;s a good idea to update your npm.
+                Luckily,
+                npm knows how to update itself!</span></p>
+        <p class="c1"><span class="c4">To upgrade to the latest version of npm on *nix (OSX, Linux, etc.), you can run
+                this
+                command in your terminal:</span></p>
+        <p class="c7"><span class="c4">sudo npm install -g npm@latest</span></p>
+        <p class="c1"><span>To upgrade on Windows, follow the steps found</span><span><a class="c6"
+                    href="https://www.google.com/url?q=https://docs.npmjs.com/try-the-latest-stable-version-of-npm&amp;sa=D&amp;source=editors&amp;ust=1663325376179090&amp;usg=AOvVaw1qt80OVbcTRYr-D82sc1mf">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://docs.npmjs.com/try-the-latest-stable-version-of-npm&amp;sa=D&amp;source=editors&amp;ust=1663325376179296&amp;usg=AOvVaw3fhLRPMJKNIWimsNHnTOFP">in
+                    the npm documentation</a></span><span class="c4">.</span></p>
+        <h3 id="7c"><span class="c0">1. Setting Up the Boilerplate Application</span></h3>
+        <p class="c1"><span>It is possible to manually create a React app, but Facebook has created a Node
+                package</span><span><a class="c6"
+                    href="https://www.google.com/url?q=https://create-react-app.dev/&amp;sa=D&amp;source=editors&amp;ust=1663325376179681&amp;usg=AOvVaw3hkZzIhjnBUfSoj9Z2w4xf">&nbsp;</a></span><span
+                class="c5 c8"><a class="c6"
+                    href="https://www.google.com/url?q=https://create-react-app.dev/&amp;sa=D&amp;source=editors&amp;ust=1663325376179863&amp;usg=AOvVaw2jwVuBRbTH6ngGy4smKa89">create-react-app</a></span><span
+                class="c4">&nbsp;to generate a boilerplate version of a React application.</span></p>
+        <p class="c1"><span class="c4">Besides providing something that works out-of-the-box, this has the added benefit
+                of
+                providing a consistent structure for React apps that you will recognize as you move between React
+                projects.
+                It also provides an out-of-the-box build script and development server.</span></p>
+        <p class="c1"><span>We will use </span><span class="c8">npx</span><span class="c4">, a package runner tool that
+                comes with npm 5.2+ and higher, to install and run create-react-app. This will ensure that the latest
+                version of create-react-app is used.</span></p>
+        <p class="c1"><span class="c4">Open up your terminal.</span></p>
+        <ul class="c17 lst-kix_w8jrapr7yhnz-0 start">
+            <li class="c1 c16 li-bullet-0"><span class="c4">If you&rsquo;ve previously installed create-react-app
+                    globally
+                    via npm install -g create-react-app, it is recommended that you uninstall the package first. In your
+                    terminal run these commands:<br> npm uninstall -g create-react-app<br>npx create-react-app
+                    myfirstreactapp</span></li>
+            <li class="c1 c16 li-bullet-0"><span class="c4">If you&rsquo;ve never installed create-react-app before, you
+                    can
+                    simply run this command:<br>npx create-react-app myfirstreactapp</span></li>
+            <li class="c1 c16 li-bullet-0"><span>If you have </span><span class="c8">Yarn</span><span
+                    class="c4">&nbsp;installed, create-react-app will use it by default to create new projects. If you
+                    would
+                    prefer to use npm, you can append --use-npm to the creation command. It will look like this:<br>npx
+                    create-react-app myfirstreactapp --use-npm</span></li>
+        </ul>
+        <p class="c1"><span class="c4">(Feel free to replace myfirstreactapp with whatever name you want, as long as it
+                doesn&rsquo;t contain capital letters :-))</span></p>
+        <p class="c1"><span class="c4">Upon completion, you will get some quick tips on how to use the
+                application:</span>
+        </p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 297.33px;"><img
+                    alt="createReactAppCommands" src="./resources/images/react1/image26.png"
+                    style="width: 601.70px; height: 297.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">Before we run the app, let&rsquo;s take a look around the app structure and see
+                what
+                it contains.</span></p>
+        <h3 id="7d"><span class="c0">2. React App Structure</span></h3>
+        <p class="c1"><span class="c4">Change directories into the app you just created, and open the app in the text
+                editor
+                of your choice. You should see the following file structure:</span></p>
+        <p class="c7"><span class="c4">myfirstreactapp</span></p>
+        <p class="c7"><span class="c4">&#9500;&#9472;&#9472; node_modules</span></p>
+        <p class="c7"><span class="c4">&#9500;&#9472;&#9472; public</span></p>
+        <p class="c7"><span class="c4">&#9474; &nbsp; &#9500;&#9472;&#9472; favicon.ico</span></p>
+        <p class="c7"><span class="c4">&#9474; &nbsp; &#9500;&#9472;&#9472; index.html</span></p>
+        <p class="c7"><span class="c4">&#9474; &nbsp; &#9500;&#9472;&#9472; logo192.png</span></p>
+        <p class="c7"><span class="c4">&#9474; &nbsp; &#9500;&#9472;&#9472; logo512.png</span></p>
+        <p class="c7"><span class="c4">&#9474; &nbsp; &#9500;&#9472;&#9472; manifest.json</span></p>
+        <p class="c7"><span class="c4">&#9474; &nbsp; &#9492;&#9472;&#9472; robots.txt</span></p>
+        <p class="c7"><span class="c4">&#9500;&#9472;&#9472; src</span></p>
+        <p class="c7"><span class="c4">&#9474; &nbsp; &#9500;&#9472;&#9472; App.css</span></p>
+        <p class="c7"><span class="c4">&#9474; &nbsp; &#9500;&#9472;&#9472; App.js</span></p>
+        <p class="c7"><span class="c4">&#9474; &nbsp; &#9500;&#9472;&#9472; App.test.js</span></p>
+        <p class="c7"><span class="c4">&#9474; &nbsp; &#9500;&#9472;&#9472; index.css</span></p>
+        <p class="c7"><span class="c4">&#9474; &nbsp; &#9500;&#9472;&#9472; index.js</span></p>
+        <p class="c7"><span class="c4">&#9474; &nbsp; &#9500;&#9472;&#9472; logo.svg</span></p>
+        <p class="c7"><span class="c4">&#9474; &nbsp; &#9500;&#9472;&#9472; serviceWorker.js</span></p>
+        <p class="c7"><span class="c4">&#9474; &nbsp; &#9492;&#9472;&#9472; setupTests.js</span></p>
+        <p class="c7"><span class="c4">&#9500;&#9472;&#9472; .gititgnore</span></p>
+        <p class="c7"><span class="c4">&#9500;&#9472;&#9472; package.json</span></p>
+        <p class="c7"><span class="c4">&#9500;&#9472;&#9472; package-lock.json</span></p>
+        <p class="c7"><span class="c4">&#9492;&#9472;&#9472; README.md</span></p>
+        <p class="c1"><span>create-react-app has taken care of setting up the main structure of the application as well
+                as a
+                couple of developer settings. Most of what you see will not be visible to the visitor of your web app.
+                React
+                uses a tool called </span><span class="c8">webpack</span><span class="c4">&nbsp;which transforms the
+                directories and files here into static assets. Visitors to your site are served those static
+                assets.</span>
+        </p>
+        <p class="c1"><span>Don&rsquo;t worry if you don&rsquo;t understand too much about webpack for now. One of the
+                benefits of using create-react-app to set up our React application is that we&rsquo;re able to bypass
+                any
+                sort of manual configuration for webpack. If you&rsquo;re interested in delving deeper into it on your
+                own,
+                you can find a</span><span><a class="c6"
+                    href="https://www.google.com/url?q=https://webpack.js.org/concepts/&amp;sa=D&amp;source=editors&amp;ust=1663325376182821&amp;usg=AOvVaw1hXkAcQ8VI629nMWlIZHpH">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://webpack.js.org/concepts/&amp;sa=D&amp;source=editors&amp;ust=1663325376183052&amp;usg=AOvVaw0krQ7b7c3LzL30U4uxyDrH">high-level
+                    overview of webpack&rsquo;s core concepts here</a></span><span class="c4">.</span></p>
+        <p class="c1"><span class="c13 c11">.gitignore</span></p>
+        <p class="c1"><span>This is the standard file used by the source control tool git to determine which files and
+                directories to ignore when committing code. While this file exists, create-react-app did not create a
+                git
+                repo within this folder. If you take a look at the file, it has taken care of ignoring a number of items
+                (even </span><span class="c11">.DS_Store</span><span class="c4">&nbsp;for Mac users):</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 349.33px;"><img
+                    alt="createReactAppGitIgnore" src="./resources/images/react1/image27.png"
+                    style="width: 601.70px; height: 349.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c13 c11">package.json</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 641.33px;"><img
+                    alt="package_json" src="./resources/images/react1/image3.png"
+                    style="width: 601.70px; height: 641.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">This file outlines all the settings for the React app.</span></p>
+        <ul class="c17 lst-kix_gazm0r66qhmv-0 start">
+            <li class="c1 c16 li-bullet-0"><span class="c4">name is the name of your app</span></li>
+            <li class="c1 c16 li-bullet-0"><span class="c4">version is the current version</span></li>
+            <li class="c1 c16 li-bullet-0"><span class="c4">&quot;private&quot;: true is a failsafe setting to avoid
+                    accidentally publishing your app as a public package within the npm ecosystem.</span></li>
+            <li class="c1 c16 li-bullet-0"><span>dependencies contains all the required Node modules and versions
+                    required
+                    for the application. In the picture above, you&rsquo;ll see six dependencies. The first three, as
+                    you
+                    may have guessed, are for the purpose of testing. The next two dependencies allow us to use react
+                    and
+                    react-dom in our JavaScript. Finally, react-scripts provides a useful set of development scripts for
+                    working with React. In the screenshot above, the react version specified is ^16.13.1. This means
+                    that
+                    npm will install the most recent major version matching 16.x.x. In contrast, you may also see
+                    something
+                    like ~1.2.3 in </span><span class="c11">package.json</span><span class="c4">, which will only
+                    install
+                    the most recent minor version matching 1.2.x.</span></li>
+            <li class="c1 c16 li-bullet-0"><span class="c4">scripts specifies aliases that you can use to access some of
+                    the
+                    react-scripts commands in a more efficient manner. For example, running npm test in your command
+                    line
+                    will run react-scripts test --env=jsdom behind the scenes.</span></li>
+            <li class="c1 c16 li-bullet-0"><span>You will also see two more attributes, eslintConfig and browserslist.
+                    Both
+                    of these are Node modules having their own set of values. browserslist provides information about
+                    browser compatibility of the app, while eslintConfig takes care of the</span><span><a class="c6"
+                        href="https://www.google.com/url?q=https://stackoverflow.com/questions/8503559/what-is-linting&amp;sa=D&amp;source=editors&amp;ust=1663325376184324&amp;usg=AOvVaw3U6NLsUXyg4ExhBAOs8a8p">&nbsp;</a></span><span
+                    class="c5"><a class="c6"
+                        href="https://www.google.com/url?q=https://stackoverflow.com/questions/8503559/what-is-linting&amp;sa=D&amp;source=editors&amp;ust=1663325376184529&amp;usg=AOvVaw0eFHoh96fAotUbhLM3aUPl">code
+                        linting</a></span><span class="c4">.</span></li>
+        </ul>
+        <p class="c1"><span class="c13 c11">node_modules</span></p>
+        <p class="c1"><span>This directory contains dependencies and sub-dependencies of packages used by the current
+                React
+                app, as specified by </span><span class="c11">package.json</span><span class="c4">. If you take a look,
+                you
+                may be surprised by how many there are.</span></p>
+        <p class="c1"><span>Running ls -1 | wc -l within the </span><span
+                class="c11">node_modules/</span><span>&nbsp;directory will yield more than 800 subfolders. This folder
+                is
+                automatically added to the </span><span class="c11">.gitignore</span><span>&nbsp;for good reason!
+                Don&rsquo;t worry, even with all these dependencies, the basic app will only be around 50 KB after
+                being</span><span><a class="c6"
+                    href="https://www.google.com/url?q=https://techterms.com/definition/minification&amp;sa=D&amp;source=editors&amp;ust=1663325376185221&amp;usg=AOvVaw3k-ccMw-_jS1WkxPf39q9d">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://techterms.com/definition/minification&amp;sa=D&amp;source=editors&amp;ust=1663325376185418&amp;usg=AOvVaw0nAEhOepsY02QzMmGiRbU5">minified</a></span><span
+                class="c4">&nbsp;and compressed for production.</span></p>
+        <p class="c1"><span class="c13 c11">package-lock.json</span></p>
+        <p class="c1"><span>This file contains the exact dependency tree installed in </span><span
+                class="c11">node_modules/</span><span>. This provides a way for teams working on private apps to ensure
+                that
+                they have the same version of dependencies and sub-dependencies. It also contains a history of changes
+                to
+            </span><span class="c11">package.json</span><span class="c4">, so you can quickly look back at dependency
+                changes.</span></p>
+        <p class="c1"><span class="c11 c13">public</span></p>
+        <p class="c1"><span>This directory contains assets that will be served directly without additional processing by
+                webpack. </span><span class="c11">index.html</span><span>&nbsp;provides the entry point for the web app.
+                You
+                will also see a favicon (header icon) and a </span><span class="c11">manifest.json</span><span
+                class="c4">.</span></p>
+        <p class="c1"><span>The manifest file configures how your web app will behave if it is added to an Android
+                user&rsquo;s home screen (Android users can &ldquo;shortcut&rdquo; web apps and load them directly from
+                the
+                Android UI). You can read more about it</span><span><a class="c6"
+                    href="https://www.google.com/url?q=https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/&amp;sa=D&amp;source=editors&amp;ust=1663325376186271&amp;usg=AOvVaw3F2J-F_yJf81fz-3XuFaXU">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/&amp;sa=D&amp;source=editors&amp;ust=1663325376186502&amp;usg=AOvVaw3flC-cyBxflbT_Gt5LPVfH">here</a></span><span
+                class="c4">.</span></p>
+        <p class="c1"><span class="c13 c11">src</span></p>
+        <p class="c1"><span>This contains the JavaScript that will be processed by webpack and is the heart of the React
+                app. Browsing this folder, you see the main App JavaScript component (</span><span
+                class="c11">App.js</span><span>), its associated styles (</span><span class="c11">App.css</span><span>),
+                and
+                test suite (</span><span class="c11">App.test.js</span><span>). </span><span
+                class="c11">index.js</span><span>&nbsp;and its styles (</span><span class="c11">index.css</span><span>)
+                provide an entry into the App and also kick off the </span><span
+                class="c11">registerServiceWorker.js</span><span>. This service worker takes care of caching and
+                updating
+                files for the end-user. It allows for offline capability and faster page loads after the initial visit.
+                More
+                of this methodology is available</span><span><a class="c6"
+                    href="https://www.google.com/url?q=https://developers.google.com/web/fundamentals/primers/service-workers&amp;sa=D&amp;source=editors&amp;ust=1663325376187194&amp;usg=AOvVaw2dNtL3Y_YZl5wDKU8aIWc9">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://developers.google.com/web/fundamentals/primers/service-workers&amp;sa=D&amp;source=editors&amp;ust=1663325376187466&amp;usg=AOvVaw1Ga1ax3EhVRcvXw_3L4ioA">here</a></span><span
+                class="c4">.</span></p>
+        <p class="c1"><span>As your React app grows, it is common to add a </span><span
+                class="c11">components/</span><span>&nbsp;directory to organize components and component-related files
+                and a
+            </span><span class="c11">views/</span><span class="c4">&nbsp;directory to organize React views and
+                view-related
+                files.</span></p>
+        <h3 id="7e"><span class="c0">3. Starting the React App Development Server</span></h3>
+        <p class="c1"><span class="c4">As was stated in the success message when you ran create-react-app, you just need
+                to
+                run npm start in your app directory to begin serving the development server. It should auto-open a tab
+                in
+                your browser that points to http://localhost:3000/ (if not, manually visit that address). You will find
+                yourself looking at a page resembling the following image:</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 226.67px;"><img
+                    alt="default_react_app" src="./resources/images/react1/image47.png"
+                    style="width: 601.70px; height: 226.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">As stated, any changes to the source code will live-update here. Let&rsquo;s see
+                that
+                in action.</span></p>
+        <p class="c1"><span>Leave the current terminal tab running (it&rsquo;s busy serving the React app) and open
+            </span><span class="c11">src/App.js</span><span>&nbsp;in your favorite text editor. You&rsquo;ll see what
+                looks
+                like a mashup of JavaScript and HTML. This is </span><span class="c8">JSX</span><span class="c4">, which
+                is
+                how React adds XML syntax to JavaScript. It provides an intuitive way to build React components and is
+                compiled to JavaScript at runtime. We&rsquo;ll delve deeper into this in other content, but for now,
+                let&rsquo;s make a simple edit and see the update in the browser.</span></p>
+        <p class="c1"><span>Change the main paragraph text to read Hello Codecademy! in </span><span
+                class="c11">App.js</span><span class="c4">&nbsp;and save the file.</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 498.67px;"><img
+                    alt="react_setup" src="./resources/images/react1/image57.png"
+                    style="width: 601.70px; height: 498.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">If you left the terminal running, you should be able to switch over to your
+                browser
+                and see the update:</span></p>
+        <p class="c1"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 241.33px;"><img
+                    alt="edited_react_app" src="./resources/images/react1/image61.png"
+                    style="width: 601.70px; height: 241.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c1"><span class="c4">Congratulations! You&rsquo;re now up and running with React. You can now begin
+                adding
+                functionality for your application.</span></p>
+        <h3 id="7f"><span class="c0">Next Steps</span></h3>
+        <p class="c1"><span>If you&rsquo;d like to learn more about create-react-app, start with the</span><span><a
+                    class="c6"
+                    href="https://www.google.com/url?q=https://create-react-app.dev/docs/getting-started&amp;sa=D&amp;source=editors&amp;ust=1663325376189148&amp;usg=AOvVaw2xtN1iwVPQnbMVoyToeV4J">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://create-react-app.dev/docs/getting-started&amp;sa=D&amp;source=editors&amp;ust=1663325376189361&amp;usg=AOvVaw2vZQan5XEzaZtHrHirQHdp">documentation
+                    on the create-react-app website</a></span><span class="c4">.</span></p>
+        <p class="c1"><span>Since an important next step after creating a React App is to set up your environment to
+                debug
+                it, consider checking out our</span><span><a class="c6"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/paths/web-development/tracks/front-end-applications-with-react/modules/react-development-setup-and-ravenous-part-1/informationals/ready-react-developer-tools&amp;sa=D&amp;source=editors&amp;ust=1663325376189797&amp;usg=AOvVaw0Nl5jxkvGdcnzJhqnIxrFa">&nbsp;</a></span><span
+                class="c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/paths/web-development/tracks/front-end-applications-with-react/modules/react-development-setup-and-ravenous-part-1/informationals/ready-react-developer-tools&amp;sa=D&amp;source=editors&amp;ust=1663325376190116&amp;usg=AOvVaw3h780ah8D6LxALAm_VTgXP">React
+                    Developer Tools article</a></span><span class="c4">. There, we use the initial skeleton created with
+                create-react-app to get you ready to begin debugging React Apps.</span></p>
+        <p class="c7 c2"><span class="c4"></span></p>
+        <h3 id="7g"><span class="c0">Documentation: Create React App</span></h3>
+        <p class="c24"><span class="c18 c5"><a class="c6"
+                    href="https://www.google.com/url?q=https://create-react-app.dev/&amp;sa=D&amp;source=editors&amp;ust=1663325376190608&amp;usg=AOvVaw371J-uXAHZ4PYAUOQnPXMm">Create
+                    React App</a></span></p>
+        <p class="c1"><span class="c4">The provided link goes directly to the go-to documentation for Create React App.
+                This
+                is helpful if you would like further guidance in getting up and running using the Create React
+                App.</span>
+        </p>
+        <h2 id="8"><span class="c11 c19">Review: React, Part I</span></h2>
+        <p class="c1"><span class="c4">In this unit, you learned about React.</span></p>
+        <p class="c1"><span class="c4">Congratulations! The goal of this unit was to introduce you to the popular
+                JavaScript
+                library, React. React is a powerful tool to help you build better, scalable front-ends for your website
+                through the creation of components. You also reviewed ES6 and functional JavaScript concepts to further
+                help
+                in your understanding of React.</span></p>
+        <p class="c1"><span class="c4">Having completed this unit, you are now able to:</span></p>
+        <ul class="c17 lst-kix_zh0xa9b9yymp-0 start">
+            <li class="c1 c16 li-bullet-0"><span class="c4">Understand ES6+ and functional JavaScript programming
+                    concepts</span></li>
+            <li class="c1 c16 li-bullet-0"><span class="c4">Know what a Virtual DOM is and how it is used in
+                    React</span>
+            </li>
+            <li class="c1 c16 li-bullet-0"><span class="c4">Understand JSX</span></li>
+            <li class="c1 c16 li-bullet-0"><span class="c4">Build React components</span></li>
+        </ul>
+        <p class="c1"><span class="c4">If you are interested in learning more about these topics, here are some
+                additional
+                resources:</span></p>
+        <ul class="c17 lst-kix_dxttakbbu9cu-0 start">
+            <li class="c1 c16 li-bullet-0"><span>Documentation:</span><span><a class="c6"
+                        href="https://www.google.com/url?q=https://reactjs.org/docs/getting-started.html&amp;sa=D&amp;source=editors&amp;ust=1663325376191641&amp;usg=AOvVaw2eXF4CM7s7BYHcykH3Wivl">&nbsp;</a></span><span
+                    class="c5"><a class="c6"
+                        href="https://www.google.com/url?q=https://reactjs.org/docs/getting-started.html&amp;sa=D&amp;source=editors&amp;ust=1663325376191877&amp;usg=AOvVaw23vXwBhvA3vSPCaTVAQROR">React
+                        Documentation: Getting Started</a></span></li>
+            <li class="c1 c16 li-bullet-0"><span>Tutorial:</span><span><a class="c6"
+                        href="https://www.google.com/url?q=https://reactjs.org/tutorial/tutorial.html&amp;sa=D&amp;source=editors&amp;ust=1663325376192180&amp;usg=AOvVaw3HDOGfmP3_hdPDRIgiQiHA">&nbsp;</a></span><span
+                    class="c5"><a class="c6"
+                        href="https://www.google.com/url?q=https://reactjs.org/tutorial/tutorial.html&amp;sa=D&amp;source=editors&amp;ust=1663325376192362&amp;usg=AOvVaw13Lgy20wZN_8_2RMfC4liG">Intro
+                        to React</a></span></li>
+            <li class="c1 c16 li-bullet-0"><span>Article:</span><span><a class="c6"
+                        href="https://www.google.com/url?q=https://reactjs.org/docs/thinking-in-react.html&amp;sa=D&amp;source=editors&amp;ust=1663325376192661&amp;usg=AOvVaw2Jm_yolXi4KmJBfO1x-Zdt">&nbsp;</a></span><span
+                    class="c5"><a class="c6"
+                        href="https://www.google.com/url?q=https://reactjs.org/docs/thinking-in-react.html&amp;sa=D&amp;source=editors&amp;ust=1663325376192872&amp;usg=AOvVaw30d1jI_H3s8w8516aFLMIt">Thinking
+                        in React</a></span></li>
+            <li class="c1 c16 li-bullet-0"><span>Article:</span><span><a class="c6"
+                        href="https://www.google.com/url?q=https://maggieappleton.com/react-vdom&amp;sa=D&amp;source=editors&amp;ust=1663325376193163&amp;usg=AOvVaw2xJ0J97DiMbqz4xoXcS-ct">&nbsp;</a></span><span
+                    class="c5"><a class="c6"
+                        href="https://www.google.com/url?q=https://maggieappleton.com/react-vdom&amp;sa=D&amp;source=editors&amp;ust=1663325376193379&amp;usg=AOvVaw3xUR6XdgxUSn_lT45aBG79">What
+                        the Fork is the React Virtual DOM</a></span></li>
+            <li class="c1 c16 li-bullet-0"><span>Resource:</span><span><a class="c6"
+                        href="https://www.google.com/url?q=https://github.com/enaqx/awesome-react&amp;sa=D&amp;source=editors&amp;ust=1663325376193685&amp;usg=AOvVaw1WMv18_1k8MFhlcBRZfm03">&nbsp;</a></span><span
+                    class="c5"><a class="c6"
+                        href="https://www.google.com/url?q=https://github.com/enaqx/awesome-react&amp;sa=D&amp;source=editors&amp;ust=1663325376193868&amp;usg=AOvVaw0IJox27gCS8pkMeeca4hBv">Awesome
+                        React</a></span></li>
+            <li class="c1 c16 li-bullet-0"><span>Resource:</span><span><a class="c6"
+                        href="https://www.google.com/url?q=https://github.com/facebook/create-react-app&amp;sa=D&amp;source=editors&amp;ust=1663325376194180&amp;usg=AOvVaw30_ZSHsQ6yaj7J5dOK5nPP">&nbsp;</a></span><span
+                    class="c5"><a class="c6"
+                        href="https://www.google.com/url?q=https://github.com/facebook/create-react-app&amp;sa=D&amp;source=editors&amp;ust=1663325376194363&amp;usg=AOvVaw2XS3OwegouWp5u014vFIE1">Create
+                        React App</a></span></li>
+        </ul>
+        <p class="c1 c2"><span class="c4"></span></p>
+    </main>
+</body>
+
+</html>
