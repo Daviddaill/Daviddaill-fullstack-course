@@ -1,0 +1,583 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="./resources/css/courses.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploying React App </title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0196cd3152.js" crossorigin="anonymous"></script>
+    <script src="./resources/script.js" defer></script>
+</head>
+
+<body class="c19 doc-content">
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <header>
+        <p id="mainPage"><a href="index.html">Main page </a></p>
+        <h1>Deploying React App with Netlify</h1>
+    </header>
+    <nav>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#1" class="dropdown-btn">Deploying a Static Site with Netlify <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#1a">Deploying a static site </a> </li>
+                <li><a href="#1b">Using Netlify </a> </li>
+                <li><a href="#1c">Wrapping up</a> </li>
+            </ul>
+        </div>
+
+        <a href="#2" class="dropdown-btn">Create and Share a React App on GitHub <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#2a">Create a React app on your own computer</a> </li>
+                <li><a href="#2b">Create a new repository on GitHub </a> </li>
+                <li><a href="#2c">Push your project code to the GitHub “remote” repository</a> </li>
+                <li><a href="#2d">Next Steps</a> </li>
+            </ul>
+        </div>
+       
+        <a href="#3" >Deploy Your React App to Netlify </a>
+        
+    </nav>
+    <main>
+        <h2 id="1"><span class="c14">Deploying a Static Site with Netlify</span></h2>
+        <p class="c0"><span class="c2">Learn how to easily deploy a static site through Netlify&rsquo;s GitHub
+                integration.</span></p>
+        <h3 id="1a"><span class="c7">Deploying a static site</span></h3>
+        <p class="c0"><span class="c2">If you want to share a site that doesn&rsquo;t have a backend and provides the
+                same
+                information to all visitors, then deploying a static site would be perfect. As you know, the most
+                efficient
+                way to deploy these static sites is through Netlify.</span></p>
+        <p class="c0"><span class="c2">To do so, you&rsquo;ll need to have the following:</span></p>
+        <ul class="c5 lst-kix_bcayxzfha8um-0 start">
+            <li class="c0 c4 li-bullet-0"><span>A Netlify account, which can be created step-by-step in</span><span><a
+                        class="c1"
+                        href="https://www.google.com/url?q=https://www.codecademy.com/articles/getting-started-with-netlify&amp;sa=D&amp;source=editors&amp;ust=1681283269203374&amp;usg=AOvVaw3o7xR3RaK8rfI5UqBTUBbj">&nbsp;</a></span><span
+                    class="c3"><a class="c1"
+                        href="https://www.google.com/url?q=https://www.codecademy.com/articles/getting-started-with-netlify&amp;sa=D&amp;source=editors&amp;ust=1681283269203799&amp;usg=AOvVaw1pX76gbUMNi98__SmUEdEl">&ldquo;Getting
+                        Started with Netlify&rdquo;</a></span><span class="c2">.</span></li>
+            <li class="c0 c4 li-bullet-0"><span>A</span><span><a class="c1"
+                        href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/general/github&amp;sa=D&amp;source=editors&amp;ust=1681283269204379&amp;usg=AOvVaw2UAkHHhGHs5HsBenuru7zf">&nbsp;</a></span><span
+                    class="c3"><a class="c1"
+                        href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/general/github&amp;sa=D&amp;source=editors&amp;ust=1681283269204695&amp;usg=AOvVaw3rTXRVLUQIjkiA0L4qA_A4">GitHub</a></span><span>&nbsp;account
+                    that you&rsquo;ll be using to</span><span><a class="c1"
+                        href="https://www.google.com/url?q=https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo&amp;sa=D&amp;source=editors&amp;ust=1681283269205113&amp;usg=AOvVaw26wa9_H9-AeoX_EmZbDw26">&nbsp;</a></span><span
+                    class="c3"><a class="c1"
+                        href="https://www.google.com/url?q=https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo&amp;sa=D&amp;source=editors&amp;ust=1681283269205495&amp;usg=AOvVaw0aWf6mIS68IYOLTvwSrGCF">fork</a></span><span>&nbsp;an
+                    existing repository. If you don&rsquo;t know how to fork a repository, check out our</span><span><a
+                        class="c1"
+                        href="https://www.google.com/url?q=https://www.codecademy.com/learn/learn-git&amp;sa=D&amp;source=editors&amp;ust=1681283269205853&amp;usg=AOvVaw2czvir7Mfi8LE0m3PSov5n">&nbsp;</a></span><span
+                    class="c3"><a class="c1"
+                        href="https://www.google.com/url?q=https://www.codecademy.com/learn/learn-git&amp;sa=D&amp;source=editors&amp;ust=1681283269206118&amp;usg=AOvVaw2lXu07vwhwT3rpd-I8t6v0">course
+                        on GitHub</a></span><span class="c2">.</span></li>
+        </ul>
+        <h4 class="c13" id="h.g8aq8hvwaouh"><span class="c17 c15">Forking the repository</span></h4>
+        <p class="c0"><span>For the purpose of this article, we&rsquo;ll be using Codecademy&rsquo;s</span><span><a
+                    class="c1"
+                    href="https://www.google.com/url?q=https://github.com/Codecademy/deploying-a-static-site-with-netlify-sample&amp;sa=D&amp;source=editors&amp;ust=1681283269206793&amp;usg=AOvVaw3FNOjbtyqECZ2ndguYyPcJ">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://github.com/Codecademy/deploying-a-static-site-with-netlify-sample&amp;sa=D&amp;source=editors&amp;ust=1681283269207135&amp;usg=AOvVaw33TpxCognjUW2biijiZ0PA">&ldquo;deploying-a-static-site-with-netlify-sample&rdquo;
+                    repository</a></span><span class="c2">. You can use your own repository if you wish, but
+                you&rsquo;ll
+                have to modify the following steps accordingly.</span></p>
+        <p class="c0"><span>To fork the repository to your personal GitHub account, click the </span><span
+                class="c15">Fork</span><span>&nbsp;button on the</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://github.com/Codecademy/deploying-a-static-site-with-netlify-sample&amp;sa=D&amp;source=editors&amp;ust=1681283269207767&amp;usg=AOvVaw0H-xJlyW-0zbN0Aul6CuqU">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://github.com/Codecademy/deploying-a-static-site-with-netlify-sample&amp;sa=D&amp;source=editors&amp;ust=1681283269208042&amp;usg=AOvVaw15QdQjl7pA3ydgzYkOUZYp">original
+                    repository&rsquo;s page</a></span><span class="c2">:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 97.33px;"><img
+                    alt="Screenshot of the GitHub &quot;Fork&quot; button" src="./resources/images/netlify/image7.png"
+                    style="width: 601.70px; height: 97.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c2">You should then have your own copy of the
+                &ldquo;deploying-a-static-site-with-netlify-sample&rdquo; repository, which you&rsquo;ll soon
+                deploy.</span>
+        </p>
+        <h3 id="1b"><span class="c7">Using Netlify</span></h3>
+        <p class="c0"><span>Let&rsquo;s get started with deploying the GitHub repository &mdash; it only takes a few
+                simple
+                steps! First, make sure you&rsquo;re logged in to your Netlify account and then go to
+                your</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://app.netlify.com/&amp;sa=D&amp;source=editors&amp;ust=1681283269209064&amp;usg=AOvVaw0xV80Ly61uk3C2doonA_A5">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://app.netlify.com/&amp;sa=D&amp;source=editors&amp;ust=1681283269209346&amp;usg=AOvVaw2FHa_kgh8JMnaN-kXD7J8j">dashboard</a></span><span
+                class="c2">.</span></p>
+        <h4 class="c13" id="h.etvsptgt6mnd"><span class="c17 c15">Creating a site from Git</span></h4>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 329.33px;"><img
+                    alt="Screenshot of the Netlify dashboard" src="./resources/images/netlify/image15.png"
+                    style="width: 601.70px; height: 329.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>In your Netlify dashboard, click </span><span class="c15">New site from Git</span><span
+                class="c2">&nbsp;to start the deployment process. You&rsquo;ll be directed to a page that shows the
+                first
+                step, which is connecting to your Git provider:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 329.33px;"><img
+                    alt="Screenshot of connecting to the Git provider" src="./resources/images/netlify/image1.png"
+                    style="width: 601.70px; height: 329.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>You should select the </span><span class="c15">GitHub</span><span>&nbsp;option because that
+                is
+                where your forked repository is hosted. However,</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://about.gitlab.com/&amp;sa=D&amp;source=editors&amp;ust=1681283269210656&amp;usg=AOvVaw3QqLeXuP5rw8zMmIa431KC">&nbsp;</a></span><span
+                class="c3 c15"><a class="c1"
+                    href="https://www.google.com/url?q=https://about.gitlab.com/&amp;sa=D&amp;source=editors&amp;ust=1681283269210859&amp;usg=AOvVaw13w3Y7rJ65trADZhjnA-ZF">GitLab</a></span><span>&nbsp;and</span><span><a
+                    class="c1"
+                    href="https://www.google.com/url?q=https://bitbucket.org/&amp;sa=D&amp;source=editors&amp;ust=1681283269211147&amp;usg=AOvVaw2m6VPVacZwWGxHisSZB9gl">&nbsp;</a></span><span
+                class="c3 c15"><a class="c1"
+                    href="https://www.google.com/url?q=https://bitbucket.org/&amp;sa=D&amp;source=editors&amp;ust=1681283269211339&amp;usg=AOvVaw0QohS68cPiS4b6927SpJc_">Bitbucket</a></span><span
+                class="c2">&nbsp;are available if you want to use those for other projects.</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 329.33px;"><img
+                    alt="Screenshot of authorizing Netlify to connect with GitHub"
+                    src="./resources/images/netlify/image11.png"
+                    style="width: 601.70px; height: 329.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>If you didn&rsquo;t create your Netlify account using GitHub, you&rsquo;ll need to provide
+                connection permissions by clicking </span><span class="c15">Authorize Netlify</span><span class="c2">.
+                Doing
+                so will eventually allow Netlify to connect with the GitHub repository that you want to deploy.</span>
+        </p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 329.33px;"><img
+                    alt="Screenshot of installing Netlify on GitHub" src="./resources/images/netlify/image12.png"
+                    style="width: 601.70px; height: 329.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>You also need to install Netlify to your GitHub account by clicking </span><span
+                class="c15">Install</span><span class="c2">. Note that you may have to enter your GitHub password
+                again.</span></p>
+        <p class="c0"><span class="c2">If you successfully connected your GitHub account to Netlify, you should see your
+                GitHub username and forked &ldquo;deploying-a-static-site-with-netlify-sample&rdquo; repository under
+                &ldquo;Continuous Deployment: GitHub App&rdquo;, somewhat like:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 329.33px;"><img
+                    alt="Screenshot of picking a GitHub repository" src="./resources/images/netlify/image2.png"
+                    style="width: 601.70px; height: 329.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>Choose the &ldquo;</span><span
+                class="c15">deploying-a-static-site-with-netlify-sample</span><span class="c2">&ldquo; repository to
+                link it
+                with Netlify.</span></p>
+        <p class="c0"><span>In the next step, check that the &ldquo;Owner&rdquo; dropdown is set to the correct team
+                (your
+                Netlify account name in this case) and &ldquo;Branch to deploy&rdquo; is set to </span><span
+                class="c15">main</span><span class="c2">, like:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 269.33px;"><img
+                    alt="Screenshot of the top part of the build options" src="./resources/images/netlify/image3.png"
+                    style="width: 601.70px; height: 269.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c2">Scrolling down, you&rsquo;ll see options for &ldquo;Basic build
+                settings&rdquo;:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 200.00px;"><img
+                    alt="Screenshot of the bottom part of the build options"
+                    src="./resources/images/netlify/image16.png"
+                    style="width: 601.70px; height: 200.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c2">Regarding the &ldquo;Build command&rdquo; and &ldquo;Publish directory&rdquo;,
+                note
+                the following:</span></p>
+        <ul class="c5 lst-kix_3sybx3ixece-0 start">
+            <li class="c0 c4 li-bullet-0"><span>Because this is an HTML, CSS, and JavaScript build, there is no need
+                    for</span><span><a class="c1"
+                        href="https://www.google.com/url?q=https://docs.netlify.com/configure-builds/get-started/%23definitions&amp;sa=D&amp;source=editors&amp;ust=1681283269213495&amp;usg=AOvVaw33z8UugIB0fk8DxMbB5aPK">&nbsp;</a></span><span
+                    class="c3 c12"><a class="c1"
+                        href="https://www.google.com/url?q=https://docs.netlify.com/configure-builds/get-started/%23definitions&amp;sa=D&amp;source=editors&amp;ust=1681283269213856&amp;usg=AOvVaw2HS7NKeFR_tN8MNmgR8Ehg">build
+                        commands</a></span><span>, which are instructions that Netlify uses to build certain types of
+                    sites
+                    like those from frontend</span><span><a class="c1"
+                        href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/general/framework&amp;sa=D&amp;source=editors&amp;ust=1681283269214252&amp;usg=AOvVaw3HI0WmMbaIffu7snvbQOka">&nbsp;</a></span><span
+                    class="c3"><a class="c1"
+                        href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/general/framework&amp;sa=D&amp;source=editors&amp;ust=1681283269214490&amp;usg=AOvVaw3l5XiFYns-TsuN4Abp0uo1">frameworks</a></span><span>&nbsp;and</span><span><a
+                        class="c1"
+                        href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/general/static-site-generators&amp;sa=D&amp;source=editors&amp;ust=1681283269214802&amp;usg=AOvVaw1Z33xz36iM5n4_wI485jIQ">&nbsp;</a></span><span
+                    class="c3"><a class="c1"
+                        href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/general/static-site-generators&amp;sa=D&amp;source=editors&amp;ust=1681283269215105&amp;usg=AOvVaw0I5oEdEndqqYiAnylCs16r">static
+                        site generators</a></span><span class="c2">.</span></li>
+            <li class="c0 c4 li-bullet-0"><span>Since no build commands are used for this site, you also don&rsquo;t
+                    need a
+                </span><span class="c12">publish directory</span><span class="c2">, which would contain deploy-ready
+                    HTML
+                    files and assets generated by the build.</span></li>
+        </ul>
+        <p class="c0"><span>You&rsquo;re now ready to deploy, so click </span><span class="c15">Deploy site</span><span
+                class="c2">! You&rsquo;ll then be directed to the site&rsquo;s dashboard:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 329.33px;"><img
+                    alt="Screenshot of the site dashboard with deployment in progress"
+                    src="./resources/images/netlify/image10.png"
+                    style="width: 601.70px; height: 329.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c2">The build status should continue to show &ldquo;Site deploy in progress&rdquo;
+                and
+                &ldquo;Deploying your site&rdquo; until the site has been successfully deployed. At that point, the
+                status
+                will change to &ldquo;Your site is deployed&rdquo; and you&rsquo;ll see a link to your deployed
+                site:</span>
+        </p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 329.33px;"><img
+                    alt="Screenshot of the site dashboard with deployment completed"
+                    src="./resources/images/netlify/image4.png"
+                    style="width: 601.70px; height: 329.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c2">Click the link, and you&rsquo;ll be directed to your deployed site:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 329.33px;"><img
+                    alt="Screenshot of the deployed site" src="./resources/images/netlify/image19.png"
+                    style="width: 601.70px; height: 329.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c2">Notice that the page&rsquo;s background color changes every time you click the
+                &#x1f44f; (clap) button!</span></p>
+        <h4 class="c13" id="h.xtatz5cq8o22"><span class="c17 c15">Production deploys</span></h4>
+        <p class="c0"><span>You can check the ongoing log that contains in-depth information about the site&rsquo;s
+                build
+                status, which is especially useful for debugging any errors that may arise. To see these logs, scroll
+                down
+                to the &ldquo;Production deploys&rdquo; section of the </span><span class="c15">Site
+                overview</span><span class="c2">&nbsp;tab:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 378.67px;"><img
+                    alt="Screenshot of the &quot;Production deploys&quot; section"
+                    src="./resources/images/netlify/image13.png"
+                    style="width: 601.70px; height: 378.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <h4 class="c8" id="h.52sjabrj0lpf"><span class="c11">Analyzing the logs</span></h4>
+        <p class="c0"><span class="c2">In the logs, you should specifically look for &ldquo;Published&rdquo; or
+                &ldquo;Failed&rdquo; statuses:</span></p>
+        <ul class="c5 lst-kix_giup9uwyn1m-0 start">
+            <li class="c0 c4 li-bullet-0"><span class="c2">A &ldquo;Published&rdquo; status means that your site has
+                    been
+                    successfully deployed.</span></li>
+            <li class="c0 c4 li-bullet-0"><span class="c2">A &ldquo;Failed&rdquo; status means that something went wrong
+                    in
+                    the deployment process.</span></li>
+        </ul>
+        <p class="c0"><span>Since every project is unique, the best way to fix a &ldquo;Failed&rdquo; deployment is to
+                either google the error or browse through</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://docs.netlify.com/&amp;sa=D&amp;source=editors&amp;ust=1681283269218465&amp;usg=AOvVaw3eaFs1zARMpcJQDHb8cB8I">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://docs.netlify.com/&amp;sa=D&amp;source=editors&amp;ust=1681283269218903&amp;usg=AOvVaw3KhDx_XN1rqF5GhbVZfxKo">Netlify&rsquo;s
+                    documentation</a></span><span class="c2">. With that being said, you may find the following
+                resources
+                from Netlify to be helpful:</span></p>
+        <ul class="c5 lst-kix_6li7xebg4ebv-0 start">
+            <li class="c0 c4 li-bullet-0"><span class="c3"><a class="c1"
+                        href="https://www.google.com/url?q=https://docs.netlify.com/configure-builds/troubleshooting-tips/&amp;sa=D&amp;source=editors&amp;ust=1681283269219391&amp;usg=AOvVaw0HtcHGDBc6VWFPWd3ha7d2">Build
+                        troubleshooting tips</a></span></li>
+            <li class="c0 c4 li-bullet-0"><span class="c3"><a class="c1"
+                        href="https://www.google.com/url?q=https://community.netlify.com/&amp;sa=D&amp;source=editors&amp;ust=1681283269219818&amp;usg=AOvVaw34M5MK7siGaBozKQLiVUJm">Netlify
+                        Community forum</a></span></li>
+            <li class="c0 c4 li-bullet-0"><span class="c3"><a class="c1"
+                        href="https://www.google.com/url?q=https://community.netlify.com/t/support-guide-frequently-encountered-problems-during-builds/213&amp;sa=D&amp;source=editors&amp;ust=1681283269220300&amp;usg=AOvVaw0DbKNhZuTWAWCEuYUfaobu">Frequently
+                        encountered problems during builds guide</a></span></li>
+        </ul>
+        <h4 class="c8" id="h.hqg1ozbf5ip1"><span class="c11">Making changes to the site</span></h4>
+        <p class="c0"><span>Next, select the </span><span class="c15">Deploys</span><span class="c2">&nbsp;tab located
+                at
+                the top of the site dashboard:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 329.33px;"><img
+                    alt="Screenshot of the &quot;Deploys&quot; tab" src="./resources/images/netlify/image9.png"
+                    style="width: 601.70px; height: 329.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>Notice that &ldquo;Auto publishing is on&rdquo;, meaning that your site automatically
+                deploys
+                each time you push a commit on GitHub (</span><span class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://docs.netlify.com/site-deploys/create-deploys/%23deploy-with-git&amp;sa=D&amp;source=editors&amp;ust=1681283269221564&amp;usg=AOvVaw1DepDO0enmmqW0T6NIRRIy">continuous
+                    deployment</a></span><span>). Although not recommended, you can turn this setting off by clicking
+            </span><span class="c15">Stop auto publishing</span><span class="c2">.</span></p>
+        <p class="c0"><span class="c2">To make changes to your site, update your forked GitHub repository. Here&rsquo;s
+                a
+                simple example for changing the site&rsquo;s heading (note that these steps are specific to the GitHub
+                website interface):</span></p>
+        <ol class="c5 lst-kix_ge9dx83omyy0-0 start" start="1">
+            <li class="c0 c4 li-bullet-0"><span class="c2">Navigate back to your forked
+                    &ldquo;deploying-a-static-site-with-netlify-sample&rdquo; repository and make an edit to the
+                    &lt;h1&gt;
+                    text (e.g., you could change the text inside the &lt;h1&gt; element from &ldquo;Welcome to your
+                    website!&rdquo; to &ldquo;Welcome to Jane&rsquo;s website!&rdquo;).</span></li>
+            <li class="c0 c4 li-bullet-0"><span class="c2">Commit your changes and wait a few moments for Netlify to
+                    update
+                    the build.</span></li>
+            <li class="c0 c4 li-bullet-0"><span class="c2">Like before, you can monitor the build status through the
+                    site&rsquo;s dashboard in your Netlify account.</span></li>
+            <li class="c0 c4 li-bullet-0"><span class="c2">After the build is complete, you should notice a difference
+                    in
+                    your published site&rsquo;s heading &mdash; it&rsquo;s that easy to make changes to your Netlify
+                    site!</span></li>
+        </ol>
+        <h4 class="c13" id="h.3n0ffm8zhppa"><span class="c15 c17">Site settings</span></h4>
+        <p class="c0"><span>Let&rsquo;s now explore the </span><span class="c15">Site settings</span><span
+                class="c2">&nbsp;tab, also at the top of the site dashboard:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 329.33px;"><img
+                    alt="Screenshot of the &quot;General&quot; section of the &quot;Site settings&quot; tab"
+                    src="./resources/images/netlify/image17.png"
+                    style="width: 601.70px; height: 329.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <h4 class="c8" id="h.vr75wnoh825z"><span class="c11">Changing the site name</span></h4>
+        <p class="c0"><span>Notice that the name of your site is randomly generated by Netlify. To rename your site to
+                something more appropriate, click the </span><span class="c15">Change site name</span><span>&nbsp;button
+                located in the &ldquo;Site information&rdquo; panel. From there, you can </span><span
+                class="c15">Save</span><span class="c2">&nbsp;a new unique name, which also determines the site&rsquo;s
+                default URL, like so:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 341.33px;"><img
+                    alt="Screenshot of changing the site&#39;s name" src="./resources/images/netlify/image6.png"
+                    style="width: 601.70px; height: 341.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <h4 class="c8" id="h.ev48rp89b175"><span class="c11">Build settings</span></h4>
+        <p class="c0"><span>Next, click the </span><span class="c15">Build &amp; deploy</span><span class="c2">&nbsp;tab
+                on
+                the left to see even more settings that you can manipulate:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 329.33px;"><img
+                    alt="Screenshot of the &quot;Build &amp; deploy&quot; section of the &quot;Site settings&quot; tab"
+                    src="./resources/images/netlify/image20.png"
+                    style="width: 601.70px; height: 329.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>You&rsquo;ll first notice a panel for</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://docs.netlify.com/configure-builds/get-started/%23basic-build-settings&amp;sa=D&amp;source=editors&amp;ust=1681283269225134&amp;usg=AOvVaw0mD0lqj0du073RmTq7kLXn">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://docs.netlify.com/configure-builds/get-started/%23basic-build-settings&amp;sa=D&amp;source=editors&amp;ust=1681283269225614&amp;usg=AOvVaw2fIzYURAnD62RPU1irreAp">&ldquo;Build
+                    settings&rdquo;</a></span><span>. As touched upon before, many frontend frameworks
+                like</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/react&amp;sa=D&amp;source=editors&amp;ust=1681283269225985&amp;usg=AOvVaw1l5dDt3K1L1o26Z6XHuZfv">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/react&amp;sa=D&amp;source=editors&amp;ust=1681283269226257&amp;usg=AOvVaw1oW2FKeOTD-7DeiJ7DYVvh">React</a></span><span>&nbsp;and
+                static site generators like</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/learn/deploy-a-website/modules/deploy-a-website-create-a-website-u&amp;sa=D&amp;source=editors&amp;ust=1681283269226667&amp;usg=AOvVaw0Ry60hRAZhq6trzztOgQLA">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/learn/deploy-a-website/modules/deploy-a-website-create-a-website-u&amp;sa=D&amp;source=editors&amp;ust=1681283269227054&amp;usg=AOvVaw2rrPLmkeAN6unJKGsjKvN5">Jekyll</a></span><span>&nbsp;require</span><span><a
+                    class="c1"
+                    href="https://www.google.com/url?q=https://docs.netlify.com/configure-builds/common-configurations/&amp;sa=D&amp;source=editors&amp;ust=1681283269227447&amp;usg=AOvVaw3ab9aC6PlHCIs5zF8TElpu">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://docs.netlify.com/configure-builds/common-configurations/&amp;sa=D&amp;source=editors&amp;ust=1681283269227816&amp;usg=AOvVaw0GCBjzGG_SxChlsK2qCL9q">special
+                    build commands</a></span><span class="c2">&nbsp;that tell Netlify how to build your specific site.
+                Build
+                commands weren&rsquo;t used in this case because it&rsquo;s only a JavaScript, HTML, and CSS site
+                without
+                any frontend frameworks or static site generators.</span></p>
+        <h4 class="c8" id="h.aul7rvoz394z"><span class="c11">Deploy notifications</span></h4>
+        <p class="c0"><span>While still in the </span><span class="c15">Build &amp; deploy</span><span>&nbsp;tab on the
+                left, jump down to the </span><span class="c15">Deploy notifications</span><span
+                class="c2">&nbsp;section:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 329.33px;"><img
+                    alt="Screenshot of the &quot;Deploy notifications&quot; section of the &quot;Site settings&quot; tab"
+                    src="./resources/images/netlify/image18.png"
+                    style="width: 601.70px; height: 329.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>Here you can configure</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://docs.netlify.com/site-deploys/notifications/&amp;sa=D&amp;source=editors&amp;ust=1681283269228948&amp;usg=AOvVaw2S6EMBAGGOFwIs1tLCxYti">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://docs.netlify.com/site-deploys/notifications/&amp;sa=D&amp;source=editors&amp;ust=1681283269229242&amp;usg=AOvVaw1tnuUgeu_2lqan_WP0XBtK">deploy
+                    notifications</a></span><span>, which can inform you or external services about your site&rsquo;s
+                deploy
+                activity. For example, the various types of</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/git&amp;sa=D&amp;source=editors&amp;ust=1681283269229549&amp;usg=AOvVaw05H-S-RXevWIVU2mzHdkVL">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/git&amp;sa=D&amp;source=editors&amp;ust=1681283269229858&amp;usg=AOvVaw3AnMVPTxb050VvvJe4vo1j">Git</a></span><span>&nbsp;notifications
+                can do things like</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://docs.netlify.com/site-deploys/notifications/%23github-pull-request-comments&amp;sa=D&amp;source=editors&amp;ust=1681283269230223&amp;usg=AOvVaw2oGqrrNmcz5EBvAXjPqoI5">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://docs.netlify.com/site-deploys/notifications/%23github-pull-request-comments&amp;sa=D&amp;source=editors&amp;ust=1681283269230516&amp;usg=AOvVaw2p7F-7ZW20YTe_AbY1nUuz">add
+                    a comment to your GitHub pull requests</a></span><span class="c2">&nbsp;indicating the status of the
+                associated deploy.</span></p>
+        <p class="c0"><span>Note that some types of notifications are only available with paid</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://www.netlify.com/pricing/&amp;sa=D&amp;source=editors&amp;ust=1681283269230937&amp;usg=AOvVaw0f5iQCMR1QCjyygQ59m4VI">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://www.netlify.com/pricing/&amp;sa=D&amp;source=editors&amp;ust=1681283269231176&amp;usg=AOvVaw25NdAkcews5qm25F5rRt0k">Netlify
+                    plans</a></span><span class="c2">.</span></p>
+        <h3 id="1c"><span class="c7">Wrapping up</span></h3>
+        <p class="c0"><span class="c2">Congrats! You&rsquo;ve just deployed your very own static site using Netlify, and
+                you
+                now know how to share your websites with the world. Specifically, you learned about:</span></p>
+        <ul class="c5 lst-kix_jchhh6r8g7ve-0 start">
+            <li class="c0 c4 li-bullet-0"><span class="c2">The use-case of static sites.</span></li>
+            <li class="c0 c4 li-bullet-0"><span class="c2">Deploying a static site through Netlify&rsquo;s GitHub
+                    integration.</span></li>
+            <li class="c0 c4 li-bullet-0"><span class="c2">Analyzing the site logs and debugging &ldquo;Failed&rdquo;
+                    deployments.</span></li>
+            <li class="c0 c4 li-bullet-0"><span class="c2">Using auto publishing to make changes to the site.</span>
+            </li>
+            <li class="c0 c4 li-bullet-0"><span class="c2">Various site settings like build commands and deploy
+                    notifications.</span></li>
+        </ul>
+        <p class="c0"><span class="c2">Most importantly, notice how many configurations Netlify handled throughout the
+                process &mdash; deploying an entire site only took a few clicks!</span></p>
+        <p class="c0"><span>Although you&rsquo;ve used Netlify to deploy a static site, there&rsquo;s</span><span><a
+                    class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/article/going-beyond-with-netlify&amp;sa=D&amp;source=editors&amp;ust=1681283269232686&amp;usg=AOvVaw2C0eUOCK7beLuY5rxoY7T5">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/article/going-beyond-with-netlify&amp;sa=D&amp;source=editors&amp;ust=1681283269232973&amp;usg=AOvVaw3izS7lgqca2spH-omc3P7T">so
+                    much more</a></span><span class="c2">&nbsp;that it can do! Features like pre-built forms, in-depth
+                analytics, and built-in user authentication can take your websites even further.</span></p>
+        <p class="c10 c18"><span class="c2"></span></p>
+        <h2 id="2"><span class="c14">Create and Share a React App on GitHub</span></h2>
+        <p class="c0"><span class="c2">Learn how to use the Create React App command-line tool and upload your project
+                to
+                GitHub.</span></p>
+        <p class="c0"><span class="c2">So, you&rsquo;ve learned the fundamentals of React and now you want to share your
+                work with the world? In just a few minutes, you can create a fully structured React application on your
+                own
+                computer and share it on GitHub. Let&rsquo;s get started!</span></p>
+        <h3 id="2a"><span class="c7">Create a React app on your own computer</span></h3>
+        <p class="c0"><span>While you can start building your own React applications from scratch, the recommended
+                approach
+                is to use the</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://create-react-app.dev/docs/getting-started&amp;sa=D&amp;source=editors&amp;ust=1681283269234515&amp;usg=AOvVaw0jvnr3DJwzLPtcjJTt0qKR">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://create-react-app.dev/docs/getting-started&amp;sa=D&amp;source=editors&amp;ust=1681283269234863&amp;usg=AOvVaw3Y6hdfEbrhseQGYbRDHfzg">Create
+                    React App (CRA) terminal command</a></span><span class="c2">:</span></p>
+        <p class="c10"><span class="c2">npx create-react-app my-react-app</span></p>
+        <p class="c0"><span>If you have already read the article on</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/how-to-create-a-react-app&amp;sa=D&amp;source=editors&amp;ust=1681283269235388&amp;usg=AOvVaw2oO4TJtO46mKM5AgVdzUMQ">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/articles/how-to-create-a-react-app&amp;sa=D&amp;source=editors&amp;ust=1681283269235629&amp;usg=AOvVaw3D1rPrtAf_9ieJmId4d2gt">how
+                    to create a react app</a></span><span class="c2">, you should be familiar with the first three parts
+                of
+                this command, npx create-react-app my-react-app.</span></p>
+        <h3 id="2b"><span class="c7">Create a new repository on GitHub</span></h3>
+        <p class="c0"><span>In addition to creating the starting structure for your application, the CRA command-line
+                tool
+                also initializes your project folder as a</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/learn/learn-git&amp;sa=D&amp;source=editors&amp;ust=1681283269236314&amp;usg=AOvVaw2zS378qJxl3a-bKk1WYPLj">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/learn/learn-git&amp;sa=D&amp;source=editors&amp;ust=1681283269236649&amp;usg=AOvVaw2vS7xD2UKBs_QUnG8zP-zK">Git</a></span><span
+                class="c2">&nbsp;project. This means that you are already set up to connect your project to a GitHub
+                repository!</span></p>
+        <p class="c0"><span>Head over to</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://github.com/&amp;sa=D&amp;source=editors&amp;ust=1681283269237068&amp;usg=AOvVaw28AVKmjpOZ5V6ABWzAxMm-">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://github.com/&amp;sa=D&amp;source=editors&amp;ust=1681283269237262&amp;usg=AOvVaw31f4pLm5UTWjwqgf_uXF08">github.com</a></span><span
+                class="c2">&nbsp;and sign into your account, or create an account if you don&rsquo;t have one already.
+                Once
+                you&rsquo;re signed in, find the + icon in the top right corner and select &ldquo;New
+                Repository&rdquo;.</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 352.00px; height: 309.00px;"><img
+                    alt="The &quot;New repository&quot; button can be found by selecting the &quot;plus&quot; icon in the top right hand corner"
+                    src="./resources/images/netlify/image14.png"
+                    style="width: 352.00px; height: 309.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c2">When configuring your GitHub repository, there are a few important fields to fill
+                out. Your final configuration should look like this:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 684.00px;"><img
+                    alt="Your new repository should have the same name as your CRA project name and all three boxes at the bottom should be unchecked"
+                    src="./resources/images/netlify/image5.png"
+                    style="width: 601.70px; height: 684.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span class="c2">A few things to note:</span></p>
+        <ul class="c5 lst-kix_gmdzyotzq5ko-0 start">
+            <li class="c0 c4 li-bullet-0"><span class="c2">Make sure the repository name matches the name of your React
+                    application from earlier in the article, in our example, it&rsquo;s my-react-app.</span></li>
+            <li class="c0 c4 li-bullet-0"><span class="c2">Leave all three boxes at the bottom unchecked (README,
+                    .gitignore, and LICENSE).</span></li>
+        </ul>
+        <p class="c0"><span class="c2">Once your repository configuration is looking good, click &ldquo;Create
+                repository&rdquo;!</span></p>
+        <h3 id="2c"><span class="c7">Push your project code to the GitHub &ldquo;remote&rdquo;
+                repository</span></h3>
+        <p class="c0"><span class="c2">After creating the GitHub repository, you will be presented with a few options
+                for
+                uploading your project code. The middle option is the one that you&rsquo;ll want to follow:</span></p>
+        <p class="c0"><span class="c2">&quot;...or push an existing repository from the command line&quot;</span></p>
+        <p class="c0"><span class="c2">As mentioned earlier in this article, the CRA command-line tool already
+                initialized
+                our React app as a Git project. This means that all we have to do is run three commands in our
+                terminal:</span></p>
+        <p class="c10"><span class="c2">cd my-react-app</span></p>
+        <p class="c10"><span class="c2">git remote add origin https://github.com/username/my-react-app.git</span></p>
+        <p class="c10"><span class="c2">git branch -M main</span></p>
+        <p class="c10"><span class="c2">git push -u origin main</span></p>
+        <p class="c0"><span class="c2">Make sure to replace my-react-app with the name of your own project and username
+                with
+                your own GitHub username! You can find the full URL for your GitHub repository at the top of the page.
+                It
+                should follow the pattern https://github.com/your-username/your-repository-name.git:</span></p>
+        <p class="c0"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 104.00px;"><img
+                    alt="" src="./resources/images/netlify/image8.png"
+                    style="width: 601.70px; height: 104.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+        <p class="c0"><span>Finally, return to your GitHub repository page. You should now see that your code has been
+                uploaded! If you run into any issues while using the GitHub CLI (it happens to all of us), check out
+                this
+                article on</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line&amp;sa=D&amp;source=editors&amp;ust=1681283269240039&amp;usg=AOvVaw25mOHzI_pjpfQlN9f45rQC">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line&amp;sa=D&amp;source=editors&amp;ust=1681283269240394&amp;usg=AOvVaw1GfmncQLTeZNDWnCGxfEBx">adding
+                    an existing project to GitHub using the command line</a></span><span class="c2">.</span></p>
+        <h3 id="2d"><span class="c7">Next Steps</span></h3>
+        <p class="c0"><span>In this article, you learned how to create a React application using the</span><span><a
+                    class="c1"
+                    href="https://www.google.com/url?q=https://create-react-app.dev/docs/getting-started&amp;sa=D&amp;source=editors&amp;ust=1681283269240932&amp;usg=AOvVaw34daQZnJL0kJRSERQXUJU_">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://create-react-app.dev/docs/getting-started&amp;sa=D&amp;source=editors&amp;ust=1681283269241179&amp;usg=AOvVaw0PmPFhQYcBAK2RqHhskVSo">Create
+                    React App (CRA) terminal command</a></span><span class="c2">. While you can create React
+                applications
+                from scratch, the CRA command-line tool handles the setup for your project&rsquo;s file structure and
+                ensures that the proper React tools are being used.</span></p>
+        <p class="c0"><span>You also learned how to upload an existing git project to a GitHub repository. Now that your
+                project has been uploaded to GitHub, you can share your creation with the world or even</span><span><a
+                    class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/paths/full-stack-engineer-career-path/tracks/fscp-22-react-part-ii/modules/wdcp-22-deploy-a-react-application-with-netlify/articles/REPLACE&amp;sa=D&amp;source=editors&amp;ust=1681283269241649&amp;usg=AOvVaw23z3oAaTl3XKWu6iZqMJDC">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/paths/full-stack-engineer-career-path/tracks/fscp-22-react-part-ii/modules/wdcp-22-deploy-a-react-application-with-netlify/articles/REPLACE&amp;sa=D&amp;source=editors&amp;ust=1681283269241969&amp;usg=AOvVaw3m1M4UihzDxTBAMJ9y-N0q">deploy
+                    your project using Netlify</a></span><span class="c2">!</span></p>
+        <p class="c10 c18"><span class="c2"></span></p>
+        <h2 id="3"><span class="c14">Deploy Your React App to Netlify</span></h2>
+        <p class="c0"><span class="c2">Combine what you have learned about using the Create React App command-line tool
+                and
+                deploying static sites with Netlify to deploy your React application.</span></p>
+        <p class="c0"><span>Now that you have read through the</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/paths/full-stack-engineer-career-path/tracks/fscp-22-react-part-ii/modules/wdcp-22-deploy-a-react-application-with-netlify/informationals/REPLACE&amp;sa=D&amp;source=editors&amp;ust=1681283269242835&amp;usg=AOvVaw1-DG58TkREOlDVGSxAg_wF">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/paths/full-stack-engineer-career-path/tracks/fscp-22-react-part-ii/modules/wdcp-22-deploy-a-react-application-with-netlify/informationals/REPLACE&amp;sa=D&amp;source=editors&amp;ust=1681283269243318&amp;usg=AOvVaw2yHjh-XLjzIpNWejjosi7n">Create
+                    and Share a React App on GitHub</a></span><span class="c2">&nbsp;article, you&rsquo;re ready to
+                deploy
+                your React app with Netlify.</span></p>
+        <p class="c0"><span>Follow the steps outlined in the</span><span><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/paths/full-stack-engineer-career-path/tracks/fscp-22-react-part-ii/modules/wdcp-22-deploy-a-react-application-with-netlify/informationals/REPLACE&amp;sa=D&amp;source=editors&amp;ust=1681283269243882&amp;usg=AOvVaw3xfNL3OCWOM13WLWtco7hg">&nbsp;</a></span><span
+                class="c3"><a class="c1"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/paths/full-stack-engineer-career-path/tracks/fscp-22-react-part-ii/modules/wdcp-22-deploy-a-react-application-with-netlify/informationals/REPLACE&amp;sa=D&amp;source=editors&amp;ust=1681283269244240&amp;usg=AOvVaw2E5NoC4_9fWXwArPXnEomM">Deploying
+                    a Static Site with Netlify</a></span><span class="c2">&nbsp;article to deploy your React app made
+                with
+                the Create React App command-line tool.</span></p>
+        <p class="c0"><span class="c2">As you follow these steps, you should be aware that React applications are NOT
+                static. Instead, they need to go through a build phase to generate the static assets served by
+                Netlify.</span></p>
+        <p class="c0"><span class="c2">To properly configure your React application on Netlify, make sure that you have
+                the
+                following configurations set for the fields &ldquo;Build command&rdquo; and &ldquo;Publish
+                directory&rdquo;
+                (they should already be there):</span></p>
+        <ul class="c5 lst-kix_6w43uragxh1u-0 start">
+            <li class="c0 c4 li-bullet-0"><span class="c2">Build command: npm run build</span></li>
+            <li class="c0 c4 li-bullet-0"><span class="c2">Publish directory: build/</span></li>
+        </ul>
+        <p class="c0"><span class="c2">These configurations will make sure that the non-public files are properly
+                compiled
+                into static assets that can be safely served to clients.</span></p>
+        <p class="c0"><span class="c2">Once you have successfully deployed your application on Netlify, you can move on.
+                As
+                you work on React projects on your own computer, use the git push command to upload your changes and,
+                thanks
+                to Netlify&rsquo;s integration with GitHub, all changes pushed to your repository will be applied to
+                your
+                deployed website.</span></p>
+        <p class="c10 c18"><span class="c2"></span></p>
+    </main>
+</body>
+</html>

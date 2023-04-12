@@ -1,0 +1,1982 @@
+<html>
+<head>
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+        <link rel="stylesheet" href="./resources/css/courses.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>React part 2 </title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap"
+            rel="stylesheet">
+        <script src="https://kit.fontawesome.com/0196cd3152.js" crossorigin="anonymous"></script>
+        <script src="./resources/script.js" defer></script>
+</head>
+
+<body>
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <header>
+        <p id="mainPage"><a href="index.html">Main page </a></p>
+        <h1>React Part 2</h1>
+    </header>
+    <nav>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#1" class="dropdown-btn">Props <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#1a">this.props </a> </li>
+                <li><a href="#1b">Access a Component's props </a> </li>
+                <li><a href="#1c">Pass `props` to a Component</a> </li>
+                <li><a href="#1d">Render a Component's props</a> </li>
+                <li><a href="#1e">Pass props From Component To Component</a> </li>
+                <li><a href="#1f">Render Different UI Based on props</a> </li>
+                <li><a href="#1g">Put an Event Handler in a Component Class</a> </li>
+                <li><a href="#1h">Pass an Event Handler as a prop</a> </li>
+                <li><a href="#1i">Receive an Event Handler as a prop</a> </li>
+                <li><a href="#1j">naming: handleEvent, onEvent, and this.props.onEvent</a> </li>
+                <li><a href="#1k">this.props.children</a> </li>
+                <li><a href="#1l">defaultProps</a> </li>
+                <li><a href="#1m">this.props Recap</a> </li>
+            </ul>
+        </div>
+
+        <a href="#2" class="dropdown-btn">State <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#2a">this.state</a> </li>
+                <li><a href="#2b">Setting Initial State </a> </li>
+                <li><a href="#2c">Access a Component's state</a> </li>
+                <li><a href="#2d">Update state with this.setState</a> </li>
+                <li><a href="#2e">Call this.setState from Another Function</a> </li>
+                <li><a href="#2f">this.setState Automatically Calls render</a> </li>
+                <li><a href="#2g">Components Interacting Recap</a> </li>
+            </ul>
+        </div>
+       
+        <a href="#3" class="dropdown-btn">React Developer Tools <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#3a">1. Install React Developer Tools </a> </li>
+                <li><a href="#3b">2. Inspect React components </a> </li>
+                <li><a href="#3c">3. Modify components with JavaScript</a> </li>
+            </ul>
+        </div>
+
+        <a href="#4" class="dropdown-btn">Stateless Components From Stateful Components <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#4a">Stateless Components Inherit From Stateful Components </a> </li>
+                <li> <a href="#4b">Build a Stateless Component Class
+                    </a> </li>
+                <li> <a href="#4c"> Pass a Component's State </a> </li>
+                <li> <a href="#4d"> Don't Update props </a>
+                </li>
+            </ul>
+        </div>
+
+        <a href="#5" class="dropdown-btn">Child Components Update Their Parents' state <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#5a"> Define an Event Handler </a> </li>
+                <li> <a href="#5b"> Pass the Event Handler </a> </li>
+                <li> <a href="#5c"> Receive the Event Handler </a> </li>
+            </ul>
+        </div>
+
+
+        <a href="#6" class="dropdown-btn"> Child Components Update Sibling Components <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#6a">intro</a> </li>
+                <li> <a href="#6b">Step by step </a> </li>
+            </ul>
+        </div>
+
+
+        <a href="#7" class="dropdown-btn">Component Lifecycle Methods <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#7a">The Component Lifecycle</a> </li>
+                <li> <a href="#7b">Introduction to Lifecycle Methods </a> </li>
+                <li> <a href="#7c">componentDidMount</a></li>
+                <li> <a href="#7d"> componentWillUnmount </a></li>
+                <li> <a href="#7e">componentDidUpdate</a> </li>
+            </ul>
+        </div>
+
+        <a href="#8" class="dropdown-btn">Function Components <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#8a">Stateless Functional Components </a> </li>
+                <li><a href="#8b">Function Components and Props </a> </li>
+                <li><a href="#8c">Review</a> </li>
+            </ul>
+        </div>
+
+        <a href="#9" class="dropdown-btn">The State Hook <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#9a">Why Use Hooks?</a> </li>
+                <li><a href="#9b">Update Function Component State </a> </li>
+                <li><a href="#9c">Initialize State</a> </li>
+                <li><a href="#9d">Use State Setter Outside of JSX</a> </li>
+                <li><a href="#9e">Set From Previous State</a> </li>
+                <li><a href="#9f">Arrays in State</a> </li>
+                <li><a href="#9g">Object in State</a> </li>
+                <li><a href="#9h">Separate Hooks for Separate States</a> </li>
+                <li><a href="#9i">Lesson Review</a> </li>
+            </ul>
+        </div>
+       
+        <a href="#10" class="dropdown-btn">The Effect Hook <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-container">
+            <ul>
+                <li> <a href="#10a">Why Use useEffect? </a> </li>
+                <li><a href="#10b">Function Component Effects </a> </li>
+                <li><a href="#10c">Clean Up Effects</a> </li>
+                <li><a href="#10d">Control When Effects Are Called</a> </li>
+                <li><a href="#10e">Fetch Data</a> </li>
+                <li><a href="#10f">Rules of Hooks</a> </li>
+                <li><a href="#10g">Separate Hooks for Separate Effects</a> </li>
+                <li><a href="#10h">Lesson Review</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+    <p class="c10 c39 title" id="h.ie9j6vrdvzqs"><span class="c15 c37">React part 2</span></p>
+    <h2 id="1"><span class="c24 c15">props</span></h2>
+    <h3 id="1a"><span class="c8">this.props</span></h3>
+    <p class="c6"><span>Previously, you learned one way that components can interact: a component can </span><span
+            class="c4">render</span><span class="c2">&nbsp;another component.</span></p>
+    <p class="c6"><span>In this lesson, you will learn another way that components can interact: a component can
+        </span><span class="c4">pass information</span><span class="c2">&nbsp;to another component.</span></p>
+    <p class="c6"><span class="c2">Information that gets passed from one component to another is known as
+            &ldquo;props.&rdquo;</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="1b"><span class="c8">Access a Component&#39;s props</span></h3>
+    <p class="c6"><span class="c2">Every component has something called props.</span></p>
+    <p class="c6"><span class="c2">A component&rsquo;s props is an object. It holds information about that
+            component.</span></p>
+    <p class="c6"><span class="c2">To see a component&rsquo;s props object, you use the expression this.props.
+            Here&rsquo;s an example of this.props being used inside of a render method:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 373.00px; height: 261.00px;"><img
+                alt="" src="./resources/images/react2/image14.png"
+                style="width: 373.00px; height: 261.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="1c"><span class="c8">Pass `props` to a Component</span></h3>
+    <p class="c6"><span>You can </span><span class="c4">pass information</span><span class="c2">&nbsp;to a React
+            component.</span></p>
+    <p class="c6"><span>How? By giving that component an </span><span class="c16 c4">attribute:</span></p>
+    <p class="c6 c36"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 304.00px; height: 50.00px;"><img
+                alt="" src="./resources/images/react2/image6.png"
+                style="width: 304.00px; height: 50.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c16 c4"></span></p>
+    <p class="c6"><span class="c2">Let&rsquo;s say that you want to pass a component the message, &quot;This is some top
+            secret info.&quot;. Here&rsquo;s how you could do it:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 312.00px; height: 72.00px;"><img
+                alt="" src="./resources/images/react2/image84.png"
+                style="width: 312.00px; height: 72.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c11"><span>As you can see, to pass information to a component, you need a </span><span
+            class="c4">name</span><span class="c2">&nbsp;for the information that you want to pass.</span></p>
+    <p class="c6"><span class="c2">In the above example, we used the name message. You can use any name you want.</span>
+    </p>
+    <p class="c6"><span class="c2">If you want to pass information that isn&rsquo;t a string, then wrap that information
+            in curly braces. Here&rsquo;s how you would pass an array:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 319.00px; height: 71.00px;"><img
+                alt="" src="./resources/images/react2/image87.png"
+                style="width: 319.00px; height: 71.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">In this next example, we pass several pieces of information to &lt;Greeting /&gt;.
+            The values that aren&rsquo;t strings are wrapped in curly braces:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 355.00px; height: 76.00px;"><img
+                alt="" src="./resources/images/react2/image41.png"
+                style="width: 355.00px; height: 76.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="1d"><span class="c8">Render a Component&#39;s props</span></h3>
+    <p class="c6"><span>You just </span><span class="c4">passed</span><span class="c2">&nbsp;information to a
+            component&rsquo;s props object!</span></p>
+    <p class="c6"><span>You will often want a component to </span><span class="c4">display</span><span
+            class="c2">&nbsp;the information that you pass.</span></p>
+    <p class="c6"><span class="c2">Here&rsquo;s how to make a component display passed-in information:</span></p>
+    <p class="c6"><span>1 - Find the </span><span class="c4">component class</span><span class="c2">&nbsp;that is going
+            to receive that information.</span></p>
+    <p class="c6"><span>2 - Include this.props.name-of-information in that component class&rsquo;s </span><span
+            class="c4">render</span><span class="c2">&nbsp;method&rsquo;s return statement.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 235.00px; height: 70.00px;"><img
+                alt="" src="./resources/images/react2/image57.png"
+                style="width: 235.00px; height: 70.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="1e"><span class="c8">Pass props From Component To Component</span></h3>
+    <p class="c6"><span class="c2">You have learned how to pass a prop to a component:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 309.00px; height: 48.00px;"><img
+                alt="" src="./resources/images/react2/image78.png"
+                style="width: 309.00px; height: 48.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">You have also learned how to access and display a passed-in prop:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 324.00px; height: 113.00px;"><img
+                alt="" src="./resources/images/react2/image90.png"
+                style="width: 324.00px; height: 113.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c11"><span>The most common use of props is to pass information to a component, </span><span
+            class="c4">from a different component</span><span class="c2">. You haven&rsquo;t done that yet, but
+            it&rsquo;s very similar to what you&rsquo;ve seen already.</span></p>
+    <p class="c6"><span class="c2">In this exercise, you will pass a prop from one component to another.</span></p>
+    <p class="c6"><span class="c29 c15 c23">A curmudgeonly clarification about grammar:</span></p>
+    <p class="c6"><span class="c2">You may have noticed some loose usage of the words prop and props. Unfortunately,
+            this is pretty inevitable.</span></p>
+    <p class="c6"><span class="c2">props is the name of the object that stores passed-in information. this.props refers
+            to that storage object. At the same time, each piece of passed-in information is called a prop. This means
+            that props could refer to two pieces of passed-in information, or it could refer to the object that stores
+            those pieces of information :(</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="1f"><span class="c8">Render Different UI Based on props</span></h3>
+    <p class="c6"><span class="c2">Awesome! You passed a prop from a component to a different component, accessed that
+            prop from the receiver component, and rendered it!</span></p>
+    <p class="c6"><span class="c2">You can do more with props than just display them. You can also use props to make
+            decisions.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 353.00px; height: 400.00px;"><img
+                alt="" src="./resources/images/react2/image70.png"
+                style="width: 353.00px; height: 400.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">In the code editor, look at the Welcome component class.</span></p>
+    <p class="c6"><span>You can tell from this.props.name on line 5 that Welcome expects to receive a piece of
+            information called </span><span class="c4">name</span><span class="c2">. However, Welcome never renders this
+            piece of information! Instead, it uses the information to make a decision.</span></p>
+    <p class="c6"><span class="c2">&lt;Welcome /&gt; instances will render the text WELCOME &quot;2&quot; MY WEB SITE
+            BABYYY!!!!!, unless the user is Mozart, in which case they will render the more respectful</span></p>
+    <p class="c6"><span class="c2">hello sir it is truly great to meet you</span></p>
+    <p class="c6"><span class="c2">here on the web.</span></p>
+    <p class="c6"><span>The passed-in </span><span class="c4">name</span><span>&nbsp;is not displayed in either case!
+            The name is used to </span><span class="c4">decide</span><span class="c2">&nbsp;what will be displayed. This
+            is a common technique.</span></p>
+    <h3 id="1g"><span class="c8">Put an Event Handler in a Component Class</span></h3>
+    <p class="c6"><span>You can, and often will, pass functions as props. It is especially common to pass </span><span
+            class="c4">event handler</span><span class="c2">&nbsp;functions.</span></p>
+    <p class="c6"><span>You have to </span><span class="c4">define</span><span class="c2">&nbsp;an event handler before
+            you can pass one anywhere. </span></p>
+    <p class="c6"><span class="c2">How do you define an event handler in React?</span></p>
+    <p class="c6"><span>You define an event handler as a method on the component class, just like the </span><span
+            class="c4">render</span><span class="c2">&nbsp;method.</span></p>
+    <h3 ><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 434.00px; height: 328.00px;"><img
+                alt="" src="./resources/images/react2/image17.png"
+                style="width: 434.00px; height: 328.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></h3>
+    
+    <h3 id="1h"><span>Pass an Event Handler as a prop</span></h3>
+    <p class="c6"><span class="c2">You can pass a method in the exact same way that you pass any other information.
+            Behold, the mighty JavaScript.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 434.00px; height: 123.00px;"><img
+                alt="" src="./resources/images/react2/image80.png"
+                style="width: 434.00px; height: 123.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <h3 id="1i"><span class="c8">Receive an Event Handler as a prop</span></h3>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">If a user clicks on this &lt;button&gt;&lt;/button&gt; element, then you want your
+            passed-in talk function to get called.</span></p>
+    <p class="c6"><span>That means that you need to attach talk to the &lt;button&gt;&lt;/button&gt; as an </span><span
+            class="c4">event handler</span><span class="c2">.</span></p>
+    <p class="c6"><span>How do you do that? The same way that you attach any event handler to a JSX element: you give
+            that JSX element a special </span><span class="c4">attribute</span><span>. The attribute&rsquo;s
+        </span><span class="c4">name</span><span>&nbsp;should be something like onClick or onHover. The
+            attribute&rsquo;s </span><span class="c4">value</span><span class="c2">&nbsp;should be the event handler
+            that you want to attach.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 417.00px; height: 257.00px;"><img
+                alt="" src="./resources/images/react2/image1.png"
+                style="width: 417.00px; height: 257.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="1j"><span class="c8">naming: handleEvent, onEvent, and this.props.onEvent</span>
+    </h3>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span>When you pass an </span><span class="c4">event handler</span><span class="c2">&nbsp;as a prop,
+            as you just did, there are two names that you have to choose.</span></p>
+    <p class="c6"><span>Both naming choices occur in the </span><span class="c4">parent</span><span
+            class="c2">&nbsp;component class - that is, in the component class that defines the event handler and passes
+            it.</span></p>
+    <p class="c6"><span class="c2">The first name that you have to choose is the name of the event handler
+            itself.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span>The second name is the name of the prop that you will use to </span><span
+            class="c4">pass</span><span class="c2">&nbsp;the event handler. This is the same thing as your attribute
+            name.</span></p>
+    <p class="c11"><span class="c2">These two names can be whatever you want. However, there is a naming convention that
+            they often follow. You don&rsquo;t have to follow this convention, but you should understand it when you see
+            it.</span></p>
+    <p class="c6"><span>Here&rsquo;s how the naming convention works: first, think about what </span><span
+            class="c4">type of event</span><span class="c2">&nbsp;you are listening for. In our example, the event type
+            was &ldquo;click.&rdquo;</span></p>
+    <p class="c6"><span>If you are listening for a &ldquo;click&rdquo; event, then you name your </span><span
+            class="c4">event handler</span><span class="c2">&nbsp;handleClick. If you are listening for a
+            &ldquo;keyPress&rdquo; event, then you name your event handler handleKeyPress:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 358.00px; height: 181.00px;"><img
+                alt="" src="./resources/images/react2/image44.png"
+                style="width: 358.00px; height: 181.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">Your prop name should be the word on, plus your event type. If you are listening for
+            a &ldquo;click&rdquo; event, then you name your prop onClick. If you are listening for a
+            &ldquo;keyPress&rdquo; event, then you name your prop onKeyPress:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 348.00px; height: 283.00px;"><img
+                alt="" src="./resources/images/react2/image77.png"
+                style="width: 348.00px; height: 283.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span>Look at </span><span class="c23">Button.js</span><span>. When you give a
+            &lt;button&gt;&lt;/button&gt; an attribute named onClick, then the name onClick has special meaning. As
+            you&rsquo;ve learned, this special onClick attribute creates an </span><span class="c4">event
+            listener</span><span class="c2">, listening for clicks on the &lt;button&gt;&lt;/button&gt;:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 273.00px; height: 200.00px;"><img
+                alt="" src="./resources/images/react2/image11.png"
+                style="width: 273.00px; height: 200.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span>Now look at </span><span class="c23">Talker.js</span><span>. Here, when you give &lt;Button
+            /&gt; an attribute named onClick, then the name onClick doesn&rsquo;t do anything special. The name onClick
+            does </span><span class="c4">not</span><span class="c2">&nbsp;create an event listener when used on
+            &lt;Button /&gt; - it&rsquo;s just an arbitrary attribute name:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 275.00px; height: 174.00px;"><img
+                alt="" src="./resources/images/react2/image51.png"
+                style="width: 275.00px; height: 174.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c11"><span>The reason for this is that &lt;Button /&gt; is not an HTML-like JSX element; it&rsquo;s a
+        </span><span class="c4">component instance</span><span class="c2">.</span></p>
+    <p class="c6"><span class="c2">Names like onClick only create event listeners if they&rsquo;re used on HTML-like JSX
+            elements. Otherwise, they&rsquo;re just ordinary prop names.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="1k"><span class="c8">this.props.children</span></h3>
+    <p class="c6"><span class="c2">Every component&rsquo;s props object has a property named children.</span></p>
+    <p class="c6"><span class="c2">this.props.children will return everything in between a component&rsquo;s opening and
+            closing JSX tags.</span></p>
+    <p class="c6"><span>So far, all of the components that you&rsquo;ve seen have been </span><span
+            class="c4">self-closing tags</span><span class="c2">, such as &lt;MyComponentClass /&gt;. They don&rsquo;t
+            have to be! You could write &lt;MyComponentClass&gt;&lt;/MyComponentClass&gt;, and it would still
+            work.</span></p>
+    <p class="c6"><span class="c2">this.props.children would return everything in between &lt;MyComponentClass&gt; and
+            &lt;/MyComponentClass&gt;.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 305.00px; height: 359.00px;"><img
+                alt="" src="./resources/images/react2/image71.png"
+                style="width: 305.00px; height: 359.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span>Look at </span><span class="c23">BigButton.js</span><span>. In </span><span class="c4">Example
+            1,</span><span class="c2">&nbsp;&lt;BigButton&gt;&lsquo;s this.props.children would equal the text, &ldquo;I
+            am a child of BigButton.&rdquo;</span></p>
+    <p class="c6"><span>In </span><span class="c4">Example 2,</span><span class="c2">&nbsp;&lt;BigButton&gt;&lsquo;s
+            this.props.children would equal a &lt;LilButton /&gt; component.</span></p>
+    <p class="c6"><span>In </span><span class="c4">Example 3,</span><span class="c2">&nbsp;&lt;BigButton&gt;&lsquo;s
+            this.props.children would equal undefined.</span></p>
+    <p class="c6"><span>If a component has more than one child between its JSX tags, then this.props.children will
+            return those children in an array. However, if a component has only one child, then this.props.children will
+            return the single child, </span><span class="c4">not</span><span class="c2">&nbsp;wrapped in an
+            array.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="1l"><span class="c8">defaultProps</span></h3>
+    <p class="c6"><span class="c2">Take a look at the Button component class.</span></p>
+    <p class="c6"><span class="c2">Notice that on line 8, Button expects to receive a prop named text. The received text
+            will be displayed inside of a &lt;button&gt;&lt;/button&gt; element.</span></p>
+    <p class="c6"><span class="c2">What if nobody passes any text to Button?</span></p>
+    <p class="c6"><span class="c2">If nobody passes any text to Button, then Button&lsquo;s display will be blank. It
+            would be better if Button could display a default message instead.</span></p>
+    <p class="c6"><span class="c2">You can make this happen by giving your component class a property named
+            defaultProps:</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 351.00px; height: 177.00px;"><img
+                alt="" src="./resources/images/react2/image28.png"
+                style="width: 351.00px; height: 177.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">The defaultProps property should be equal to an object:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 357.00px; height: 198.00px;"><img
+                alt="" src="./resources/images/react2/image45.png"
+                style="width: 357.00px; height: 198.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">Inside of this object, write properties for any default props that you&rsquo;d like
+            to set:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 352.00px; height: 176.00px;"><img
+                alt="" src="./resources/images/react2/image2.png"
+                style="width: 352.00px; height: 176.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c11"><span class="c2">If an &lt;Example /&gt; doesn&rsquo;t get passed any text, then it will display
+            &ldquo;yo.&rdquo;</span></p>
+    <p class="c6"><span>If an &lt;Example /&gt; </span><span class="c4">does</span><span class="c2">&nbsp;get passed
+            some text, then it will display that passed-in text.</span></p>
+    <h3 class="c6 c10 c33" id="h.k00pftezve1i"><span class="c8"></span></h3>
+    <h3 id="1m"><span class="c8">this.props Recap</span></h3>
+    <p class="c6"><span class="c2">That completes our lesson on props. Great job sticking with it!</span></p>
+    <p class="c6"><span class="c2">Here are some of the skills that you have learned:</span></p>
+    <ul class="c3 lst-kix_lkysynd37twx-0 start">
+        <li class="c6 c7 li-bullet-0"><span>Passing a prop by giving an </span><span class="c4">attribute</span><span
+                class="c2">&nbsp;to a component instance</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">Accessing a passed-in prop via this.props.prop-name</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">Displaying a prop</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">Using a prop to make decisions about what to display</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">Defining an event handler in a component class</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">Passing an event handler as a prop</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">Receiving a prop event handler and attaching it to an event
+                listener</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">Naming event handlers and event handler attributes according to
+                convention</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">this.props.children</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">getDefaultProps</span></li>
+    </ul>
+    <p class="c6"><span class="c2">That&rsquo;s a lot! Don&rsquo;t worry if it&rsquo;s all a bit of a blur. Soon
+            you&rsquo;ll get plenty of practice!</span></p>
+    <h2 id="2"><span class="c24 c15">State</span></h2>
+    <h3 id="2a"><span>this.state</span></h3>
+    <p class="c6"><span class="c12"><a class="c5"
+                href="https://www.google.com/url?q=http://www.teach-ict.com/as_a2_ict_new/ocr/AS_G061/311_data_info_knowledge/static_dynamic_data/miniweb/pg4.htm&amp;sa=D&amp;source=editors&amp;ust=1681269371529240&amp;usg=AOvVaw2GUCB751Aa-pdJ2N4OL0qk">Dynamic
+                information</a></span><span class="c2">&nbsp;is information that can change.</span></p>
+    <p class="c6"><span>React components will often need </span><span class="c4">dynamic
+            information</span><span>&nbsp;in order to render. For example, imagine a component that displays the score
+            of a basketball game. The score of the game might change over time, meaning that the score is </span><span
+            class="c4">dynamic</span><span class="c2">. Our component will have to know the score, a piece of dynamic
+            information, in order to render in a useful way.</span></p>
+    <p class="c6"><span class="c2">There are two ways for a component to get dynamic information: props and state.
+            Besides props and state, every value used in a component should always stay exactly the same.</span></p>
+    <p class="c6"><span class="c2">You just spent a long lesson learning about props. Now it&rsquo;s time to learn about
+            state. props and state are all that you need to set up an ecosystem of interacting React components.</span>
+    </p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="2b"><span class="c8">Setting Initial State</span></h3>
+    <p class="c6"><span class="c2">A React component can access dynamic information in two ways: props and state.</span>
+    </p>
+    <p class="c6"><span>Unlike props, a component&rsquo;s state is </span><span class="c4">not</span><span
+            class="c2">&nbsp;passed in from the outside. A component decides its own state.</span></p>
+    <p class="c6"><span class="c2">To make a component have state, give the component a state property. This property
+            should be declared inside of a constructor method, like this:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 374.00px; height: 281.00px;"><img
+                alt="" src="./resources/images/react2/image65.png"
+                style="width: 374.00px; height: 281.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">Whoa, a constructor method? super(props)? What&rsquo;s going on here? Let&rsquo;s
+            look more closely at this potentially unfamiliar code:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 313.00px; height: 115.00px;"><img
+                alt="" src="./resources/images/react2/image9.png"
+                style="width: 313.00px; height: 115.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c11"><span class="c2">this.state should be equal to an object, like in the example above. This object
+            represents the initial &ldquo;state&rdquo; of any component instance. We&rsquo;ll explain that more
+            soon!</span></p>
+    <p class="c6"><span>How about the rest of the code? constructor and super are both features of ES6, not unique to
+            React. There is nothing particularly React-y about their usage here. A full explanation of their
+            functionality is outside of the scope of this course, but we&rsquo;d recommend</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://hacks.mozilla.org/2015/07/es6-in-depth-classes/&amp;sa=D&amp;source=editors&amp;ust=1681269371530988&amp;usg=AOvVaw0fvWwhpQWHS2B5JJ8qsK0s">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://hacks.mozilla.org/2015/07/es6-in-depth-classes/&amp;sa=D&amp;source=editors&amp;ust=1681269371531196&amp;usg=AOvVaw1gRduSdi3RhVuy6fgsOHng">familiarizing</a></span><span><a
+                class="c5"
+                href="https://www.google.com/url?q=http://exploringjs.com/es6/ch_classes.html&amp;sa=D&amp;source=editors&amp;ust=1681269371531376&amp;usg=AOvVaw0rSbO_BkFOaTeAIngDDCjb">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=http://exploringjs.com/es6/ch_classes.html&amp;sa=D&amp;source=editors&amp;ust=1681269371531554&amp;usg=AOvVaw2_4LA9D1oyuhQC8rL1gDaY">yourself</a></span><span>.
+            It is important to note that React components </span><span class="c4">always</span><span
+            class="c2">&nbsp;have to call super in their constructors to be set up properly.</span></p>
+    <h3 id="2c"><span class="c8">Access a Component&#39;s state</span></h3>
+    <p class="c6"><span>To </span><span class="c4">read</span><span class="c2">&nbsp;a component&rsquo;s state, use the
+            expression this.state.name-of-property:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 347.00px; height: 343.00px;"><img
+                alt="" src="./resources/images/react2/image83.png"
+                style="width: 347.00px; height: 343.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c11"><span class="c2">The above component class reads a property in its state from inside of its render
+            function.</span></p>
+    <p class="c6"><span class="c2">Just like this.props, you can use this.state from any property defined inside of a
+            component class&rsquo;s body.</span></p>
+    <h3 id="2d"><span class="c8">Update state with this.setState</span></h3>
+    <p class="c6"><span>A component can do more than just read its own state. A component can also </span><span
+            class="c4">change</span><span class="c2">&nbsp;its own state.</span></p>
+    <p class="c6"><span class="c2">A component changes its state by calling the function this.setState().</span></p>
+    <p class="c6"><span>this.setState() takes two arguments: an </span><span class="c4">object</span><span
+            class="c2">&nbsp;that will update the component&rsquo;s state, and a callback. You basically never need the
+            callback.</span></p>
+    <p class="c6"><span>In the code editor, take a look at </span><span class="c23">Example.js</span><span class="c2">.
+            Notice that &lt;Example /&gt; has a state of:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 213.00px; height: 115.00px;"><img
+                alt="" src="./resources/images/react2/image39.png"
+                style="width: 213.00px; height: 115.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">Now, let&rsquo;s say that &lt;Example /&gt; were to call:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 295.00px; height: 53.00px;"><img
+                alt="" src="./resources/images/react2/image53.png"
+                style="width: 295.00px; height: 53.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">After that call, here is what &lt;Example /&gt;&lsquo;s state would be:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 175.00px; height: 113.00px;"><img
+                alt="" src="./resources/images/react2/image31.png"
+                style="width: 175.00px; height: 113.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c11"><span class="c2">The mood part of the state remains unaffected!</span></p>
+    <p class="c6"><span>this.setState() takes an object, and </span><span class="c4">merges</span><span
+            class="c2">&nbsp;that object with the component&rsquo;s current state. If there are properties in the
+            current state that aren&rsquo;t part of that object, then those properties remain how they were.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="2e"><span class="c8">Call this.setState from Another Function</span></h3>
+    <p class="c6"><span>The most common way to call this.setState() is to call a custom function that </span><span
+            class="c4">wraps</span><span class="c2">&nbsp;a this.setState() call. .makeSomeFog() is an example:</span>
+    </p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 353.00px; height: 324.00px;"><img
+                alt="" src="./resources/images/react2/image89.png"
+                style="width: 353.00px; height: 324.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c11"><span class="c2">Notice how the method makeSomeFog() contains a call to this.setState().</span></p>
+    <p class="c6"><span class="c2">You may have noticed a weird line in there:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 282.00px; height: 73.00px;"><img
+                alt="" src="./resources/images/react2/image8.png"
+                style="width: 282.00px; height: 73.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c11"><span class="c2">This line is necessary because makeSomeFog()&lsquo;s body contains the word this.
+            We&rsquo;ll talk about it more soon!</span></p>
+    <p class="c6"><span>Due to the way that event handlers are bound in JavaScript, this.toggleMood() loses its this
+            when it is used on line 20. Therefore, the expressions this.state.mood and this.setState on lines 12 and 13
+            won&rsquo;t mean what they&rsquo;re supposed to&hellip; </span><span class="c4">unless</span><span
+            class="c2">&nbsp;you have already bound the correct this to this.toggleMood.</span></p>
+    <p class="c6"><span class="c2">That is why we must bind this.toggleMood to this on line 8.</span></p>
+    <p class="c6"><span>For an in-depth explanation of this kind of binding trickery, begin with</span><span><a
+                class="c5"
+                href="https://www.google.com/url?q=https://facebook.github.io/react/docs/handling-events.html&amp;sa=D&amp;source=editors&amp;ust=1681269371534701&amp;usg=AOvVaw3h5La7-2hHdQjjMnia4W9N">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://facebook.github.io/react/docs/handling-events.html&amp;sa=D&amp;source=editors&amp;ust=1681269371534974&amp;usg=AOvVaw1xSXcASjs6jftzM2ceh-Uo">the
+                React docs</a></span><span class="c2">. For the less curious, just know that in React, whenever you
+            define an event handler that uses this, you need to add this.methodName = this.methodName.bind(this) to your
+            constructor function.</span></p>
+    <p class="c6"><span>One final note: you </span><span class="c4">can&rsquo;t</span><span class="c2">&nbsp;call
+            this.setState() from inside of the render function! We&rsquo;ll explain why in the next exercise. ( it will
+            create an infinite loop)</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="2f"><span class="c8">this.setState Automatically Calls render</span></h3>
+    <p class="c6"><span class="c16 c4">Any time that you call this.setState(), this.setState() AUTOMATICALLY calls
+            .render() as soon as the state has changed.</span></p>
+    <p class="c6"><span class="c2">Think of this.setState() as actually being two things: this.setState(), immediately
+            followed by .render().</span></p>
+    <p class="c6"><span class="c4">That</span><span>&nbsp;is why you can&rsquo;t call this.setState() from inside of the
+            .render() method! this.setState() </span><span class="c4">automatically</span><span class="c2">&nbsp;calls
+            .render(). If .render() calls this.setState(), then an infinite loop is created.</span></p>
+    <h3 id="2g"><span class="c8">Components Interacting Recap</span></h3>
+    <p class="c6"><span class="c2">In this unit, you learned how to use import and export to access one file from
+            another. You learned about props and state, and the countless variations on how they work.</span></p>
+    <p class="c6"><span class="c2">Before this unit, you learned about JSX, components, and how they can work
+            together.</span></p>
+    <p class="c6"><span class="c2">A React app is basically just a lot of components, setting state and passing props to
+            one another. Now that you have a real understanding of how to use props and state, you have by far the most
+            important tools that you need!</span></p>
+    <p class="c6"><span>In future lessons, the focus will shift slightly outward. In addition to learning more new
+            skills, you&rsquo;ll also learn your first </span><span class="c4">programming patterns.</span><span
+            class="c2">&nbsp;These large-scale strategies will help you combine what you&rsquo;ve learned and really
+            start building.</span></p>
+    <h2 id="3"><span class="c24 c15">React Developer Tools</span></h2>
+    <p class="c6"><span class="c2">Use React Developer Tools to debug your React applications.</span></p>
+    <h3 id="3a"><span class="c8">Introduction</span></h3>
+    <p class="c6"><span class="c2">Effectively debugging applications is a cornerstone of programming. After creating a
+            React App, an important next step is setting up your environment to debug it. We&rsquo;ll cover the basics
+            in this article using the initial skeleton created by using create-react-app.</span></p>
+    <p class="c6"><span>This article assumes you are familiar with</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/content-items/54c92cb96ccd75f82d11041e9bd67cf4&amp;sa=D&amp;source=editors&amp;ust=1681269371536806&amp;usg=AOvVaw0wKLMnl7A630Cl_m29IGI9">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/content-items/54c92cb96ccd75f82d11041e9bd67cf4&amp;sa=D&amp;source=editors&amp;ust=1681269371537146&amp;usg=AOvVaw02nxArW0buraSw_xulo_cj">create-react-app</a></span><span>&nbsp;and</span><span><a
+                class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/paths/premium-fswd-react-postgres/tracks/premium-unit-2-building-your-front-end/modules/premium-developing-with-css/videos/intro-to-chrome-devtools&amp;sa=D&amp;source=editors&amp;ust=1681269371537466&amp;usg=AOvVaw10FLBEWE8m3efaWuJYDCvI">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/paths/premium-fswd-react-postgres/tracks/premium-unit-2-building-your-front-end/modules/premium-developing-with-css/videos/intro-to-chrome-devtools&amp;sa=D&amp;source=editors&amp;ust=1681269371537868&amp;usg=AOvVaw2PIrpn-JHoIxPsV3B0Ru0a">Chrome
+                DevTools</a></span><span>. We&rsquo;re also going to be briefly touching on</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/react/state&amp;sa=D&amp;source=editors&amp;ust=1681269371538243&amp;usg=AOvVaw0qYHNVFGkBAzwQF3XOXYbg">&nbsp;</a></span><span
+            class="c12 c4"><a class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/react/state&amp;sa=D&amp;source=editors&amp;ust=1681269371538546&amp;usg=AOvVaw2P2vTfZ_UZtDNxCpxcMvue">state</a></span><span>&nbsp;and</span><span><a
+                class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/react/props&amp;sa=D&amp;source=editors&amp;ust=1681269371538890&amp;usg=AOvVaw0p6pU77rTPLcffmuIdF4J6">&nbsp;</a></span><span
+            class="c12 c4"><a class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/react/props&amp;sa=D&amp;source=editors&amp;ust=1681269371539169&amp;usg=AOvVaw1grH5R54RaJS-RkOATVIaD">props</a></span><span
+            class="c2">&nbsp;within a component, so it&rsquo;s best if you have a basic understanding of these concepts
+            before proceeding with this article!</span></p>
+    <p class="c6"><span class="c2">We&rsquo;ve included this article in video form too. You can watch here or scroll
+            down to keep reading!</span></p>
+    <h3 id="3b"><span class="c15 c23 c27">1. Install React Developer Tools</span></h3>
+    <p class="c6"><span>Facebook created a Chrome extension to help with debugging React Apps. It is called </span><span
+            class="c4">React Developer Tools</span><span>&nbsp;and allows developers to inspect React</span><span><a
+                class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/react/components&amp;sa=D&amp;source=editors&amp;ust=1681269371540029&amp;usg=AOvVaw3bssFK6pkL3Vf_ulGrVyni">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/resources/docs/react/components&amp;sa=D&amp;source=editors&amp;ust=1681269371540229&amp;usg=AOvVaw2AQxx9LCatwYEnNvwCR3eH">components</a></span><span>,
+            view their properties, and interact with them while looking at the application in Google Chrome. You can add
+            this functionality to Chrome by navigating to the extension page</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi&amp;sa=D&amp;source=editors&amp;ust=1681269371540549&amp;usg=AOvVaw2KTYvFwvLSWm6gI22G0UhZ">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi&amp;sa=D&amp;source=editors&amp;ust=1681269371540780&amp;usg=AOvVaw1RFeNd8zowM9rsxmPJAU_v">here</a></span><span
+            class="c2">, selecting &ldquo;Add to Chrome&rdquo;, and following the installation prompts.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 404.00px;"><img
+                alt="React Dev Tools installation page" src="./resources/images/react2/image64.png"
+                style="width: 601.70px; height: 404.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <h3 id="3c"><span class="c27 c15 c23">2. Inspect React components</span></h3>
+    <p class="c6"><span class="c2">With the extension installed, if you start your React App (npm start) and visit the
+            site in Chrome, the React Developer Tools icon in the Chrome menu bar should change from inactive:</span>
+    </p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 36.00px; height: 36.00px;"><img
+                alt="React Dev Tools inactive status" src="./resources/images/react2/image66.png"
+                style="width: 36.00px; height: 36.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">to active:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 40.00px; height: 34.00px;"><img
+                alt="React Dev Tools active status" src="./resources/images/react2/image27.png"
+                style="width: 40.00px; height: 34.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">This indicates that the site you are browsing is a React App in development build.
+            When a page is using the production build of React, the icon will look like this:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 44.00px; height: 44.00px;"><img
+                alt="React Dev Tools active production status" src="./resources/images/react2/image3.png"
+                style="width: 44.00px; height: 44.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span>To open the React Developer Tools, first open Chrome DevTools (View &gt; Developer &gt;
+            Developer Tools). On the same banner as Elements, Sources, Console, etc., there will be two new React tabs:
+        </span><span class="c4">Components</span><span>&nbsp;and </span><span class="c4">Profiler</span><span
+            class="c2">. These two tabs will only appear on sites using React. (If they&rsquo;re not visible,
+            you&rsquo;ll need to click on the arrow to expand the tabs selection.)</span></p>
+    <p class="c6"><span class="c2">Click on the Components tab.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 284.00px;"><img
+                alt="React Dev Tools tab open" src="./resources/images/react2/image69.png"
+                style="width: 601.70px; height: 284.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">Right now, all we can see is App itself. But we want to see the contents of App as
+            well!</span></p>
+    <p class="c6"><span class="c2">In the above image, you&rsquo;ll see that the cursor is pointing to a gear icon.
+            Click the gear icon to open up the settings, and then click on the Components tab in the pop up
+            window.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 132.00px;"><img
+                alt="React Dev Tools filter" src="./resources/images/react2/image38.png"
+                style="width: 601.70px; height: 132.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">By default, there is a filter that is causing the host (DOM) nodes to be hidden.
+            Delete this filter for now and then exit out of the settings window. You can always go back into settings
+            and apply your preferred filters!</span></p>
+    <p class="c6"><span class="c2">Now you will see a tree of App&lsquo;s contents! As you hover over the elements on
+            the left, they are highlighted in the rendered view, similar to Chrome DevTools. If you click on the
+            elements in the left side of the window, their properties are exposed on the right side. (If your Chrome
+            DevTools appear vertically on the left/right side of the window, App and its contents will appear on top,
+            and their properties will be exposed underneath.):</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 132.00px;"><img
+                alt="React Dev Tools select" src="./resources/images/react2/image60.png"
+                style="width: 601.70px; height: 132.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">You can also use the search box to locate elements by name:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 133.33px;"><img
+                alt="React Dev Tools search" src="./resources/images/react2/image79.png"
+                style="width: 601.70px; height: 133.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span>If you&rsquo;ve played around with React Developer Tools before, you may notice that this looks
+            a bit different than what you remember. If that&rsquo;s the case, you may want to take a look at
+            the</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/blog/2019/08/15/new-react-devtools.html&amp;sa=D&amp;source=editors&amp;ust=1681269371542910&amp;usg=AOvVaw17_t2fMr9eIMJEnr6SqnZp">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/blog/2019/08/15/new-react-devtools.html&amp;sa=D&amp;source=editors&amp;ust=1681269371543121&amp;usg=AOvVaw2n-bE6kbb0Wm_zPkAm5a5v">official
+                React documentation</a></span><span class="c2">&nbsp;for what&rsquo;s changed or how to get the old
+            version back if you&rsquo;re more comfortable with that.</span></p>
+    <h3 id="3d"><span class="c27 c15 c23">3. Modify components with JavaScript</span></h3>
+    <p class="c6"><span class="c2">With React Developer Tools and the console, it is possible to modify rendered React
+            components. This allows you to experiment with changing component values, calling methods, and testing
+            interaction between components.</span></p>
+    <p class="c6"><span class="c2">You can access and update a component&rsquo;s state and props inside the Components
+            tab. Click and edit the props and state from the right side. For state to show up, you&rsquo;ll first need
+            to initialize the component with some state from inside your files.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 132.00px;"><img
+                alt="React Dev Tools select component" src="./resources/images/react2/image10.png"
+                style="width: 601.70px; height: 132.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">It works with React Hooks, too!</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 118.67px;"><img
+                alt="React Dev Tools select component hooks" src="./resources/images/react2/image82.png"
+                style="width: 601.70px; height: 118.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">You can also do this by selecting the component, switching over to the console view,
+            and accessing the component using $r. By logging $r, you could see that this was indeed the component
+            selected.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 86.67px;"><img
+                alt="React Dev Tools console" src="./resources/images/react2/image58.png"
+                style="width: 601.70px; height: 86.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">With these tools you&rsquo;re now ready to begin debugging React Apps!</span></p>
+    <p class="c6"><span>For more details and practice on how to use the updated tools, check out this</span><span><a
+                class="c5"
+                href="https://www.google.com/url?q=https://react-devtools-tutorial.now.sh/&amp;sa=D&amp;source=editors&amp;ust=1681269371544348&amp;usg=AOvVaw0bJ1ZQ8_2aNN3WZ6Up7wv-">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://react-devtools-tutorial.now.sh/&amp;sa=D&amp;source=editors&amp;ust=1681269371544590&amp;usg=AOvVaw2r0r0mpc16GT-RSu9LN7yZ">interactive
+                tutorial</a></span><span class="c2">!</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h2 id="4"><span class="c24 c15">Stateless Components From Stateful Components</span>
+    </h2>
+    <h3 id="4a"><span class="c8">Stateless Components Inherit From Stateful Components</span>
+    </h3>
+    <p class="c6"><span>Let&rsquo;s learn our first </span><span class="c16 c4">programming pattern!</span></p>
+    <p class="c6"><span class="c2">In this lesson, we&rsquo;ll take a look at a simple version of a programming pattern.
+            The following lessons will expand upon that lesson, and by the end, we&rsquo;ll have a programming pattern
+            in its full complexity.</span></p>
+    <p class="c6"><span>Our programming pattern uses two React components: a </span><span
+            class="c4">stateful</span><span>&nbsp;component, and a </span><span class="c4">stateless</span><span
+            class="c2">&nbsp;component. &ldquo;Stateful&rdquo; describes any component that has a state property;
+            &ldquo;stateless&rdquo; describes any component that does not.</span></p>
+    <p class="c6"><span>In our pattern, a </span><span class="c4">stateful</span><span>&nbsp;component passes its state
+            down to a </span><span class="c4">stateless</span><span class="c2">&nbsp;component.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">Build a Stateful Component Class</span></p>
+    <p class="c6"><span>Let&rsquo;s make a </span><span class="c4">stateful</span><span>&nbsp;component pass its state
+            to a </span><span class="c4">stateless</span><span class="c2">&nbsp;component.</span></p>
+    <p class="c6"><span>To make that happen, you need two component classes: a </span><span
+            class="c4">stateful</span><span>&nbsp;class, and a </span><span class="c4">stateless</span><span
+            class="c2">&nbsp;class.</span></p>
+    <p class="c25"><span class="c20">import</span><span class="c1">&nbsp;</span><span class="c9">React</span><span
+            class="c1">&nbsp;</span><span class="c9">from</span><span class="c1">&nbsp;</span><span
+            class="c21">&#39;react&#39;</span><span class="c1 c15">;</span></p>
+    <p class="c25"><span class="c20">import</span><span class="c1">&nbsp;</span><span class="c9">ReactDOM</span><span
+            class="c1">&nbsp;</span><span class="c9">from</span><span class="c1">&nbsp;</span><span
+            class="c21">&#39;react-dom&#39;</span><span class="c1 c15">;</span></p>
+    <p class="c25"><span class="c20">import</span><span class="c1">&nbsp;{</span><span class="c9">Child</span><span
+            class="c1">} </span><span class="c9">from</span><span class="c1">&nbsp;</span><span
+            class="c21">&#39;./Child&#39;</span><span class="c1 c15">;</span></p>
+    <p class="c25 c26"><span class="c1 c15"></span></p>
+    <p class="c25"><span class="c20">class</span><span class="c1">&nbsp;</span><span class="c9">Parent</span><span
+            class="c1">&nbsp;</span><span class="c20">extends</span><span class="c1">&nbsp;</span><span
+            class="c9">React</span><span class="c1">.</span><span class="c32">Component</span><span
+            class="c1 c15">&nbsp;{</span></p>
+    <p class="c25"><span class="c1">&nbsp;</span><span class="c9">constructor</span><span class="c1">(</span><span
+            class="c9">props</span><span class="c1 c15">){</span></p>
+    <p class="c25"><span class="c1">&nbsp; &nbsp;</span><span class="c20">super</span><span class="c1">(</span><span
+            class="c9">props</span><span class="c1 c15">);</span></p>
+    <p class="c25"><span class="c1">&nbsp; &nbsp;</span><span class="c20">this</span><span class="c1">.</span><span
+            class="c32">state</span><span class="c1">= {</span><span class="c32">name</span><span class="c1">:
+        </span><span class="c21">&#39;Frarthur&#39;</span><span class="c1 c15">};</span></p>
+    <p class="c25"><span class="c1 c15">&nbsp;}</span></p>
+    <p class="c25"><span class="c1">&nbsp;</span><span class="c9">render</span><span class="c1 c15">(){</span></p>
+    <p class="c25"><span class="c1">&nbsp; &nbsp;</span><span class="c20">return</span><span
+            class="c1">&nbsp;</span><span class="c31">&lt;Child </span><span class="c35">name</span><span
+            class="c1">=</span><span class="c31">&nbsp;</span><span class="c1">{</span><span
+            class="c20">this</span><span class="c1">.</span><span class="c32">state</span><span class="c1">.</span><span
+            class="c32">name</span><span class="c1">}</span><span class="c31">/&gt;</span><span class="c1 c15">;</span>
+    </p>
+    <p class="c25"><span class="c1 c15">&nbsp;}</span></p>
+    <p class="c25 c26"><span class="c1 c15"></span></p>
+    <p class="c25"><span class="c1 c15">}</span></p>
+    <p class="c25"><span class="c9">ReactDOM</span><span class="c1">.</span><span class="c32">render</span><span
+            class="c1">(</span><span class="c31">&lt;Parent /&gt;</span><span class="c1">, </span><span
+            class="c9">document</span><span class="c1">.</span><span class="c32">getElementById</span><span
+            class="c1">(</span><span class="c21">&#39;app&#39;</span><span class="c1 c15">))</span></p>
+    <h3 id="4b"><span class="c8">Build a Stateless Component Class</span></h3>
+    <p class="c13"><span class="c20">import</span><span class="c1">&nbsp;</span><span class="c9">React</span><span
+            class="c1">&nbsp;</span><span class="c9">from</span><span class="c1">&nbsp;</span><span
+            class="c21">&#39;react&#39;</span><span class="c1 c15">;</span></p>
+    <p class="c13 c26"><span class="c1 c15"></span></p>
+    <p class="c13"><span class="c20">export</span><span class="c1">&nbsp;</span><span class="c20">class</span><span
+            class="c1">&nbsp;</span><span class="c9">Child</span><span class="c1">&nbsp;</span><span
+            class="c20">extends</span><span class="c1">&nbsp;</span><span class="c9">React</span><span
+            class="c1">.</span><span class="c32">Component</span><span class="c1 c15">&nbsp;{</span></p>
+    <p class="c13"><span class="c9">name</span><span class="c1 c15">(){</span></p>
+    <p class="c13"><span class="c20">return</span><span class="c1">&nbsp;</span><span class="c20">this</span><span
+            class="c1">.</span><span class="c32">props</span><span class="c1">.</span><span class="c32">name</span><span
+            class="c1 c15">;</span></p>
+    <p class="c13"><span class="c1 c15">}</span></p>
+    <p class="c13"><span class="c9">render</span><span class="c1 c15">(){</span></p>
+    <p class="c13"><span class="c20">return</span><span class="c1">&nbsp;</span><span class="c31">&lt;h1&gt;</span><span
+            class="c1">Hey</span><span class="c31">, </span><span class="c1">my</span><span
+            class="c31">&nbsp;</span><span class="c1">name</span><span class="c31">&nbsp;</span><span
+            class="c1">is</span><span class="c31">&nbsp;</span><span class="c1">{</span><span
+            class="c20">this</span><span class="c1">.</span><span class="c32">props</span><span class="c1">.</span><span
+            class="c32">name</span><span class="c1">}</span><span class="c31">!&lt;/h1&gt;</span><span
+            class="c1 c15">;</span></p>
+    <p class="c13"><span class="c1 c15">}</span></p>
+    <p class="c13"><span class="c1 c15">}</span></p>
+    <p class="c17 c26"><span class="c2"></span></p>
+    <p class="c17 c26"><span class="c2"></span></p>
+    <h3 id="4c"><span class="c8">Pass a Component&#39;s State</span></h3>
+    <p class="c6"><span class="c2">A &lt;Parent /&gt; is supposed to pass its state to a &lt;Child /&gt;.</span></p>
+    <p class="c6"><span>Before a &lt;Parent /&gt; can pass anything to a &lt;Child /&gt;, you need to import Child into
+        </span><span class="c23">Parent.js</span><span class="c2">.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="4d"><span class="c8">Don&#39;t Update props</span></h3>
+    <p class="c6"><span>Great work! You just passed information from a </span><span
+            class="c4">stateful</span><span>&nbsp;component to a </span><span class="c4">stateless</span><span
+            class="c2">&nbsp;component. You will be doing a lot of that.</span></p>
+    <p class="c6"><span>You learned earlier that a component can </span><span class="c4">change</span><span>&nbsp;its
+            state by calling this.setState(). You may have been wondering: how does a component </span><span
+            class="c4">change</span><span class="c2">&nbsp;its props?</span></p>
+    <p class="c6"><span class="c2">The answer: it doesn&rsquo;t!</span></p>
+    <p class="c6"><span>A component should never update this.props. Look at </span><span class="c23">Bad.js</span><span
+            class="c2">&nbsp;to see an example of what not to do.</span></p>
+    <p class="c6"><span>This is potentially confusing. props and state store </span><span class="c4">dynamic</span><span
+            class="c2">&nbsp;information. Dynamic information can change, by definition. If a component can&rsquo;t
+            change its props, then what are props for?</span></p>
+    <p class="c6"><span class="c23">A React component should use props to store information that can be changed, but can
+            only be changed by a </span><span class="c23 c4">different</span><span
+            class="c29 c15 c23">&nbsp;component.</span></p>
+    <p class="c6"><span class="c15 c23 c29">A React component should use state to store information that the component
+            itself can change.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h2 id="5"><span class="c15 c24">Child Components Update Their Parents&#39; state</span>
+    </h2>
+    <p class="c17 c26"><span class="c2"></span></p>
+    <p class="c11"><span class="c16 c4">1</span></p>
+    <p class="c6"><span>The </span><span class="c4">parent</span><span class="c2">&nbsp;component class defines a method
+            that calls this.setState().</span></p>
+    <p class="c6"><span class="c2">For an example, look at the .handleClick() method.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 415.00px; height: 411.00px;"><img
+                alt="" src="./resources/images/react2/image4.png"
+                style="width: 415.00px; height: 411.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c16 c4">2</span></p>
+    <p class="c6"><span class="c2">The parent component binds the newly-defined method to the current instance of the
+            component in its constructor. This ensures that when we pass the method to the child component, it will
+            still update the parent component.</span></p>
+    <p class="c6"><span class="c2">For an example, look at the end of the constructor() method.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 449.00px; height: 310.00px;"><img
+                alt="" src="./resources/images/react2/image5.png"
+                style="width: 449.00px; height: 310.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c16 c4">3</span></p>
+    <p class="c6"><span>Once the </span><span class="c4">parent</span><span>&nbsp;has defined a method that updates its
+            state and bound to it, the parent then passes that method down to a </span><span
+            class="c16 c4">child.</span></p>
+    <p class="c6"><span>Look in </span><span class="c23">Step2.js</span><span class="c2">, at the prop on line
+            28.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 481.00px; height: 412.00px;"><img
+                alt="" src="./resources/images/react2/image40.png"
+                style="width: 481.00px; height: 412.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c16 c4"></span></p>
+    <p class="c6"><span class="c16 c4">4</span></p>
+    <p class="c6"><span>The </span><span class="c4">child</span><span class="c2">&nbsp;receives the passed-down
+            function, and uses it as an event handler.</span></p>
+    <p class="c6"><span>When a user clicks on the &lt;button&gt;&lt;/button&gt;, a click event will fire. This will make
+            the passed-down function get called, which will </span><span class="c4">update</span><span
+            class="c2">&nbsp;the parent&rsquo;s state.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 468.00px; height: 400.00px;"><img
+                alt="" src="./resources/images/react2/image47.png"
+                style="width: 468.00px; height: 400.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c17 c26"><span class="c2"></span></p>
+    <h3 id="5a"><span class="c8">Define an Event Handler</span></h3>
+    <p class="c6"><span class="c2">To make a child component update its parent&rsquo;s state, the first step is
+            something that you&rsquo;ve seen before: you must define a state-changing method on the parent.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 228.00px; height: 126.00px;"><img
+                alt="" src="./resources/images/react2/image7.png"
+                style="width: 228.00px; height: 126.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="5b"><span class="c8">Pass the Event Handler</span></h3>
+    <p class="c6"><span class="c2">Parent must pass this function down to Child, so that Child can use it in an event
+            listener on the dropdown menu.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 74.67px;"><img
+                alt="" src="./resources/images/react2/image23.png"
+                style="width: 601.70px; height: 74.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="5c"><span class="c8">Receive the Event Handler</span></h3>
+    <p class="c17 c26"><span class="c2"></span></p>
+    <p class="c11 c26"><span class="c2"></span></p>
+    <p class="c6"><span>When a user selects a new dropdown item, it will invoke changeName, but it </span><span
+            class="c4">won&rsquo;t</span><span>&nbsp;pass the correct argument! Instead of passing a new name, it will
+            pass an </span><span class="c4">event object</span><span class="c2">, as all event listeners do.</span></p>
+    <p class="c6"><span>This is a common problem when passing down an </span><span class="c4">event handler</span><span
+            class="c2">&nbsp;in React! The solution is to define another function.</span></p>
+    <p class="c17 c26"><span class="c2"></span></p>
+    <p class="c17"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 293.00px; height: 109.00px;"><img
+                alt="" src="./resources/images/react2/image21.png"
+                style="width: 293.00px; height: 109.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c17 c26"><span class="c2"></span></p>
+    <p class="c17 c26"><span class="c2"></span></p>
+    <p class="c6"><span>in the children render function:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 376.00px; height: 312.00px;"><img
+                alt="" src="./resources/images/react2/image55.png"
+                style="width: 376.00px; height: 312.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h2 id="6"><span class="c24 c15">Child Components Update Sibling Components</span></h2>
+    <h3 id="6a"><span class="c8">intro</span></h3>
+    <p class="c6"><span class="c2">Patterns within patterns within patterns!</span></p>
+    <p class="c6"><span>In lesson 1, you learned your first React programming pattern: a </span><span
+            class="c4">stateful</span><span>, parent component passes down a prop to a </span><span
+            class="c4">stateless</span><span class="c2">, child component.</span></p>
+    <p class="c6"><span>In lesson 2, you learned that lesson 1&rsquo;s pattern is actually part of a larger pattern: a
+            stateful, parent component passes down an </span><span class="c4">event handler</span><span>&nbsp;to a
+            stateless, child component. The child component then uses that </span><span class="c4">event
+            handler</span><span class="c2">&nbsp;to update its parent&rsquo;s state.</span></p>
+    <p class="c6"><span>In this lesson, we will expand the pattern one last time. A child component updates its
+            parent&rsquo;s state, and the parent passes that state to a </span><span class="c4">sibling</span><span
+            class="c2">&nbsp;component.</span></p>
+    <p class="c6"><span class="c2">An understanding of this final pattern will be very helpful in the wild, not to
+            mention in the next React course. Click Next and we&rsquo;ll build an example!</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">Stateless Components Inherit From Stateful Components Recap</span></p>
+    <p class="c6"><span class="c2">You just executed your first complete React programming pattern!</span></p>
+    <h3 id="6b"><span class="c8">Step by step</span></h3>
+    <ul class="c3 lst-kix_6vdb8tz5afe-0 start">
+        <li class="c6 c7 li-bullet-0"><span>A </span><span class="c4">stateful</span><span>&nbsp;component class defines
+                a function that calls this.setState. (</span><span class="c23">Parent.js</span><span class="c2">, lines
+                15-19)</span></li>
+    </ul>
+    <p class="c6 c19"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 336.00px; height: 141.00px;"><img
+                alt="" src="./resources/images/react2/image15.png"
+                style="width: 336.00px; height: 141.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span><span class="c2"><br></span></p>
+    <ul class="c3 lst-kix_6vdb8tz5afe-0">
+        <li class="c6 c7 li-bullet-0"><span>The stateful component passes that function down to a stateless component.
+                (</span><span class="c23">Parent.js</span><span class="c2">, line 24)</span></li>
+    </ul>
+    <p class="c6 c19"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 461.00px; height: 224.00px;"><img
+                alt="" src="./resources/images/react2/image92.png"
+                style="width: 461.00px; height: 224.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span><span class="c2"><br></span></p>
+    <ul class="c3 lst-kix_6vdb8tz5afe-0">
+        <li class="c6 c7 li-bullet-0"><span>That </span><span class="c4">stateless</span><span>&nbsp;component class
+                defines a function that calls the passed-down function, and that can take an </span><span
+                class="c4">event object</span><span>&nbsp;as an argument. (</span><span class="c23">Child.js</span><span
+                class="c2">, lines 10-13)</span></li>
+    </ul>
+    <p class="c6 c19"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 369.00px; height: 123.00px;"><img
+                alt="" src="./resources/images/react2/image50.png"
+                style="width: 369.00px; height: 123.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span><span class="c2"><br></span></p>
+    <ul class="c3 lst-kix_6vdb8tz5afe-0">
+        <li class="c6 c7 li-bullet-0"><span>The stateless component class uses this new function as an event handler.
+                (</span><span class="c23">Child.js</span><span class="c2">, line 20)<br></span></li>
+    </ul>
+    <p class="c6 c19"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 412.00px; height: 37.00px;"><img
+                alt="" src="./resources/images/react2/image52.png"
+                style="width: 412.00px; height: 37.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <ul class="c3 lst-kix_6vdb8tz5afe-0">
+        <li class="c6 c7 li-bullet-0"><span class="c2">When an event is detected, the parent&rsquo;s state updates. (A
+                user selects a new dropdown menu item)</span></li>
+    </ul>
+    <p class="c0 c19"><span class="c2"><br></span></p>
+    <ul class="c3 lst-kix_6vdb8tz5afe-0">
+        <li class="c6 c7 li-bullet-0"><span>The stateful component class passes down its state, distinct from the
+                ability to </span><span class="c4">change</span><span>&nbsp;its state, to a different stateless
+                component. (</span><span class="c23">Parent.js</span><span class="c2">, line 25)</span></li>
+    </ul>
+    <p class="c6 c19"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 447.00px; height: 223.00px;"><img
+                alt="" src="./resources/images/react2/image37.png"
+                style="width: 447.00px; height: 223.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span><span class="c2"><br></span></p>
+    <ul class="c3 lst-kix_6vdb8tz5afe-0">
+        <li class="c6 c7 li-bullet-0"><span>That stateless component class receives the state and displays it.
+                (</span><span class="c23">Sibling.js</span><span class="c2">, lines 5-10)</span></li>
+    </ul>
+    <p class="c6 c19"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 274.67px;"><img
+                alt="" src="./resources/images/react2/image62.png"
+                style="width: 601.70px; height: 274.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span><span class="c2"><br></span></p>
+    <ul class="c3 lst-kix_6vdb8tz5afe-0">
+        <li class="c6 c7 li-bullet-0"><span>An instance of the stateful component class is rendered. One stateless child
+                component displays the state, and a different stateless child component displays a way to </span><span
+                class="c4">change</span><span>&nbsp;the state. (</span><span class="c23">Parent.js</span><span
+                class="c2">, lines 23-26)</span></li>
+    </ul>
+    <p class="c6 c19"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 462.00px; height: 222.00px;"><img
+                alt="" src="./resources/images/react2/image22.png"
+                style="width: 462.00px; height: 222.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span><span class="c2"><br></span></p>
+    <p class="c6"><span class="c2">This pattern occurs in React all the time! The more that you see it, the more that
+            its elegance will become clear.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h2 id="7"><span class="c24 c15">Component Lifecycle Methods</span></h2>
+    <p class="c6"><span class="c2">Hook actions to specific moments in a component&rsquo;s life.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="7a"><span class="c8">The Component Lifecycle</span></h3>
+    <p class="c6"><span>We&rsquo;ve seen that React components can be highly dynamic. They get created, rendered, added
+            to the DOM, updated, and removed. All of these steps are part of a component&rsquo;s </span><span
+            class="c4">lifecycle</span><span class="c2">.</span></p>
+    <p class="c6"><span class="c2">The component lifecycle has three high-level parts:</span></p>
+    <ol class="c3 lst-kix_ha7buysde0u2-0 start" start="1">
+        <li class="c6 c7 li-bullet-0"><span class="c4">Mounting</span><span class="c2">, when the component is being
+                initialized and put into the DOM for the first time</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c4">Updating</span><span class="c2">, when the component updates as a
+                result of changed state or changed props</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c4">Unmounting</span><span class="c2">, when the component is being
+                removed from the DOM</span></li>
+    </ol>
+    <p class="c6"><span class="c2">Every React component you&rsquo;ve ever interacted with does the first step at a
+            minimum. If a component never mounted, you&rsquo;d never see it!</span></p>
+    <p class="c6"><span>Most interesting components are </span><span class="c4">updated</span><span class="c2">&nbsp;at
+            some point. A purely static component&mdash;like, for example, a logo&mdash;might not ever update. But if a
+            component&rsquo;s state changes, it updates. Or if different props are passed to a component, it
+            updates.</span></p>
+    <p class="c6"><span>Finally, a component is </span><span class="c4">unmounted</span><span class="c2">&nbsp;when
+            it&rsquo;s removed from the DOM. For example, if you have a button that hides a component, chances are that
+            component will be unmounted. If your app has multiple screens, it&rsquo;s likely that each screen (and all
+            of its child components)</span></p>
+    <p class="c6"><span class="c2">will be unmounted. If a component is &ldquo;alive&rdquo; for the entire lifetime of
+            your app (say, a top-level &lt;App /&gt; component or a persistent navigation bar), it won&rsquo;t be
+            unmounted. But most components can get unmounted one way or another!</span></p>
+    <p class="c6"><span class="c2">It&rsquo;s worth noting that each component instance has its own lifecycle. For
+            example, if you have 3 buttons on a page, then there are 3 component instances, each with its own lifecycle.
+            However, once a component instance is unmounted, that&rsquo;s it&mdash;it will never be re-mounted, or
+            updated again, or unmounted.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 458.67px;"><img
+                alt="" src="./resources/images/react2/image20.png"
+                style="width: 601.70px; height: 458.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="7b"><span class="c8">Introduction to Lifecycle Methods</span></h3>
+    <p class="c6"><span>React components have several methods, called </span><span class="c4">lifecycle
+            methods</span><span class="c2">, that are called at different parts of a component&rsquo;s lifecycle. This
+            is how you, the programmer, deal with the lifecycle of a component.</span></p>
+    <p class="c6"><span class="c2">You may not have known it, but you&rsquo;ve already used two of the most common
+            lifecycle methods: constructor() and render()! constructor() is the first method called during the mounting
+            phase. render() is called later during the mounting phase, to render the component for the first time, and
+            during the updating phase, to re-render the component.</span></p>
+    <p class="c6"><span class="c2">Notice that lifecycle methods don&rsquo;t necessarily correspond one-to-one with part
+            of the lifecycle. constructor() only executes during the mounting phase, but render() executes during both
+            the mounting and updating phase.</span></p>
+    <h3 id="7c"><span class="c8">componentDidMount</span></h3>
+    <p class="c6"><span class="c2">We&rsquo;ve made a clock component, but it&rsquo;s static. Wouldn&rsquo;t it be nice
+            if it updated?</span></p>
+    <p class="c6"><span class="c2">At a high level, we&rsquo;d like to update this.state.date with a new date once per
+            second.</span></p>
+    <p class="c6"><span>JavaScript has a helpful function,</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval&amp;sa=D&amp;source=editors&amp;ust=1681269371564219&amp;usg=AOvVaw11fnxFJySCpKyXN7uzCrTv">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval&amp;sa=D&amp;source=editors&amp;ust=1681269371564537&amp;usg=AOvVaw33yJtVrOp0p4jUdUktBZtT">setInterval()</a></span><span
+            class="c2">, that will help us do just this. It lets us run a function on a set interval. In our case,
+            we&rsquo;ll make a function that updates this.state.date, and call it every second.</span></p>
+    <p class="c6"><span class="c2">We&rsquo;ll want to run some code that looks like this:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 351.00px; height: 200.00px;"><img
+                alt="" src="./resources/images/react2/image26.png"
+                style="width: 351.00px; height: 200.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">We have the code we want to run&mdash;that&rsquo;s great. But where should we put
+            this code? In other words, where in the component&rsquo;s lifecycle should it go?</span></p>
+    <p class="c6"><span class="c2">Remember, the component lifecycle has three high-level parts:</span></p>
+    <ol class="c3 lst-kix_7bbdfiy4thhu-0 start" start="1">
+        <li class="c6 c7 li-bullet-0"><span class="c4">Mounting</span><span class="c2">, when the component is being
+                initialized and put into the DOM for the first time</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c4">Updating</span><span class="c2">, when the component updates as a
+                result of changed state or changed props</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c4">Unmounting</span><span class="c2">, when the component is being
+                removed from the DOM</span></li>
+    </ol>
+    <p class="c6"><span class="c2">It&rsquo;s certainly not in the unmounting phase&mdash;we don&rsquo;t want to start
+            our interval when the clock disappears from the screen! It&rsquo;s also probably not useful during the
+            updating phase&mdash;we want the interval to start as soon as the clock appears, and we don&rsquo;t want to
+            wait for an update. It probably makes sense to stick this code somewhere in the mounting phase.</span></p>
+    <p class="c6"><span class="c2">We&rsquo;ve seen two functions: the render() and the constructor. Can we put this
+            code in either of those places?</span></p>
+    <ul class="c3 lst-kix_y58icfxmwg0e-0 start">
+        <li class="c6 c7 li-bullet-0"><span class="c2">render() isn&rsquo;t a good candidate. For one, it executes
+                during the mounting phase and the updating phase&mdash;too often for us. It&rsquo;s also generally a bad
+                idea to set up any kind of side-effect like this in render(), as it can create subtle bugs in the
+                future.</span></li>
+        <li class="c6 c7 li-bullet-0"><span>constructor() is also not great. It does only execute during the mounting
+                phase, so that&rsquo;s good, but you should generally avoid side-effects like this in constructors
+                because it violates something called the Single Responsibility Principle. In short, it&rsquo;s not a
+                constructor&rsquo;s responsibility to start side-effects. (</span><span class="c12"><a class="c5"
+                    href="https://www.google.com/url?q=https://en.wikipedia.org/wiki/Single-responsibility_principle&amp;sa=D&amp;source=editors&amp;ust=1681269371566017&amp;usg=AOvVaw2RKgkIW27YBwE31jdn95l-">You
+                    can read more about the principle on Wikipedia.</a></span><span class="c2">)</span></li>
+    </ul>
+    <p class="c6"><span class="c2">If it&rsquo;s not render() or the constructor, then where? Enter a new lifecycle
+            method, componentDidMount().</span></p>
+    <p class="c6"><span class="c2">componentDidMount() is the final method called during the mounting phase. The order
+            is:</span></p>
+    <ol class="c3 lst-kix_szkks9roez1y-0 start" start="1">
+        <li class="c6 c7 li-bullet-0"><span class="c2">The constructor</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">render()</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">componentDidMount()</span></li>
+    </ol>
+    <p class="c6"><span class="c2">In other words, it&rsquo;s called after the component is rendered. This is where
+            we&rsquo;ll want to start our timer.</span></p>
+    <p class="c6"><span>(Another method,</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/react-component.html%23static-getderivedstatefromprops&amp;sa=D&amp;source=editors&amp;ust=1681269371566747&amp;usg=AOvVaw0bsodQ_Ui2uwrAKjj5s8JD">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/react-component.html%23static-getderivedstatefromprops&amp;sa=D&amp;source=editors&amp;ust=1681269371566994&amp;usg=AOvVaw30UkLD1M2K-JDafyBZCSdd">getDerivedStateFromProps()</a></span><span
+            class="c2">, is called between the constructor and render(), but it is very rarely used and usually
+            isn&rsquo;t the best way to achieve your goals. We won&rsquo;t be talking about it in this lesson.)</span>
+    </p>
+    <h3 id="7d"><span class="c8">componentWillUnmount</span></h3>
+    <p class="c6"><span class="c2">Our clock is working, but it has an important problem. We never told the interval to
+            stop, so it&rsquo;ll keep running that function forever (or at least, until the user leaves/refreshes the
+            page).</span></p>
+    <p class="c6"><span class="c2">When the component is unmounted (in other words, removed from the page), that timer
+            will keep on ticking, trying to update the state of a component that&rsquo;s effectively gone. This means
+            your users will have some JavaScript code running unnecessarily, which will hurt the performance of your
+            app.</span></p>
+    <p class="c6"><span class="c2">React will log a warning that looks something like this:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 361.00px; height: 153.00px;"><img
+                alt="" src="./resources/images/react2/image54.png"
+                style="width: 361.00px; height: 153.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">Imagine if the clock gets mounted and unmounted hundreds of times&mdash;eventually,
+            this will cause your page to become sluggish because of all of the unnecessary work. You&rsquo;ll also see
+            warnings in your browser console. Even worse, this can lead to subtle, annoying bugs.</span></p>
+    <p class="c6"><span class="c2">All this bad stuff can happen if we fail to clean up a side-effect of a component. In
+            our case this is a call to setInterval(), but components can have lots of other side-effects: loading
+            external data with AJAX, doing manual tweaking of the DOM, setting a global value, and more. We try to limit
+            our side-effects, but it&rsquo;s difficult to build an interesting app with truly zero side-effects.</span>
+    </p>
+    <p class="c6"><span class="c16 c4">In general, when a component produces a side-effect, you should remember to clean
+            it up.</span></p>
+    <p class="c6"><span>JavaScript gives us the</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval&amp;sa=D&amp;source=editors&amp;ust=1681269371568169&amp;usg=AOvVaw0k9HkOr7RsLIYXJB1ZRLPt">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval&amp;sa=D&amp;source=editors&amp;ust=1681269371568449&amp;usg=AOvVaw0IlQeK_MXMIS4XjDanQ39e">clearInterval()</a></span><span
+            class="c2">&nbsp;function. setInterval() can return an ID, which you can then pass into clearInterval() to
+            clear it. Here&rsquo;s the code we&rsquo;ll want to use:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 341.00px; height: 174.00px;"><img
+                alt="" src="./resources/images/react2/image91.png"
+                style="width: 341.00px; height: 174.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">At a high level, we want to continue to set up our setInterval() in
+            componentDidMount(), but then we want to clear that interval when the clock is unmounted.</span></p>
+    <p class="c6"><span class="c2">Let&rsquo;s introduce a new lifecycle method: componentWillUnmount().
+            componentWillUnmount() is called in the unmounting phase, right before the component is completely
+            destroyed. It&rsquo;s a useful time to clean up any of your component&rsquo;s mess.</span></p>
+    <p class="c6"><span class="c2">In our case, we&rsquo;ll use it to clean up the clock&rsquo;s interval.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="7e"><span class="c8">componentDidUpdate</span></h3>
+    <p class="c6"><span class="c2">Let&rsquo;s finish by looking at the updating phase.</span></p>
+    <p class="c6"><span class="c2">An update is caused by changes to props or state. You&rsquo;ve already seen this
+            happen a bunch of times. Every time you&rsquo;ve called setState() with new data, you&rsquo;ve triggered an
+            update. Every time you change the props passed to a component, you&rsquo;ve caused it to update.</span></p>
+    <p class="c6"><span>When a component updates, it calls</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/react-component.html%23updating&amp;sa=D&amp;source=editors&amp;ust=1681269371569651&amp;usg=AOvVaw35s3o8pL8kfUJmZgC1g1lJ">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/react-component.html%23updating&amp;sa=D&amp;source=editors&amp;ust=1681269371569861&amp;usg=AOvVaw3VthhW4TmeiG7TtZTGIuUl">several
+                methods</a></span><span class="c2">, but only two are commonly used.</span></p>
+    <p class="c6"><span class="c2">The first is render(), which we&rsquo;ve seen in every React component. When a
+            component&rsquo;s props or state changes, render() is called.</span></p>
+    <p class="c6"><span class="c2">The second, which we haven&rsquo;t seen yet, is componentDidUpdate(). Just like
+            componentDidMount() is a good place for mount-phase setup, componentDidUpdate() is a good place for
+            update-phase work.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">Create a new empty method, componentDidUpdate(). It should take one argument,
+            prevProps, which will be the props this component had the last time it was rendered. We&rsquo;ll fill it in
+            next:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 385.00px; height: 272.00px;"><img
+                alt="" src="./resources/images/react2/image46.png"
+                style="width: 385.00px; height: 272.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">Review</span></p>
+    <p class="c6"><span class="c2">We&rsquo;ve come to the end of the lesson. We&rsquo;ve learned about the three major
+            phases of a component&rsquo;s lifecycle:</span></p>
+    <ol class="c3 lst-kix_hcp51bsqskr1-0 start" start="1">
+        <li class="c6 c7 li-bullet-0"><span class="c4">Mounting</span><span class="c2">, when the component is being
+                initialized and put into the DOM for the first time. We saw that the constructor, render(), and
+                componentDidMount() are called during this phase.</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c4">Updating</span><span class="c2">, when the component updates as a
+                result of changed state or changed props. We saw that render() and componentDidUpdate() are called
+                during this phase.</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c4">Unmounting</span><span class="c2">, when the component is being
+                removed from the DOM. We saw that componentWillUnmount() was called here, which was a good time to clean
+                things up.</span></li>
+    </ol>
+    <p class="c6"><span class="c2">We also learned about setting up side-effects and tearing them down. We now know how
+            to make more robust, complex components!</span></p>
+    <p class="c6"><span>To your right is a reference that you can use. It shows the three phases of a component&rsquo;s
+            lifecycle and which methods are called at each phase. You can also refer to</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/&amp;sa=D&amp;source=editors&amp;ust=1681269371571386&amp;usg=AOvVaw2YQ6MOazFji6fdWp9Ibjsr">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/&amp;sa=D&amp;source=editors&amp;ust=1681269371571664&amp;usg=AOvVaw3ruXWQ25G_dZ_nUI-cCkyV">this
+                interactive diagram</a></span><span class="c2">.</span></p>
+    <p class="c6"><span>For more, you can read React&rsquo;s official documentation. See</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/state-and-lifecycle.html&amp;sa=D&amp;source=editors&amp;ust=1681269371572012&amp;usg=AOvVaw2Uembh5dncnNoB4q28Bhcu">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/state-and-lifecycle.html&amp;sa=D&amp;source=editors&amp;ust=1681269371572205&amp;usg=AOvVaw2HiOaw2XGzYSAwid2inVFP">&ldquo;State
+                and Lifecycle&rdquo;</a></span><span>&nbsp;and</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/react-component.html&amp;sa=D&amp;source=editors&amp;ust=1681269371572446&amp;usg=AOvVaw0aeLu902RSbuWp1M4dYes0">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/react-component.html&amp;sa=D&amp;source=editors&amp;ust=1681269371572683&amp;usg=AOvVaw08MM3hcYZMu2Xmurnr2kz8">the
+                docs for React.Component</a></span><span class="c2">.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 370.67px;"><img
+                alt="" src="./resources/images/react2/image63.png"
+                style="width: 601.70px; height: 370.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c17 c26"><span class="c2"></span></p>
+
+    <h2 id="8"><span class="c24 c15">Function Components</span></h2>
+    <h3 id="8a">Stateless Functional Components</span></h3>
+    <p class="c17"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 365.33px;"><img
+                alt="" src="./resources/images/react2/image32.png"
+                style="width: 601.70px; height: 365.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c17 c26"><span class="c2"></span></p>
+    <p class="c6"><span>In the code editor, take a look at </span><span class="c23">Example.js</span><span>. The first
+            Example component is defined as a JavaScript class, but it doesn&rsquo;t have to be! In React, we can also
+            define components as JavaScript functions &mdash; we call them </span><span class="c4">function
+            components</span><span>&nbsp;to differentiate them from </span><span class="c4">class components</span><span
+            class="c2">.</span></p>
+    <p class="c6"><span class="c2">In the latest versions of React, function components can do everything that class
+            components can do. In most cases, however, function components offer a more elegant, concise way of creating
+            React components. This lesson will focus on converting a class component to a function component and adding
+            props, which are available in all versions of React.</span></p>
+    <p class="c6"><span class="c2">To put it in other words: the function component should return the same JSX that was
+            originally returned by the render() method.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="8b"><span class="c8">Function Components and Props</span></h3>
+    <p class="c6"><span class="c2">Like any component, function components can receive information via props.</span></p>
+    <p class="c6"><span class="c2">To access these props, give your function component a parameter named props. Within
+            the function body, you can access the props using this pattern: props.propertyName. You don&rsquo;t need to
+            use the this keyword.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 364.00px; height: 348.00px;"><img
+                alt="" src="./resources/images/react2/image33.png"
+                style="width: 364.00px; height: 348.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">In the above example, we pass a value of &ldquo;Have you eaten an apple today?&rdquo;
+            as the prompt prop when rendering YesNoQuestion.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="8c"><span class="c8">Review</span></h3>
+    <p class="c6"><span class="c2">Well done! You&rsquo;ve written your first function component. Here&rsquo;s a
+            recap:</span></p>
+    <ul class="c3 lst-kix_6xws5vcdibzr-0 start">
+        <li class="c6 c7 li-bullet-0"><span class="c4">Function components</span><span class="c2">&nbsp;are React
+                components defined as JavaScript functions</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">Function components must return JSX</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">Function components may accept a props parameter. Expect it to be
+                a JavaScript object</span></li>
+    </ul>
+    <p class="c6"><span class="c2">Although function components and class components can do the same things,
+            you&rsquo;ll see a lot of function components in the React documentation and example apps. Some developers
+            prefer them over class components for their simplicity and straightforward features, like Hooks, which
+            you&rsquo;ll learn later in your coding journey.</span></p>
+    <p class="c17 c26"><span class="c2"></span></p>
+    <h2 id="9"><span class="c24 c15">The State Hook</span></h2>
+    <h3 id="9a"><span class="c8">Why Use Hooks?</span></h3>
+    <p class="c6"><span class="c2">As React developers, we love breaking down complex problems into simple
+            pieces.</span></p>
+    <p class="c6"><span class="c2">Classes, however, are not simple. They:</span></p>
+    <ul class="c3 lst-kix_g176jgdpk6xi-0 start">
+        <li class="c6 c7 li-bullet-0"><span class="c2">are difficult to reuse between components</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">are tricky and time-consuming to test</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">have confused many developers and caused lots of bugs</span></li>
+    </ul>
+    <p class="c6"><span>The React core team heard all of this feedback from developers like us, and they engineered an
+            incredible solution for us! React 16.8+ supports </span><span class="c4">Hooks</span><span class="c2">. With
+            Hooks, we can use simple function components to do lots of the fancy things that we could only do with class
+            components in the past.</span></p>
+    <p class="c6"><span class="c2">React Hooks, plainly put, are functions that let us manage the internal state of
+            components and handle post-rendering side effects directly from our function components. Hooks don&rsquo;t
+            work inside classes &mdash; they let us use fancy React features without classes. Keep in mind that function
+            components and React Hooks do not replace class components. They are completely optional; just a new tool
+            that we can take advantage of.</span></p>
+    <p class="c6 c34"><span>Note: If you&rsquo;re familiar with</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/state-and-lifecycle.html%23adding-lifecycle-methods-to-a-class&amp;sa=D&amp;source=editors&amp;ust=1681269371576433&amp;usg=AOvVaw3nNmqfhfpXHQ-RS1v3PBme">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/state-and-lifecycle.html%23adding-lifecycle-methods-to-a-class&amp;sa=D&amp;source=editors&amp;ust=1681269371576755&amp;usg=AOvVaw3wN9MqIW4x3CsxKGId1STA">lifecycle
+                methods</a></span><span class="c2">&nbsp;of class components, you could say that Hooks let us
+            &ldquo;hook into&rdquo; state and lifecycle features directly from our function components.</span></p>
+    <p class="c6"><span>React offers a number of built-in Hooks. A few of these include useState(), useEffect(),
+            useContext(), useReducer(), and useRef(). See</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/hooks-reference.html&amp;sa=D&amp;source=editors&amp;ust=1681269371577106&amp;usg=AOvVaw00DIG2P93J4Ugx3et5eDpy">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/hooks-reference.html&amp;sa=D&amp;source=editors&amp;ust=1681269371577291&amp;usg=AOvVaw2DvGEsyl5SMWvorkPZUEHR">the
+                full list in the docs</a></span><span class="c2">. In this lesson, we&rsquo;ll learn different ways to
+            manage state in a function component.</span></p>
+    <p class="c17 c26"><span class="c2"></span></p>
+    <h3 id="9b"><span class="c8">Update Function Component State</span></h3>
+    <p class="c6"><span class="c2">Let&rsquo;s get started with the State Hook, the most common Hook used for building
+            React components. The State Hook is a named export from the React library, so we import it like this:</span>
+    </p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 53.00px;"><img
+                alt="" src="./resources/images/react2/image49.png"
+                style="width: 370.00px; height: 53.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c11"><span class="c2">useState() is a JavaScript function defined in the React library. When we call this
+            function, it returns an array with two values:</span></p>
+    <ul class="c3 lst-kix_i3wvlrlxk7cr-0 start">
+        <li class="c6 c7 li-bullet-0"><span class="c4">current state</span><span class="c2">&nbsp;- the current value of
+                this state</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c4">state setter</span><span class="c2">&nbsp;- a function that we
+                can use to update the value of this state</span></li>
+    </ul>
+    <p class="c6"><span class="c2">Because React returns these two values in an array, we can assign them to local
+            variables, naming them whatever we like. For example:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 53.00px;"><img
+                alt="" src="./resources/images/react2/image76.png"
+                style="width: 370.00px; height: 53.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">Let&rsquo;s have a look at an example of a function component using the State Hook:
+        </span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c17"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 363.00px; height: 371.00px;"><img
+                alt="" src="./resources/images/react2/image12.png"
+                style="width: 363.00px; height: 371.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c17 c26"><span class="c2"></span></p>
+    <p class="c17 c26"><span class="c2"></span></p>
+    <p class="c11"><span>Notice how the state setter function, setToggle(), is called by our onClick </span><span
+            class="c4">event listeners</span><span class="c2">. To update the value of toggle and re-render this
+            component with the new value, all we need to do is call the setToggle() function with the next state value
+            as an argument.</span></p>
+    <p class="c6"><span class="c2">No need to worry about binding functions to class instances, working with
+            constructors, or dealing with the this keyword. With the State Hook, updating state is as simple as calling
+            a state setter function.</span></p>
+    <p class="c6"><span class="c2">Calling the state setter signals to React that the component needs to re-render, so
+            the whole function defining the component is called again. The magic of useState() is that it allows React
+            to keep track of the current value of state from one render to the next!</span></p>
+    <p class="c17 c26"><span class="c2"></span></p>
+    <h3 id="9c"><span class="c8">Initialize State</span></h3>
+    <p class="c6"><span>Great work building out your first stateful function component in the last exercise. Just like
+            you used the State Hook to manage a variable with string values, we can use the State Hook to manage the
+            value of any</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/courses/introduction-to-javascript/lessons/introduction-to-javascript/exercises/types&amp;sa=D&amp;source=editors&amp;ust=1681269371579678&amp;usg=AOvVaw3wCWx_X2JrnppseULL99i3">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/courses/introduction-to-javascript/lessons/introduction-to-javascript/exercises/types&amp;sa=D&amp;source=editors&amp;ust=1681269371579992&amp;usg=AOvVaw1Wvuhm5M2GJ-ZVJtOInvdJ">primitive
+                data type</a></span><span class="c2">&nbsp;and even data collections like arrays and objects!</span></p>
+    <p class="c6"><span class="c2">Have a look at the following function component. What data type does this state
+            variable hold?</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 471.00px;"><img
+                alt="" src="./resources/images/react2/image42.png"
+                style="width: 370.00px; height: 471.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c11"><span class="c2">The ToggleLoading() function component above is using the simplest of all data
+            types, a boolean. Booleans are frequently used in React applications to represent whether data has loaded or
+            not. In the example above, we see that true and false values are passed to the state setter, setIsLoading().
+            This code works just fine as is, but what if we want our component to start off with isLoading set to
+            true?</span></p>
+    <p class="c6"><span class="c2">To initialize our state with any value we want, we simply pass the initial value as
+            an argument to the useState() function call.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 312.00px; height: 69.00px;"><img
+                alt="" src="./resources/images/react2/image13.png"
+                style="width: 312.00px; height: 69.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c11"><span class="c2">There are three ways in which this code affects our component:</span></p>
+    <ol class="c3 lst-kix_uggfm22hh2ms-0 start" start="1">
+        <li class="c6 c7 li-bullet-0"><span>During the first render, the </span><span class="c4">initial state
+                argument</span><span class="c2">&nbsp;is used.</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">When the state setter is called, React ignores the initial state
+                argument and uses the new value.</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">When the component re-renders for any other reason, React
+                continues to use the same value from the previous render.</span></li>
+    </ol>
+    <p class="c6"><span class="c2">If we don&rsquo;t pass an initial value when calling useState(), then the current
+            value of the state during the first render will be undefined. Often, this is perfectly fine for the
+            machines, but it can be unclear to the humans reading our code. So, we prefer to explicitly initialize our
+            state. If we don&rsquo;t have the value needed during the first render, we can explicitly pass null instead
+            of just passively leaving the value as undefined.</span></p>
+    <h3 id="9d"><span class="c8">Use State Setter Outside of JSX</span></h3>
+    <p class="c6"><span class="c2">Let&rsquo;s see how to manage the changing value of a string as a user types into a
+            text input field:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 365.00px; height: 389.00px;"><img
+                alt="" src="./resources/images/react2/image35.png"
+                style="width: 365.00px; height: 389.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c11"><span class="c2">Let&rsquo;s break down how this code works!</span></p>
+    <ul class="c3 lst-kix_yijrmmobsai-0 start">
+        <li class="c6 c7 li-bullet-0"><span>The square brackets on the left side of the assignment operator
+                signal</span><span><a class="c5"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/content-items/92a5f93c6dbc6794d83e00383fc3af68&amp;sa=D&amp;source=editors&amp;ust=1681269371581864&amp;usg=AOvVaw3dNoOcBZlc6Rd0Wp7zEt_K">&nbsp;</a></span><span
+                class="c12"><a class="c5"
+                    href="https://www.google.com/url?q=https://www.codecademy.com/content-items/92a5f93c6dbc6794d83e00383fc3af68&amp;sa=D&amp;source=editors&amp;ust=1681269371582085&amp;usg=AOvVaw386e2Wsj8AstrVvfbP2agT">array
+                    destructuring</a></span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">The local variable named email is assigned the current state
+                value at index 0 from the array returned by useState()</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">The local variable named setEmail() is assigned a reference to
+                the state setter function at index 1 from the array returned by useState()</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">It&rsquo;s convention to name this variable using the current
+                state variable (email) with &ldquo;set&rdquo; prepended</span></li>
+    </ul>
+    <p class="c6"><span>The JSX input tag has an event listener called onChange. This event listener calls an
+        </span><span class="c4">event handler</span><span class="c2">&nbsp;each time the user types something in this
+            element. In the example above, our event handler is defined inside of the definition for our function
+            component, but outside of our JSX. Earlier in this lesson, we wrote our event handlers right in our JSX.
+            Those inline event handlers work perfectly fine, but when we want to do something more interesting than just
+            calling the state setter with a static value, it&rsquo;s a good idea to separate that logic from everything
+            else going on in our JSX. This separation of concerns makes our code easier to read, test, and
+            modify.</span></p>
+    <p class="c6"><span class="c2">This is so common in React code, that we can comfortably simplify this:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 362.00px; height: 115.00px;"><img
+                alt="" src="./resources/images/react2/image18.png"
+                style="width: 362.00px; height: 115.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">To this:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 337.00px; height: 74.00px;"><img
+                alt="" src="./resources/images/react2/image61.png"
+                style="width: 337.00px; height: 74.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span>Or even, use</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/content-items/92a5f93c6dbc6794d83e00383fc3af68?&amp;sa=D&amp;source=editors&amp;ust=1681269371583444&amp;usg=AOvVaw3h83Apcmp5uBIjCNb9fRKq">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/content-items/92a5f93c6dbc6794d83e00383fc3af68?&amp;sa=D&amp;source=editors&amp;ust=1681269371583663&amp;usg=AOvVaw0-RFP-RGPHwi8abv32qfEL">object
+                destructuring</a></span><span class="c2">&nbsp;to just write this:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 370.00px; height: 74.00px;"><img
+                alt="" src="./resources/images/react2/image72.png"
+                style="width: 370.00px; height: 74.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">All three of these code snippets behave the same way, so there really isn&rsquo;t a
+            right and wrong between these different ways of doing this. We&rsquo;ll use the last, most concise version
+            moving forward.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="9e"><span class="c8">Set From Previous State</span></h3>
+    <p class="c6"><span class="c2">Often, the next value of our state is calculated using the current state. In this
+            case, it is best practice to update state with a callback function. If we do not, we risk capturing
+            outdated, or &ldquo;stale&rdquo;, state values.</span></p>
+    <p class="c6"><span class="c2">Let&rsquo;s take a look at the following code:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 365.00px; height: 384.00px;"><img
+                alt="" src="./resources/images/react2/image16.png"
+                style="width: 365.00px; height: 384.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">When the button is pressed, the increment() event handler is called. Inside of this
+            function, we use our setCount() state setter in a new way! Because the next value of count depends on the
+            previous value of count, we pass a callback function as the argument for setCount() instead of a value (as
+            we&rsquo;ve done in previous exercises). </span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 351.00px; height: 51.00px;"><img
+                alt="" src="./resources/images/react2/image43.png"
+                style="width: 351.00px; height: 51.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span>When our state setter calls the callback function, this </span><span class="c4">state setter
+            callback function</span><span>&nbsp;takes our previous count as an argument. The value returned by this
+            state setter callback function is used as the next value of count (in this case prevCount + 1). Note: We can
+            just call setCount(count +1) and it would work the same in this example&hellip; but for reasons that are out
+            of scope for this lesson, it is safer to use the callback method. If you&rsquo;d like to learn more about
+            why the callback method is safer,</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/react-component.html%23setstate&amp;sa=D&amp;source=editors&amp;ust=1681269371585106&amp;usg=AOvVaw3WuXTHROZS-4FKecF4DFYT">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/react-component.html%23setstate&amp;sa=D&amp;source=editors&amp;ust=1681269371585337&amp;usg=AOvVaw17vkdL-MRsgGfp_4w7F9TP">this
+                section of the docs</a></span><span class="c2">&nbsp;is a great place to start.</span></p>
+    <h3 id="9f"><span class="c8">Arrays in State</span></h3>
+    <p class="c6"><span class="c2">Think about the last time that you ordered a pizza online. Mmmmm&hellip;</span></p>
+    <p class="c6"><span class="c2">Part of the magical website that brought you tasty food was built with code like
+            this:</span></p>
+    <p class="c6"><span class="c2">import React, { useState } from &quot;react&quot;;</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 438.67px;"><img
+                alt="" src="./resources/images/react2/image30.png"
+                style="width: 601.70px; height: 438.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 280.00px;"><img
+                alt="" src="./resources/images/react2/image73.png"
+                style="width: 601.70px; height: 280.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">JavaScript arrays are the best data model for managing and rendering JSX lists. In
+            this example, we are using two arrays:</span></p>
+    <ul class="c3 lst-kix_jdyrf2jh39q8-0 start">
+        <li class="c6 c7 li-bullet-0"><span class="c2">options is an array that contains the names of all of the pizza
+                toppings available</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">selected is an array representing the selected toppings for our
+                personal pizza</span></li>
+    </ul>
+    <p class="c6"><span>The options array contains </span><span class="c4">static data</span><span class="c2">, meaning
+            that it does not change. We like to define static data models outside of our function components since they
+            don&rsquo;t need to be recreated each time our component re-renders. In our JSX, we use the map method to
+            render a button for each of the toppings in our options array.</span></p>
+    <p class="c6"><span>The selected array contains </span><span class="c4">dynamic data</span><span class="c2">,
+            meaning that it changes, usually based on a user&rsquo;s actions. We initialize selected as an empty array.
+            When a button is clicked, the toggleTopping event handler is called. Notice how this event handler uses
+            information from the event object to determine which topping was clicked.</span></p>
+    <p class="c6"><span>When updating an array in state, we do not just add new data to the previous array. We replace
+            the previous array with a brand new array. This means that any information that we want to save from the
+            previous array needs to be explicitly copied over to our new array. That&rsquo;s what this</span><span><a
+                class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax&amp;sa=D&amp;source=editors&amp;ust=1681269371586762&amp;usg=AOvVaw36N8dx0fi6jSmNCBDAUykq">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax&amp;sa=D&amp;source=editors&amp;ust=1681269371586991&amp;usg=AOvVaw1-EEJ9WXaQbvX5mi5uNKQA">spread
+                syntax</a></span><span class="c2">&nbsp;does for us: ...prev.</span></p>
+    <p class="c6"><span>Notice how we use the</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes&amp;sa=D&amp;source=editors&amp;ust=1681269371587322&amp;usg=AOvVaw2Km6NzW3pP0pk6GXzr4FwQ">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes&amp;sa=D&amp;source=editors&amp;ust=1681269371587608&amp;usg=AOvVaw2lXwMouq0ud2h5r8iGIPeu">includes()</a></span><span>,</span><span><a
+                class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter&amp;sa=D&amp;source=editors&amp;ust=1681269371587875&amp;usg=AOvVaw17LK9qPWieBcqxAMr5HJgr">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter&amp;sa=D&amp;source=editors&amp;ust=1681269371588099&amp;usg=AOvVaw3DaCGJHsWFDNiFg_YWBwqU">filter()</a></span><span>,
+            and</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map&amp;sa=D&amp;source=editors&amp;ust=1681269371588360&amp;usg=AOvVaw3Xow9EkjC9rvnCYGEB7TSl">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map&amp;sa=D&amp;source=editors&amp;ust=1681269371588583&amp;usg=AOvVaw2PzKmP5Qg5n2EQ2EvJq3aA">map()</a></span><span>&nbsp;methods
+            of our arrays. If these are new to you, or you just want a refresher, take a minute to review
+            these</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-iterators&amp;sa=D&amp;source=editors&amp;ust=1681269371588840&amp;usg=AOvVaw3-sBIJwlw79aEpMOIWQB0O">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-iterators&amp;sa=D&amp;source=editors&amp;ust=1681269371589061&amp;usg=AOvVaw0kAKK-fbk8EaDqADmvT9LW">array
+                methods</a></span><span>. We don&rsquo;t need to be full-fledged JavaScript gurus to build React UIs,
+            but know that investing time to</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/learn/introduction-to-javascript&amp;sa=D&amp;source=editors&amp;ust=1681269371589302&amp;usg=AOvVaw3JQSvrVMtYGsgGk-Vp8qre">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://www.codecademy.com/learn/introduction-to-javascript&amp;sa=D&amp;source=editors&amp;ust=1681269371589515&amp;usg=AOvVaw2ZpEvGFHZFeDapLQ2wua9T">strengthen
+                our JavaScript skills</a></span><span class="c2">, will always help us do more faster (and have a lot
+            more fun doing it) as React developers.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="9g"><span class="c8">Objects in State</span></h3>
+    <p class="c6"><span class="c2">When we work with a set of related variables, it can be very helpful to group them in
+            an object. Let&rsquo;s look at an example!</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 399.00px; height: 383.00px;"><img
+                alt="" src="./resources/images/react2/image34.png"
+                style="width: 399.00px; height: 383.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 459.00px; height: 246.00px;"><img
+                alt="" src="./resources/images/react2/image74.png"
+                style="width: 459.00px; height: 246.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c11"><span class="c2">A few things to notice:</span></p>
+    <ul class="c3 lst-kix_qht2kl37eoci-0 start">
+        <li class="c6 c7 li-bullet-0"><span class="c2">We use a state setter callback function to update state based on
+                the previous value</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">The spread syntax is the same for objects as for arrays: {
+                ...oldObject, newKey: newValue }</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">We reuse our event handler across multiple inputs by using the
+                input tag&rsquo;s name attribute to identify which input the change event came from</span></li>
+    </ul>
+    <p class="c6"><span class="c2">Once again, when updating the state with setFormState() inside a function component,
+            we do not modify the same object. We must copy over the values from the previous object when setting the
+            next value of state. Thankfully, the spread syntax makes this super easy to do!</span></p>
+    <p class="c6"><span class="c2">Anytime one of the input values is updated, the handleChange() function will be
+            called. Inside of this event handler, we use object destructuring to unpack the target property from our
+            event object, then we use object destructuring again to unpack the name and value properties from the target
+            object.</span></p>
+    <p class="c6"><span>Inside of our state setter callback function, we wrap our curly brackets in parentheses like so:
+            setFormState((prev) =&gt; ({ ...prev })). This tells JavaScript that our curly brackets refer to a new
+            object to be returned. We use ..., the spread operator, to fill in the corresponding fields from our
+            previous state. Finally, we overwrite the appropriate key with its updated value. Did you notice the square
+            brackets around the name? This</span><span><a class="c5"
+                href="https://www.google.com/url?q=http://eloquentcode.com/computed-property-names-in-javascript&amp;sa=D&amp;source=editors&amp;ust=1681269371590821&amp;usg=AOvVaw0huIGoQ7DdeqP7hDCLbYja">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=http://eloquentcode.com/computed-property-names-in-javascript&amp;sa=D&amp;source=editors&amp;ust=1681269371591071&amp;usg=AOvVaw2LJYK47C1-QBYqrSII8LxK">Computed
+                Property Name</a></span><span class="c2">&nbsp;allows us to use the string value stored by the name
+            variable as a property key! </span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="9h"><span class="c8">Separate Hooks for Separate States</span></h3>
+    <p class="c6"><span class="c2">While there are times when it can be helpful to store related data in a data
+            collection like an array or object, it can also be helpful to separate data that changes separately into
+            completely different state variables. Managing dynamic data is much easier when we keep our data models as
+            simple as possible.</span></p>
+    <p class="c6"><span class="c2">For example, if we had a single object that held state for a subject you are studying
+            at school, it might look something like this:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 587.00px; height: 178.00px;"><img
+                alt="" src="./resources/images/react2/image36.png"
+                style="width: 587.00px; height: 178.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c11"><span class="c2">This would work, but think about how messy it could get to copy over all the other
+            values when we need to update something in this big state object. For example, to update the grade on an
+            exam, we would need an event handler that did something like this:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 382.00px; height: 302.00px;"><img
+                alt="" src="./resources/images/react2/image19.png"
+                style="width: 382.00px; height: 302.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">Yikes! Complex code like this is likely to cause bugs! Luckily, there is another
+            option&hellip; We can make more than one call to the State Hook. In fact, we can make as many calls to
+            useState() as we want! It&rsquo;s best to split state into multiple state variables based on which values
+            tend to change together. We can rewrite the previous example as follows&hellip;</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 496.00px; height: 263.00px;"><img
+                alt="" src="./resources/images/react2/image25.png"
+                style="width: 496.00px; height: 263.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c11"><span class="c2">Managing dynamic data with separate state variables has many advantages, like making
+            our code more simple to write, read, test, and reuse across components.</span></p>
+    <p class="c6"><span class="c2">Often, we find ourselves packaging up and organizing data in collections to pass
+            between components, then separating that very same data within components where different parts of the data
+            change separately. The wonderful thing about working with Hooks is that we have the freedom to organize our
+            data the way that makes the most sense to us!</span></p>
+    <p class="c6"><span>If you&rsquo;d like, have a look at another example of using</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/hooks-state.html%23tip-using-multiple-state-variables&amp;sa=D&amp;source=editors&amp;ust=1681269371592545&amp;usg=AOvVaw3VkIXP3eRQaENC36HCaXXK">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/hooks-state.html%23tip-using-multiple-state-variables&amp;sa=D&amp;source=editors&amp;ust=1681269371592767&amp;usg=AOvVaw0-ctlxfhyFl0zpmWlye6wv">multiple
+                State Hooks for managing separate data</a></span><span class="c2">.</span></p>
+    <h3 id="9i"><span class="c8">Lesson Review</span></h3>
+    <p class="c6"><span class="c2">Awesome work, we can now build &ldquo;stateful&rdquo; function components using the
+            useState React Hook!</span></p>
+    <p class="c6"><span class="c2">Let&rsquo;s review what we learned and practiced in this lesson:</span></p>
+    <ul class="c3 lst-kix_nvwchfjgq0ay-0 start">
+        <li class="c6 c7 li-bullet-0"><span class="c2">With React, we feed static and dynamic data models to JSX to
+                render a view to the screen<br></span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">Use Hooks to &ldquo;hook into&rdquo; internal component state for
+                managing dynamic data in function components<br></span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">We employ the State Hook by using the code below:<br></span></li>
+    </ul>
+    <ul class="c3 lst-kix_nvwchfjgq0ay-1 start">
+        <li class="c6 c18 li-bullet-0"><span class="c2">currentState to reference the current value of state<br></span>
+        </li>
+        <li class="c6 c18 li-bullet-0"><span class="c2">stateSetter to reference a function used to update the value of
+                this state<br></span></li>
+        <li class="c6 c18 li-bullet-0"><span class="c2">the initialState argument to initialize the value of state for
+                the component&rsquo;s first render</span></li>
+    </ul>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 408.00px; height: 73.00px;"><img
+                alt="" src="./resources/images/react2/image93.png"
+                style="width: 408.00px; height: 73.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <ul class="c3 lst-kix_87kjv5ytvz6e-0 start">
+        <li class="c11 c7 li-bullet-0"><span class="c2">Call state setters in event handlers<br></span></li>
+        <li class="c11 c7 li-bullet-0"><span class="c2">Define simple event handlers inline with our JSX event listeners
+                and define complex event handlers outside of our JSX<br></span></li>
+        <li class="c11 c7 li-bullet-0"><span class="c2">Use a state setter callback function when our next value depends
+                on our previous value<br></span></li>
+        <li class="c11 c7 li-bullet-0"><span class="c2">Use arrays and objects to organize and manage related data that
+                tends to change together<br></span></li>
+        <li class="c11 c7 li-bullet-0"><span class="c2">Use the spread syntax on collections of dynamic data to copy the
+                previous state into the next state like so: setArrayState((prev) =&gt; [ ...prev ]) and
+                setObjectState((prev) =&gt; ({ ...prev }))<br></span></li>
+        <li class="c11 c7 li-bullet-0"><span class="c2">Split state into multiple, simpler variables instead of throwing
+                it all into one state object<br></span></li>
+    </ul>
+    <h2 id="10"><span class="c24 c15">The Effect Hook</span></h2>
+    <h3 id="10a"><span class="c8">Why Use useEffect?</span></h3>
+    <p class="c6"><span class="c2">Before Hooks, function components were only used to accept data in the form of props
+            and return some JSX to be rendered. However, as we learned in the last lesson, the State Hook allows us to
+            manage dynamic data, in the form of component state, within our function components.</span></p>
+    <p class="c6"><span class="c2">In this lesson, we&rsquo;ll use the Effect Hook to run some JavaScript code after
+            each render, such as:</span></p>
+    <ul class="c3 lst-kix_mr7ukz3mhwn9-0 start">
+        <li class="c6 c7 li-bullet-0"><span class="c2">fetching data from a backend service</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">subscribing to a stream of data</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">managing timers and intervals</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">reading from and making changes to the DOM</span></li>
+    </ul>
+    <h4 class="c38" id="h.3w1tywb7q6co"><span class="c29 c15 c23">Why after each render?</span></h4>
+    <p class="c6"><span class="c2">Most interesting components will re-render multiple times throughout their lifetime
+            and these key moments present the perfect opportunity to execute these &ldquo;side effects&rdquo;.</span>
+    </p>
+    <p class="c6"><span class="c2">There are three key moments when the Effect Hook can be utilized:</span></p>
+    <ol class="c3 lst-kix_wzz8vaiyxhhi-0 start" start="1">
+        <li class="c6 c7 li-bullet-0"><span>When the component is first added, or </span><span
+                class="c4">mounted</span><span class="c2">, to the DOM and renders</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">When the state or props change, causing the component to
+                re-render</span></li>
+        <li class="c6 c7 li-bullet-0"><span>When the component is removed, or </span><span
+                class="c4">unmounted</span><span class="c2">, from the DOM.</span></li>
+    </ol>
+    <p class="c6"><span class="c2">Later on in this lesson, we&rsquo;ll learn how to further fine-tune exactly when this
+            code executes.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 535.00px; height: 440.00px;"><img
+                alt="" src="./resources/images/react2/image59.png"
+                style="width: 535.00px; height: 440.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="10b"><span class="c8">Function Component Effects</span></h3>
+    <p class="c6"><span class="c2">Let&rsquo;s break down how our PageTitle() function component is using the Effect
+            Hook to execute some code after each render!</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 353.00px; height: 452.00px;"><img
+                alt="" src="./resources/images/react2/image68.png"
+                style="width: 353.00px; height: 452.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">First, we import the Effect Hook from the react library, like so: </span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 315.00px; height: 55.00px;"><img
+                alt="" src="./resources/images/react2/image81.png"
+                style="width: 315.00px; height: 55.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c11"><span class="c2">The Effect Hook is used to call another function that does something for us so there
+            is nothing returned when we call the useEffect() function.</span></p>
+    <p class="c6"><span>The first argument passed to the useEffect() function is the callback function that we want
+            React to call after each time this component renders. We will refer to this callback function as our
+        </span><span class="c4">effect</span><span class="c2">.</span></p>
+    <p class="c6"><span class="c2">In our example, the effect is:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 355.00px; height: 70.00px;"><img
+                alt="" src="./resources/images/react2/image75.png"
+                style="width: 355.00px; height: 70.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c11"><span>In our effect, we assign the value of the name variable to the document.title within a string.
+            For more on this syntax, have a look at this</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/API/Document/title&amp;sa=D&amp;source=editors&amp;ust=1681269371597359&amp;usg=AOvVaw1HwF5LG1Aqew3W_3rPrJjj">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/API/Document/title&amp;sa=D&amp;source=editors&amp;ust=1681269371597614&amp;usg=AOvVaw0Z9FQgQEHOD3U63R4cHMyD">explanation
+                of the document&rsquo;s title property</a></span><span class="c2">.</span></p>
+    <p class="c6"><span class="c2">Notice how we use the current state inside of our effect. Even though our effect is
+            called after the component renders, we still have access to the variables in the scope of our function
+            component! When React renders our component, it will update the DOM as usual, and then run our effect after
+            the DOM has been updated. This happens for every render, including the first and last one.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="10c"><span class="c8">Clean Up Effects</span></h3>
+    <p class="c6"><span>Some effects require cleanup. For example, we might want to add event listeners to some element
+            in the DOM, beyond the JSX in our component. When we</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener&amp;sa=D&amp;source=editors&amp;ust=1681269371598589&amp;usg=AOvVaw2y5ryrLv58pRuJdtbARyKM">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener&amp;sa=D&amp;source=editors&amp;ust=1681269371598832&amp;usg=AOvVaw0gUs5KaZHKZHT1haVBDo5Y">add
+                event listeners to the DOM</a></span><span>, it is important to remove those event listeners when we are
+            done with them to avoid</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/&amp;sa=D&amp;source=editors&amp;ust=1681269371599096&amp;usg=AOvVaw3NbgO9F4g56lOnmJsZKS-W">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/&amp;sa=D&amp;source=editors&amp;ust=1681269371599366&amp;usg=AOvVaw0Y8yzhChEJEunY5cU0IEEk">memory
+                leaks</a></span><span class="c2">!</span></p>
+    <p class="c6"><span class="c2">Let&rsquo;s consider the following effect:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 383.00px; height: 198.00px;"><img
+                alt="" src="./resources/images/react2/image88.png"
+                style="width: 383.00px; height: 198.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c11"><span>If our effect didn&rsquo;t return a </span><span class="c4">cleanup function</span><span
+            class="c2">, then a new event listener would be added to the DOM&rsquo;s document object every time that our
+            component re-renders. Not only would this cause bugs, but it could cause our application performance to
+            diminish and maybe even crash!</span></p>
+    <p class="c6"><span class="c2">Because effects run after every render and not just once, React calls our cleanup
+            function before each re-render and before unmounting to clean up each effect call.</span></p>
+    <p class="c6"><span class="c2">If our effect returns a function, then the useEffect() Hook always treats that as a
+            cleanup function. React will call this cleanup function before the component re-renders or unmounts. Since
+            this cleanup function is optional, it is our responsibility to return a cleanup function from our effect
+            when our effect code could create memory leaks.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="10d"><span class="c8">Control When Effects Are Called</span></h3>
+    <p class="c6"><span class="c2">The useEffect() function calls its first argument (the effect) after each time a
+            component renders. We&rsquo;ve learned how to return a cleanup function so that we don&rsquo;t create
+            performance issues and other bugs, but sometimes we want to skip calling our effect on re-renders
+            altogether.</span></p>
+    <p class="c6"><span>It is common, when defining function components, to run an effect only when the component mounts
+            (renders the first time), but not when the component re-renders. The Effect Hook makes this very easy for us
+            to do! If we want to only call our effect after the first render, we pass an empty array to useEffect() as
+            the second argument. This second argument is called the </span><span class="c4">dependency array</span><span
+            class="c2">.</span></p>
+    <p class="c6"><span class="c2">The dependency array is used to tell the useEffect() method when to call our effect
+            and when to skip it. Our effect is always called after the first render but only called again if something
+            in our dependency array has changed values between renders.</span></p>
+    <p class="c6"><span class="c2">We will continue to learn more about this second argument over the next few
+            exercises, but for now, we&rsquo;ll focus on using an empty dependency array to call an effect when a
+            component first mounts, and if a cleanup function is returned by our effect, calling that when the component
+            unmounts.</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 339.00px; height: 199.00px;"><img
+                alt="" src="./resources/images/react2/image24.png"
+                style="width: 339.00px; height: 199.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span class="c2">Without passing an empty array as the second argument to the useEffect() above, those
+            alerts would be displayed before and after every render of our component, which is clearly not when those
+            messages are meant to be displayed. Simply, passing [] to the useEffect() function is enough to configure
+            when the effect and cleanup functions are called!</span></p>
+    <h3 id="10e"><span class="c8">Fetch Data</span></h3>
+    <p class="c6"><span class="c2">When building software, we often start with default behaviors then modify them to
+            improve performance. We&rsquo;ve learned that the default behavior of the Effect Hook is to call the effect
+            function after every single render. Next, we learned that we can pass an empty array as the second argument
+            for useEffect() if we only want our effect to be called after the component&rsquo;s first render. In this
+            exercise, we&rsquo;ll learn to use the dependency array to further configure exactly when we want our effect
+            to be called!</span></p>
+    <p class="c6"><span class="c2">When our effect is responsible for fetching data from a server, we pay extra close
+            attention to when our effect is called. Unnecessary round trips back and forth between our React components
+            and the server can be costly in terms of:</span></p>
+    <ul class="c3 lst-kix_qcpblb8nlu95-0 start">
+        <li class="c6 c7 li-bullet-0"><span class="c2">Processing</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">Performance</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">Data usage for mobile users</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">API service fees</span></li>
+    </ul>
+    <p class="c6"><span class="c2">When the data that our components need to render doesn&rsquo;t change, we can pass an
+            empty dependency array, so that the data is fetched after the first render. When the response is received
+            from the server, we can use a state setter from the State Hook to store the data from the server&rsquo;s
+            response in our local component state for future renders. Using the State Hook and the Effect Hook together
+            in this way is a powerful pattern that saves our components from unnecessarily fetching new data after every
+            render!</span></p>
+    <p class="c6"><span class="c2">An empty dependency array signals to the Effect Hook that our effect never needs to
+            be re-run, that it doesn&rsquo;t depend on anything. Specifying zero dependencies means that the result of
+            running that effect won&rsquo;t change and calling our effect once is enough.</span></p>
+    <p class="c6"><span class="c2">A dependency array that is not empty signals to the Effect Hook that it can skip
+            calling our effect after re-renders unless the value of one of the variables in our dependency array has
+            changed. If the value of a dependency has changed, then the Effect Hook will call our effect again!</span>
+    </p>
+    <p class="c6"><span>Here&rsquo;s a nice example from the</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/hooks-effect.html%23tip-optimizing-performance-by-skipping-effects&amp;sa=D&amp;source=editors&amp;ust=1681269371602017&amp;usg=AOvVaw3Q9WKp_imcWYOQY-JN3_zl">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/hooks-effect.html%23tip-optimizing-performance-by-skipping-effects&amp;sa=D&amp;source=editors&amp;ust=1681269371602252&amp;usg=AOvVaw3000VfZtIdSbj2EiXA57wb">official
+                React docs</a></span><span class="c2">:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 364.00px; height: 137.00px;"><img
+                alt="" src="./resources/images/react2/image67.png"
+                style="width: 364.00px; height: 137.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <h3 id="10f"><span class="c8">Rules of Hooks</span></h3>
+    <p class="c6"><span class="c2">There are two main rules to keep in mind when using Hooks:</span></p>
+    <ul class="c3 lst-kix_246ip5q0f7ge-0 start">
+        <li class="c6 c7 li-bullet-0"><span class="c2">only call Hooks at the top level</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c2">only call Hooks from React functions</span></li>
+    </ul>
+    <p class="c6"><span>As we have been practicing with the State Hook and the Effect Hook, we&rsquo;ve been following
+            these rules with ease, but it is helpful to keep these two rules in mind as you take your new understanding
+            of Hooks out into the wild and begin using</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/hooks-reference.html&amp;sa=D&amp;source=editors&amp;ust=1681269371603072&amp;usg=AOvVaw35mSqR__Y7lPomCnps0LGh">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/hooks-reference.html&amp;sa=D&amp;source=editors&amp;ust=1681269371603257&amp;usg=AOvVaw3b0Khvqv5ZS6j6zETIS_0K">more
+                Hooks</a></span><span class="c2">&nbsp;in your React applications.</span></p>
+    <p class="c6"><span class="c2">When React builds the Virtual DOM, the library calls the functions that define our
+            components over and over again as the user interacts with the user interface. React keeps track of the data
+            and functions that we are managing with Hooks based on their order in the function component&rsquo;s
+            definition. For this reason, we always call our Hooks at the top level; we never call hooks inside of loops,
+            conditions, or nested functions.</span></p>
+    <p class="c6"><span class="c2">Instead of confusing React with code like this:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 363.00px; height: 156.00px;"><img
+                alt="" src="./resources/images/react2/image56.png"
+                style="width: 363.00px; height: 156.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">We can accomplish the same goal, while consistently calling our Hook every
+            time:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 367.00px; height: 158.00px;"><img
+                alt="" src="./resources/images/react2/image86.png"
+                style="width: 367.00px; height: 158.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span>Secondly, Hooks can only be used in React Functions. We cannot use Hooks in class components and
+            we cannot use Hooks in regular JavaScript functions. We&rsquo;ve been working with useState() and
+            useEffect() in function components, and this is the most common use. The only other place where Hooks can be
+            used is within custom hooks. Custom Hooks are incredibly useful for organizing and reusing stateful logic
+            between function components. For more on this topic, head to the</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/hooks-custom.html&amp;sa=D&amp;source=editors&amp;ust=1681269371604069&amp;usg=AOvVaw3gjWOD9JDj_mS-jHUgf1XX">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/hooks-custom.html&amp;sa=D&amp;source=editors&amp;ust=1681269371604265&amp;usg=AOvVaw1hdo1XqvKDZvFg3f6S7KXk">React
+                Docs</a></span><span class="c2">.</span></p>
+    <p class="c0"><span class="c2"></span></p>
+    <h3 id="10g"><span class="c8">Separate Hooks for Separate Effects</span></h3>
+    <p class="c6"><span class="c2">When multiple values are closely related and change at the same time, it can make
+            sense to group these values in a collection like an object or array. Packaging data together can also add
+            complexity to the code responsible for managing that data. Therefore, it is a good idea to separate concerns
+            by managing different data with different Hooks.</span></p>
+    <p class="c6"><span class="c2">Compare the complexity here, where data is bundled up into a single object:</span>
+    </p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 354.00px; height: 470.00px;"><img
+                alt="" src="./resources/images/react2/image29.png"
+                style="width: 354.00px; height: 470.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">To the simplicity here, where we have separated concerns:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 363.00px; height: 500.00px;"><img
+                alt="" src="./resources/images/react2/image48.png"
+                style="width: 363.00px; height: 500.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span>It is not always obvious</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/hooks-faq.html%23should-i-use-one-or-many-state-variables&amp;sa=D&amp;source=editors&amp;ust=1681269371605359&amp;usg=AOvVaw36S142q-3bD14EEByXo3Gk">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/hooks-faq.html%23should-i-use-one-or-many-state-variables&amp;sa=D&amp;source=editors&amp;ust=1681269371605569&amp;usg=AOvVaw18_N2KOtJIIgmc_D6vkRyQ">whether
+                to bundle data together or separate it</a></span><span class="c2">, but with practice, we get better at
+            organizing our code so that it is easier to understand, add to, reuse, and test!</span></p>
+    <h3 id="10h"><span class="c8">Lesson Review</span></h3>
+    <p class="c6"><span>In this lesson, we learned how to write effects that manage timers, manipulate the DOM, and
+            fetch data from a server. In earlier versions of React, we could only have executed this type of code in
+            the</span><span><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/state-and-lifecycle.html%23adding-lifecycle-methods-to-a-class&amp;sa=D&amp;source=editors&amp;ust=1681269371606063&amp;usg=AOvVaw3C3fOaP1uAelUwFXiNo_0f">&nbsp;</a></span><span
+            class="c12"><a class="c5"
+                href="https://www.google.com/url?q=https://reactjs.org/docs/state-and-lifecycle.html%23adding-lifecycle-methods-to-a-class&amp;sa=D&amp;source=editors&amp;ust=1681269371606283&amp;usg=AOvVaw2bLRUsxQFdYvbX1LzZaJjR">lifecycle
+                methods of class components</a></span><span class="c2">, but with the Effect Hook, we can perform these
+            types of actions in function components with ease!</span></p>
+    <p class="c6"><span class="c2">Let&rsquo;s review the main concepts from this lesson:</span></p>
+    <ul class="c3 lst-kix_h44kmgi1yorg-0 start">
+        <li class="c6 c7 li-bullet-0"><span class="c2">useEffect() - we can import this function from the
+                &#39;react&#39; library and call it in our function components</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c4">effect</span><span class="c2">&nbsp;- refers to a function that
+                we pass as the first argument of the useEffect() function. By default, the Effect Hook calls this effect
+                after each render</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c4">cleanup function</span><span class="c2">&nbsp;- the function that
+                is optionally returned by the effect. If the effect does anything that needs to be cleaned up to prevent
+                memory leaks, then the effect returns a cleanup function, then the Effect Hook will call this cleanup
+                function before calling the effect again as well as when the component is being unmounted</span></li>
+        <li class="c6 c7 li-bullet-0"><span class="c4">dependency array</span><span class="c2">&nbsp;- this is the
+                optional second argument that the useEffect() function can be called with in order to prevent repeatedly
+                calling the effect when this is not needed. This array should consist of all variables that the effect
+                depends on.</span></li>
+    </ul>
+    <p class="c6"><span class="c2">The Effect Hook is all about scheduling when our effect&rsquo;s code gets executed.
+            We can use the dependency array to configure when our effect is called in the following ways:</span></p>
+    <p class="c6"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 398.00px; height: 164.00px;"><img
+                alt="" src="./resources/images/react2/image85.png"
+                style="width: 398.00px; height: 164.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c6"><span class="c2">Hooks gives us the flexibility to organize our code in different ways, grouping
+            related data as well as separating concerns to keep code simple, error-free, reusable, and testable!</span>
+    </p>
+    <p class="c0"><span class="c2"></span></p>
+    <p class="c17 c26"><span class="c2"></span></p>
+    </main>
+</body>
+
+</html>
