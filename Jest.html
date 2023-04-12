@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+        <link rel="stylesheet" href="./resources/css/courses.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jest </title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap"
+            rel="stylesheet">
+        <script src="https://kit.fontawesome.com/0196cd3152.js" crossorigin="anonymous"></script>
+        <script src="./resources/script.js" defer></script>
+</head>
+
+<body class="c30 doc-content">
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <header>
+        <p id="mainPage"><a href="index.html">Main page </a></p>
+        <h1>Jest</h1>
+    </header>
+    <nav>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#1" class="noDropdown-btn">getting started with Jest </a>
+        <a href="#2" class="noDropdown-btn">Writing Tests for React Applications Using Jest and Enzyme
+        </a>
+        <a href="#3" class="noDropdown-btn">Documentation: Jest </a>
+        <a href="#3" class="noDropdown-btn">Documentation: Enzyme </a>
+
+
+        
+    </nav>
+    <main>
+        <h2 id="1"><span class="c29">Getting started with Jest</span></h2>
+    <p class="c2"><span class="c12">In this article, you will learn about structuring unit testing of JavaScript code
+            using the popular Jest JavaScript library.</span></p>
+    <p class="c2"><span class="c22"><a class="c3"
+                href="https://www.google.com/url?q=https://www.valentinog.com/blog/jest/&amp;sa=D&amp;source=editors&amp;ust=1681296638658905&amp;usg=AOvVaw1YCBPPqBabgIZ0EOr2uhSz">&rarr;
+                Getting Started with Jest for JavaScript Testing</a></span></p>
+    <p class="c2 c27"><span class="c12"></span></p>
+    <h2 id="2"><span class="c29">Writing Tests for React Applications Using Jest and
+            Enzyme</span></h2>
+    <h3 class="c2 c5" id="h.4cljdoxufawy"><span class="c17">Learn about the testing frameworks Jest and Enzyme.</span>
+    </h3>
+    <p class="c7 c15"><span class="c22"><a class="c3"
+                href="https://www.google.com/url?q=https://css-tricks.com/writing-tests-for-react-applications-using-jest-and-enzyme/&amp;sa=D&amp;source=editors&amp;ust=1681296638660135&amp;usg=AOvVaw0cwH8Wewr5Der0EQ85z4Sv">&rarr;
+                Writing Tests for React Applications Using Jest and Enzyme</a></span></p>
+    <h3 class="c15 c16" id="h.90malc68okof"><span class="c17">Running packages</span></h3>
+    <ul class="c9 lst-kix_g3dwhv2fazwb-0 start">
+        <li class="c2 c6 li-bullet-0"><span>Using Yarn:<br><br> </span><span class="c0">yarn </span><span
+                class="c14">create-react-app</span><span class="c4">&nbsp;</span><span class="c0">my-app<br></span></li>
+        <li class="c2 c6 li-bullet-0"><span>Using npm (specifically the</span><span><a class="c3"
+                    href="https://www.google.com/url?q=https://docs.npmjs.com/cli/v8/commands/npx&amp;sa=D&amp;source=editors&amp;ust=1681296638661300&amp;usg=AOvVaw2_dqRmtCdsdXiA5f5sKfAc">&nbsp;</a></span><span
+                class="c22"><a class="c3"
+                    href="https://www.google.com/url?q=https://docs.npmjs.com/cli/v8/commands/npx&amp;sa=D&amp;source=editors&amp;ust=1681296638661743&amp;usg=AOvVaw3nly1hkjhq9SyyfamAiTsg">npx
+                    command</a></span><span>&nbsp;to execute a package without installing it):<br><br> </span><span
+                class="c0">npx </span><span class="c14">create-react-app</span><span class="c4">&nbsp;</span><span
+                class="c0">my-app<br></span></li>
+    </ul>
+    <h3 class="c16 c15" id="h.2v54zllj4o2f"><span class="c17">Adding dependencies</span></h3>
+    <ul class="c9 lst-kix_44ciksc0l707-0 start">
+        <li class="c2 c6 li-bullet-0"><span>Using Yarn:<br><br></span></li>
+    </ul><a id="t.ea8e9d37a3f65c4677048b22a6e68b0cc322edf6"></a><a id="t.0"></a>
+    <table class="c20">
+        <tr class="c21">
+            <td class="c13" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">&nbsp;yarn </span><span class="c18">add</span><span
+                        class="c4">&nbsp;enzyme enzyme-adapter-react-16 --dev</span></p>
+            </td>
+        </tr>
+    </table>
+    <ul class="c9 lst-kix_44ciksc0l707-0">
+        <li class="c2 c6 li-bullet-0"><span>Using npm:<br><br></span></li>
+    </ul><a id="t.221ea09fbafd906e760679da5cf63140b1d29b14"></a><a id="t.1"></a>
+    <table class="c20">
+        <tr class="c21">
+            <td class="c13" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">&nbsp;npm install enzyme enzyme-adapter-react</span><span
+                        class="c10">-16</span><span class="c4">&nbsp;--</span><span class="c14">save</span><span
+                        class="c4">-</span><span class="c14">dev</span></p>
+            </td>
+        </tr>
+    </table>
+    <p class="c7 c15 c27"><span class="c12"></span></p>
+    <h3 class="c16 c15" id="h.4ntnba65r3ek"><span>Running </span><span class="c26">package.json</span><span
+            class="c17">&nbsp;scripts</span></h3>
+    <ul class="c9 lst-kix_lj274ngjncw0-0 start">
+        <li class="c2 c6 li-bullet-0"><span>Using Yarn:<br><br></span></li>
+    </ul><a id="t.c18ef18ff20abf4129be9f8310b7824ba3eb2711"></a><a id="t.2"></a>
+    <table class="c20">
+        <tr class="c21">
+            <td class="c13" colspan="1" rowspan="1">
+                <p class="c7"><span class="c4">&nbsp;yarn </span><span class="c18">run</span><span
+                        class="c4">&nbsp;</span><span class="c14">test</span><span class="c4"><br></span></p>
+            </td>
+        </tr>
+    </table>
+    <ul class="c9 lst-kix_lj274ngjncw0-0">
+        <li class="c2 c6 li-bullet-0"><span>Using npm:<br><br> </span><span class="c4">npm </span><span
+                class="c18">run</span><span class="c4">&nbsp;</span><span class="c14 c28">test</span></li>
+    </ul>
+    <p class="c2 c27"><span class="c4"><br></span></p>
+    <h3 id="3"><span class="c17">Documentation: Jest</span></h3>
+    <h2 ><span class="c22 c23"><a class="c3"
+                href="https://www.google.com/url?q=https://jestjs.io/docs/en/tutorial-react&amp;sa=D&amp;source=editors&amp;ust=1681296638666456&amp;usg=AOvVaw0L5lpPWFJ-XjFM9_ScPF8T">Jest</a></span>
+    </h2>
+    <p class="c2"><span class="c12">The provided link goes directly to the go-to documentation for Jest. This is helpful
+            if you would like a comprehensive resource describing all Jest syntax.</span></p>
+    <h3 id="4"><span class="c17">Documentation: Enzyme</span></h3>
+    <h2 ><span class="c23 c22"><a class="c3"
+                href="https://www.google.com/url?q=https://enzymejs.github.io/enzyme/&amp;sa=D&amp;source=editors&amp;ust=1681296638667467&amp;usg=AOvVaw2_OxJTTuIg5Ng06LT6bTXK">Enzyme</a></span>
+    </h2>
+    <p class="c2"><span class="c12">The provided link goes directly to the go-to documentation for Enzyme. This is
+            helpful if you would like a comprehensive resource describing all Enzyme syntax.</span></p>
+    <p class="c2 c27"><span class="c12"></span></p>
+    <p class="c2 c27"><span class="c12"></span></p>
+    <p class="c2 c27"><span class="c12"></span></p>
+    <p class="c7 c15 c27"><span class="c12"></span></p>
+</body>
+
+</html>
